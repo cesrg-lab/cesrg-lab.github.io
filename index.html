@@ -1,70 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<!-- ================= SEO & INDEXING ================= -->
 <meta charset="utf-8">
-<title>CESRG | COMSATS University Islamabad</title>
+<title>CESRG | Control & Energy Systems Research Group</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta name="description"
-      content="Control & Energy Systems Research Group, COMSATS University Islamabad">
+      content="Control & Energy Systems Research Group (CESRG), COMSATS University Islamabad.
+      Research in control systems, electric vehicles, energy optimization, and battery management.">
 
-<!-- Bootstrap 5 -->
+<meta name="keywords"
+      content="CESRG, Control Systems, Energy Systems, Electric Vehicles,
+               Battery Management, COMSATS University Islamabad">
+
+<meta name="author" content="CESRG | COMSATS University Islamabad">
+
+<!-- Google Indexing -->
+<meta name="robots" content="index, follow">
+
+<!-- OpenGraph (for sharing) -->
+<meta property="og:title" content="CESRG – Control & Energy Systems Research Group">
+<meta property="og:description" content="Advanced research in control and energy systems">
+<meta property="og:type" content="website">
+
+<!-- ================= BOOTSTRAP 5 ================= -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet">
 
+<!-- ================= CUSTOM STYLE ================= -->
 <style>
-body { scroll-behavior: smooth; }
-.counter { font-size: 2.2rem; font-weight: bold; }
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+}
+
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #ffffff;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
+
 .section-padding { padding: 60px 0; }
+.counter { font-size: 2.2rem; font-weight: bold; }
 .team-img { height: 220px; object-fit: cover; }
 </style>
+
 </head>
 
 <body>
 
 <!-- ================= NAVBAR ================= -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <img src="images/cesrg_logo.png" height="40" class="me-2">
-      CESRG
-    </a>
-    <button class="navbar-toggler" data-bs-toggle="collapse"
-            data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<div class="container">
 
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="people.html">People</a></li>
-        <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
-        <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </div>
+<a class="navbar-brand d-flex align-items-center" href="#">
+  <img src="images/cesrg_logo.png" height="40" class="me-2">
+  CESRG
+</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse"
+        data-bs-target="#navMenu">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navMenu">
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="people.html">People</a></li>
+<li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+<li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+
+<!-- DARK MODE TOGGLE -->
+<li class="nav-item ms-3">
+  <button class="btn btn-outline-light btn-sm"
+          onclick="toggleTheme()">🌙</button>
+</li>
+
+</ul>
+</div>
+</div>
 </nav>
 
 <!-- ================= HERO ================= -->
-<header class="bg-light section-padding text-center mt-5">
-  <div class="container">
-    <h1 class="fw-bold">Control & Energy Systems Research Group</h1>
-    <p class="lead">COMSATS University Islamabad</p>
-  </div>
-</header>
-
-<!-- ================= ABOUT ================= -->
-<section class="section-padding">
-<div class="container text-center">
-  <h2 class="mb-4">About CESRG</h2>
-  <p class="lead">
-    CESRG focuses on advanced research in control systems, electric vehicles,
-    battery management systems, energy optimization, and data-driven modeling.
-  </p>
+<header class="section-padding text-center mt-5">
+<div class="container">
+<h1 class="fw-bold">Control & Energy Systems Research Group</h1>
+<p class="lead">COMSATS University Islamabad</p>
 </div>
-</section>
+</header>
 
 <!-- ================= COUNTERS ================= -->
 <section class="bg-dark text-white section-padding">
@@ -72,148 +104,118 @@ body { scroll-behavior: smooth; }
 <div class="row">
 
 <div class="col-md-3">
-  <div class="counter" data-target="12">0</div>
-  <p>Funded Projects</p>
+<div class="counter" data-target="85">0</div>
+<p>Publications</p>
 </div>
 
 <div class="col-md-3">
-  <div class="counter" data-target="85">0</div>
-  <p>Publications</p>
+<div class="counter" data-target="1200">0</div>
+<p>Citations</p>
 </div>
 
 <div class="col-md-3">
-  <div class="counter" data-target="20">0</div>
-  <p>Researchers</p>
+<div class="counter" data-target="20">0</div>
+<p>Researchers</p>
 </div>
 
 <div class="col-md-3">
-  <div class="counter" data-target="8">0</div>
-  <p>PhD Scholars</p>
+<div class="counter" data-target="12">0</div>
+<p>Funded Projects</p>
 </div>
 
 </div>
 </div>
 </section>
 
-<!-- ================= LATEST NEWS ================= -->
+<!-- ================= LATEST NEWS (JSON CMS) ================= -->
 <section class="section-padding">
 <div class="container">
-<h2 class="text-center mb-5">Latest News</h2>
-
-<div class="row g-4">
-
-<div class="col-md-4">
-<div class="card h-100">
-<div class="card-body">
-<h5>CESRG Weekly Talk</h5>
-<p>
-Optimal Control of Active Cell Balancing for EV Batteries
-</p>
-<small class="text-muted">March 2025</small>
-</div>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="card h-100">
-<div class="card-body">
-<h5>New Funded Project</h5>
-<p>
-Intelligent Battery Pack for Electric Scooter Range Extension
-</p>
-<small class="text-muted">February 2025</small>
-</div>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="card h-100">
-<div class="card-body">
-<h5>Journal Publication</h5>
-<p>
-Paper accepted in <em>IEEE Transactions on Industrial Electronics</em>
-</p>
-<small class="text-muted">January 2025</small>
-</div>
-</div>
-</div>
-
-</div>
+<h2 class="text-center mb-4">Latest News</h2>
+<div class="row" id="newsContainer"></div>
 </div>
 </section>
 
-<!-- ================= TEAM HIGHLIGHTS ================= -->
+<!-- ================= PUBLICATIONS (AUTO FETCH) ================= -->
 <section class="bg-light section-padding">
 <div class="container">
-<h2 class="text-center mb-5">Team Highlights</h2>
-
-<div class="row g-4">
-
-<div class="col-md-4">
-<div class="card text-center">
-<img src="images/team1.jpg" class="card-img-top team-img">
-<div class="card-body">
-<h5>Dr. Ali Arshad Uppal</h5>
-<p class="text-muted">Principal Investigator</p>
-</div>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="card text-center">
-<img src="images/team2.jpg" class="card-img-top team-img">
-<div class="card-body">
-<h5>Dr. Qadeer Ahmed</h5>
-<p class="text-muted">Co-PI</p>
-</div>
-</div>
-</div>
-
-<div class="col-md-4">
-<div class="card text-center">
-<img src="images/team3.jpg" class="card-img-top team-img">
-<div class="card-body">
-<h5>PhD Researchers</h5>
-<p class="text-muted">Energy & Control Systems</p>
-</div>
-</div>
-</div>
-
-</div>
+<h2 class="text-center mb-4">Recent Publications</h2>
+<ul class="list-group" id="pubContainer"></ul>
 </div>
 </section>
 
 <!-- ================= FOOTER ================= -->
-<footer class="bg-dark text-white py-4">
-<div class="container text-center">
+<footer class="bg-dark text-white py-4 text-center">
 <p class="mb-1">
 Control & Energy Systems Research Group – COMSATS University Islamabad
 </p>
-<p class="small mb-0">
+<p class="small">
 Email: ali_arshad@comsats.edu.pk | Phone: +92-51-9049207
 </p>
-</div>
 </footer>
 
-<!-- Bootstrap JS -->
+<!-- ================= SCRIPTS ================= -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Counter Script -->
 <script>
+// ===== COUNTER =====
 document.querySelectorAll('.counter').forEach(counter => {
   const update = () => {
     const target = +counter.dataset.target;
     const current = +counter.innerText;
-    const increment = target / 100;
-
+    const inc = target / 100;
     if (current < target) {
-      counter.innerText = Math.ceil(current + increment);
+      counter.innerText = Math.ceil(current + inc);
       setTimeout(update, 20);
-    } else {
-      counter.innerText = target;
-    }
+    } else counter.innerText = target;
   };
   update();
+});
+
+// ===== DARK MODE =====
+function toggleTheme() {
+  const theme = document.documentElement.getAttribute("data-theme");
+  document.documentElement.setAttribute(
+    "data-theme",
+    theme === "dark" ? "light" : "dark"
+  );
+  localStorage.setItem("theme", document.documentElement.getAttribute("data-theme"));
+}
+document.documentElement.setAttribute(
+  "data-theme",
+  localStorage.getItem("theme") || "light"
+);
+
+// ===== NEWS CMS =====
+fetch("data/news.json")
+.then(res => res.json())
+.then(news => {
+  const c = document.getElementById("newsContainer");
+  news.forEach(n => {
+    c.innerHTML += `
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5>${n.title}</h5>
+            <p>${n.desc}</p>
+            <small class="text-muted">${n.date}</small>
+          </div>
+        </div>
+      </div>`;
+  });
+});
+
+// ===== PUBLICATIONS (SCHOLAR JSON) =====
+fetch("data/publications.json")
+.then(res => res.json())
+.then(pubs => {
+  const p = document.getElementById("pubContainer");
+  pubs.slice(0,5).forEach(pub => {
+    p.innerHTML += `
+      <li class="list-group-item">
+        <b>${pub.title}</b><br>
+        <small>${pub.journal} (${pub.year})</small>
+      </li>`;
+  });
 });
 </script>
 
