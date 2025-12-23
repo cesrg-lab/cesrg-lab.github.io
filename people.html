@@ -1,251 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <title>People</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Control & Energy Systems Research Group, COMSATS University Islamabad">
-      <meta name="author" content="">
+<head>
+   <meta charset="utf-8">
+   <title>People</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Control & Energy Systems Research Group, COMSATS University Islamabad">
+   <meta name="author" content="">
 
-      <!-- Favicon -->
+   <!-- Favicon -->
    <link rel="icon" type="image/jpeg" href="images/cesrg_logooo.png">
-      
-      <!-- Le styles -->
-      <link href="css/bootstrap.min.css" rel="stylesheet">
-      <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-      <link href="css/theme.css" rel="stylesheet">
-   </head>
-   <body>
-      <div class="container">
-         <header class="jumbotron subhead" id="overview">
-            <h1>Control & Energy Systems Research Group</h1>
-             <p class="lead"> COMSATS University Islamabad </p>
-         </header>
-         <div class="masthead">
-            <div class="navbar">
-               <div class="navbar-inner">
-                  <div class="container">
-                     <ul class="nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="active"><a href="#">People</a></li>
-                        <li><a href="research.html">Research</a></li>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <hr>
-         <div class="row-fluid">
-            <div class="span3 bs-docs-sidebar" id="navparent">
-               <ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="200" data-offset-bottom="260">
-                  <li><a href="#principalinvestigator"> Faculty Members </a></li>
-                  <li><a href="#graduate">Research Associates</a></li>
-                  <li><a href="#undergraduate">Graduate Students</a></li>
+
+   <!-- CSS -->
+   <link href="css/bootstrap.min.css" rel="stylesheet">
+   <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+   <link href="css/theme.css" rel="stylesheet">
+
+   <style>
+      section .page-header h3 {
+         color: #1a1a1a;
+         border-bottom: 2px solid #f1c40f;
+         padding-bottom: 5px;
+         margin-bottom: 25px;
+      }
+
+      .person-card {
+         display: flex;
+         flex-wrap: wrap;
+         margin-bottom: 30px;
+         align-items: flex-start;
+         gap: 20px;
+      }
+
+      .person-card img {
+         max-width: 180px;
+         border-radius: 10px;
+      }
+
+      .person-info h4 {
+         color: #23568F;
+         font-weight: 600;
+         margin-bottom: 10px;
+      }
+
+      .person-info p {
+         line-height: 1.6;
+         margin-bottom: 10px;
+         text-align: justify;
+      }
+
+      .person-info a {
+         color: #23568F;
+         text-decoration: none;
+         font-weight: 600;
+      }
+
+      .person-info a:hover {
+         text-decoration: underline;
+      }
+
+      .bs-docs-sidenav li a {
+         color: #23568F;
+         font-weight: 500;
+      }
+
+      .bs-docs-sidenav li.active a {
+         color: #f1c40f;
+         font-weight: 700;
+      }
+
+      #footer h3 {
+         color: #f1c40f;
+      }
+      #footer a {
+         color: #23568F;
+         font-weight: 600;
+         text-decoration: none;
+      }
+      #footer a:hover {
+         text-decoration: underline;
+      }
+
+      @media (max-width: 767px) {
+         .span8.offset1 {
+            margin-left: 0;
+         }
+         .person-card {
+            flex-direction: column;
+            align-items: center;
+         }
+         .person-info {
+            text-align: center;
+         }
+      }
+   </style>
+</head>
+
+<body>
+<div class="container">
+
+   <header class="jumbotron subhead text-center" id="overview">
+      <h1>Control & Energy Systems Research Group</h1>
+      <p class="lead">COMSATS University Islamabad</p>
+   </header>
+
+   <div class="masthead">
+      <div class="navbar">
+         <div class="navbar-inner">
+            <div class="container">
+               <ul class="nav">
+                  <li><a href="index.html">Home</a></li>
+                  <li class="active"><a href="#">People</a></li>
+                  <li><a href="research.html">Research</a></li>
+                  <li><a href="publications.html">Publications</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="contact.html">Contact</a></li>
                </ul>
-            </div>
-            <div class="span8 offset1">
-               <section id="principalinvestigator">
-                  <div class="page-header">
-                     <h3>Faculty Members</h3>
-                  </div>
-                  <div class="row-fluid">
-                  <div class="span3">
-                        <a href="https://www.researchgate.net/profile/Qudrat-Khan-3" class="thumbnail">
-                        <img src="thumbs/dr_qudrat.jpg" alt="Dr Qudrat Khan"/>
-                        </a>
-                     </div>
-                     <div class="span9">
-                        <h4>Dr. Qudrat Khan, Tenured Associate Professor</h4>
-                         <p style="text-align: justify;"> He received the B.Sc. degree in
-mathematics and computer science from the
-University of Peshawar, in 2003, the M.Sc.
-and M.Phil. degrees in mathematics from
-Quaid-i-Azam University, Islamabad, in 2006 and
-2008, respectively, and the Ph.D. degree in nonlinear control systems from M. A. Jinnah University,
-Islamabad, in November 2012.
-He was a postgraduate scholarship holder during Ph.D. (2008–2011) and an IRSIP scholarship
-holder during Ph.D. (as a Visiting Research Scholar at the University of
-Pavia, Italy). He was selected for the Young Author Support Program, IFAC,
-World Congress, 2011, Milan, Italy. Since July 2013, he has been working as
-an Assistant Professor with COMSATS, Islamabad. From September 2015 to
-August 2016, he worked as a Postdoctoral Fellow with the Department
-of Mechatronics Engineering, International Islamic University, Malaysia.
-He has published more than 50 research papers (with an impact factor
-of 40+) in refereed international journals and conference proceedings. His
-research interests include robust nonlinear control design, observers design,
-fault detection in electro-mechanical systems, and multi-agent system’s
-control. He is listed in the Young Productive Scientists of Pakistan in the
-year 2017 and 2018.</p>
-                        <p><b>Phone: </b>(+92)  051-9049159 </p>
-                        <p><b>Email: </b><a href="mailto:qudratullah@comsats.edu.pk">qudratullah@comsats.edu.pk</a></p>
-                        <p><b>Address: </b>Department of Electrical Engineering, COMSATS University Islamabad</p>
-                        <p><b><a href="https://orcid.org/0000-0001-8499-3078">Website</a>, <a href="https://scholar.google.com.pk/citations?user=R75VAeUAAAAJ&hl=en">Google Scholar</a>, <a href="https://pk.linkedin.com/in/qudrat-khan-ph-d-7a94b940">Linkedin</a>, <a href="https://www.researchgate.net/profile/Qudrat-Khan-3">ResearchGate</a></b></p>
-                     </div>
-                  <hr>
-                  </div>
-                  <div class="row-fluid">
-                     <div class="span3">
-                        <a href="https://aauppal.github.io/" class="thumbnail">
-                        <img src="thumbs/dr_ali_arshad.jpeg" alt="Dr Ali Arshad Uppal"/>
-                        </a>
-                     </div>
-                     <div class="span9">
-                        <h4>Dr. Ali Arshad Uppal,Tenured Associate Professor (Senior Member, IEEE)</h4>
-                        <p style="text-align: justify;">
- He received his Ph.D. degree in electrical engineering
-(control systems) from COMSATS University
-Islamabad (CUI), Islamabad, Pakistan, in 2016.
-From 2015 to 2016, he was a Visiting Scholar
-at the Department of Electrical and Computer
-Engineering, The Ohio State University, Columbus, OH, USA. From 2020 to 2021, he was a
-Postdoctoral Researcher at the Faculty of Engineering, University of Porto, Porto, Portugal. He is
-currently a tenured Associate Professor with the Department of Electrical
-Engineering, CUI. So far, he has secured competitive research funding
-worth around 20 million PKR. He has authored/co-authored several research
-papers in peer-reviewed journals and international conferences. His research
-interests include the application of nonlinear control in the areas of energy
-conversion, energy storage, and clean energy technologies. His current
-research interest includes the modeling and control of active cell balancing
-of lithium-ion batteries to extend the range of electric vehicles. He was
-elected to the grade of Senior Member, IEEE, in recognition of his research
-contributions in the field of control systems, in June 2022. He served as
-a Guest Editor for the Special Issue on Sliding Mode Control in Dynamic
-Systems of Electronics (MDPI). </p>
-                        <p><b>Phone: </b>(+92) 51-9049255 </p>
-                        <p><b>Email: </b><a href="mailto:ali_arshad@comsats.edu.pk">ali_arshad@comsats.edu.pk</a></p>
-                        <p><b>Address: </b>Room No. 229, Department of Electrical Engineering, COMSATS University Islamabad</p>
-                        <p><b><a href="https://aauppal.github.io/">Website</a>, <a href="https://scholar.google.com.pk/citations?user=4wvbCf4AAAAJ&hl=en">Google Scholar</a>, <a href="https://pk.linkedin.com/in/aauppal">Linkedin</a>, <a href="https://www.researchgate.net/profile/Ali-Arshad-6">ResearchGate</a></b></p>
-                     </div>
-                  </div>
-               </section>
-               <hr>
-               <section id="graduate">
-                  <div class="page-header">
-                     <h3>Research Associates</h3>
-                  </div>
-                  <div class="row-fluid">
-                     <div class="span3">
-                        <a href="https://www.researchgate.net/profile/Afaq-Ahmad-7" class="thumbnail">
-                        <img src="thumbs/afaq_ahmad.jpeg" alt="Afaq Ahmad"/>
-                        </a>
-                     </div>
-                     <div class="span9">
-                        <h4><a href="https://www.researchgate.net/profile/Afaq-Ahmad-7">Afaq Ahmad</a></h4>
-                         <p style="text-align: justify;">He received the B.Eng. degree in electrical engineering from the Ghulam Ishaq Khan Institute, in 2015, and the M.S. degree in electrical engineering from COMSATS University Islamabad, Pakistan, in 2023. He is currently doing PhD degree in machanical engineering from the Ghulam Ishaq Khan Institute on fully funded phd scholarship. His research interests include mathematical modeling and simulation of battery management systems, development of balancing architectures, and applications of learning-based predictive control.</p>
-                        <p><b>Email: </b><a href="mailto:ahmadafaq09@yahoo.com">ahmadafaq09@yahoo.com</a></p>
-                        <p><b>Address: </b>GIK Institute of Engineering Sciences and Technology, Topi 23640, District Swabi, Khyber Pakhtunkhwa, Pakistan</p>
-                     </div>
-                  </div>
-                  <hr>
-                  <div class="row-fluid">
-                     <div class="span3">
-                        <a href="https://unsplash.com/photos/LUdelQ2EO2g" class="thumbnail">
-                        <img src="thumbs/Sohail_Ahmad.png" alt="Sohail Ahmad"/>
-                        </a>
-                     </div>
-                     <div class="span9">
-                        <h4><a href="https://unsplash.com/photos/LUdelQ2EO2g">Sohail Ahmad</a></h4>
-                         <p style="text-align: justify;">He received his B.Sc. degree in Double Mathematics and Physics from Quaid-i-Azam University, Islamabad, in 2014. He completed his MSc degrees in Electronics from Quaid-i-Azam University in 2017 and in Mathematics from Virtual University, Lahore, in 2023. He obtained his MS degree in Electrical Engineering from COMSATS University Islamabad in 2020. His current research interests include speed and flux control of induction machines and optimal control strategies for electric vehicles aimed at range extension. </p>
-                        <p><b>Email: </b><a href="mailto:sahmad@ele.qau.edu.pk">sahmad@ele.qau.edu.pk</a></p>
-                        <p><b>Address: </b>Department of Electrical Engineering, COMSATS University Islamabad</p>
-                     </div>
-                  <hr>
-                 
-               </section>
-               <hr>
-               <section id="undergraduate">
-                  <div class="page-header">
-                     <h3>Graduate Students</h3>
-                  </div>
-                  <div class="row-fluid">
-                     <div class="span3">
-                        <a href="https://ieeexplore.ieee.org/author/323843675614211" class="thumbnail">
-                        <img src="thumbs/azmat_ullah.PNG" alt="Muhammad Azmat Ullah"/>
-                        </a>
-                     </div>
-                     <div class="span9">
-                        <h4>Muhammad Azmat Ullah</h4>
-                         <p style="text-align: justify;">He received the B.S. degree in electronic engineering from International Islamic University Islamabad, Pakistan, in 2012, and the M.S. degree in electrical engineering from Government College University Lahore, in 2015. He is currently pursuing the Ph.D. degree in electrical engineering (control systems) with COMSATS University Islamabad, Pakistan. His research interests include nonlinear control systems, model predictive control, and battery management systems. His current research interest includes MPC-based active cell balancing for lithium-ion battery networks.</p>
-                     </div>
-                  </div>
-                  <hr>
-                  <div class="row-fluid">
-                     <div class="span3">
-                        <a href="https://www.scopus.com/authid/detail.uri?authorId=58711441500" class="thumbnail">
-                        <img src="thumbs/shehr.PNG" alt="Sheher Bano"/>
-                        </a>
-                     </div>
-                     <div class="span9">
-                        <h4>Shehar Bano</h4>
-                         <p style="text-align: justify;"> She is currently pursuing her PhD in Control Systems at COMSATS University, enrolled in 2024. where she also completed her MS in Control Systems from same institute. Her academic and research journey has been centered around advanced control methodologies, dynamic system modeling, and emerging applications in control engineering.
-Her professional career began at Abasyn University Islamabad Campus (AUIC), where she served as a Lab Engineer from 2019 to 2021. Following the completion of her MS degree, she was promoted to Lecturer in the Electrical Engineering Department at AUIC.
-She has published one research paper in the Journal of Theoretical Biology, demonstrating her commitment to interdisciplinary and impactful research. Currently, her doctoral research focuses on active cell balancing techniques for electric vehicle (EV) battery systems, exploring efficient energy management and control strategies to enhance battery performance and lifespan. </p>
-                     </div>
-                  </div>
-                  <hr>
-                     </div>
-               </section>
             </div>
          </div>
       </div>
+   </div>
+
+   <hr>
+
+   <div class="row-fluid">
+      <div class="span3 bs-docs-sidebar" id="navparent">
+         <ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="200" data-offset-bottom="260">
+            <li><a href="#principalinvestigator">Faculty Members</a></li>
+            <li><a href="#graduate">Research Associates</a></li>
+            <li><a href="#undergraduate">Graduate Students</a></li>
+         </ul>
+      </div>
+
+      <div class="span8 offset1">
+
+         <!-- Faculty Members -->
+         <section id="principalinvestigator">
+            <div class="page-header">
+               <h3>Faculty Members</h3>
+            </div>
+
+            <div class="person-card">
+               <img src="thumbs/dr_qudrat.jpg" alt="Dr Qudrat Khan">
+               <div class="person-info">
+                  <h4>Dr. Qudrat Khan, Tenured Associate Professor</h4>
+                  <p>He received the B.Sc. degree in mathematics and computer science from the University of Peshawar, in 2003, the M.Sc. and M.Phil. degrees in mathematics from Quaid-i-Azam University, Islamabad, in 2006 and 2008, respectively, and the Ph.D. degree in nonlinear control systems from M. A. Jinnah University, Islamabad, in November 2012. He was a postgraduate scholarship holder during Ph.D. (2008–2011) and an IRSIP scholarship holder during Ph.D. (as a Visiting Research Scholar at the University of Pavia, Italy). He was selected for the Young Author Support Program, IFAC, World Congress, 2011, Milan, Italy. Since July 2013, he has been working as an Assistant Professor with COMSATS, Islamabad. From September 2015 to August 2016, he worked as a Postdoctoral Fellow with the Department of Mechatronics Engineering, International Islamic University, Malaysia. He has published more than 50 research papers (with an impact factor of 40+) in refereed international journals and conference proceedings. His research interests include robust nonlinear control design, observers design, fault detection in electro-mechanical systems, and multi-agent system’s control. He is listed in the Young Productive Scientists of Pakistan in the year 2017 and 2018.</p>
+                  <p><b>Phone:</b> (+92) 051-9049159</p>
+                  <p><b>Email:</b> <a href="mailto:qudratullah@comsats.edu.pk">qudratullah@comsats.edu.pk</a></p>
+                  <p><b>Address:</b> Department of Electrical Engineering, COMSATS University Islamabad</p>
+                  <p>
+                     <a href="https://orcid.org/0000-0001-8499-3078">Website</a> | 
+                     <a href="https://scholar.google.com.pk/citations?user=R75VAeUAAAAJ&hl=en">Google Scholar</a> | 
+                     <a href="https://pk.linkedin.com/in/qudrat-khan-ph-d-7a94b940">Linkedin</a> | 
+                     <a href="https://www.researchgate.net/profile/Qudrat-Khan-3">ResearchGate</a>
+                  </p>
+               </div>
+            </div>
+
+            <div class="person-card">
+               <img src="thumbs/dr_ali_arshad.jpeg" alt="Dr Ali Arshad Uppal">
+               <div class="person-info">
+                  <h4>Dr. Ali Arshad Uppal, Tenured Associate Professor (Senior Member, IEEE)</h4>
+                  <p>He received his Ph.D. degree in electrical engineering (control systems) from COMSATS University Islamabad (CUI), Islamabad, Pakistan, in 2016. From 2015 to 2016, he was a Visiting Scholar at the Department of Electrical and Computer Engineering, The Ohio State University, Columbus, OH, USA. From 2020 to 2021, he was a Postdoctoral Researcher at the Faculty of Engineering, University of Porto, Porto, Portugal. He is currently a tenured Associate Professor with the Department of Electrical Engineering, CUI. So far, he has secured competitive research funding worth around 20 million PKR. He has authored/co-authored several research papers in peer-reviewed journals and international conferences. His research interests include the application of nonlinear control in the areas of energy conversion, energy storage, and clean energy technologies. His current research interest includes the modeling and control of active cell balancing of lithium-ion batteries to extend the range of electric vehicles. He was elected to the grade of Senior Member, IEEE, in recognition of his research contributions in the field of control systems, in June 2022. He served as a Guest Editor for the Special Issue on Sliding Mode Control in Dynamic Systems of Electronics (MDPI).</p>
+                  <p><b>Phone:</b> (+92) 51-9049255</p>
+                  <p><b>Email:</b> <a href="mailto:ali_arshad@comsats.edu.pk">ali_arshad@comsats.edu.pk</a></p>
+                  <p><b>Address:</b> Room No. 229, Department of Electrical Engineering, COMSATS University Islamabad</p>
+                  <p>
+                     <a href="https://aauppal.github.io/">Website</a> | 
+                     <a href="https://scholar.google.com.pk/citations?user=4wvbCf4AAAAJ&hl=en">Google Scholar</a> | 
+                     <a href="https://pk.linkedin.com/in/aauppal">Linkedin</a> | 
+                     <a href="https://www.researchgate.net/profile/Ali-Arshad-6">ResearchGate</a>
+                  </p>
+               </div>
+            </div>
+         </section>
+
+         <hr>
+
+         <!-- Research Associates -->
+         <section id="graduate">
+            <div class="page-header">
+               <h3>Research Associates</h3>
+            </div>
+
+            <div class="person-card">
+               <img src="thumbs/afaq_ahmad.jpeg" alt="Afaq Ahmad">
+               <div class="person-info">
+                  <h4><a href="https://www.researchgate.net/profile/Afaq-Ahmad-7">Afaq Ahmad</a></h4>
+                  <p>He received the B.Eng. degree in electrical engineering from the Ghulam Ishaq Khan Institute, in 2015, and the M.S. degree in electrical engineering from COMSATS University Islamabad, Pakistan, in 2023. He is currently doing PhD degree in mechanical engineering from the Ghulam Ishaq Khan Institute on fully funded PhD scholarship. His research interests include mathematical modeling and simulation of battery management systems, development of balancing architectures, and applications of learning-based predictive control.</p>
+                  <p><b>Email:</b> <a href="mailto:ahmadafaq09@yahoo.com">ahmadafaq09@yahoo.com</a></p>
+                  <p><b>Address:</b> GIK Institute of Engineering Sciences and Technology, Topi 23640, District Swabi, Khyber Pakhtunkhwa, Pakistan</p>
+               </div>
+            </div>
+
+            <div class="person-card">
+               <img src="thumbs/Sohail_Ahmad.png" alt="Sohail Ahmad">
+               <div class="person-info">
+                  <h4><a href="https://unsplash.com/photos/LUdelQ2EO2g">Sohail Ahmad</a></h4>
+                  <p>He received his B.Sc. degree in Double Mathematics and Physics from Quaid-i-Azam University, Islamabad, in 2014. He completed his MSc degrees in Electronics from Quaid-i-Azam University in 2017 and in Mathematics from Virtual University, Lahore, in 2023. He obtained his MS degree in Electrical Engineering from COMSATS University Islamabad in 2020. His current research interests include speed and flux control of induction machines and optimal control strategies for electric vehicles aimed at range extension.</p>
+                  <p><b>Email:</b> <a href="mailto:sahmad@ele.qau.edu.pk">sahmad@ele.qau.edu.pk</a></p>
+                  <p><b>Address:</b> Department of Electrical Engineering, COMSATS University Islamabad</p>
+               </div>
+            </div>
+         </section>
+
+         <hr>
+
+         <!-- Graduate Students -->
+         <section id="undergraduate">
+            <div class="page-header">
+               <h3>Graduate Students</h3>
+            </div>
+
+            <div class="person-card">
+               <img src="thumbs/azmat_ullah.PNG" alt="Muhammad Azmat Ullah">
+               <div class="person-info">
+                  <h4>Muhammad Azmat Ullah</h4>
+                  <p>He received the B.S. degree in electronic engineering from International Islamic University Islamabad, Pakistan, in 2012, and the M.S. degree in electrical engineering from Government College University Lahore, in 2015. He is currently pursuing the Ph.D. degree in electrical engineering (control systems) with COMSATS University Islamabad, Pakistan. His research interests include nonlinear control systems, model predictive control, and battery management systems. His current research interest includes MPC-based active cell balancing for lithium-ion battery networks.</p>
+               </div>
+            </div>
+
+            <div class="person-card">
+               <img src="thumbs/shehr.PNG" alt="Shehar Bano">
+               <div class="person-info">
+                  <h4>Shehar Bano</h4>
+                  <p>She is currently pursuing her PhD in Control Systems at COMSATS University, enrolled in 2024, where she also completed her MS in Control Systems from same institute. Her academic and research journey has been centered around advanced control methodologies, dynamic system modeling, and emerging applications in control engineering. Her professional career began at Abasyn University Islamabad Campus (AUIC), where she served as a Lab Engineer from 2019 to 2021. Following the completion of her MS degree, she was promoted to Lecturer in the Electrical Engineering Department at AUIC. She has published one research paper in the Journal of Theoretical Biology, demonstrating her commitment to interdisciplinary and impactful research. Currently, her doctoral research focuses on active cell balancing techniques for electric vehicle (EV) battery systems, exploring efficient energy management and control strategies to enhance battery performance and lifespan.</p>
+               </div>
+            </div>
+
+         </section>
+
+      </div>
+   </div>
+</div>
+
 <!-- ================= FOOTER ================= -->
-<footer id="footer" style="background:#1a1a1a; color:#fff; padding:20px 20px; font-family:Arial, sans-serif;">
+<footer id="footer" style="background:#1a1a1a; color:#fff; padding:30px 20px; font-family:Arial, sans-serif;">
    <div class="container text-center">
-
       <div class="row-fluid" style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:40px;">
-
-         <!-- Contact Information -->
          <div class="footer-section" style="flex:1 1 250px; min-width:250px;">
-            <h3 style="color:#f1c40f; margin-bottom:10px;">Contact Information</h3>
-            <p style="margin:3px 0;"><b>Office Hours:</b> Monday–Friday (9:00am – 5:00pm)</p>
-            <p style="margin:3px 0;"><b>Phone:</b> +92-51-9049255</p>
-            <p style="margin:3px 0;"><b>Cell:</b> +92-331-3666163</p>
-            <a href="mailto:ali_arshad@comsats.edu.pk" style="color:#23568F; text-decoration:none; font-weight:600;">Email</a>
+            <h3>Contact Information</h3>
+            <p><b>Office Hours:</b> Monday–Friday (9:00am – 5:00pm)</p>
+            <p><b>Phone:</b> +92-51-9049255</p>
+            <p><b>Cell:</b> +92-331-3666163</p>
+            <a href="mailto:ali_arshad@comsats.edu.pk">Email</a>
          </div>
 
-         <!-- Logo -->
          <div class="footer-section" style="flex:1 1 250px; min-width:250px;">
             <a href="https://comsats.edu.pk/">
                <img src="thumbs/cesrg_logoo.jpeg" alt="CESRG Logo" style="max-width:150px; border-radius:10px; margin-bottom:10px;">
             </a>
          </div>
 
-         <!-- Address -->
          <div class="footer-section" style="flex:1 1 250px; min-width:250px;">
-            <h3 style="color:#f1c40f; margin-bottom:10px;">Address</h3>
-            <p style="margin:3px 0;">
+            <h3>Address</h3>
+            <p>
                Control & Energy Systems Research Group<br>
                Room No. 229, 2nd Floor, Department of Electrical Engineering,<br>
                COMSATS University Islamabad, Pakistan
             </p>
-            <a href="https://maps.app.goo.gl/pZj32DCDwLoRUJXe9" target="_blank" style="color:#23568F; text-decoration:none; font-weight:600;">Show Map</a>
+            <a href="https://maps.app.goo.gl/pZj32DCDwLoRUJXe9" target="_blank">Show Map</a>
          </div>
-
       </div>
 
-      <hr style="border-color:rgba(255,255,255,0.2); margin:5px 0;">
-
-      <p style="margin:3px 0; color:#ccc; font-size:14px;">
-         &copy; 2025 CESRG | COMSATS University Islamabad. All rights reserved.
-      </p>
-
+      <hr style="border-color:rgba(255,255,255,0.2); margin:10px 0;">
+      <p style="color:#ccc; font-size:14px;">&copy; 2025 CESRG | COMSATS University Islamabad. All rights reserved.</p>
    </div>
 </footer>
-      <!-- Le javascript
-         ================================================== -->
-      <!-- Placed at the end of the document so the pages load faster -->
-      <script src="js/jquery-1.9.1.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script>
-         $(document).ready(function() {
-             $(document.body).scrollspy({
-                 target: "#navparent"
-             });
-         });
-         
-      </script>
-   </body>
+
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+   $(document).ready(function() {
+       $(document.body).scrollspy({ target: "#navparent" });
+   });
+</script>
+</body>
 </html>
