@@ -3,40 +3,53 @@
 ======================= */
 body {
     padding-top: 15px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
 }
 
 /* =======================
-   FULL WIDTH LAYOUT FIX
+   FORCE 95% WIDTH EVERYWHERE
 ======================= */
-.container {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding-left: 20px;
-    padding-right: 20px;
+.container,
+.container-fluid,
+.navbar-inner,
+.masthead,
+.jumbotron,
+#overview,
+.row,
+.row-fluid,
+#footer {
+    width: 95%;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.container > hr {
-    margin: 20px 0;
-}
-
+/* Prevent Bootstrap side overflow */
 .row,
 .row-fluid {
     margin-left: 0;
     margin-right: 0;
 }
 
+/* =======================
+   IMAGES & MEDIA
+======================= */
 img,
 .carousel img,
-img.carousel-image {
-    width: 100%;
+img.carousel-image,
+iframe,
+video {
+    max-width: 100%;
     height: auto;
 }
 
 /* =======================
    NAVBAR
 ======================= */
+.navbar {
+    margin-bottom: 20px;
+}
+
 .navbar .navbar-inner {
     padding: 0;
 }
@@ -56,8 +69,8 @@ img.carousel-image {
 .navbar .nav li a {
     font-weight: bold;
     text-align: center;
-    border-left: 1px solid rgba(255, 255, 255, .75);
-    border-right: 1px solid rgba(0, 0, 0, .1);
+    border-left: 1px solid rgba(255,255,255,.75);
+    border-right: 1px solid rgba(0,0,0,.1);
 }
 
 .navbar .nav li:first-child a {
@@ -70,79 +83,13 @@ img.carousel-image {
     border-radius: 0 3px 3px 0;
 }
 
-body > .navbar {
-    font-size: 13px;
-}
-
-/* Brand */
-body > .navbar .brand {
-    padding-right: 0;
-    padding-left: 0;
-    margin-left: 20px;
-    float: right;
-    font-weight: bold;
-    color: #000;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, .1),
-                 0 0 30px rgba(255, 255, 255, .125);
-    transition: all .2s linear;
-}
-
-body > .navbar .brand:hover {
-    text-decoration: none;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, .1),
-                 0 0 30px rgba(255, 255, 255, .4);
-}
-
-/* =======================
-   SIDENAV
-======================= */
-@media screen and (max-width: 768px) {
-    .bs-docs-sidenav {
-        display: none !important;
-    }
-}
-
-.bs-docs-sidenav {
-    width: 228px;
-    margin: 30px 0 0;
-    padding: 0;
-    background-color: #fff;
-    border-radius: 6px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .065);
-}
-
-.bs-docs-sidenav > li > a {
-    display: block;
-    width: 200px;
-    padding: 8px 14px;
-    border: 1px solid #e5e5e5;
-}
-
-.bs-docs-sidenav > li > a.subhead {
-    width: 168px;
-    padding: 8px 30px;
-    font-size: 12px;
-}
-
-.bs-docs-sidenav > .active > a {
-    padding: 9px 15px;
-    box-shadow: inset 1px 0 0 rgba(0, 0, 0, .1),
-                inset -1px 0 0 rgba(0, 0, 0, .1);
-}
-
-.bs-docs-sidenav.affix {
-    top: 10px;
-}
-
 /* =======================
    JUMBOTRON
 ======================= */
 .jumbotron {
-    position: relative;
     padding: 45px 0 35px;
     color: #fff;
     text-align: center;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, .4);
     background: linear-gradient(45deg, #30393C 0%, #000000 100%);
     box-shadow: inset 0 3px 7px rgba(0,0,0,.2),
                 inset 0 -3px 7px rgba(0,0,0,.2);
@@ -156,51 +103,42 @@ body > .navbar .brand:hover {
 }
 
 /* =======================
-   MEDIA / POSTS
+   CONTENT BOXES
 ======================= */
-#media {
-    margin-top: 70px;
-}
-
-#media .post_row .post {
-    background: #fff;
-    border-radius: 4px;
-    box-shadow: 1px 1px 2px #E0E0E0;
-}
-
-#media .post_row .post:hover {
-    box-shadow: 0px 1px 5px rgb(216, 216, 216);
+.box_cont {
+    background: #f9f9f9;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
 }
 
 /* =======================
    MAP
 ======================= */
 iframe.map-frame {
-    border: none;
     width: 100%;
     height: 550px;
+    border: none;
     margin: 10px 0;
 }
 
 /* =======================
-   FOOTER (FULL WIDTH)
+   FOOTER
 ======================= */
 #footer {
-    z-index: 10;
     margin-top: 50px;
-    padding-bottom: 25px;
-    background-color: #000000;
+    padding: 25px 0;
+    background-color: #000;
     text-align: center;
 }
 
 #footer h3 {
     font-size: 19px;
     text-transform: uppercase;
-    color: #ffffff;
+    color: #fff;
     border-bottom: 1px solid #30393C;
     line-height: 35px;
-    margin-bottom: 20px;
-    margin-top: 25px;
+    margin: 25px 0 20px;
     font-weight: bold;
 }
 
@@ -222,4 +160,16 @@ iframe.map-frame {
 #footer a:hover {
     color: #f1c40f !important;
     text-decoration: none;
+}
+
+/* =======================
+   MOBILE FIX
+======================= */
+@media (max-width: 768px) {
+    .container,
+    .navbar-inner,
+    .jumbotron,
+    #footer {
+        width: 98%;
+    }
 }
