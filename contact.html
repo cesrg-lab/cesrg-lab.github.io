@@ -103,7 +103,7 @@ hr { border-color: rgba(0,0,0,0.1); margin:20px 0; }
          <hr>
          <h4>Feedback Form</h4>
 
-         <form id="contactForm" class="form-horizontal" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+         <form id="contactForm" class="form-horizontal" method="POST" action="https://formspree.io/f/xkowelbz">
             <div class="control-group">
                <label class="control-label">Name</label>
                <div class="controls">
@@ -135,8 +135,7 @@ hr { border-color: rgba(0,0,0,0.1); margin:20px 0; }
             <!-- Google reCAPTCHA -->
             <div class="control-group">
                <div class="controls">
-                  <div class="g-recaptcha" data-sitekey="6LdegzUsAAAAABGXZ75ZIR9E6ICASzO_NlQN9rvb
-"></div>
+                  <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
                </div>
             </div>
 
@@ -149,7 +148,7 @@ hr { border-color: rgba(0,0,0,0.1); margin:20px 0; }
 
             <div class="control-group">
                <div class="controls">
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary">Send</button>
                </div>
             </div>
          </form>
@@ -213,17 +212,13 @@ $('#contactForm').submit(function(e){
       method: "POST",
       data: form.serialize(),
       dataType: "json",
-      success: function(data){
-         if(data.ok){
-            $('#formAlert').html('<div class="alert alert-success">Message sent successfully!</div>');
-            form[0].reset();
-            grecaptcha.reset();
-         } else {
-            $('#formAlert').html('<div class="alert alert-danger">Error: '+ (data.error || 'Please try again.') +'</div>');
-         }
+      success: function(){
+         $('#formAlert').html('<div class="alert alert-success">Message sent successfully! Thank you.</div>');
+         form[0].reset();
+         grecaptcha.reset();
       },
       error: function(){
-         $('#formAlert').html('<div class="alert alert-danger">Server error. Try again later.</div>');
+         $('#formAlert').html('<div class="alert alert-danger">Server error. Please try again later.</div>');
       }
    });
 });
