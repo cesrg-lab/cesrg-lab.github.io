@@ -7,7 +7,7 @@ body {
 }
 
 /* =======================
-   FORCE 95% WIDTH EVERYWHERE
+   FORCE 85% WIDTH EVERYWHERE
 ======================= */
 .container,
 .container-fluid,
@@ -18,13 +18,13 @@ body {
 .row,
 .row-fluid,
 #footer {
-    width: 95%;
-    max-width: 95%;
+    width: 85%;
+    max-width: 85%;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Prevent Bootstrap side overflow */
+/* Remove Bootstrap side overflow */
 .row,
 .row-fluid {
     margin-left: 0;
@@ -170,6 +170,6 @@ iframe.map-frame {
     .navbar-inner,
     .jumbotron,
     #footer {
-        width: 98%;
+        width: 95%;
     }
 }
