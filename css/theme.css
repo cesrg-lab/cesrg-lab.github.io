@@ -1,55 +1,46 @@
-/* =======================
-   GLOBAL
-======================= */
+/* =========================================================
+   GLOBAL RESET – NO HORIZONTAL SCROLL
+========================================================= */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================================
+   BODY
+========================================================= */
 body {
     padding-top: 15px;
-    padding-bottom: 0;
+    padding-bottom: 0px;
+    font-family: Arial, sans-serif;
 }
 
-/* =======================
-   FORCE 85% WIDTH EVERYWHERE
-======================= */
-.container,
-.container-fluid,
-.navbar-inner,
-.masthead,
-.jumbotron,
-#overview,
-.row,
-.row-fluid,
-#footer {
+/* =========================================================
+   MAIN CONTAINER – 85% WIDTH
+========================================================= */
+.container {
     width: 85%;
     max-width: 85%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
-/* Remove Bootstrap side overflow */
-.row,
+.container > hr {
+    margin: 20px 0;
+}
+
+/* =========================================================
+   BOOTSTRAP ROW FIX
+========================================================= */
 .row-fluid {
     margin-left: 0;
     margin-right: 0;
 }
 
-/* =======================
-   IMAGES & MEDIA
-======================= */
-img,
-.carousel img,
-img.carousel-image,
-iframe,
-video {
-    max-width: 100%;
-    height: auto;
-}
-
-/* =======================
-   NAVBAR
-======================= */
-.navbar {
-    margin-bottom: 20px;
-}
-
+/* =========================================================
+   NAVBAR (FULL WIDTH MENU ITEMS)
+========================================================= */
 .navbar .navbar-inner {
     padding: 0;
 }
@@ -69,8 +60,8 @@ video {
 .navbar .nav li a {
     font-weight: bold;
     text-align: center;
-    border-left: 1px solid rgba(255,255,255,.75);
-    border-right: 1px solid rgba(0,0,0,.1);
+    border-left: 1px solid rgba(255, 255, 255, .75);
+    border-right: 1px solid rgba(0, 0, 0, .1);
 }
 
 .navbar .nav li:first-child a {
@@ -83,93 +74,144 @@ video {
     border-radius: 0 3px 3px 0;
 }
 
-/* =======================
-   JUMBOTRON
-======================= */
+/* =========================================================
+   JUMBOTRON / HEADER
+========================================================= */
 .jumbotron {
+    position: relative;
     padding: 45px 0 35px;
     color: #fff;
     text-align: center;
     background: linear-gradient(45deg, #30393C 0%, #000000 100%);
-    box-shadow: inset 0 3px 7px rgba(0,0,0,.2),
-                inset 0 -3px 7px rgba(0,0,0,.2);
+    box-shadow: inset 0 3px 7px rgba(0,0,0,.2);
 }
 
 .lead {
     margin-bottom: 0;
     font-size: 21px;
     font-weight: 200;
-    line-height: 15px;
 }
 
-/* =======================
-   CONTENT BOXES
-======================= */
-.box_cont {
-    background: #f9f9f9;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+/* =========================================================
+   FULL-WIDTH SLIDER (NO SCROLL)
+========================================================= */
+#main-carousel {
+    width: 100vw;
+    max-width: 100%;
+    margin-left: calc(-50vw + 50%);
+    overflow: hidden;
 }
 
-/* =======================
+/* Mobile fix */
+@media (max-width: 768px) {
+    #main-carousel {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* Carousel images */
+.carousel-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+.section-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-header h1,
+.section-header h2 {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* =========================================================
+   MEDIA / POSTS
+========================================================= */
+#media {
+    margin-top: 70px;
+}
+
+#media .post {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px #e0e0e0;
+}
+
+/* =========================================================
    MAP
-======================= */
+========================================================= */
 iframe.map-frame {
+    border: none;
     width: 100%;
     height: 550px;
-    border: none;
-    margin: 10px 0;
 }
 
-/* =======================
+/* =========================================================
    FOOTER
-======================= */
+========================================================= */
 #footer {
     margin-top: 50px;
-    padding: 25px 0;
+    padding-bottom: 25px;
     background-color: #000;
+    color: #fff;
     text-align: center;
 }
 
 #footer h3 {
     font-size: 19px;
     text-transform: uppercase;
-    color: #fff;
+    color: #ffffff;
     border-bottom: 1px solid #30393C;
     line-height: 35px;
-    margin: 25px 0 20px;
+    margin-bottom: 20px;
+    margin-top: 25px;
     font-weight: bold;
 }
 
 #footer p,
 #footer address,
-#footer a,
-#footer span {
+#footer a {
     font-size: 11px;
     font-weight: bold;
 }
 
-/* Highlight contact info */
+/* Highlighted footer info */
 #footer p.contact-info,
 #footer address.contact-info,
 #footer a.show-map {
-    color: #FFD700 !important;
+    color: #FFD700;
 }
 
 #footer a:hover {
-    color: #f1c40f !important;
+    color: #f1c40f;
     text-decoration: none;
 }
 
-/* =======================
-   MOBILE FIX
-======================= */
+/* =========================================================
+   RESPONSIVE FIXES
+========================================================= */
 @media (max-width: 768px) {
-    .container,
-    .navbar-inner,
-    .jumbotron,
-    #footer {
+
+    .container {
         width: 95%;
+        max-width: 95%;
+    }
+
+    .span12,
+    .span6,
+    .span4,
+    .span3 {
+        width: 100%;
+        float: none;
+        margin-bottom: 20px;
     }
 }
