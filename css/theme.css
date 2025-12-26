@@ -131,7 +131,7 @@ ul.sponsors { margin-top: 40px; margin-bottom: 40px; }
 /* Footer links and text */
 #footer a img { margin-top: 40px; }
 #footer p, #footer address { font-size: 11px; }
-#footer, #footer p, #footer address, #footer a, #footer span { font-weight: bold; }
+#footer, #footer p, #footer address, #footer a, #footer span { font-weight: 500; }
 
 /* Only update color for Contact Information, Email, Address, Show Map */
 #footer p.contact-info,
