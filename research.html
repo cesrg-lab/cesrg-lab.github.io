@@ -269,43 +269,59 @@
 </div>
 
 <!-- ================= FOOTER ================= -->
-<footer id="footer">
+<footer id="footer" style="background:#1a1a1a; color:#fff; padding:25px 20px; font-family:Arial, sans-serif;">
    <div class="container text-center">
-      <div class="row-fluid" style="display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:40px;">
+
+      <!-- Upper Footer Sections -->
+      <div class="row-fluid"
+           style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:40px; text-align:center;">
+
          <!-- Contact Information -->
          <div class="footer-section" style="flex:1 1 250px; min-width:250px;">
-            <h3>Contact Information</h3>
-            <p><b>Office Hours:</b> Monday–Friday (9:00am – 5:00pm)</p>
-            <p><b>Phone:</b> +92-51-9049255</p>
-            <p><b>Cell:</b> +92-331-3666163</p>
-            <a href="mailto:ali_arshad@comsats.edu.pk">Email</a>
+            <h3 style="color:#1abc9c; margin-bottom:10px;">Contact Information</h3>
+            <p style="margin:3px 0;"><b>Office Hours:</b> Monday–Friday (9:00am – 5:00pm)</p>
+            <p style="margin:3px 0;"><b>Phone:</b> +92-51-9049255</p>
+            <p style="margin:3px 0;"><b>Cell:</b> +92-331-3666163</p>
+            <a href="mailto:ali_arshad@comsats.edu.pk"
+               style="color:#3498db; text-decoration:none; font-weight:600; display:inline-block;">
+               Email
+            </a>
          </div>
 
          <!-- Logo -->
          <div class="footer-section" style="flex:1 1 250px; min-width:250px;">
             <a href="https://comsats.edu.pk/">
-               <img src="thumbs/CESRG_logo_circle.png" alt="CESRG Logo" style="max-width:150px; border-radius:10px; margin-bottom:10px;">
+               <img src="thumbs/CESRG_logo_circle02.png"
+                    alt="CESRG Logo"
+                    style="max-width:150px; border-radius:10px; margin:0 auto 10px; display:block;">
             </a>
          </div>
 
          <!-- Address -->
          <div class="footer-section" style="flex:1 1 250px; min-width:250px;">
-            <h3>Address</h3>
-            <p>
+            <h3 style="color:#1abc9c; margin-bottom:10px;">Address</h3>
+            <p style="margin:3px 0;">
                Control & Energy Systems Research Group<br>
                Room No. 229, 2nd Floor, Department of Electrical Engineering,<br>
                COMSATS University Islamabad, Pakistan
             </p>
-            <a href="https://maps.app.goo.gl/pZj32DCDwLoRUJXe9" target="_blank">Show Map</a>
+            <a href="https://maps.app.goo.gl/pZj32DCDwLoRUJXe9"
+               target="_blank"
+               style="color:#3498db; text-decoration:none; font-weight:600; display:inline-block;">
+               Show Map
+            </a>
          </div>
       </div>
 
-      <hr style="border-color:rgba(255,255,255,0.2); margin:10px 0;">
+      <!-- Divider -->
+      <hr style="border:0; height:1px; background:rgba(255,255,255,0.25); margin:5px auto; width:80%;">
 
-      <p style="color:#ccc; font-size:14px;">
+      <!-- Bottom Footer -->
+      <p style="margin:5px 0; color:#ccc; font-size:14px; text-align:center;">
          &copy; 2025 CESRG | COMSATS University Islamabad. All rights reserved.
       </p>
-       <p style="margin:2px 0 0 0; padding-bottom:3px; color:#aaa; font-size:13px; text-align:center;">
+
+      <p style="margin:2px 0 0 0; padding-bottom:3px; color:#aaa; font-size:13px; text-align:center;">
    Website Designed & Maintained by
    <a href="https://www.upwork.com/freelancers/~0198227b97d16b50c9"
       target="_blank"
@@ -313,17 +329,19 @@
       Sohail Ahmad
    </a>
 </p>
+
    </div>
 </footer>
+
+
+
 
 <!-- JS -->
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script>
-   $(document).ready(function () {
-      $(document.body).scrollspy({
-         target: "#navparent"
-      });
+   $('#main-carousel').carousel({
+      interval: 5000
    });
 </script>
 
