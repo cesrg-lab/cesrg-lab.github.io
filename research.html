@@ -14,39 +14,79 @@
    <link href="css/theme.css" rel="stylesheet">
 
    <style>
-      section .page-header h3 {
-         color: #1a1a1a;
-         border-bottom: 2px solid #f1c40f;
-         padding-bottom: 5px;
-         margin-bottom: 20px;
+      /* ===== Section Cards ===== */
+      .section-card {
+         background: #ffffff;
+         border-left: 5px solid #1abc9c;
+         padding: 25px 30px;
+         margin-bottom: 35px;
+         border-radius: 6px;
+         box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+         transition: all 0.3s ease-in-out;
       }
+      .section-card:hover {
+         transform: translateY(-3px);
+         box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      }
+
+      section .page-header h3 {
+         border-bottom: none;
+         margin-bottom: 10px;
+         color: #23568F;
+      }
+
       section h4 {
+         color: #1a1a1a;
+         font-size: 20px;
+         margin-top: 10px;
+      }
+
+      section h5 {
+         margin-top: 20px;
+         padding-left: 10px;
+         border-left: 3px solid #f1c40f;
          color: #23568F;
          font-weight: 600;
-         margin-top: 20px;
       }
-      section h5 {
-         color: #1a1a1a;
-         font-weight: 500;
-         margin-top: 15px;
-      }
+
       section p, section ul, section ol {
          line-height: 1.6;
          margin-bottom: 15px;
       }
+
       ul, ol {
          margin-left: 20px;
       }
+
+      /* ===== Sidebar Enhancement ===== */
       .bs-docs-sidebar {
-         margin-top: 30px;   /* keeps sidebar away from header */
+         margin-top: 30px;
+         background: #f9f9f9;
+         padding: 15px;
+         border-radius: 6px;
+         box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       }
       .bs-docs-sidenav li a {
+         padding: 8px 10px;
+         border-radius: 4px;
          color: #23568F;
          font-weight: 500;
       }
-      .bs-docs-sidenav li.active a {
-         color: #f1c40f;
-         font-weight: 700;
+      .bs-docs-sidenav li a:hover {
+         background: #1abc9c;
+         color: #fff;
+         text-decoration: none;
+      }
+
+      /* ===== Links inside section-cards ===== */
+      .section-card ol li a {
+         color: #23568F;
+         text-decoration: none;
+         font-weight: 500;
+      }
+      .section-card ol li a:hover {
+         color: #1abc9c;
+         text-decoration: underline;
       }
    </style>
 </head>
@@ -54,143 +94,204 @@
 <body>
 <div class="container">
 
-<!-- ================= HEADER ================= -->
-<header class="jumbotron subhead text-center">
-   <h1>Control & Energy Systems Research Group</h1>
-   <p class="lead">COMSATS University Islamabad</p>
-</header>
+   <!-- ================= HEADER ================= -->
+   <header class="jumbotron subhead text-center">
+      <h1>Control & Energy Systems Research Group</h1>
+      <p class="lead">COMSATS University Islamabad</p>
+   </header>
 
-<!-- ================= NAVBAR ================= -->
-<div class="masthead">
-   <div class="navbar">
-      <div class="navbar-inner">
-         <div class="container">
-            <ul class="nav">
-               <li><a href="index.html">Home</a></li>
-               <li><a href="people.html">People</a></li>
-               <li class="active"><a href="#">Research</a></li>
-               <li><a href="publications.html">Publications</a></li>
-               <li><a href="gallery.html">Gallery</a></li>
-               <li><a href="contact.html">Contact</a></li>
-            </ul>
+   <!-- ================= NAVBAR ================= -->
+   <div class="masthead">
+      <div class="navbar">
+         <div class="navbar-inner">
+            <div class="container">
+               <ul class="nav">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="people.html">People</a></li>
+                  <li class="active"><a href="#">Research</a></li>
+                  <li><a href="publications.html">Publications</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+               </ul>
+            </div>
          </div>
       </div>
    </div>
-</div>
-
-<hr>
-
-<!-- ================= MAIN CONTENT ================= -->
-<div class="row-fluid">
-
-<!-- ===== LEFT SIDEBAR (NORMAL FLOW, NOT HEADER) ===== -->
-<div class="span3 bs-docs-sidebar">
-   <ul class="nav nav-list bs-docs-sidenav">
-      <li><a href="#current">Current Research</a></li>
-      <li><a href="#completed">Completed Projects</a></li>
-   </ul>
-</div>
-
-<!-- ===== RIGHT CONTENT ===== -->
-<div class="span8 offset1">
-
-<!-- ================= CURRENT RESEARCH ================= -->
-<section id="current">
-   <div class="page-header">
-      <h3>1. Current Research</h3>
-   </div>
-
-   <h4>1.1 Design and Development of Intelligent Battery Pack for Range Extension of Electric Scooter</h4>
-   <p><strong>Project Code:</strong> PSF-CRP/TUBITAK-IV/EV/C-COMSATS (26)</p>
-   <p><strong>Funding Amount:</strong> 19.37 Million PKR</p>
-
-   <h5>1.1.1 Team Members</h5>
-   <ul>
-      <li><strong>Dr. Ali Arshad Uppal</strong> (PI, Pakistan)</li>
-      <li><strong>Dr. Qadeer Ahmed</strong> (Co-PI, USA)</li>
-      <li>Dr. Ahmad Yar (RA)</li>
-      <li>Mr. Afaq Ahmed (RA)</li>
-      <li>Mr. Sohail Ahmed (RA)</li>
-      <li>Mr. Azmatullah (PhD Student)</li>
-      <li>Ms. Sheharbano (PhD Student)</li>
-   </ul>
-
-   <h5>1.1.2 Background</h5>
-   <p>
-      The electric vehicle (EV) market is steadily growing, with projections indicating over
-      <strong>672 million EVs by 2050</strong>. Lithium-ion battery packs form the core of EVs.
-   </p>
-   <p>
-      Cell imbalance may cause premature battery pack shutdown due to the weakest cell.
-      <strong>Active Cell Balancing (ACB)</strong> redistributes energy to improve safety and range.
-   </p>
-
-   <h5>1.1.3 Proposed Research</h5>
-   <ul>
-      <li>Selection of an appropriate Active Cell Balancing Network (ACBN)</li>
-      <li>Mathematical modeling of SoC, thermal dynamics, and terminal voltage</li>
-      <li>High-fidelity modeling of balancing currents and power losses</li>
-      <li>Design of range-aware Nonlinear Model Predictive Control (NMPC)</li>
-      <li>Simulation-based performance evaluation</li>
-      <li>Prototype development for real-time implementation</li>
-   </ul>
-
-   <h5>1.1.4 Intellectual Merit</h5>
-   <ul>
-      <li>Power-loss-aware modeling of ACB networks</li>
-      <li>Unified cell modeling for local and global optimization</li>
-      <li>Range-extension-aware NMPC design</li>
-   </ul>
-
-   <h5>1.1.5 Broader Impact</h5>
-   <ul>
-      <li>Improved EV safety and reliability</li>
-      <li>Reduced emissions and battery degradation</li>
-      <li>Enhanced driving range and affordability</li>
-   </ul>
-
-   <h5>1.1.6 Research Contributions</h5>
-   <ol>
-      <li>Model-Based Quantitative Analysis of Capacitive Cell Balancing</li>
-      <li>Power Loss Aware NMPC for Active Cell Balancing</li>
-      <li>NMPC-Based Performance Evaluation of ACB Networks</li>
-      <li>Scalable and Modular Control Framework</li>
-   </ol>
-</section>
-
-<hr>
-
-<!-- ================= COMPLETED PROJECTS ================= -->
-<section id="completed">
-   <div class="page-header">
-      <h3>2. Completed Projects</h3>
-   </div>
-
-   <h4>2.1 Optimal Control of Active Cell Balancing Network for Lithium-ion Battery Pack</h4>
-   <p><strong>Funding Amount:</strong> 0.4 Million PKR</p>
-   <ul>
-      <li><strong>Dr. Ali Arshad Uppal</strong> (PI)</li>
-      <li>Dr. Syed Bilal Javed (Co-PI, NESCOM)</li>
-      <li>Dr. Rizwan Azam (Co-PI, COMSATS)</li>
-   </ul>
 
    <hr>
 
-   <h4>2.2 Machine Learning Based Control-Oriented Modeling of Underground Coal Gasification</h4>
-   <ul>
-      <li><strong>Dr. Ali Arshad Uppal</strong> (PI)</li>
-      <li>Mr. Afaq Ahmed</li>
-      <li>Dr. Syed Bilal Javed</li>
-   </ul>
+   <!-- ================= MAIN CONTENT ================= -->
+   <div class="row-fluid">
 
-   <ul>
-      <li>Nonlinear ML-based modeling of UCG process</li>
-      <li>Development of <strong>CAVLAB</strong> MATLAB Simulator</li>
-   </ul>
-</section>
+      <!-- ===== LEFT SIDEBAR ===== -->
+      <div class="span3 bs-docs-sidebar">
+         <ul class="nav nav-list bs-docs-sidenav">
+            <li><a href="#current">Current Research</a></li>
+            <li><a href="#completed">Completed Projects</a></li>
+         </ul>
+      </div>
 
-</div>
-</div>
+      <!-- ===== RIGHT CONTENT ===== -->
+      <div class="span8 offset1">
+
+         <!-- ================= CURRENT RESEARCH ================= -->
+         <section id="current" class="section-card">
+            <div class="page-header">
+               <h3>1. Current Research</h3>
+            </div>
+
+            <h4>1.1 Design and Development of Intelligent Battery Pack for Range Extension of Electric Scooter</h4>
+            <p><strong>Project Code:</strong> PSF-CRP/TUBITAK-IV/EV/C-COMSATS (26)</p>
+            <p><strong>Funding Amount:</strong> 19.37 Million PKR</p>
+
+            <h5>1.1.1 Team Members</h5>
+            <ul>
+               <li><strong>Dr. Ali Arshad Uppal</strong> (PI, Pakistan)</li>
+               <li><strong>Dr. Qadeer Ahmed</strong> (Co-PI, USA)</li>
+               <li>Dr. Ahmad Yar (RA)</li>
+               <li>Mr. Afaq Ahmed (RA)</li>
+               <li>Mr. Sohail Ahmed (RA)</li>
+               <li>Mr. Azmatullah (PhD Student)</li>
+               <li>Ms. Sheharbano (PhD Student)</li>
+            </ul>
+
+            <h5>1.1.2 Background</h5>
+            <p>
+               The electric vehicle (EV) market is steadily growing, with projections indicating over
+               <strong>672 million EVs by 2050</strong>. Lithium-ion battery packs form the core of EVs.
+            </p>
+            <p>
+               Cell imbalance may cause premature battery pack shutdown due to the weakest cell.
+               <strong>Active Cell Balancing (ACB)</strong> redistributes energy to improve safety and range.
+            </p>
+
+            <h5>1.1.3 Proposed Research</h5>
+            <ul>
+               <li>Selection of an appropriate Active Cell Balancing Network (ACBN)</li>
+               <li>Mathematical modeling of SoC, thermal dynamics, and terminal voltage</li>
+               <li>High-fidelity modeling of balancing currents and power losses</li>
+               <li>Design of range-aware Nonlinear Model Predictive Control (NMPC)</li>
+               <li>Simulation-based performance evaluation</li>
+               <li>Prototype development for real-time implementation</li>
+            </ul>
+
+            <h5>1.1.4 Intellectual Merit</h5>
+            <ul>
+               <li>Power-loss-aware modeling of ACB networks</li>
+               <li>Unified cell modeling for local and global optimization</li>
+               <li>Range-extension-aware NMPC design</li>
+            </ul>
+
+            <h5>1.1.5 Broader Impact</h5>
+            <ul>
+               <li>Improved EV safety and reliability</li>
+               <li>Reduced emissions and battery degradation</li>
+               <li>Enhanced driving range and affordability</li>
+            </ul>
+
+            <h5>1.1.6 Research Contributions</h5>
+            <ol>
+               <li>
+                  <a href="https://aauppal.github.io/publication/C5" target="_blank">
+                     Model-Based Quantitative Analysis of a Capacitive Cell Balancing Technique
+                     using State-of-Charge (SoC) Estimator
+                  </a>
+               </li>
+               <li>
+                  <a href="https://aauppal.github.io/publication/J30" target="_blank">
+                     Power Losses Aware Nonlinear Model Predictive Control Design for
+                     Active Cell Balancing
+                  </a>
+               </li>
+               <li>
+                  <a href="https://aauppal.github.io/publication/C6" target="_blank">
+                     Nonlinear Model Predictive Control Design for
+                     Active Cell Balancing and Thermal Management
+                  </a>
+               </li>
+               <li>
+                  <a href="https://aauppal.github.io/publication/J32" target="_blank">
+                     Model-Based Quantitative Analysis of Power Losses Aware
+                     Active Cell Balancing Networks with Load
+                  </a>
+               </li>
+               <li>
+                  <a href="https://aauppal.github.io/publication/C7" target="_blank">
+                     Performance Analysis of Model Predictive Controllers for
+                     Active Cell Balancing of Electric Vehicle Battery Packs
+                  </a>
+               </li>
+               <li>
+                  <a href="https://aauppal.github.io/publication/J33" target="_blank">
+                     NMPC-Based Performance Evaluation of Active Balancing Networks of
+                     Lithium-Ion Batteries for Overnight EV Charging
+                  </a>
+               </li>
+               <li>
+                  <a href="https://aauppal.github.io/publication/C8" target="_blank">
+                     Design and Evaluation of Nonlinear Model Predictive Control for
+                     Active Load Balancing in Adjacent Battery Cells
+                  </a>
+               </li>
+               <li>
+                  <a href="https://aauppal.github.io/publication/J34" target="_blank">
+                     Scalable and Modular Control Framework for Managing
+                     Active Cell Balancing Challenges in Battery Packs
+                  </a>
+               </li>
+            </ol>
+         </section>
+
+         <hr>
+
+         <!-- ================= COMPLETED PROJECTS ================= -->
+         <section id="completed" class="section-card">
+            <div class="page-header">
+               <h3>2. Completed Projects</h3>
+            </div>
+
+            <h4>2.1 Optimal Control of Active Cell Balancing Network for Lithium-ion Battery Pack</h4>
+            <p><strong>Funding Amount:</strong> 0.4 Million PKR</p>
+            <ul>
+               <li><strong>Dr. Ali Arshad Uppal</strong> (PI)</li>
+               <li>Dr. Syed Bilal Javed (Co-PI, NESCOM)</li>
+               <li>Dr. Rizwan Azam (Co-PI, COMSATS)</li>
+            </ul>
+
+            <hr>
+
+            <h4>2.2 Machine Learning Based Control-Oriented Modeling of Underground Coal Gasification</h4>
+            <ul>
+               <li><strong>Dr. Ali Arshad Uppal</strong> (PI)</li>
+               <li>Mr. Afaq Ahmed</li>
+               <li>Dr. Syed Bilal Javed</li>
+            </ul>
+
+            <h5>2.2.2 Research Contributions</h5>
+            <ol>
+               <li>
+                  <a href="https://aauppal.github.io/publication/J29" target="_blank">
+                     Chattering-Free Sliding Mode Control with Adaptive State Estimation
+                     for Underground Coal Gasification Energy Conversion Process
+                  </a>
+               </li>
+               <li>
+                  <a href="https://aauppal.github.io/publication/J28" target="_blank">
+                     State-Dependent Kalman Filter Design for Nonlinear Dynamic Modeling
+                     of Underground Coal Gasification Process
+                  </a>
+               </li>
+               <li>
+                  <a href="https://github.com/Hilberto-inf/CAVLAB--UCG-process-simulator" target="_blank">
+                     CAVLAB Simulator for Underground Coal Gasification (UCG)
+                     Energy Conversion Process
+                  </a>
+               </li>
+            </ol>
+         </section>
+
+      </div>
+   </div>
 </div>
 
 <!-- ================= JS ================= -->
