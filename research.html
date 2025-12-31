@@ -20,23 +20,47 @@
          padding-bottom: 5px;
          margin-bottom: 20px;
       }
-      section h4 { color: #23568F; font-weight: 600; }
-      section h5 { color: #1a1a1a; font-weight: 500; }
-      section p, section ul, section ol { line-height: 1.6; margin-bottom: 15px; }
-      ul, ol { margin-left: 20px; }
-      .bs-docs-sidenav li a { color: #23568F; font-weight: 500; }
-      .bs-docs-sidenav li.active a { color: #f1c40f; font-weight: 700; }
+      section h4 {
+         color: #23568F;
+         font-weight: 600;
+         margin-top: 20px;
+      }
+      section h5 {
+         color: #1a1a1a;
+         font-weight: 500;
+         margin-top: 15px;
+      }
+      section p, section ul, section ol {
+         line-height: 1.6;
+         margin-bottom: 15px;
+      }
+      ul, ol {
+         margin-left: 20px;
+      }
+      .bs-docs-sidebar {
+         margin-top: 30px;   /* keeps sidebar away from header */
+      }
+      .bs-docs-sidenav li a {
+         color: #23568F;
+         font-weight: 500;
+      }
+      .bs-docs-sidenav li.active a {
+         color: #f1c40f;
+         font-weight: 700;
+      }
    </style>
 </head>
 
 <body>
 <div class="container">
 
+<!-- ================= HEADER ================= -->
 <header class="jumbotron subhead text-center">
    <h1>Control & Energy Systems Research Group</h1>
    <p class="lead">COMSATS University Islamabad</p>
 </header>
 
+<!-- ================= NAVBAR ================= -->
 <div class="masthead">
    <div class="navbar">
       <div class="navbar-inner">
@@ -56,17 +80,18 @@
 
 <hr>
 
+<!-- ================= MAIN CONTENT ================= -->
 <div class="row-fluid">
 
-<!-- Sidebar -->
+<!-- ===== LEFT SIDEBAR (NORMAL FLOW, NOT HEADER) ===== -->
 <div class="span3 bs-docs-sidebar">
-   <ul class="nav nav-list bs-docs-sidenav" data-spy="affix">
+   <ul class="nav nav-list bs-docs-sidenav">
       <li><a href="#current">Current Research</a></li>
       <li><a href="#completed">Completed Projects</a></li>
    </ul>
 </div>
 
-<!-- Content -->
+<!-- ===== RIGHT CONTENT ===== -->
 <div class="span8 offset1">
 
 <!-- ================= CURRENT RESEARCH ================= -->
@@ -96,24 +121,24 @@
       <strong>672 million EVs by 2050</strong>. Lithium-ion battery packs form the core of EVs.
    </p>
    <p>
-      Cell imbalance can cause premature battery shutdown due to the weakest cell.
+      Cell imbalance may cause premature battery pack shutdown due to the weakest cell.
       <strong>Active Cell Balancing (ACB)</strong> redistributes energy to improve safety and range.
    </p>
 
    <h5>1.1.3 Proposed Research</h5>
    <ul>
-      <li>Selection of appropriate Active Cell Balancing Network (ACBN)</li>
-      <li>Mathematical modeling of cell SoC, thermal dynamics, and voltage</li>
-      <li>High-fidelity ACBN modeling including losses</li>
+      <li>Selection of an appropriate Active Cell Balancing Network (ACBN)</li>
+      <li>Mathematical modeling of SoC, thermal dynamics, and terminal voltage</li>
+      <li>High-fidelity modeling of balancing currents and power losses</li>
       <li>Design of range-aware Nonlinear Model Predictive Control (NMPC)</li>
-      <li>Simulation-based validation</li>
-      <li>Prototype development</li>
+      <li>Simulation-based performance evaluation</li>
+      <li>Prototype development for real-time implementation</li>
    </ul>
 
    <h5>1.1.4 Intellectual Merit</h5>
    <ul>
       <li>Power-loss-aware modeling of ACB networks</li>
-      <li>Unified cell model for local and global optimization</li>
+      <li>Unified cell modeling for local and global optimization</li>
       <li>Range-extension-aware NMPC design</li>
    </ul>
 
@@ -168,8 +193,9 @@
 </div>
 </div>
 
-<!-- JS -->
+<!-- ================= JS ================= -->
 <script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+
 </body>
 </html>
