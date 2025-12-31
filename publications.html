@@ -36,13 +36,14 @@
             </div>
          </div>
          <hr>
-        <style>
+   <style>
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     background-color: #f5f5f5;
+    text-align: center; /* Center all text by default */
 }
 
 /* Sidebar */
@@ -54,12 +55,12 @@ body {
     position: fixed;
     padding: 20px;
     overflow-y: auto;
+    text-align: center; /* Center sidebar text */
 }
 
 .sidebar h3 {
     margin-top: 0;
     font-size: 20px;
-    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -82,11 +83,15 @@ body {
     margin-left: 240px;
     padding: 20px;
     flex: 1;
+    text-align: center; /* Center all content */
 }
 
-.main-content h2 {
-    text-align: center;
-    margin-bottom: 30px;
+.main-content h2, 
+.main-content h3, 
+.main-content h4, 
+.main-content p, 
+.publication a {
+    text-align: center; /* Ensure headings, paragraphs, links are centered */
 }
 
 .publication {
@@ -95,23 +100,36 @@ body {
     padding: 12px 16px;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
-}
-
-.publication h4 {
-    margin: 5px 0;
-}
-
-.publication p {
-    margin: 2px 0;
-    font-size: 14px;
+    display: inline-block; /* Center publication boxes */
+    text-align: center;
+    width: 80%; /* Optional: limit width for better centering */
 }
 
 hr {
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 15px 0;
+    margin: 15px auto; /* Center the horizontal line */
+}
+
+/* Footer */
+#footer {
+    text-align: center; /* Center footer content */
+}
+
+#footer h3, 
+#footer p, 
+#footer a {
+    text-align: center;
+    display: block;
+    margin: 5px auto;
+}
+
+#footer img {
+    margin: 0 auto 10px;
+    display: block;
 }
 </style>
+
 </head>
 <body>
 
