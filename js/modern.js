@@ -728,7 +728,51 @@
 
                 }
             );
+/* =====================================================
+   LAB VIDEO — PLAY WHEN VISIBLE
+   ===================================================== */
 
+const labSection =
+    document.getElementById("lab");
+
+const labVideo =
+    document.getElementById("cesrgLabVideo");
+
+
+if (labSection && labVideo) {
+
+    const videoObserver =
+        new IntersectionObserver(
+            function (entries) {
+
+                entries.forEach(
+                    function (entry) {
+
+                        if (entry.isIntersecting) {
+
+                            labVideo.play()
+                                .catch(function () {
+                                    // Autoplay may be blocked by the browser.
+                                });
+
+                        } else {
+
+                            labVideo.pause();
+
+                        }
+
+                    },
+                    {
+                        threshold: 0.35
+                    }
+                );
+
+            }
+        );
+
+    videoObserver.observe(labSection);
+
+}
         }
     );
 
@@ -790,3 +834,4 @@
 
 
 })();
+
