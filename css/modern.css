@@ -1435,3 +1435,54 @@ button:focus-visible {
         transition-duration: 0.01ms !important;
     }
 }
+/* =====================================================
+   CESRG LAB VIDEO
+   ===================================================== */
+
+.lab-video-wrapper {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 25px;
+    background: #071525;
+    border: 1px solid #e3e8ee;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(7,21,37,.10);
+}
+
+.lab-video {
+    display: block;
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    background: #071525;
+}
+
+.lab-video-label {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 55px 22px 20px;
+    background: linear-gradient(
+        transparent,
+        rgba(4,14,27,.88)
+    );
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    pointer-events: none;
+}
+
+@media (max-width: 650px) {
+
+    .lab-video {
+        min-height: 240px;
+        max-height: 400px;
+    }
+
+    .lab-video-label {
+        padding: 45px 15px 15px;
+        font-size: 12px;
+    }
+
+}
