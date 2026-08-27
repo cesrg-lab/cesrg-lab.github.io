@@ -1,269 +1,1819 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="utf-8">
-   <title>Research</title>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="Control & Energy Systems Research Group, COMSATS University Islamabad (CUI), Pakistan">
 
-   <link rel="icon" type="image/jpeg" href="thumbs/CESRG_logo_circle.png">
+    <meta charset="UTF-8">
 
-   <!-- CSS -->
-   <link href="css/bootstrap.min.css" rel="stylesheet">
-   <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-   <link href="css/theme.css" rel="stylesheet">
+    <title>
+        Research | CESRG – Control & Energy Systems Research Group
+    </title>
 
-   <style>
-      section .page-header h3 {
-         color: #1a1a1a;
-         border-bottom: 2px solid #f1c40f;
-         padding-bottom: 5px;
-         margin-bottom: 25px;
-      }
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-      .research-card {
-         margin-bottom: 30px;
-         padding: 15px 20px;
-         background: #ffffff;
-         border-radius: 6px;
-         box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      }
+    <meta name="description"
+          content="Research projects, active cell balancing, battery management, nonlinear control and energy systems research at CESRG, COMSATS University Islamabad.">
 
-      .research-card h4 {
-         color: #23568F;
-         margin-top: 10px;
-      }
+    <link rel="icon"
+          type="image/png"
+          href="thumbs/CESRG_logo_circle.png">
 
-      .research-card h5 {
-         margin-top: 15px;
-         color: #1a1a1a;
-         font-weight: 600;
-      }
+    <!-- CESRG MODERN CSS -->
+    <link rel="stylesheet"
+          href="css/modern.css">
 
-      .research-card p, 
-      .research-card ul, 
-      .research-card ol {
-         line-height: 1.6;
-         margin-bottom: 10px;
-      }
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-      .research-card ol li a, 
-      .research-card ul li a {
-         color: #23568F;
-         text-decoration: none;
-      }
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-      .research-card ol li a:hover,
-      .research-card ul li a:hover {
-         text-decoration: underline;
-         color: #f1c40f;
-      }
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
 
-      .bs-docs-sidenav li a {
-         color: #23568F;
-         font-weight: 500;
-      }
 
-      .bs-docs-sidenav li.active a {
-         color: #f1c40f;
-         font-weight: 700;
-      }
+    <style>
 
-      @media (max-width: 767px) {
-         .span8.offset1 {
-            margin-left: 0;
-         }
-      }
-   </style>
+        /* =====================================================
+           RESEARCH PAGE
+           ===================================================== */
+
+        .research-nav {
+            position: sticky;
+            top: 82px;
+            z-index: 100;
+            margin: 35px 0 50px;
+            padding: 12px;
+            background: rgba(255,255,255,0.94);
+            border: 1px solid #e5eaf0;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(7,21,37,0.07);
+            backdrop-filter: blur(14px);
+        }
+
+        .research-nav-inner {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .research-nav a {
+            display: inline-flex;
+            align-items: center;
+            padding: 9px 14px;
+            border-radius: 10px;
+            color: #475467;
+            font-size: 12px;
+            font-weight: 650;
+            text-decoration: none;
+        }
+
+        .research-nav a:hover {
+            background: #eef7fc;
+            color: #1769aa;
+        }
+
+
+        /* =====================================================
+           RESEARCH STATISTICS
+           ===================================================== */
+
+        .research-stats {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin: 35px 0 65px;
+        }
+
+        .research-stat {
+            padding: 25px 20px;
+            text-align: center;
+            background: #ffffff;
+            border: 1px solid #e5eaf0;
+            border-radius: 18px;
+            box-shadow: 0 7px 25px rgba(7,21,37,0.06);
+        }
+
+        .research-stat-number {
+            display: block;
+            margin-bottom: 7px;
+            color: #1769aa;
+            font-size: 28px;
+            font-weight: 800;
+        }
+
+        .research-stat-label {
+            color: #667085;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+
+        /* =====================================================
+           PROJECT CARD
+           ===================================================== */
+
+        .research-project {
+            margin-bottom: 60px;
+            padding: 35px;
+            background: #ffffff;
+            border: 1px solid #e4e9ef;
+            border-radius: 24px;
+            box-shadow: 0 10px 35px rgba(7,21,37,0.07);
+        }
+
+        .research-project.featured {
+            border-top: 5px solid #1769aa;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .project-title-area {
+            flex: 1;
+        }
+
+        .project-number {
+            display: inline-flex;
+            padding: 6px 12px;
+            margin-bottom: 13px;
+            border-radius: 50px;
+            background: #edf7fc;
+            color: #1769aa;
+            font-size: 11px;
+            font-weight: 750;
+            letter-spacing: .4px;
+            text-transform: uppercase;
+        }
+
+        .project-title {
+            margin: 0;
+            color: #0b1f3a;
+            font-size: 27px;
+            line-height: 1.35;
+        }
+
+        .funding-box {
+            flex: 0 0 190px;
+            padding: 20px;
+            text-align: center;
+            background:
+                linear-gradient(
+                    135deg,
+                    #071525,
+                    #123b69
+                );
+            border-radius: 17px;
+            color: white;
+        }
+
+        .funding-label {
+            display: block;
+            margin-bottom: 6px;
+            color: rgba(255,255,255,.70);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: .7px;
+            text-transform: uppercase;
+        }
+
+        .funding-value {
+            display: block;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+
+        /* =====================================================
+           PROJECT META
+           ===================================================== */
+
+        .project-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0 30px;
+        }
+
+        .meta-item {
+            padding: 9px 13px;
+            background: #f6f8fa;
+            border: 1px solid #e6ebf0;
+            border-radius: 10px;
+            color: #475467;
+            font-size: 12px;
+        }
+
+        .meta-item strong {
+            color: #172033;
+        }
+
+
+        /* =====================================================
+           CONTENT GRID
+           ===================================================== */
+
+        .research-content-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+            gap: 22px;
+        }
+
+        .research-content-box {
+            padding: 25px;
+            background: #f8fafc;
+            border: 1px solid #e6ebf0;
+            border-radius: 17px;
+        }
+
+        .research-content-box.full {
+            grid-column: 1 / -1;
+        }
+
+        .research-content-box h4 {
+            margin: 0 0 15px;
+            color: #0b1f3a;
+            font-size: 17px;
+        }
+
+        .research-content-box p {
+            color: #475467;
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+        .research-content-box ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .research-content-box li {
+            margin-bottom: 10px;
+            color: #475467;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+
+        /* =====================================================
+           TEAM
+           ===================================================== */
+
+        .team-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+        }
+
+        .team-member {
+            display: inline-flex;
+            align-items: center;
+            padding: 9px 12px;
+            background: white;
+            border: 1px solid #dfe7ee;
+            border-radius: 10px;
+            color: #344054;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .team-member strong {
+            color: #1769aa;
+        }
+
+
+        /* =====================================================
+           RESEARCH PIPELINE
+           ===================================================== */
+
+        .research-pipeline {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .pipeline-step {
+            position: relative;
+            padding: 20px 15px;
+            text-align: center;
+            background: white;
+            border: 1px solid #dfe7ee;
+            border-radius: 14px;
+        }
+
+        .pipeline-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            margin: 0 auto 10px;
+            border-radius: 50%;
+            background: #1769aa;
+            color: white;
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .pipeline-step h5 {
+            margin: 0 0 7px;
+            color: #172033;
+            font-size: 13px;
+        }
+
+        .pipeline-step p {
+            margin: 0;
+            color: #667085;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+
+        /* =====================================================
+           CONTRIBUTIONS
+           ===================================================== */
+
+        .publication-list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .publication-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+            padding: 15px;
+            background: white;
+            border: 1px solid #e2e8ef;
+            border-radius: 12px;
+            transition: .25s ease;
+        }
+
+        .publication-item:hover {
+            border-color: #1769aa;
+            transform: translateX(3px);
+        }
+
+        .publication-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: #edf7fc;
+            color: #1769aa;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .publication-item a {
+            color: #344054;
+            font-size: 13px;
+            line-height: 1.55;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .publication-item a:hover {
+            color: #1769aa;
+        }
+
+
+        /* =====================================================
+           COMPLETED PROJECT
+           ===================================================== */
+
+        .completed-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(310px, 1fr));
+            gap: 22px;
+        }
+
+        .completed-card {
+            padding: 28px;
+            background: #ffffff;
+            border: 1px solid #e3e8ee;
+            border-radius: 19px;
+            box-shadow: 0 7px 25px rgba(7,21,37,0.06);
+            transition: .3s ease;
+        }
+
+        .completed-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 35px rgba(7,21,37,0.10);
+        }
+
+        .completed-card h3 {
+            margin: 12px 0;
+            color: #0b1f3a;
+            font-size: 19px;
+            line-height: 1.45;
+        }
+
+        .completed-card p {
+            color: #667085;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .completed-card ul {
+            padding-left: 19px;
+        }
+
+        .completed-card li {
+            margin-bottom: 7px;
+            color: #475467;
+            font-size: 13px;
+        }
+
+        .completed-label {
+            display: inline-flex;
+            padding: 5px 10px;
+            border-radius: 50px;
+            background: #f0fdf4;
+            color: #15803d;
+            font-size: 10px;
+            font-weight: 750;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+        }
+
+        .completed-links {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #edf0f3;
+        }
+
+        .completed-links a {
+            display: block;
+            margin: 8px 0;
+            color: #1769aa;
+            font-size: 12px;
+            font-weight: 650;
+            line-height: 1.5;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 760px) {
+
+            .research-nav {
+                position: static;
+            }
+
+            .research-project {
+                padding: 22px;
+            }
+
+            .project-header {
+                flex-direction: column;
+            }
+
+            .funding-box {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .project-title {
+                font-size: 22px;
+            }
+
+        }
+
+    </style>
+
 </head>
 
+
 <body>
+
+
+<!-- =====================================================
+     NAVIGATION
+     ===================================================== -->
+
+<header class="masthead">
+
+    <div class="navbar">
+
+        <div class="navbar-inner">
+
+            <div class="container">
+
+                <a href="index.html"
+                   style="
+                       display:flex;
+                       align-items:center;
+                       justify-content:center;
+                       gap:10px;
+                       margin:10px auto;
+                       width:max-content;
+                       color:#0b1f3a;
+                       font-weight:800;
+                       text-decoration:none;
+                   ">
+
+                    <img
+                        src="thumbs/CESRG_logo_circle02.png"
+                        alt="CESRG Logo"
+                        style="
+                            width:42px;
+                            height:42px;
+                            object-fit:contain;
+                        ">
+
+                    <span>
+                        CESRG
+                    </span>
+
+                </a>
+
+
+                <button
+                    class="cesrg-mobile-toggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false">
+
+                    ☰
+
+                </button>
+
+
+                <ul class="nav">
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="people.html">
+                            People
+                        </a>
+                    </li>
+
+                    <li class="active">
+                        <a href="research.html">
+                            Research
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="publications.html">
+                            Publications
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="gallery.html">
+                            Gallery
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+     ===================================================== -->
+
+<section class="jumbotron">
+
+    <div class="container">
+
+        <div style="max-width:900px;">
+
+            <div style="
+                display:inline-flex;
+                padding:7px 14px;
+                margin-bottom:18px;
+                border-radius:50px;
+                background:rgba(255,255,255,0.10);
+                border:1px solid rgba(255,255,255,0.15);
+                font-size:12px;
+                font-weight:700;
+                letter-spacing:.4px;
+            ">
+
+                RESEARCH & INNOVATION
+
+            </div>
+
+
+            <h1>
+                Research at CESRG
+            </h1>
+
+
+            <p style="max-width:800px;">
+
+                Advancing control, energy storage,
+                battery management and intelligent
+                energy systems through mathematical
+                modeling, advanced control and
+                real-time implementation.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     RESEARCH NAVIGATION
+     ===================================================== -->
+
 <div class="container">
 
-   <header class="jumbotron subhead text-center">
-      <h1>Control & Energy Systems Research Group</h1>
-      <p class="lead">COMSATS University Islamabad</p>
-   </header>
+    <nav class="research-nav">
 
-   <div class="masthead">
-      <div class="navbar">
-         <div class="navbar-inner">
-            <div class="container">
-               <ul class="nav">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="people.html">People</a></li>
-                  <li class="active"><a href="#">Research</a></li>
-                  <li><a href="publications.html">Publications</a></li>
-                  <li><a href="gallery.html">Gallery</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-               </ul>
-            </div>
-         </div>
-      </div>
-   </div>
+        <div class="research-nav-inner">
 
-   <hr>
+            <a href="#current">
+                Current Research
+            </a>
 
-   <div class="row-fluid">
+            <a href="#project-team">
+                Project Team
+            </a>
 
-      <!-- Sidebar -->
-      <div class="span3 bs-docs-sidebar">
-         <ul class="nav nav-list bs-docs-sidenav">
-            <li><a href="#current">Current Research</a></li>
-            <li><a href="#completed">Completed Projects</a></li>
-         </ul>
-      </div>
+            <a href="#contributions">
+                Contributions
+            </a>
 
-      <!-- Main Content -->
-      <div class="span8 offset1">
+            <a href="#completed">
+                Completed Projects
+            </a>
 
-         <!-- Current Research -->
-         <section id="current" class="research-card">
-            <div class="page-header">
-               <h3>1. Current Research</h3>
-            </div>
+        </div>
 
-            <h4>1.1 Design and Development of Intelligent Battery Pack for Range Extension of Electric Scooter</h4>
-            <p><strong>Project Code:</strong> PSF-CRP/TUBITAK-IV/EV/C-COMSATS (26)</p>
-            <p><strong>Funding Amount:</strong> 19.37 Million PKR</p>
+    </nav>
 
-            <h5>1.1.1 Team Members</h5>
-            <ul>
-               <li><strong>Dr. Ali Arshad Uppal</strong> (PI, Pakistan)</li>
-               <li><strong>Dr. Qadeer Ahmed</strong> (Co-PI, USA)</li>
-               <li>Dr. Ahmad Yar (RA)</li>
-               <li>Mr. Afaq Ahmed (RA)</li>
-               <li>Mr. Sohail Ahmad (RA)</li>
-               <li>Mr. Azmatullah (PhD Student)</li>
-               <li>Ms. Sheharbano (PhD Student)</li>
-            </ul>
-
-            <h5>1.1.2 Background</h5>
-            <p>The EV market is steadily growing, with projections indicating over <strong>672 million EVs by 2050</strong>. Lithium-ion battery packs form the core of EVs.</p>
-            <p>Cell imbalance may cause premature battery pack shutdown due to the weakest cell. <strong>Active Cell Balancing (ACB)</strong> redistributes energy to improve safety and range.</p>
-
-            <h5>1.1.3 Proposed Research</h5>
-            <ul>
-               <li>Selection of an appropriate Active Cell Balancing Network (ACBN)</li>
-               <li>Mathematical modeling of SoC, thermal dynamics, and terminal voltage</li>
-               <li>High-fidelity modeling of balancing currents and power losses</li>
-               <li>Design of range-aware Nonlinear Model Predictive Control (NMPC)</li>
-               <li>Simulation-based performance evaluation</li>
-               <li>Prototype development for real-time implementation</li>
-            </ul>
-
-            <h5>1.1.4 Intellectual Merit</h5>
-            <ul>
-               <li>Power-loss-aware modeling of ACB networks</li>
-               <li>Unified cell modeling for local and global optimization</li>
-               <li>Range-extension-aware NMPC design</li>
-            </ul>
-
-            <h5>1.1.5 Broader Impact</h5>
-            <ul>
-               <li>Improved EV safety and reliability</li>
-               <li>Reduced emissions and battery degradation</li>
-               <li>Enhanced driving range and affordability</li>
-            </ul>
-
-            <h5>1.1.6 Research Contributions</h5>
-            <ol>
-               <li><a href="https://aauppal.github.io/publication/C5" target="_blank">Model-Based Quantitative Analysis of a Capacitive Cell Balancing Technique using State-of-Charge (SoC) Estimator</a></li>
-               <li><a href="https://aauppal.github.io/publication/J30" target="_blank">Power Losses Aware Nonlinear Model Predictive Control Design for Active Cell Balancing</a></li>
-               <li><a href="https://aauppal.github.io/publication/C6" target="_blank">Nonlinear Model Predictive Control Design for Active Cell Balancing and Thermal Management</a></li>
-               <li><a href="https://aauppal.github.io/publication/J32" target="_blank">Model-Based Quantitative Analysis of Power Losses Aware Active Cell Balancing Networks with Load</a></li>
-               <li><a href="https://aauppal.github.io/publication/C7" target="_blank">Performance Analysis of Model Predictive Controllers for Active Cell Balancing of Electric Vehicle Battery Packs</a></li>
-               <li><a href="https://aauppal.github.io/publication/J33" target="_blank">NMPC-Based Performance Evaluation of Active Balancing Networks of Lithium-Ion Batteries for Overnight EV Charging</a></li>
-               <li><a href="https://aauppal.github.io/publication/C8" target="_blank">Design and Evaluation of Nonlinear Model Predictive Control for Active Load Balancing in Adjacent Battery Cells</a></li>
-               <li><a href="https://aauppal.github.io/publication/J34" target="_blank">Scalable and Modular Control Framework for Managing Active Cell Balancing Challenges in Battery Packs</a></li>
-            </ol>
-         </section>
-
-         <hr>
-
-         <!-- Completed Projects -->
-         <section id="completed" class="research-card">
-            <div class="page-header">
-               <h3>2. Completed Projects</h3>
-            </div>
-
-            <h4>2.1 Optimal Control of Active Cell Balancing Network for Lithium-ion Battery Pack</h4>
-            <p><strong>Funding Amount:</strong> 0.4 Million PKR</p>
-            <ul>
-               <li><strong>Dr. Ali Arshad Uppal</strong> (PI)</li>
-               <li>Dr. Syed Bilal Javed (Co-PI, NESCOM)</li>
-               <li>Dr. Rizwan Azam (Co-PI, COMSATS)</li>
-            </ul>
-
-            <hr>
-
-            <h4>2.2 Machine Learning Based Control-Oriented Modeling of Underground Coal Gasification</h4>
-            <ul>
-               <li><strong>Dr. Ali Arshad Uppal</strong> (PI)</li>
-               <li>Mr. Afaq Ahmed</li>
-               <li>Dr. Syed Bilal Javed</li>
-            </ul>
-
-            <h5>2.2.2 Research Contributions</h5>
-            <ol>
-               <li><a href="https://aauppal.github.io/publication/J29" target="_blank">Nonlinear-Control-Oriented Modeling of the MultiVariable Underground Coal Gasification Process for UCG Project Thar: A Machine Learning Perspective</a></li>
-               <li><a href="https://aauppal.github.io/publication/J28" target="_blank">State-Dependent Kalman Filter Design for Nonlinear Dynamic Modeling of Underground Coal Gasification Process</a></li>
-               <li><a href="https://github.com/Hilberto-inf/CAVLAB--UCG-process-simulator" target="_blank">CAVLAB Simulator for Underground Coal Gasification (UCG) Energy Conversion Process</a></li>
-            </ol>
-         </section>
-
-      </div>
-   </div>
 </div>
 
-<!-- ================= FOOTER ================= -->
-<footer id="footer" style="background:#1a1a1a; color:#fff; padding:25px 20px; font-family:Arial, sans-serif;">
-   <div class="container text-center">
 
-      <div class="row-fluid"
-           style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:40px; text-align:center;">
 
-         <div class="footer-section" style="flex:1 1 250px; min-width:250px;">
-            <h3 style="color:#1abc9c; margin-bottom:10px;">Contact Information</h3>
-            <p style="margin:3px 0;"><b>Office Hours:</b> Monday–Friday (9:00am – 5:00pm)</p>
-            <p style="margin:3px 0;"><b>Phone:</b> +92-51-9049255</p>
-            <p style="margin:3px 0;"><b>Cell:</b> +92-331-3666163</p>
-            <a href="mailto:ali_arshad@comsats.edu.pk" style="color:#3498db; text-decoration:none; font-weight:600; display:inline-block;">Email</a>
-         </div>
+<!-- =====================================================
+     RESEARCH STATISTICS
+     ===================================================== -->
 
-         <div class="footer-section" style="flex:1 1 250px; min-width:250px;">
-            <a href="https://comsats.edu.pk/">
-               <img src="thumbs/CESRG_logo_circle02.png" alt="CESRG Logo" style="max-width:150px; border-radius:10px; margin:0 auto 10px; display:block;">
-            </a>
-         </div>
+<section class="container">
 
-         <div class="footer-section" style="flex:1 1 250px; min-width:250px;">
-            <h3 style="color:#1abc9c; margin-bottom:10px;">Address</h3>
-            <p style="margin:3px 0;">
-               Control & Energy Systems Research Group<br>
-               Room No. 229, 2nd Floor, Department of Electrical Engineering,<br>
-               COMSATS University Islamabad, Pakistan
+    <div class="research-stats">
+
+
+        <div class="research-stat">
+
+            <span class="research-stat-number">
+                19.37M
+            </span>
+
+            <span class="research-stat-label">
+                PKR Current Project Funding
+            </span>
+
+        </div>
+
+
+        <div class="research-stat">
+
+            <span class="research-stat-number">
+                8
+            </span>
+
+            <span class="research-stat-label">
+                Current Research Contributions
+            </span>
+
+        </div>
+
+
+        <div class="research-stat">
+
+            <span class="research-stat-number">
+                2
+            </span>
+
+            <span class="research-stat-label">
+                Completed Projects
+            </span>
+
+        </div>
+
+
+        <div class="research-stat">
+
+            <span class="research-stat-number">
+                ACB
+            </span>
+
+            <span class="research-stat-label">
+                Active Cell Balancing Focus
+            </span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CURRENT RESEARCH
+     ===================================================== -->
+
+<section id="current"
+         class="container">
+
+
+    <div class="section-title">
+
+        <h2>
+            Current Research
+        </h2>
+
+        <p style="
+            max-width:760px;
+            margin:0 auto;
+            color:#667085;
+        ">
+
+            Our current flagship research focuses on
+            intelligent battery systems for electric
+            mobility and range extension.
+
+        </p>
+
+    </div>
+
+
+
+    <!-- =================================================
+         MAIN PROJECT
+         ================================================= -->
+
+    <article class="research-project featured">
+
+
+        <div class="project-header">
+
+            <div class="project-title-area">
+
+                <span class="project-number">
+                    Project 01 · Current
+                </span>
+
+
+                <h2 class="project-title">
+
+                    Design and Development of Intelligent
+                    Battery Pack for Range Extension
+                    of Electric Scooter
+
+                </h2>
+
+            </div>
+
+
+            <div class="funding-box">
+
+                <span class="funding-label">
+                    Funding Amount
+                </span>
+
+                <span class="funding-value">
+                    19.37 Million PKR
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="project-meta">
+
+            <div class="meta-item">
+
+                <strong>
+                    Project Code:
+                </strong>
+
+                PSF-CRP/TUBITAK-IV/EV/C-COMSATS (26)
+
+            </div>
+
+
+            <div class="meta-item">
+
+                <strong>
+                    Area:
+                </strong>
+
+                Battery Management & EVs
+
+            </div>
+
+
+            <div class="meta-item">
+
+                <strong>
+                    Core Technology:
+                </strong>
+
+                Active Cell Balancing
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             TEAM
+             ================================================= -->
+
+        <div id="project-team"
+             class="research-content-box full"
+             style="margin-bottom:22px;">
+
+            <h4>
+                Project Team
+            </h4>
+
+
+            <div class="team-list">
+
+                <span class="team-member">
+                    <strong>Dr. Ali Arshad Uppal</strong>
+                    &nbsp; · PI, Pakistan
+                </span>
+
+                <span class="team-member">
+                    <strong>Dr. Qadeer Ahmed</strong>
+                    &nbsp; · Co-PI, USA
+                </span>
+
+                <span class="team-member">
+                    Dr. Ahmad Yar · RA
+                </span>
+
+                <span class="team-member">
+                    Mr. Afaq Ahmed · RA
+                </span>
+
+                <span class="team-member">
+                    Mr. Sohail Ahmad · RA
+                </span>
+
+                <span class="team-member">
+                    Mr. Azmatullah · PhD Student
+                </span>
+
+                <span class="team-member">
+                    Ms. Sheharbano · PhD Student
+                </span>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             BACKGROUND + IMPACT
+             ================================================= -->
+
+        <div class="research-content-grid">
+
+
+            <div class="research-content-box">
+
+                <h4>
+                    Background
+                </h4>
+
+                <p>
+
+                    The EV market is steadily growing,
+                    with projections indicating over
+                    <strong>672 million EVs by 2050</strong>.
+                    Lithium-ion battery packs form the
+                    core of EVs.
+
+                </p>
+
+                <p>
+
+                    Cell imbalance may cause premature
+                    battery pack shutdown due to the
+                    weakest cell.
+
+                    <strong>
+                        Active Cell Balancing (ACB)
+                    </strong>
+
+                    redistributes energy to improve
+                    safety and range.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="research-content-box">
+
+                <h4>
+                    Intellectual Merit
+                </h4>
+
+                <ul>
+
+                    <li>
+                        Power-loss-aware modeling of
+                        ACB networks
+                    </li>
+
+                    <li>
+                        Unified cell modeling for
+                        local and global optimization
+                    </li>
+
+                    <li>
+                        Range-extension-aware NMPC design
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+            <div class="research-content-box">
+
+                <h4>
+                    Broader Impact
+                </h4>
+
+                <ul>
+
+                    <li>
+                        Improved EV safety and reliability
+                    </li>
+
+                    <li>
+                        Reduced emissions and
+                        battery degradation
+                    </li>
+
+                    <li>
+                        Enhanced driving range
+                        and affordability
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             PROPOSED RESEARCH
+             ================================================= -->
+
+        <div class="research-content-box"
+             style="margin-top:22px;">
+
+            <h4>
+                Proposed Research
+            </h4>
+
+
+            <div class="research-pipeline">
+
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-number">
+                        01
+                    </div>
+
+                    <h5>
+                        ACBN Selection
+                    </h5>
+
+                    <p>
+                        Selection of an appropriate
+                        Active Cell Balancing Network.
+                    </p>
+
+                </div>
+
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-number">
+                        02
+                    </div>
+
+                    <h5>
+                        Cell Modeling
+                    </h5>
+
+                    <p>
+                        Mathematical modeling of SoC,
+                        thermal dynamics and voltage.
+                    </p>
+
+                </div>
+
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-number">
+                        03
+                    </div>
+
+                    <h5>
+                        Loss Modeling
+                    </h5>
+
+                    <p>
+                        High-fidelity balancing current
+                        and power-loss modeling.
+                    </p>
+
+                </div>
+
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-number">
+                        04
+                    </div>
+
+                    <h5>
+                        NMPC Design
+                    </h5>
+
+                    <p>
+                        Range-aware Nonlinear Model
+                        Predictive Control design.
+                    </p>
+
+                </div>
+
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-number">
+                        05
+                    </div>
+
+                    <h5>
+                        Simulation
+                    </h5>
+
+                    <p>
+                        Simulation-based performance
+                        evaluation.
+                    </p>
+
+                </div>
+
+
+                <div class="pipeline-step">
+
+                    <div class="pipeline-number">
+                        06
+                    </div>
+
+                    <h5>
+                        Prototype
+                    </h5>
+
+                    <p>
+                        Real-time prototype development
+                        and implementation.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             CONTRIBUTIONS
+             ================================================= -->
+
+        <div id="contributions"
+             class="research-content-box"
+             style="margin-top:22px;">
+
+            <h4>
+                Research Contributions
+            </h4>
+
+
+            <div class="publication-list">
+
+
+                <div class="publication-item">
+
+                    <span class="publication-number">
+                        01
+                    </span>
+
+                    <a
+                        href="https://aauppal.github.io/publication/C5"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        Model-Based Quantitative Analysis of
+                        a Capacitive Cell Balancing Technique
+                        using State-of-Charge (SoC) Estimator
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="publication-item">
+
+                    <span class="publication-number">
+                        02
+                    </span>
+
+                    <a
+                        href="https://aauppal.github.io/publication/J30"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        Power Losses Aware Nonlinear Model
+                        Predictive Control Design for
+                        Active Cell Balancing
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="publication-item">
+
+                    <span class="publication-number">
+                        03
+                    </span>
+
+                    <a
+                        href="https://aauppal.github.io/publication/C6"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        Nonlinear Model Predictive Control
+                        Design for Active Cell Balancing
+                        and Thermal Management
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="publication-item">
+
+                    <span class="publication-number">
+                        04
+                    </span>
+
+                    <a
+                        href="https://aauppal.github.io/publication/J32"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        Model-Based Quantitative Analysis of
+                        Power Losses Aware Active Cell
+                        Balancing Networks with Load
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="publication-item">
+
+                    <span class="publication-number">
+                        05
+                    </span>
+
+                    <a
+                        href="https://aauppal.github.io/publication/C7"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        Performance Analysis of Model Predictive
+                        Controllers for Active Cell Balancing
+                        of Electric Vehicle Battery Packs
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="publication-item">
+
+                    <span class="publication-number">
+                        06
+                    </span>
+
+                    <a
+                        href="https://aauppal.github.io/publication/J33"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        NMPC-Based Performance Evaluation of
+                        Active Balancing Networks of Lithium-Ion
+                        Batteries for Overnight EV Charging
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="publication-item">
+
+                    <span class="publication-number">
+                        07
+                    </span>
+
+                    <a
+                        href="https://aauppal.github.io/publication/C8"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        Design and Evaluation of Nonlinear Model
+                        Predictive Control for Active Load
+                        Balancing in Adjacent Battery Cells
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="publication-item">
+
+                    <span class="publication-number">
+                        08
+                    </span>
+
+                    <a
+                        href="https://aauppal.github.io/publication/J34"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        Scalable and Modular Control Framework
+                        for Managing Active Cell Balancing
+                        Challenges in Battery Packs
+
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </article>
+
+</section>
+
+
+
+<!-- =====================================================
+     COMPLETED PROJECTS
+     ===================================================== -->
+
+<section id="completed"
+         class="container"
+         style="margin-top:80px;">
+
+    <div class="section-title">
+
+        <h2>
+            Completed Projects
+        </h2>
+
+        <p style="
+            max-width:760px;
+            margin:0 auto;
+            color:#667085;
+        ">
+
+            Previous CESRG projects contributing to
+            advanced battery systems and intelligent
+            energy conversion research.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="completed-grid">
+
+
+        <!-- =================================================
+             PROJECT 2.1
+             ================================================= -->
+
+        <article class="completed-card">
+
+            <span class="completed-label">
+                Completed Project
+            </span>
+
+
+            <h3>
+
+                Optimal Control of Active Cell
+                Balancing Network for Lithium-ion
+                Battery Pack
+
+            </h3>
+
+
+            <p>
+
+                <strong>
+                    Funding Amount:
+                </strong>
+
+                0.4 Million PKR
+
             </p>
-            <a href="https://maps.app.goo.gl/pZj32DCDwLoRUJXe9" target="_blank" style="color:#3498db; text-decoration:none; font-weight:600; display:inline-block;">Show Map</a>
-         </div>
-      </div>
 
-      <hr style="border:0; height:1px; background:rgba(255,255,255,0.25); margin:5px auto; width:80%;">
 
-      <p style="margin:5px 0; color:#ccc; font-size:14px; text-align:center;">
-         &copy; 2025 CESRG | COMSATS University Islamabad. All rights reserved.
-      </p>
+            <h4 style="
+                margin-top:22px;
+                color:#172033;
+                font-size:14px;
+            ">
 
-      <p style="margin:2px 0 0 0; padding-bottom:3px; color:#aaa; font-size:13px; text-align:center;">
-         Website Designed & Maintained by
-         <a href="https://www.upwork.com/freelancers/~0198227b97d16b50c9" target="_blank" style="color:#f1c40f; font-weight:700; text-decoration:none;">Sohail Ahmad</a>
-      </p>
+                Project Team
 
-   </div>
+            </h4>
+
+
+            <ul>
+
+                <li>
+                    <strong>
+                        Dr. Ali Arshad Uppal
+                    </strong>
+                    · PI
+                </li>
+
+                <li>
+                    Dr. Syed Bilal Javed
+                    · Co-PI, NESCOM
+                </li>
+
+                <li>
+                    Dr. Rizwan Azam
+                    · Co-PI, COMSATS
+                </li>
+
+            </ul>
+
+
+        </article>
+
+
+
+        <!-- =================================================
+             PROJECT 2.2
+             ================================================= -->
+
+        <article class="completed-card">
+
+            <span class="completed-label">
+                Completed Project
+            </span>
+
+
+            <h3>
+
+                Machine Learning Based
+                Control-Oriented Modeling of
+                Underground Coal Gasification
+
+            </h3>
+
+
+            <h4 style="
+                margin-top:22px;
+                color:#172033;
+                font-size:14px;
+            ">
+
+                Project Team
+
+            </h4>
+
+
+            <ul>
+
+                <li>
+                    <strong>
+                        Dr. Ali Arshad Uppal
+                    </strong>
+                    · PI
+                </li>
+
+                <li>
+                    Mr. Afaq Ahmed
+                </li>
+
+                <li>
+                    Dr. Syed Bilal Javed
+                </li>
+
+            </ul>
+
+
+            <div class="completed-links">
+
+                <h4 style="
+                    color:#172033;
+                    font-size:14px;
+                ">
+
+                    Research Contributions
+
+                </h4>
+
+
+                <a
+                    href="https://aauppal.github.io/publication/J29"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    → Nonlinear-Control-Oriented Modeling
+                    of the MultiVariable Underground Coal
+                    Gasification Process for UCG Project
+                    Thar: A Machine Learning Perspective
+
+                </a>
+
+
+                <a
+                    href="https://aauppal.github.io/publication/J28"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    → State-Dependent Kalman Filter Design
+                    for Nonlinear Dynamic Modeling of
+                    Underground Coal Gasification Process
+
+                </a>
+
+
+                <a
+                    href="https://github.com/Hilberto-inf/CAVLAB--UCG-process-simulator"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    → CAVLAB Simulator for Underground
+                    Coal Gasification (UCG) Energy
+                    Conversion Process
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     RESEARCH AREAS
+     ===================================================== -->
+
+<section class="container"
+         style="margin-top:80px; margin-bottom:80px;">
+
+    <div class="research-project">
+
+        <div class="section-title">
+
+            <h2>
+                Core Research Areas
+            </h2>
+
+            <p style="
+                max-width:720px;
+                margin:0 auto;
+                color:#667085;
+            ">
+
+                CESRG research connects advanced control
+                theory with practical energy and
+                electrification challenges.
+
+            </p>
+
+        </div>
+
+
+        <div style="
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            gap:8px;
+        ">
+
+            <span class="research-pill">
+                Nonlinear Control
+            </span>
+
+            <span class="research-pill">
+                Model Predictive Control
+            </span>
+
+            <span class="research-pill">
+                Active Cell Balancing
+            </span>
+
+            <span class="research-pill">
+                Battery Management Systems
+            </span>
+
+            <span class="research-pill">
+                Lithium-ion Batteries
+            </span>
+
+            <span class="research-pill">
+                Electric Vehicles
+            </span>
+
+            <span class="research-pill">
+                Energy Storage
+            </span>
+
+            <span class="research-pill">
+                Thermal Management
+            </span>
+
+            <span class="research-pill">
+                Machine Learning
+            </span>
+
+            <span class="research-pill">
+                State Estimation
+            </span>
+
+            <span class="research-pill">
+                Embedded Systems
+            </span>
+
+            <span class="research-pill">
+                Intelligent Energy Systems
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer id="footer">
+
+    <div class="container">
+
+
+        <div style="
+            display:grid;
+            grid-template-columns:
+                repeat(auto-fit,minmax(240px,1fr));
+            gap:40px;
+        ">
+
+
+            <div>
+
+                <h3>
+                    CESRG
+                </h3>
+
+                <p>
+                    Control & Energy Systems
+                    Research Group
+                </p>
+
+                <p>
+                    COMSATS University Islamabad
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Contact Information
+                </h3>
+
+                <p>
+                    <strong>
+                        Office Hours:
+                    </strong>
+                    Monday–Friday
+                    (9:00am – 5:00pm)
+                </p>
+
+                <p>
+                    <strong>
+                        Phone:
+                    </strong>
+                    +92-51-9049255
+                </p>
+
+                <p>
+                    <strong>
+                        Cell:
+                    </strong>
+                    +92-331-3666163
+                </p>
+
+                <p>
+                    <a href="mailto:ali_arshad@comsats.edu.pk">
+                        ali_arshad@comsats.edu.pk
+                    </a>
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Address
+                </h3>
+
+                <p>
+
+                    Control & Energy Systems
+                    Research Group
+                    <br>
+
+                    Room No. 229, 2nd Floor
+                    <br>
+
+                    Department of Electrical Engineering
+                    <br>
+
+                    COMSATS University Islamabad, Pakistan
+
+                </p>
+
+
+                <a
+                    href="https://maps.app.goo.gl/pZj32DCDwLoRUJXe9"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    📍 Show Map →
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <hr>
+
+
+        <div style="
+            text-align:center;
+        ">
+
+            <p style="
+                margin:5px 0;
+                color:rgba(255,255,255,0.65);
+                font-size:14px;
+            ">
+
+                © <span data-current-year>2026</span>
+                CESRG |
+                COMSATS University Islamabad.
+                All rights reserved.
+
+            </p>
+
+
+            <p style="
+                margin:4px 0 0;
+                color:rgba(255,255,255,0.45);
+                font-size:13px;
+            ">
+
+                Website Designed & Maintained by
+
+                <a
+                    href="https://www.upwork.com/freelancers/~0198227b97d16b50c9"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Sohail Ahmad,Roshaan Imran
+
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
 </footer>
 
-<script src="js/jquery-1.9.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+
+
+<!-- =====================================================
+     MODERN JAVASCRIPT
+     ===================================================== -->
+
+<script src="js/modern.js"></script>
+
 
 </body>
+
 </html>
