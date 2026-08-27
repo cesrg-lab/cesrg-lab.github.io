@@ -1,0 +1,1437 @@
+/* =========================================================
+   CESRG MODERN WEBSITE SYSTEM
+   Control & Energy Systems Research Group
+   COMSATS University Islamabad
+   ========================================================= */
+
+/* =========================================================
+   1. ROOT VARIABLES
+   ========================================================= */
+
+:root {
+    --cesrg-primary: #0b1f3a;
+    --cesrg-primary-2: #123b69;
+    --cesrg-blue: #1769aa;
+    --cesrg-accent: #00a8e8;
+    --cesrg-cyan: #00c2ff;
+    --cesrg-green: #18a77a;
+
+    --cesrg-dark: #071525;
+    --cesrg-text: #172033;
+    --cesrg-muted: #667085;
+    --cesrg-light: #f5f8fc;
+    --cesrg-white: #ffffff;
+    --cesrg-border: #e6ebf2;
+
+    --cesrg-radius-sm: 10px;
+    --cesrg-radius-md: 16px;
+    --cesrg-radius-lg: 24px;
+
+    --cesrg-shadow-sm: 0 5px 20px rgba(7, 21, 37, 0.07);
+    --cesrg-shadow-md: 0 12px 35px rgba(7, 21, 37, 0.10);
+    --cesrg-shadow-lg: 0 25px 60px rgba(7, 21, 37, 0.15);
+
+    --cesrg-transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   2. GLOBAL RESET
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f7f9fc;
+    color: var(--cesrg-text);
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: 16px;
+    line-height: 1.7;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body::selection {
+    background: var(--cesrg-accent);
+    color: white;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--cesrg-blue);
+    text-decoration: none;
+    transition: color var(--cesrg-transition);
+}
+
+a:hover {
+    color: var(--cesrg-accent);
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   3. OLD BOOTSTRAP CONTAINER — MODERNIZE IT
+   ========================================================= */
+
+.container {
+    width: min(1180px, calc(100% - 40px));
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row-fluid {
+    width: 100%;
+    margin-left: 0;
+}
+
+.span12,
+.span4,
+.span3,
+.span6,
+.span8 {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   4. MODERN PAGE BACKGROUND
+   ========================================================= */
+
+body {
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(0, 168, 232, 0.05),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(23, 105, 170, 0.05),
+            transparent 30%
+        ),
+        #f7f9fc;
+}
+
+
+/* =========================================================
+   5. HEADER / HERO
+   ========================================================= */
+
+.jumbotron {
+    position: relative;
+
+    margin: 0 auto;
+    padding: 85px 35px 80px;
+
+    border: 0;
+    border-radius: 0 0 var(--cesrg-radius-lg) var(--cesrg-radius-lg);
+
+    overflow: hidden;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7, 21, 37, 0.97),
+            rgba(18, 59, 105, 0.94)
+        );
+
+    box-shadow: var(--cesrg-shadow-lg);
+}
+
+.jumbotron::before {
+    content: "";
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -140px;
+    top: -160px;
+
+    border-radius: 50%;
+
+    background: rgba(0, 194, 255, 0.15);
+
+    filter: blur(2px);
+}
+
+.jumbotron::after {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    left: -120px;
+    bottom: -140px;
+
+    border-radius: 50%;
+
+    background: rgba(24, 167, 122, 0.12);
+}
+
+.jumbotron h1 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 auto 15px;
+
+    max-width: 950px;
+
+    color: white;
+
+    font-size: clamp(34px, 5vw, 64px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+}
+
+.jumbotron p {
+    position: relative;
+    z-index: 2;
+
+    margin: 0;
+
+    color: rgba(255,255,255,0.82);
+
+    font-size: clamp(17px, 2vw, 22px);
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   6. NAVIGATION
+   ========================================================= */
+
+.masthead {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    margin: 0 auto;
+
+    background: rgba(255,255,255,0.88);
+
+    border-bottom: 1px solid rgba(230,235,242,0.8);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow: 0 4px 20px rgba(7,21,37,0.06);
+}
+
+.masthead .navbar {
+    margin: 0;
+    border: 0;
+    background: transparent;
+}
+
+.masthead .navbar-inner {
+    min-height: 68px;
+
+    padding: 0;
+
+    border: 0;
+    border-radius: 0;
+
+    background: transparent;
+    box-shadow: none;
+}
+
+.masthead .navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 68px;
+}
+
+.masthead .nav {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.masthead .nav > li {
+    float: none;
+    display: block;
+}
+
+.masthead .nav > li > a {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 48px;
+
+    padding: 10px 16px;
+
+    border-radius: 12px;
+
+    color: var(--cesrg-text);
+
+    font-size: 14px;
+    font-weight: 650;
+
+    background: transparent;
+
+    transition:
+        color var(--cesrg-transition),
+        background var(--cesrg-transition),
+        transform var(--cesrg-transition);
+}
+
+.masthead .nav > li > a:hover {
+    color: var(--cesrg-blue);
+
+    background: rgba(23,105,170,0.07);
+
+    transform: translateY(-1px);
+}
+
+.masthead .nav > li.active > a {
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--cesrg-primary),
+            var(--cesrg-blue)
+        );
+
+    box-shadow: 0 7px 18px rgba(23,105,170,0.22);
+}
+
+.masthead .nav > li.active > a:hover {
+    color: white;
+}
+
+
+/* =========================================================
+   7. GENERAL HEADINGS
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--cesrg-primary);
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-weight: 750;
+
+    line-height: 1.25;
+}
+
+h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    letter-spacing: -0.5px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+h4 {
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   8. SECTION SYSTEM
+   ========================================================= */
+
+.my-5 {
+    margin-top: 65px !important;
+    margin-bottom: 65px !important;
+}
+
+hr {
+    height: 1px;
+
+    margin: 55px auto;
+
+    border: 0;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #dfe6ef,
+        transparent
+    );
+}
+
+
+/* =========================================================
+   9. CAROUSEL
+   ========================================================= */
+
+#main-carousel {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: var(--cesrg-radius-lg);
+
+    background: var(--cesrg-dark);
+
+    box-shadow: var(--cesrg-shadow-lg);
+}
+
+.carousel-image {
+    display: block;
+
+    width: 100%;
+    height: min(650px, 65vh);
+
+    min-height: 350px;
+
+    object-fit: cover;
+
+    border-radius: 0;
+}
+
+.carousel-caption {
+    position: absolute;
+
+    left: 5%;
+    right: 5%;
+    bottom: 30px;
+
+    width: auto;
+
+    padding: 25px 30px;
+
+    text-align: left;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7,21,37,0.92),
+            rgba(7,21,37,0.68)
+        );
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 18px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+.carousel-caption h4 {
+    margin: 0 0 5px;
+
+    color: white;
+
+    font-size: clamp(18px, 2.2vw, 28px);
+    line-height: 1.3;
+}
+
+.carousel-caption p {
+    margin: 5px 0 0;
+
+    color: rgba(255,255,255,0.8);
+
+    font-size: 15px;
+}
+
+.carousel-control {
+    width: 48px;
+    height: 48px;
+
+    top: 50%;
+
+    margin-top: -24px;
+
+    border-radius: 50%;
+
+    opacity: 0.9;
+
+    background: rgba(7,21,37,0.65);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    transition:
+        background var(--cesrg-transition),
+        transform var(--cesrg-transition);
+}
+
+.carousel-control:hover {
+    background: var(--cesrg-blue);
+
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   10. MODERN CARD SYSTEM
+   ========================================================= */
+
+.cesrg-card,
+.card,
+.panel,
+.feature-card,
+.research-card,
+.person-card,
+.publication-card,
+.news-card {
+    background: white;
+
+    border: 1px solid var(--cesrg-border);
+
+    border-radius: var(--cesrg-radius-md);
+
+    box-shadow: var(--cesrg-shadow-sm);
+
+    transition:
+        transform var(--cesrg-transition),
+        box-shadow var(--cesrg-transition),
+        border-color var(--cesrg-transition);
+}
+
+.cesrg-card:hover,
+.card:hover,
+.panel:hover,
+.feature-card:hover,
+.research-card:hover,
+.person-card:hover,
+.publication-card:hover,
+.news-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(23,105,170,0.20);
+
+    box-shadow: var(--cesrg-shadow-md);
+}
+
+
+/* =========================================================
+   11. BUTTONS
+   ========================================================= */
+
+.btn,
+button {
+    border-radius: 12px !important;
+
+    font-weight: 650 !important;
+
+    transition:
+        transform var(--cesrg-transition),
+        box-shadow var(--cesrg-transition),
+        background var(--cesrg-transition) !important;
+}
+
+.btn:hover,
+button:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    color: white !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--cesrg-primary),
+            var(--cesrg-blue)
+        ) !important;
+
+    border: 0 !important;
+
+    box-shadow:
+        0 8px 22px rgba(23,105,170,0.20);
+}
+
+.btn-primary:hover {
+    color: white !important;
+
+    box-shadow:
+        0 12px 30px rgba(23,105,170,0.30);
+}
+
+
+/* =========================================================
+   12. ABOUT / CONTENT SECTIONS
+   ========================================================= */
+
+.about-section,
+.section-card {
+    padding: 55px 35px;
+
+    background: white;
+
+    border: 1px solid var(--cesrg-border);
+
+    border-radius: var(--cesrg-radius-lg);
+
+    box-shadow: var(--cesrg-shadow-sm);
+}
+
+.section-title {
+    position: relative;
+
+    margin-bottom: 35px;
+
+    text-align: center;
+}
+
+.section-title::after {
+    content: "";
+
+    display: block;
+
+    width: 55px;
+    height: 4px;
+
+    margin: 14px auto 0;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--cesrg-blue),
+            var(--cesrg-accent)
+        );
+}
+
+
+/* =========================================================
+   13. RESEARCH TAGS / PILLS
+   ========================================================= */
+
+.research-pill,
+.research-tag,
+.tag {
+    display: inline-flex;
+
+    align-items: center;
+
+    margin: 5px;
+
+    padding: 10px 17px;
+
+    color: var(--cesrg-primary);
+
+    background: #eef7fc;
+
+    border: 1px solid #d8edf8;
+
+    border-radius: 50px;
+
+    font-size: 14px;
+    font-weight: 650;
+
+    transition:
+        background var(--cesrg-transition),
+        transform var(--cesrg-transition);
+}
+
+.research-pill:hover,
+.research-tag:hover,
+.tag:hover {
+    background: #dff3fc;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   14. STATISTICS
+   ========================================================= */
+
+.stats-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(180px, 1fr));
+
+    gap: 20px;
+}
+
+.stat-card {
+    padding: 32px 20px;
+
+    text-align: center;
+
+    background: white;
+
+    border: 1px solid var(--cesrg-border);
+
+    border-radius: var(--cesrg-radius-md);
+
+    box-shadow: var(--cesrg-shadow-sm);
+}
+
+.stat-card h1,
+.stat-card h2 {
+    margin: 0 0 8px;
+
+    color: var(--cesrg-blue);
+
+    font-size: 42px;
+    font-weight: 800;
+}
+
+.stat-card p {
+    margin: 0;
+
+    color: var(--cesrg-muted);
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   15. NEWS / NOTICE BOARD
+   ========================================================= */
+
+.cesrg-notice-board {
+    position: relative;
+
+    overflow: hidden;
+
+    background: white;
+
+    border: 1px solid var(--cesrg-border);
+
+    border-radius: var(--cesrg-radius-md);
+
+    box-shadow: var(--cesrg-shadow-md);
+}
+
+.cesrg-notice-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 22px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--cesrg-primary),
+            var(--cesrg-blue)
+        );
+}
+
+.cesrg-notice-header h3 {
+    margin: 0;
+
+    color: white;
+
+    font-size: 18px;
+}
+
+.cesrg-notice-header span {
+    font-size: 12px;
+
+    padding: 5px 10px;
+
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.15);
+}
+
+.cesrg-notice-track {
+    display: flex;
+
+    gap: 20px;
+
+    width: max-content;
+
+    padding: 18px;
+
+    animation: cesrgMarquee 35s linear infinite;
+}
+
+.cesrg-notice-board:hover .cesrg-notice-track {
+    animation-play-state: paused;
+}
+
+.cesrg-notice-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 280px;
+
+    padding: 14px 18px;
+
+    background: #f8fafc;
+
+    border: 1px solid var(--cesrg-border);
+
+    border-radius: 12px;
+}
+
+.cesrg-notice-dot {
+    flex: 0 0 auto;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: var(--cesrg-accent);
+
+    box-shadow:
+        0 0 0 5px rgba(0,194,255,0.10);
+}
+
+@keyframes cesrgMarquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* =========================================================
+   16. PEOPLE / FACULTY
+   ========================================================= */
+
+.people-grid,
+.faculty-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+}
+
+.person-card {
+    overflow: hidden;
+
+    text-align: center;
+}
+
+.person-card img {
+    width: 100%;
+    height: 280px;
+
+    object-fit: cover;
+}
+
+.person-card-content {
+    padding: 22px;
+}
+
+.person-card h3 {
+    margin: 0 0 5px;
+}
+
+.person-card p {
+    margin: 5px 0;
+
+    color: var(--cesrg-muted);
+}
+
+
+/* =========================================================
+   17. PUBLICATIONS
+   ========================================================= */
+
+.publication-card {
+    position: relative;
+
+    margin-bottom: 18px;
+
+    padding: 25px 28px;
+
+    background: white;
+}
+
+.publication-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 18px;
+    bottom: 18px;
+
+    width: 4px;
+
+    border-radius: 0 5px 5px 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--cesrg-blue),
+            var(--cesrg-accent)
+        );
+}
+
+.publication-card h3 {
+    margin-top: 0;
+}
+
+.publication-card .year {
+    display: inline-block;
+
+    margin-bottom: 8px;
+
+    padding: 5px 11px;
+
+    color: var(--cesrg-blue);
+
+    background: #edf7fc;
+
+    border-radius: 50px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   18. GALLERY
+   ========================================================= */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 18px;
+}
+
+.gallery-item {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 220px;
+
+    border-radius: var(--cesrg-radius-md);
+
+    background: #e9eef5;
+
+    box-shadow: var(--cesrg-shadow-sm);
+}
+
+.gallery-item img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    min-height: 220px;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.5s ease,
+        filter 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+
+    filter: brightness(0.78);
+}
+
+.gallery-item::after {
+    content: "View";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.8);
+
+    padding: 9px 16px;
+
+    color: white;
+
+    background: rgba(7,21,37,0.78);
+
+    border-radius: 50px;
+
+    opacity: 0;
+
+    transition:
+        opacity var(--cesrg-transition),
+        transform var(--cesrg-transition);
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+}
+
+
+/* =========================================================
+   19. RESEARCH EVENT ARROWS
+   ========================================================= */
+
+.research-event {
+    position: relative;
+
+    padding: 20px 55px 20px 22px;
+
+    margin-bottom: 15px;
+
+    background: white;
+
+    border: 1px solid var(--cesrg-border);
+
+    border-radius: 14px;
+
+    box-shadow: var(--cesrg-shadow-sm);
+
+    transition:
+        transform var(--cesrg-transition),
+        box-shadow var(--cesrg-transition);
+}
+
+.research-event:hover {
+    transform: translateX(4px);
+
+    box-shadow: var(--cesrg-shadow-md);
+}
+
+.research-event-arrow {
+    position: absolute;
+
+    right: 18px;
+    top: 50%;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(-50%);
+
+    color: white;
+
+    background: var(--cesrg-blue);
+
+    border-radius: 50%;
+
+    font-size: 18px;
+
+    transition:
+        background var(--cesrg-transition),
+        transform var(--cesrg-transition);
+}
+
+.research-event:hover .research-event-arrow {
+    background: var(--cesrg-accent);
+
+    transform:
+        translateY(-50%)
+        translateX(3px);
+}
+
+
+/* =========================================================
+   20. FOOTER
+   ========================================================= */
+
+#footer,
+footer {
+    position: relative;
+
+    margin-top: 80px;
+
+    padding: 55px 25px 25px;
+
+    color: rgba(255,255,255,0.75);
+
+    background:
+        linear-gradient(
+            135deg,
+            #061322,
+            #0c2949
+        );
+
+    border-radius: 28px 28px 0 0;
+
+    box-shadow:
+        0 -15px 50px rgba(7,21,37,0.10);
+}
+
+#footer h3,
+footer h3 {
+    color: white;
+}
+
+#footer a,
+footer a {
+    color: #69d8ff;
+}
+
+#footer a:hover,
+footer a:hover {
+    color: white;
+}
+
+#footer hr,
+footer hr {
+    background: rgba(255,255,255,0.15);
+}
+
+
+/* =========================================================
+   21. SCROLL REVEAL
+   ========================================================= */
+
+.cesrg-reveal {
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.cesrg-reveal.cesrg-visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   22. BACK TO TOP
+   ========================================================= */
+
+#cesrg-back-top {
+    position: fixed;
+
+    right: 22px;
+    bottom: 22px;
+
+    z-index: 9999;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--cesrg-primary),
+            var(--cesrg-blue)
+        );
+
+    border: 0;
+
+    border-radius: 50%;
+
+    box-shadow: 0 10px 25px rgba(7,21,37,0.20);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateY(15px);
+
+    cursor: pointer;
+
+    transition:
+        opacity var(--cesrg-transition),
+        visibility var(--cesrg-transition),
+        transform var(--cesrg-transition);
+}
+
+#cesrg-back-top.visible {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+#cesrg-back-top:hover {
+    transform:
+        translateY(-3px)
+        scale(1.05);
+}
+
+
+/* =========================================================
+   23. MOBILE NAVIGATION
+   ========================================================= */
+
+.cesrg-mobile-toggle {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 10px auto;
+
+    color: white;
+
+    background: var(--cesrg-primary);
+
+    border: 0;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 22px;
+}
+
+
+/* =========================================================
+   24. MOBILE RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .container {
+        width: min(100% - 28px, 720px);
+    }
+
+    .jumbotron {
+        padding: 65px 22px 60px;
+    }
+
+    .masthead .navbar-inner {
+        min-height: auto;
+    }
+
+    .masthead .navbar .container {
+        display: block;
+    }
+
+    .cesrg-mobile-toggle {
+        display: flex;
+    }
+
+    .masthead .nav {
+        display: none;
+
+        flex-direction: column;
+
+        width: 100%;
+
+        padding: 10px 0 15px;
+
+        gap: 3px;
+    }
+
+    .masthead .nav.cesrg-mobile-open {
+        display: flex;
+    }
+
+    .masthead .nav > li {
+        width: 100%;
+    }
+
+    .masthead .nav > li > a {
+        justify-content: center;
+
+        width: 100%;
+    }
+
+    .carousel-image {
+        height: 55vh;
+
+        min-height: 320px;
+    }
+
+    .carousel-caption {
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+
+        padding: 18px;
+    }
+
+    .carousel-control {
+        display: none;
+    }
+
+    .about-section,
+    .section-card {
+        padding: 35px 20px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    .container {
+        width: calc(100% - 22px);
+    }
+
+    .jumbotron {
+        padding: 50px 18px;
+    }
+
+    .jumbotron h1 {
+        letter-spacing: -0.7px;
+    }
+
+    .my-5 {
+        margin-top: 40px !important;
+        margin-bottom: 40px !important;
+    }
+
+    hr {
+        margin: 35px auto;
+    }
+
+    .carousel-image {
+        height: 430px;
+
+        min-height: 0;
+    }
+
+    .carousel-caption {
+        padding: 15px;
+    }
+
+    .carousel-caption p {
+        font-size: 13px;
+    }
+
+    .cesrg-notice-track {
+        animation-duration: 28s;
+    }
+
+    .cesrg-notice-item {
+        min-width: 245px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+    }
+
+    .gallery-item,
+    .gallery-item img {
+        min-height: 150px;
+    }
+
+    #footer,
+    footer {
+        margin-top: 50px;
+
+        padding: 40px 18px 20px;
+    }
+}
+
+
+/* =========================================================
+   25. ACCESSIBILITY
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid rgba(0,194,255,0.45);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   26. REDUCE MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
