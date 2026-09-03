@@ -331,7 +331,83 @@
     transform: translateY(-2px);
     box-shadow: 0 8px 18px rgba(23,105,170,.18);
 }
+        /* =====================================================
+   COLLABORATION STATISTICS
+   ===================================================== */
 
+.collab-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin: 0 0 75px;
+}
+
+.collab-stat {
+    padding: 25px 15px;
+    text-align: center;
+    border: 1px solid #e1e8ee;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 7px 24px rgba(7,21,37,.05);
+    transition: .25s ease;
+}
+
+.collab-stat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 32px rgba(7,21,37,.09);
+}
+
+.collab-stat-number {
+    display: block;
+    margin-bottom: 7px;
+    color: #1769aa;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.collab-stat-label {
+    display: block;
+    color: #667085;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+<!-- =====================================================
+     COLLABORATION AT A GLANCE
+     ===================================================== -->
+
+<section class="collab-stats">
+
+    <div class="collab-stat">
+        <span class="collab-stat-number">3</span>
+        <span class="collab-stat-label">
+            Academic Partners
+        </span>
+    </div>
+
+    <div class="collab-stat">
+        <span class="collab-stat-number">3</span>
+        <span class="collab-stat-label">
+            Countries / Regions
+        </span>
+    </div>
+
+    <div class="collab-stat">
+        <span class="collab-stat-number">1</span>
+        <span class="collab-stat-label">
+            International Flagship Project
+        </span>
+    </div>
+
+    <div class="collab-stat">
+        <span class="collab-stat-number">6+</span>
+        <span class="collab-stat-label">
+            Research Domains
+        </span>
+    </div>
+
+</section>
 
         /* =====================================================
            COLLABORATION AREAS
