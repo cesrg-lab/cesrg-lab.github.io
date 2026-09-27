@@ -15,6 +15,8 @@
 
     document.addEventListener("DOMContentLoaded", function () {
 
+        initThemeSwitcher();
+
         initMobileNavigation();
 
         initBackToTop();
@@ -33,30 +35,183 @@
 
         initCurrentYear();
 
+        initImageLoading();
+
+        initLabVideo();
+
     });
 
 
     /* =====================================================
-       2. MOBILE NAVIGATION
+       2. THEME SWITCHER
+       ===================================================== */
+
+    function initThemeSwitcher() {
+
+        var savedTheme =
+            localStorage.getItem("cesrg-theme") ||
+            "margalla-mist";
+
+        /*
+         * Allowed CESRG themes.
+         * Prevent invalid values from being stored.
+         */
+
+        var allowedThemes = [
+            "margalla-mist",
+            "institutional-blue",
+            "ivory-press",
+            "sage-calm",
+            "indigo-night",
+            "graphite"
+        ];
+
+        if (
+            allowedThemes.indexOf(savedTheme) === -1
+        ) {
+
+            savedTheme = "margalla-mist";
+
+        }
+
+
+        setTheme(savedTheme);
+
+
+        /*
+         * Theme buttons are already present
+         * in the HTML pages.
+         */
+
+        var buttons =
+            document.querySelectorAll(
+                ".theme-btn"
+            );
+
+
+        buttons.forEach(function (button) {
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    var themeName =
+                        button.getAttribute(
+                            "data-theme"
+                        );
+
+
+                    if (!themeName) {
+                        return;
+                    }
+
+
+                    if (
+                        allowedThemes.indexOf(
+                            themeName
+                        ) === -1
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    setTheme(themeName);
+
+                }
+            );
+
+        });
+
+    }
+
+
+    /*
+     * Apply selected theme
+     */
+
+    function setTheme(themeName) {
+
+        document.documentElement.setAttribute(
+            "data-theme",
+            themeName
+        );
+
+
+        localStorage.setItem(
+            "cesrg-theme",
+            themeName
+        );
+
+
+        /*
+         * Highlight active theme button
+         */
+
+        var buttons =
+            document.querySelectorAll(
+                ".theme-btn"
+            );
+
+
+        buttons.forEach(function (button) {
+
+            button.classList.remove(
+                "active"
+            );
+
+
+            if (
+                button.getAttribute(
+                    "data-theme"
+                ) === themeName
+            ) {
+
+                button.classList.add(
+                    "active"
+                );
+
+            }
+
+        });
+
+    }
+
+
+    /* =====================================================
+       3. MOBILE NAVIGATION
        ===================================================== */
 
     function initMobileNavigation() {
 
-        var masthead = document.querySelector(".masthead");
+        var masthead =
+            document.querySelector(
+                ".masthead"
+            );
+
 
         if (!masthead) {
             return;
         }
 
-        var nav = masthead.querySelector(".nav");
 
-        var container = masthead.querySelector(
-            ".navbar-inner .container"
-        );
+        var nav =
+            masthead.querySelector(
+                ".nav"
+            );
+
+
+        var container =
+            masthead.querySelector(
+                ".navbar-inner .container"
+            );
+
 
         if (!nav || !container) {
             return;
         }
+
 
         /*
          * Prevent creating the button twice.
@@ -67,25 +222,37 @@
                 ".cesrg-mobile-toggle"
             )
         ) {
+
             return;
+
         }
 
 
-        var button = document.createElement("button");
+        var button =
+            document.createElement(
+                "button"
+            );
 
-        button.className = "cesrg-mobile-toggle";
 
-        button.type = "button";
+        button.className =
+            "cesrg-mobile-toggle";
+
+
+        button.type =
+            "button";
+
 
         button.setAttribute(
             "aria-label",
             "Open navigation menu"
         );
 
+
         button.setAttribute(
             "aria-expanded",
             "false"
         );
+
 
         button.innerHTML = "☰";
 
@@ -113,24 +280,34 @@
                         "cesrg-mobile-open"
                     );
 
+
                 button.setAttribute(
                     "aria-expanded",
-                    isOpen ? "true" : "false"
+                    isOpen
+                        ? "true"
+                        : "false"
                 );
 
+
                 button.innerHTML =
-                    isOpen ? "✕" : "☰";
+                    isOpen
+                        ? "✕"
+                        : "☰";
 
             }
         );
 
 
         /*
-         * Close mobile menu after clicking a link.
+         * Close mobile menu after
+         * clicking a navigation link.
          */
 
         var links =
-            nav.querySelectorAll("a");
+            nav.querySelectorAll(
+                "a"
+            );
+
 
         links.forEach(function (link) {
 
@@ -142,12 +319,15 @@
                         "cesrg-mobile-open"
                     );
 
+
                     button.setAttribute(
                         "aria-expanded",
                         "false"
                     );
 
-                    button.innerHTML = "☰";
+
+                    button.innerHTML =
+                        "☰";
 
                 }
             );
@@ -158,27 +338,53 @@
 
 
     /* =====================================================
-       3. BACK TO TOP
+       4. BACK TO TOP
        ===================================================== */
 
     function initBackToTop() {
 
+        /*
+         * Prevent duplicate button.
+         */
+
+        var existing =
+            document.getElementById(
+                "cesrg-back-top"
+            );
+
+
         var button =
-            document.createElement("button");
+            existing ||
+            document.createElement(
+                "button"
+            );
 
-        button.id =
-            "cesrg-back-top";
 
-        button.type = "button";
+        if (!existing) {
 
-        button.setAttribute(
-            "aria-label",
-            "Back to top"
-        );
+            button.id =
+                "cesrg-back-top";
 
-        button.innerHTML = "↑";
 
-        document.body.appendChild(button);
+            button.type =
+                "button";
+
+
+            button.setAttribute(
+                "aria-label",
+                "Back to top"
+            );
+
+
+            button.innerHTML =
+                "↑";
+
+
+            document.body.appendChild(
+                button
+            );
+
+        }
 
 
         /*
@@ -189,7 +395,9 @@
             "scroll",
             function () {
 
-                if (window.scrollY > 450) {
+                if (
+                    window.scrollY > 450
+                ) {
 
                     button.classList.add(
                         "visible"
@@ -230,15 +438,10 @@
 
 
     /* =====================================================
-       4. SCROLL REVEAL
+       5. SCROLL REVEAL
        ===================================================== */
 
     function initScrollReveal() {
-
-        /*
-         * Elements explicitly marked with
-         * .cesrg-reveal will animate.
-         */
 
         var elements =
             document.querySelectorAll(
@@ -252,8 +455,7 @@
 
 
         /*
-         * IntersectionObserver is supported
-         * by modern browsers.
+         * Modern browser support.
          */
 
         if (
@@ -275,6 +477,7 @@
                                     entry.target.classList.add(
                                         "cesrg-visible"
                                     );
+
 
                                     observer.unobserve(
                                         entry.target
@@ -324,7 +527,7 @@
 
 
     /* =====================================================
-       5. ACTIVE NAVIGATION
+       6. ACTIVE NAVIGATION
        ===================================================== */
 
     function initActiveNavigation() {
@@ -359,7 +562,10 @@
         links.forEach(function (link) {
 
             var href =
-                link.getAttribute("href");
+                link.getAttribute(
+                    "href"
+                );
+
 
             if (!href) {
                 return;
@@ -373,7 +579,9 @@
             if (
                 href.indexOf("http") === 0
             ) {
+
                 return;
+
             }
 
 
@@ -388,6 +596,7 @@
 
                 var parent =
                     link.parentElement;
+
 
                 if (parent) {
 
@@ -405,7 +614,7 @@
 
 
     /* =====================================================
-       6. NOTICE BOARD
+       7. NOTICE BOARD
        ===================================================== */
 
     function initNoticeBoard() {
@@ -448,6 +657,7 @@
             track.innerHTML =
                 original + original;
 
+
             track.dataset.duplicated =
                 "true";
 
@@ -460,7 +670,9 @@
          */
 
         var links =
-            track.querySelectorAll("a");
+            track.querySelectorAll(
+                "a"
+            );
 
 
         links.forEach(function (link) {
@@ -492,7 +704,7 @@
 
 
     /* =====================================================
-       7. RESEARCH EVENT → GALLERY
+       8. RESEARCH EVENT → GALLERY
        ===================================================== */
 
     function initResearchEventLinks() {
@@ -521,8 +733,8 @@
 
 
                     /*
-                     * If a gallery ID exists on
-                     * this page, scroll to it.
+                     * If gallery ID exists on
+                     * current page, scroll to it.
                      */
 
                     var target =
@@ -538,14 +750,14 @@
                             block: "start"
                         });
 
+
                         return;
 
                     }
 
 
                     /*
-                     * Otherwise, go to gallery.html
-                     * with the selected event.
+                     * Otherwise go to gallery.html
                      */
 
                     window.location.href =
@@ -563,7 +775,7 @@
 
 
     /* =====================================================
-       8. GALLERY HASH HANDLING
+       9. GALLERY HASH HANDLING
        ===================================================== */
 
     function initGalleryLinks() {
@@ -593,7 +805,9 @@
 
 
         var target =
-            document.getElementById(id);
+            document.getElementById(
+                id
+            );
 
 
         if (!target) {
@@ -602,7 +816,7 @@
 
 
         /*
-         * Small delay so the page finishes
+         * Small delay so page finishes
          * rendering before scrolling.
          */
 
@@ -622,7 +836,7 @@
 
 
     /* =====================================================
-       9. EXTERNAL LINKS
+       10. EXTERNAL LINKS
        ===================================================== */
 
     function initExternalLinks() {
@@ -637,7 +851,7 @@
 
             /*
              * Don't modify links that
-             * explicitly define target.
+             * already define target.
              */
 
             if (
@@ -650,6 +864,7 @@
                     "target",
                     "_blank"
                 );
+
 
                 link.setAttribute(
                     "rel",
@@ -664,7 +879,7 @@
 
 
     /* =====================================================
-       10. AUTOMATIC YEAR
+       11. AUTOMATIC YEAR
        ===================================================== */
 
     function initCurrentYear() {
@@ -692,74 +907,111 @@
 
 
     /* =====================================================
-       11. IMAGE LOADING
+       12. IMAGE LOADING
        ===================================================== */
 
-    document.addEventListener(
-        "DOMContentLoaded",
-        function () {
+    function initImageLoading() {
 
-            var images =
-                document.querySelectorAll(
-                    "img"
-                );
+        var images =
+            document.querySelectorAll(
+                "img"
+            );
 
 
-            images.forEach(
-                function (image) {
+        images.forEach(
+            function (image) {
 
-                    /*
-                     * Don't override images
-                     * that already have loading.
-                     */
+                /*
+                 * Don't override images
+                 * that already have loading.
+                 */
 
-                    if (
-                        !image.hasAttribute(
-                            "loading"
-                        )
-                    ) {
+                if (
+                    !image.hasAttribute(
+                        "loading"
+                    )
+                ) {
 
-                        image.setAttribute(
-                            "loading",
-                            "lazy"
-                        );
-
-                    }
+                    image.setAttribute(
+                        "loading",
+                        "lazy"
+                    );
 
                 }
+
+            }
+        );
+
+    }
+
+
+    /* =====================================================
+       13. LAB VIDEO — PLAY WHEN VISIBLE
+       ===================================================== */
+
+    function initLabVideo() {
+
+        var labSection =
+            document.getElementById(
+                "lab"
             );
-/* =====================================================
-   LAB VIDEO — PLAY WHEN VISIBLE
-   ===================================================== */
-
-const labSection =
-    document.getElementById("lab");
-
-const labVideo =
-    document.getElementById("cesrgLabVideo");
 
 
-if (labSection && labVideo) {
+        var labVideo =
+            document.getElementById(
+                "cesrgLabVideo"
+            );
 
-    const videoObserver =
-        new IntersectionObserver(
-            function (entries) {
 
-                entries.forEach(
-                    function (entry) {
+        if (
+            !labSection ||
+            !labVideo
+        ) {
 
-                        if (entry.isIntersecting) {
+            return;
 
-                            labVideo.play()
-                                .catch(function () {
-                                    // Autoplay may be blocked by the browser.
-                                });
+        }
 
-                        } else {
 
-                            labVideo.pause();
+        /*
+         * IntersectionObserver supported.
+         */
 
-                        }
+        if (
+            "IntersectionObserver"
+            in window
+        ) {
+
+            var videoObserver =
+                new IntersectionObserver(
+                    function (entries) {
+
+                        entries.forEach(
+                            function (entry) {
+
+                                if (
+                                    entry.isIntersecting
+                                ) {
+
+                                    labVideo
+                                        .play()
+                                        .catch(
+                                            function () {
+                                                /*
+                                                 * Autoplay may be
+                                                 * blocked by browser.
+                                                 */
+                                            }
+                                        );
+
+                                } else {
+
+                                    labVideo.pause();
+
+                                }
+
+                            }
+                        );
 
                     },
                     {
@@ -767,23 +1019,27 @@ if (labSection && labVideo) {
                     }
                 );
 
-            }
-        );
 
-    videoObserver.observe(labSection);
+            videoObserver.observe(
+                labSection
+            );
 
-}
         }
-    );
+
+    }
 
 
     /* =====================================================
-       12. SMOOTH INTERNAL LINKS
+       14. SMOOTH INTERNAL LINKS
        ===================================================== */
 
     document.addEventListener(
         "click",
         function (event) {
+
+            /*
+             * closest() may return null.
+             */
 
             var link =
                 event.target.closest(
@@ -806,14 +1062,27 @@ if (labSection && labVideo) {
                 !href ||
                 href === "#"
             ) {
+
                 return;
+
             }
 
 
-            var target =
-                document.querySelector(
-                    href
-                );
+            var target;
+
+
+            try {
+
+                target =
+                    document.querySelector(
+                        href
+                    );
+
+            } catch (error) {
+
+                return;
+
+            }
 
 
             if (!target) {
@@ -834,28 +1103,3 @@ if (labSection && labVideo) {
 
 
 })();
-
-// ========================================
-// CESRG Theme Switcher
-// ========================================
-
-function setTheme(themeName) {
-
-    // Apply selected theme
-    document.documentElement.setAttribute("data-theme", themeName);
-
-    // Save selected theme
-    localStorage.setItem("cesrg-theme", themeName);
-
-}
-
-
-// Load saved theme when page opens
-document.addEventListener("DOMContentLoaded", function () {
-
-    const savedTheme =
-        localStorage.getItem("cesrg-theme") || "margalla-mist";
-
-    setTheme(savedTheme);
-
-});
