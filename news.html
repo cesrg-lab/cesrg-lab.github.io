@@ -1,263 +1,1703 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <title>News</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Control & Energy Systems Research Group, COMSATS University Islamabad ">
-      <meta name="author" content="">
-      <!-- Le styles -->
-      <link href="css/bootstrap.min.css" rel="stylesheet">
-      <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-      <link href="css/theme.css" rel="stylesheet">
-   </head>
-   <body>
-      <div class="container">
-         <header class="jumbotron subhead" id="overview">
-         <h1>Control & Energy Systems Research Group</h1>
-            <p class="lead"> COMSATS University Islamabad </p>
-         </header>
-         <div class="masthead">
-            <div class="navbar">
-               <div class="navbar-inner">
-                  <div class="container">
-                     <ul class="nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="people.html">People</a></li>
-                        <li><a href="research.html">Research</a></li>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li class="active"><a href="#">News</a></li>
-                        <li><a href="teaching.html">Teaching</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                     </ul>
-                  </div>
-               </div>
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>
+        News | CESRG
+    </title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="News and updates from the Control & Energy Systems Research Group, COMSATS University Islamabad.">
+
+    <meta name="author"
+          content="CESRG">
+
+
+    <!-- =====================================================
+         BOOTSTRAP
+         ===================================================== -->
+
+    <link href="css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link href="css/bootstrap-responsive.min.css"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         MODERN CESRG CSS
+         ===================================================== -->
+
+    <link href="css/modern.css"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         GOOGLE FONT
+         ===================================================== -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FAVICON
+         ===================================================== -->
+
+    <link rel="icon"
+          type="image/png"
+          href="thumbs/CESRG_logo_circle.png">
+
+
+    <!-- =====================================================
+         NEWS PAGE THEME CSS
+         ===================================================== -->
+
+    <style>
+
+        /* =====================================================
+           NEWS PAGE THEME VARIABLES
+           ===================================================== */
+
+        :root {
+
+            --news-primary: #0b5c53;
+            --news-primary-2: #174f49;
+            --news-blue: #287d72;
+            --news-accent: #4da89b;
+
+            --news-page-bg: #f7faf9;
+            --news-soft-bg: #edf5f2;
+            --news-card-bg: #ffffff;
+
+            --news-text: #172033;
+            --news-muted: #667085;
+
+            --news-border: #dce8e4;
+            --news-strong-border: #c9dad5;
+
+            --news-hover: #e2f0ec;
+
+            --news-hero-1: #071d1a;
+            --news-hero-2: #174f49;
+
+            --news-footer-bg: #071d1a;
+
+            --news-shadow:
+                0 8px 28px rgba(7,21,37,.06);
+
+            --news-shadow-hover:
+                0 16px 38px rgba(7,21,37,.12);
+        }
+
+
+        /* =====================================================
+           1. MARGALLA MIST
+           ===================================================== */
+
+        [data-theme="margalla-mist"] {
+
+            --news-primary: #0b5c53;
+            --news-primary-2: #174f49;
+            --news-blue: #287d72;
+            --news-accent: #4da89b;
+
+            --news-page-bg: #f7faf9;
+            --news-soft-bg: #edf5f2;
+            --news-card-bg: #ffffff;
+
+            --news-text: #172033;
+            --news-muted: #667085;
+
+            --news-border: #dce8e4;
+            --news-strong-border: #c9dad5;
+
+            --news-hover: #e2f0ec;
+
+            --news-hero-1: #071d1a;
+            --news-hero-2: #174f49;
+
+            --news-footer-bg: #071d1a;
+        }
+
+
+        /* =====================================================
+           2. INSTITUTIONAL BLUE
+           ===================================================== */
+
+        [data-theme="institutional-blue"] {
+
+            --news-primary: #1a5276;
+            --news-primary-2: #154360;
+            --news-blue: #2874a6;
+            --news-accent: #3498db;
+
+            --news-page-bg: #f6f9fc;
+            --news-soft-bg: #eaf2f8;
+            --news-card-bg: #ffffff;
+
+            --news-text: #172033;
+            --news-muted: #667085;
+
+            --news-border: #dce6ef;
+            --news-strong-border: #c7d8e7;
+
+            --news-hover: #e1edf6;
+
+            --news-hero-1: #071a2d;
+            --news-hero-2: #154360;
+
+            --news-footer-bg: #071a2d;
+        }
+
+
+        /* =====================================================
+           3. IVORY PRESS
+           ===================================================== */
+
+        [data-theme="ivory-press"] {
+
+            --news-primary: #8b3a3a;
+            --news-primary-2: #633333;
+            --news-blue: #9f4a4a;
+            --news-accent: #c27668;
+
+            --news-page-bg: #fbf8f3;
+            --news-soft-bg: #f3ede4;
+            --news-card-bg: #fffdf9;
+
+            --news-text: #332d2a;
+            --news-muted: #756b65;
+
+            --news-border: #e7ddd2;
+            --news-strong-border: #d8c8bb;
+
+            --news-hover: #f0e5dc;
+
+            --news-hero-1: #241817;
+            --news-hero-2: #633333;
+
+            --news-footer-bg: #241817;
+        }
+
+
+        /* =====================================================
+           4. SAGE CALM
+           ===================================================== */
+
+        [data-theme="sage-calm"] {
+
+            --news-primary: #4a6b5d;
+            --news-primary-2: #365247;
+            --news-blue: #638676;
+            --news-accent: #8daa8d;
+
+            --news-page-bg: #f7faf7;
+            --news-soft-bg: #edf3ed;
+            --news-card-bg: #ffffff;
+
+            --news-text: #26342d;
+            --news-muted: #6d7d73;
+
+            --news-border: #dce6de;
+            --news-strong-border: #cbd9ce;
+
+            --news-hover: #e3eee5;
+
+            --news-hero-1: #17251f;
+            --news-hero-2: #365247;
+
+            --news-footer-bg: #17251f;
+        }
+
+
+        /* =====================================================
+           5. INDIGO NIGHT
+           ===================================================== */
+
+        [data-theme="indigo-night"] {
+
+            --news-primary: #6366f1;
+            --news-primary-2: #3730a3;
+            --news-blue: #818cf8;
+            --news-accent: #a5b4fc;
+
+            --news-page-bg: #0f172a;
+            --news-soft-bg: #172033;
+            --news-card-bg: #1e293b;
+
+            --news-text: #e5e7eb;
+            --news-muted: #aab3c2;
+
+            --news-border: #334155;
+            --news-strong-border: #475569;
+
+            --news-hover: #273449;
+
+            --news-hero-1: #070b18;
+            --news-hero-2: #312e81;
+
+            --news-footer-bg: #070b18;
+        }
+
+
+        /* =====================================================
+           6. GRAPHITE
+           ===================================================== */
+
+        [data-theme="graphite"] {
+
+            --news-primary: #52525b;
+            --news-primary-2: #3f3f46;
+            --news-blue: #71717a;
+            --news-accent: #a1a1aa;
+
+            --news-page-bg: #f4f4f5;
+            --news-soft-bg: #e9e9eb;
+            --news-card-bg: #ffffff;
+
+            --news-text: #27272a;
+            --news-muted: #71717a;
+
+            --news-border: #d4d4d8;
+            --news-strong-border: #bdbdc3;
+
+            --news-hover: #e4e4e7;
+
+            --news-hero-1: #18181b;
+            --news-hero-2: #3f3f46;
+
+            --news-footer-bg: #18181b;
+        }
+
+
+        /* =====================================================
+           GLOBAL NEWS PAGE
+           ===================================================== */
+
+        html,
+        body {
+
+            background: var(--news-page-bg);
+
+            color: var(--news-text);
+
+            font-family: "Inter", sans-serif;
+        }
+
+
+        /* =====================================================
+           MAIN CONTAINER
+           ===================================================== */
+
+        .news-page-container {
+
+            max-width: 1180px;
+
+            margin: 0 auto;
+
+            padding: 0 20px;
+        }
+
+
+        /* =====================================================
+           NEWS HERO
+           ===================================================== */
+
+        .news-hero {
+
+            margin-top: 25px;
+
+            padding: 55px 35px;
+
+            border-radius: 22px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--news-hero-1),
+                    var(--news-hero-2)
+                );
+
+            color: white;
+
+            box-shadow:
+                0 12px 35px rgba(7,21,37,.12);
+        }
+
+
+        .news-hero h1 {
+
+            margin: 0;
+
+            color: white;
+
+            font-size: 34px;
+
+            font-weight: 800;
+
+            line-height: 1.2;
+        }
+
+
+        .news-hero p {
+
+            margin: 10px 0 0;
+
+            color: rgba(255,255,255,.78);
+
+            font-size: 15px;
+        }
+
+
+        /* =====================================================
+           OLD BOOTSTRAP MASTHEAD
+           ===================================================== */
+
+        .masthead {
+
+            margin-top: 20px;
+        }
+
+
+        .masthead .navbar {
+
+            margin-bottom: 0;
+        }
+
+
+        .masthead .navbar-inner {
+
+            background:
+                var(--news-card-bg);
+
+            border:
+                1px solid var(--news-border);
+
+            box-shadow:
+                var(--news-shadow);
+        }
+
+
+        .masthead .nav > li > a {
+
+            color:
+                var(--news-text);
+
+            text-shadow: none;
+        }
+
+
+        .masthead .nav > li > a:hover {
+
+            background:
+                var(--news-hover);
+
+            color:
+                var(--news-primary);
+        }
+
+
+        .masthead .nav > .active > a,
+        .masthead .nav > .active > a:hover {
+
+            background:
+                var(--news-primary);
+
+            color: white;
+
+            text-shadow: none;
+        }
+
+
+        /* =====================================================
+           SEPARATOR
+           ===================================================== */
+
+        .news-divider {
+
+            border: 0;
+
+            border-top:
+                1px solid var(--news-border);
+
+            margin:
+                35px 0 45px;
+        }
+
+
+        /* =====================================================
+           NEWS MEDIA AREA
+           ===================================================== */
+
+        #media {
+
+            margin-bottom: 70px;
+        }
+
+
+        /* =====================================================
+           NEWS ROW
+           ===================================================== */
+
+        .post_row {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 25px;
+
+            margin-bottom: 30px !important;
+
+            margin-left: 0 !important;
+        }
+
+
+        /* =====================================================
+           NEWS CARD
+           ===================================================== */
+
+        .post_row .post {
+
+            box-sizing: border-box;
+
+            width: calc(50% - 13px);
+
+            margin-left: 0 !important;
+
+            padding: 25px;
+
+            background:
+                var(--news-card-bg);
+
+            border:
+                1px solid var(--news-border);
+
+            border-radius: 18px;
+
+            box-shadow:
+                var(--news-shadow);
+
+            transition:
+                transform .3s ease,
+                box-shadow .3s ease,
+                border-color .3s ease;
+        }
+
+
+        .post_row .post:hover {
+
+            transform:
+                translateY(-4px);
+
+            box-shadow:
+                var(--news-shadow-hover);
+
+            border-color:
+                var(--news-strong-border);
+        }
+
+
+        /* =====================================================
+           NEWS TITLE
+           ===================================================== */
+
+        .post .text h5 {
+
+            margin: 0;
+
+            font-size: 17px;
+
+            line-height: 1.5;
+        }
+
+
+        .post .text h5 a {
+
+            color:
+                var(--news-primary);
+
+            font-weight: 750;
+
+            text-decoration: none;
+
+            transition: color .2s ease;
+        }
+
+
+        .post .text h5 a:hover {
+
+            color:
+                var(--news-blue);
+
+            text-decoration: none;
+        }
+
+
+        /* =====================================================
+           DATE
+           ===================================================== */
+
+        .post .date {
+
+            display: inline-block;
+
+            margin-top: 3px;
+
+            padding: 5px 10px;
+
+            border-radius: 50px;
+
+            background:
+                var(--news-hover);
+
+            color:
+                var(--news-primary);
+
+            font-size: 11px;
+
+            font-weight: 700;
+
+            letter-spacing: .2px;
+        }
+
+
+        /* =====================================================
+           NEWS IMAGE
+           ===================================================== */
+
+        .post .img {
+
+            margin:
+                20px 0;
+        }
+
+
+        .post .img a {
+
+            display: block;
+        }
+
+
+        .post .img img {
+
+            display: block;
+
+            width: 100%;
+
+            height: 245px;
+
+            object-fit: cover;
+
+            border-radius: 14px;
+
+            border:
+                1px solid var(--news-border);
+
+            transition:
+                transform .35s ease,
+                opacity .35s ease;
+        }
+
+
+        .post:hover .img img {
+
+            transform:
+                scale(1.015);
+
+            opacity: .96;
+        }
+
+
+        /* =====================================================
+           NEWS DESCRIPTION
+           ===================================================== */
+
+        .post .text p {
+
+            margin: 0;
+
+            color:
+                var(--news-muted);
+
+            font-size: 13px;
+
+            line-height: 1.75;
+        }
+
+
+        /* =====================================================
+           AUTHOR BOX
+           ===================================================== */
+
+        .author_box {
+
+            margin-top: 20px;
+
+            padding-top: 14px;
+
+            border-top:
+                1px solid var(--news-border);
+        }
+
+
+        .author_box h6 {
+
+            margin: 0;
+
+            color:
+                var(--news-primary-2);
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+
+        #footer {
+
+            margin-top: 70px;
+
+            padding:
+                55px 0 45px;
+
+            background:
+                var(--news-footer-bg);
+
+            color:
+                rgba(255,255,255,.75);
+
+            border-top:
+                1px solid var(--news-border);
+        }
+
+
+        #footer h3 {
+
+            color: white;
+
+            font-size: 18px;
+
+            font-weight: 750;
+        }
+
+
+        #footer p {
+
+            color:
+                rgba(255,255,255,.68);
+
+            font-size: 13px;
+
+            line-height: 1.7;
+        }
+
+
+        #footer b,
+        #footer strong {
+
+            color: white;
+        }
+
+
+        #footer a {
+
+            color:
+                var(--news-accent);
+
+            text-decoration: none;
+        }
+
+
+        #footer a:hover {
+
+            color: white;
+
+            text-decoration: underline;
+        }
+
+
+        #footer img {
+
+            max-width: 100%;
+
+            height: auto;
+
+            border-radius: 12px;
+        }
+
+
+        /* =====================================================
+           DARK THEME CARD ADJUSTMENT
+           ===================================================== */
+
+        [data-theme="indigo-night"] .post_row .post {
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,.22);
+        }
+
+
+        [data-theme="indigo-night"] .masthead .navbar-inner {
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,.20);
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .post_row .post {
+
+                width: 100%;
+            }
+
+
+            .news-hero {
+
+                padding: 45px 28px;
+            }
+
+
+            .news-hero h1 {
+
+                font-size: 29px;
+            }
+
+        }
+
+
+        @media (max-width: 767px) {
+
+            .news-page-container {
+
+                padding:
+                    0 15px;
+            }
+
+
+            .news-hero {
+
+                margin-top: 15px;
+
+                padding: 35px 22px;
+
+                border-radius: 16px;
+            }
+
+
+            .news-hero h1 {
+
+                font-size: 25px;
+            }
+
+
+            .news-hero p {
+
+                font-size: 13px;
+            }
+
+
+            .post_row {
+
+                display: block;
+            }
+
+
+            .post_row .post {
+
+                width: 100%;
+
+                margin-bottom: 22px !important;
+
+                padding: 20px;
+            }
+
+
+            .post .img img {
+
+                height: 220px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- =====================================================
+     MAIN PAGE CONTAINER
+     ===================================================== -->
+
+<div class="news-page-container">
+
+
+    <!-- =================================================
+         NEWS HERO
+         ================================================= -->
+
+    <header class="news-hero">
+
+        <h1>
+            Control & Energy Systems Research Group
+        </h1>
+
+        <p>
+            COMSATS University Islamabad
+        </p>
+
+    </header>
+
+
+
+    <!-- =================================================
+         NAVIGATION
+         ================================================= -->
+
+    <div class="masthead">
+
+        <div class="navbar">
+
+            <div class="navbar-inner">
+
+                <div class="container">
+
+                    <ul class="nav">
+
+                        <li>
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="people.html">
+                                People
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="research.html">
+                                Research
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="collaboration.html">
+                                Collaboration
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="publications.html">
+                                Publications
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="gallery.html">
+                                Gallery
+                            </a>
+                        </li>
+
+
+                        <li class="active">
+                            <a href="news.html">
+                                News
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="teaching.html">
+                                Teaching
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="contact.html">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
             </div>
-         </div>
-         <hr>
-         <div id="media">
-            <div class="row-fluid post_row">
-               <div class="span6 post">
-                  <div class="text">
-                     <h5><a href="https://mitei.mit.edu">Lorem ipsum dolor sit amet: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</a></h5>
-                     <br/>
-                     <span class="date">January 11, 2018</span>
-                  </div>
-                  <div class="img">
-                     <a href="https://mitei.mit.edu">
-                     <img src="images/envmonitor2.png" alt="Lorem ipsum dolor sit amet: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris">
-                     </a>
-                  </div>
-                  <div class="text">
-                     <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-                  </div>
-                  <div class="author_box">
-                     <h6>Daniel SD</h6>
-                  </div>
-               </div>
-               <div class="span6 post">
-                  <div class="text">
-                     <h5><a href="http://web.mit.edu">Eget Nulla: Posuere urna nec tincidunt praesent. Egestas sed sed risus pretium quam.</a></h5>
-                     <br/>
-                     <span class="date">January 4, 2018</span>                        
-                  </div>
-                  <div class="img">
-                     <a href="http://web.mit.edu">
-                     <img src="images/mit-spotlight1.png" alt="Eget Nulla: Posuere urna nec tincidunt praesent. Egestas sed sed risus pretium quam.">
-                     </a>
-                  </div>
-                  <div class="text">
-                     <p>Commodo ullamcorper a lacus vestibulum sed arcu non. Neque aliquam vestibulum morbi blandit cursus risus at ultrices mi. </p>
-                     <br/>
-                     <br/>
-                  </div>
-                  <div class="author_box">
-                     <h6>Alissa L. Jacque</h6>
-                  </div>
-               </div>
+
+        </div>
+
+    </div>
+
+
+
+    <hr class="news-divider">
+
+
+
+    <!-- =================================================
+         NEWS
+         ================================================= -->
+
+    <div id="media">
+
+
+        <!-- =================================================
+             ROW 1
+             ================================================= -->
+
+        <div class="row-fluid post_row">
+
+
+            <!-- POST 1 -->
+
+            <div class="span6 post">
+
+                <div class="text">
+
+                    <h5>
+
+                        <a href="https://mitei.mit.edu"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Lorem ipsum dolor sit amet:
+                            Ut enim ad minim veniam,
+                            quis nostrud exercitation
+                            ullamco laboris
+
+                        </a>
+
+                    </h5>
+
+
+                    <span class="date">
+                        January 11, 2018
+                    </span>
+
+                </div>
+
+
+                <div class="img">
+
+                    <a href="https://mitei.mit.edu"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <img
+                            src="images/envmonitor2.png"
+                            alt="Lorem ipsum dolor sit amet: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris">
+
+                    </a>
+
+                </div>
+
+
+                <div class="text">
+
+                    <p>
+
+                        Duis aute irure dolor in
+                        reprehenderit in voluptate velit
+                        esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat
+                        cupidatat non proident, sunt in culpa
+                        qui officia deserunt mollit anim id
+                        est laborum.
+
+                    </p>
+
+                </div>
+
+
+                <div class="author_box">
+
+                    <h6>
+                        Daniel SD
+                    </h6>
+
+                </div>
+
             </div>
-            <div class="row-fluid post_row">
-               <div class="span6 post">
-                  <div class="text">
-                     <h5><a href="https://mitei.mit.edu">Vitae Congue eu Consequat : Arcu cursus euismod</a></h5>
-                     <span class="date">December 13, 2017</span>
-                  </div>
-                  <div class="img">
-                     <a href="https://mitei.mit.edu">
-                     <img src="images/harnessingsolar-3.jpg" alt="Vitae Congue eu Consequat : Arcu cursus euismod">
-                     </a>
-                  </div>
-                  <div class="text">
-                     <p> Eu augue ut lectus arcu bibendum at. Vel elit scelerisque mauris pellentesque pulvinar pellentesque. Hac habitasse platea dictumst quisque sagittis purus. Elementum sagittis vitae et leo. Malesuada proin libero nunc consequat.</p>
-                     <br/>
-                     <br/>
-                  </div>
-                  <div class="author_box">
-                     <h6>Karen R. James</h6>
-                  </div>
-               </div>
-               <div class="span6 post">
-                  <div class="text">
-                     <h5><a href="https://mitei.mit.edu">Scelerisque Mauris: Ut sem nulla pharetra diam sit amet nisl suscipit.</a></h5>
-                     <span class="date">March 4, 2017</span>
-                  </div>
-                  <div class="img">
-                     <a href="https://mitei.mit.edu">
-                     <img src="images/smartplanet.png" alt="Scelerisque Mauris: Ut sem nulla pharetra diam sit amet nisl suscipit.">
-                     </a>
-                  </div>
-                  <div class="text">
-                     <p>Leo duis ut diam quam nulla porttitor massa id neque. Quam id leo in vitae turpis massa sed elementum. Scelerisque mauris pellentesque pulvinar pellentesque habitant morbi. Id donec ultrices tincidunt arcu non. Nec feugiat in fermentum posuere urna nec. Et leo duis ut diam. Tincidunt eget nullam non nisi est sit amet. </p>
-                  </div>
-                  <div class="author_box">
-                     <h6>Jacob Bern</h6>
-                  </div>
-               </div>
+
+
+
+            <!-- POST 2 -->
+
+            <div class="span6 post">
+
+                <div class="text">
+
+                    <h5>
+
+                        <a href="http://web.mit.edu"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Eget Nulla:
+                            Posuere urna nec tincidunt
+                            praesent. Egestas sed sed risus
+                            pretium quam.
+
+                        </a>
+
+                    </h5>
+
+
+                    <span class="date">
+                        January 4, 2018
+                    </span>
+
+                </div>
+
+
+                <div class="img">
+
+                    <a href="http://web.mit.edu"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <img
+                            src="images/mit-spotlight1.png"
+                            alt="Eget Nulla: Posuere urna nec tincidunt praesent. Egestas sed sed risus pretium quam.">
+
+                    </a>
+
+                </div>
+
+
+                <div class="text">
+
+                    <p>
+
+                        Commodo ullamcorper a lacus
+                        vestibulum sed arcu non.
+                        Neque aliquam vestibulum morbi
+                        blandit cursus risus at ultrices mi.
+
+                    </p>
+
+                </div>
+
+
+                <div class="author_box">
+
+                    <h6>
+                        Alissa L. Jacque
+                    </h6>
+
+                </div>
+
             </div>
-            <div class="row-fluid post_row">
-               <div class="span6 post">
-                  <div class="text">
-                     <h5><a href="https://mitei.mit.edu">Vulputate Dignissim Suspendisse: Purus sit amet</a></h5>
-                     <br/>
-                     <span class="date">November 11, 2017</span>
-                  </div>
-                  <div class="img">
-                     <a href="https://mitei.mit.edu">
-                     <img src="images/parabolic.jpg" alt="Vulputate Dignissim Suspendisse: Purus sit amet">
-                     </a>
-                  </div>
-                  <div class="text">
-                     <p>Ultricies lacus sed turpis tincidunt id aliquet. Ultricies mi eget mauris pharetra et ultrices. Velit dignissim sodales ut eu sem. Senectus et netus et malesuada fames ac turpis egestas. Commodo quis imperdiet massa tincidunt nunc.</p>
-                     <br/>
-                  </div>
-                  <div class="author_box">
-                     <h6>Sarmin Kato</h6>
-                  </div>
-               </div>
-               <div class="span6 post">
-                  <div class="text">
-                     <h5><a href="https://mitei.mit.edu">Lorem Ipsum Dolor: Enim ut sem viverra aliquet?</a></h5>
-                     <br/>
-                     <span class="date">October 31, 2017</span>                     
-                  </div>
-                  <div class="img">
-                     <a href="https://mitei.mit.edu">
-                     <img src="images/solarenergypowerstation.jpg" alt="Lorem Ipsum Dolor: Enim ut sem viverra aliquet?">
-                     </a>
-                  </div>
-                  <div class="text">
-                     <p> Nisl condimentum id venenatis a condimentum vitae. Leo vel orci porta non pulvinar. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Egestas tellus rutrum tellus pellentesque eu tincidunt tortor aliquam nulla. </p>
-                     <br/>
-                  </div>
-                  <div class="author_box">
-                     <h6>Joe Orwell</h6>
-                  </div>
-               </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             ROW 2
+             ================================================= -->
+
+        <div class="row-fluid post_row">
+
+
+            <!-- POST 3 -->
+
+            <div class="span6 post">
+
+                <div class="text">
+
+                    <h5>
+
+                        <a href="https://mitei.mit.edu"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Vitae Congue eu Consequat:
+                            Arcu cursus euismod
+
+                        </a>
+
+                    </h5>
+
+
+                    <span class="date">
+                        December 13, 2017
+                    </span>
+
+                </div>
+
+
+                <div class="img">
+
+                    <a href="https://mitei.mit.edu"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <img
+                            src="images/harnessingsolar-3.jpg"
+                            alt="Vitae Congue eu Consequat: Arcu cursus euismod">
+
+                    </a>
+
+                </div>
+
+
+                <div class="text">
+
+                    <p>
+
+                        Eu augue ut lectus arcu
+                        bibendum at. Vel elit scelerisque
+                        mauris pellentesque pulvinar
+                        pellentesque. Hac habitasse platea
+                        dictumst quisque sagittis purus.
+                        Elementum sagittis vitae et leo.
+                        Malesuada proin libero nunc consequat.
+
+                    </p>
+
+                </div>
+
+
+                <div class="author_box">
+
+                    <h6>
+                        Karen R. James
+                    </h6>
+
+                </div>
+
             </div>
-         </div>
-      </div>
-      <footer id="footer">
-         <div class="container-fluid">
-            <div class="row-fluid">
-               <div class="span5">
-                  <h3>Contact Information</h3>
-                  <p><b>Office Hours: </b>Monday-Friday (9.00am - 5.00pm)</p>
-                  <p><b>Phone: </b>+92-51-9049207</p>
-                  <p><b>Cell: </b>+92-331-3666163</p>
-                  <a href="mailto:ali_arshad@comsats.edu.pk">Email</a>
-               </div>
-               <div class="span2">
-                  <a href="https://comsats.edu.pk/"><img src = "thumbs/cesrg_logoo.jpeg" alt="CESRG-logo"/></a>
-               </div>
-               <div class="span5">
-                  <h3>Address</h3>
-                  <p>Control & Energy Systems Research Group<br>
-                     Room No. 229, 2nd Floor, Department of Electrical Engineering,<br>
-                      COMSATS University Islamabad<br>
-                     Pakistan
-                  </p>
-                  <a href="https://maps.app.goo.gl/pZj32DCDwLoRUJXe9">Show Map</a>
-               </div>
+
+
+
+            <!-- POST 4 -->
+
+            <div class="span6 post">
+
+                <div class="text">
+
+                    <h5>
+
+                        <a href="https://mitei.mit.edu"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Scelerisque Mauris:
+                            Ut sem nulla pharetra diam
+                            sit amet nisl suscipit.
+
+                        </a>
+
+                    </h5>
+
+
+                    <span class="date">
+                        March 4, 2017
+                    </span>
+
+                </div>
+
+
+                <div class="img">
+
+                    <a href="https://mitei.mit.edu"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <img
+                            src="images/smartplanet.png"
+                            alt="Scelerisque Mauris: Ut sem nulla pharetra diam sit amet nisl suscipit.">
+
+                    </a>
+
+                </div>
+
+
+                <div class="text">
+
+                    <p>
+
+                        Leo duis ut diam quam nulla
+                        porttitor massa id neque.
+                        Quam id leo in vitae turpis massa
+                        sed elementum. Scelerisque mauris
+                        pellentesque pulvinar pellentesque
+                        habitant morbi. Id donec ultrices
+                        tincidunt arcu non.
+
+                    </p>
+
+                </div>
+
+
+                <div class="author_box">
+
+                    <h6>
+                        Jacob Bern
+                    </h6>
+
+                </div>
+
             </div>
-         </div>
-      </footer>
-      <!-- Le javascript
-         ================================================== -->
-      <!-- Placed at the end of the document so the pages load faster -->
-      <script src="js/jquery-1.9.1.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script>
-         $(document).ready(function() {
-             $(document.body).scrollspy({
-                 target: "#navparent"
-             });
-         });
-      </script>
-   </body>
-   <!-- Floating Theme Switcher -->
-<div class="theme-switcher-bar">
 
-  <span class="theme-title">Theme</span>
-
-  <button class="theme-btn"
-          onclick="setTheme('margalla-mist')">
-
-    <span class="color-dot"
-          style="background:#0b5c53;"></span>
-
-    Margalla
-  </button>
+        </div>
 
 
-  <button class="theme-btn"
-          onclick="setTheme('institutional-blue')">
 
-    <span class="color-dot"
-          style="background:#1a5276;"></span>
+        <!-- =================================================
+             ROW 3
+             ================================================= -->
 
-    Blue
-  </button>
+        <div class="row-fluid post_row">
 
 
-  <button class="theme-btn"
-          onclick="setTheme('ivory-press')">
+            <!-- POST 5 -->
 
-    <span class="color-dot"
-          style="background:#8b3a3a;"></span>
+            <div class="span6 post">
 
-    Ivory
-  </button>
+                <div class="text">
 
+                    <h5>
 
-  <button class="theme-btn"
-          onclick="setTheme('sage-calm')">
+                        <a href="https://mitei.mit.edu"
+                           target="_blank"
+                           rel="noopener noreferrer">
 
-    <span class="color-dot"
-          style="background:#4a6b5d;"></span>
+                            Vulputate Dignissim
+                            Suspendisse:
+                            Purus sit amet
 
-    Sage
-  </button>
+                        </a>
 
-
-  <button class="theme-btn"
-          onclick="setTheme('indigo-night')">
-
-    <span class="color-dot"
-          style="background:#6366f1;"></span>
-
-    Night
-  </button>
+                    </h5>
 
 
-  <button class="theme-btn"
-          onclick="setTheme('graphite')">
+                    <span class="date">
+                        November 11, 2017
+                    </span>
 
-    <span class="color-dot"
-          style="background:#a1a1aa;"></span>
+                </div>
 
-    Graphite
-  </button>
+
+                <div class="img">
+
+                    <a href="https://mitei.mit.edu"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <img
+                            src="images/parabolic.jpg"
+                            alt="Vulputate Dignissim Suspendisse: Purus sit amet">
+
+                    </a>
+
+                </div>
+
+
+                <div class="text">
+
+                    <p>
+
+                        Ultricies lacus sed turpis
+                        tincidunt id aliquet. Ultricies mi
+                        eget mauris pharetra et ultrices.
+                        Velit dignissim sodales ut eu sem.
+                        Senectus et netus et malesuada fames
+                        ac turpis egestas. Commodo quis
+                        imperdiet massa tincidunt nunc.
+
+                    </p>
+
+                </div>
+
+
+                <div class="author_box">
+
+                    <h6>
+                        Sarmin Kato
+                    </h6>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- POST 6 -->
+
+            <div class="span6 post">
+
+                <div class="text">
+
+                    <h5>
+
+                        <a href="https://mitei.mit.edu"
+                           target="_blank"
+                           rel="noopener noreferrer">
+
+                            Lorem Ipsum Dolor:
+                            Enim ut sem viverra aliquet?
+
+                        </a>
+
+                    </h5>
+
+
+                    <span class="date">
+                        October 31, 2017
+                    </span>
+
+                </div>
+
+
+                <div class="img">
+
+                    <a href="https://mitei.mit.edu"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <img
+                            src="images/solarenergypowerstation.jpg"
+                            alt="Lorem Ipsum Dolor: Enim ut sem viverra aliquet?">
+
+                    </a>
+
+                </div>
+
+
+                <div class="text">
+
+                    <p>
+
+                        Nisl condimentum id venenatis
+                        a condimentum vitae. Leo vel orci
+                        porta non pulvinar. Phasellus
+                        vestibulum lorem sed risus ultricies
+                        tristique nulla. Egestas tellus rutrum
+                        tellus pellentesque eu tincidunt
+                        tortor aliquam nulla.
+
+                    </p>
+
+                </div>
+
+
+                <div class="author_box">
+
+                    <h6>
+                        Joe Orwell
+                    </h6>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
 
 </div>
+
+
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
+
+<footer id="footer">
+
+    <div class="container-fluid">
+
+        <div class="row-fluid">
+
+
+            <!-- CONTACT -->
+
+            <div class="span5">
+
+                <h3>
+                    Contact Information
+                </h3>
+
+
+                <p>
+
+                    <b>
+                        Office Hours:
+                    </b>
+
+                    Monday-Friday
+                    (9.00am - 5.00pm)
+
+                </p>
+
+
+                <p>
+
+                    <b>
+                        Phone:
+                    </b>
+
+                    +92-51-9049207
+
+                </p>
+
+
+                <p>
+
+                    <b>
+                        Cell:
+                    </b>
+
+                    +92-331-3666163
+
+                </p>
+
+
+                <a href="mailto:ali_arshad@comsats.edu.pk">
+
+                    Email
+
+                </a>
+
+            </div>
+
+
+
+            <!-- LOGO -->
+
+            <div class="span2"
+                 style="text-align:center;">
+
+                <a href="https://comsats.edu.pk/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <img
+                        src="thumbs/cesrg_logoo.jpeg"
+                        alt="CESRG Logo">
+
+                </a>
+
+            </div>
+
+
+
+            <!-- ADDRESS -->
+
+            <div class="span5">
+
+                <h3>
+                    Address
+                </h3>
+
+
+                <p>
+
+                    Control & Energy Systems
+                    Research Group
+
+                    <br>
+
+                    Room No. 229, 2nd Floor,
+                    Department of Electrical Engineering,
+
+                    <br>
+
+                    COMSATS University Islamabad
+
+                    <br>
+
+                    Pakistan
+
+                </p>
+
+
+                <a
+                    href="https://maps.app.goo.gl/pZj32DCDwLoRUJXe9"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Show Map
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     FLOATING THEME SWITCHER
+     ===================================================== -->
+
+<div class="theme-switcher-bar">
+
+    <span class="theme-title">
+        Theme
+    </span>
+
+
+    <button
+        class="theme-btn"
+        data-theme="margalla-mist"
+        onclick="setTheme('margalla-mist')">
+
+        <span
+            class="color-dot"
+            style="background:#0b5c53;">
+        </span>
+
+        Margalla
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="institutional-blue"
+        onclick="setTheme('institutional-blue')">
+
+        <span
+            class="color-dot"
+            style="background:#1a5276;">
+        </span>
+
+        Blue
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="ivory-press"
+        onclick="setTheme('ivory-press')">
+
+        <span
+            class="color-dot"
+            style="background:#8b3a3a;">
+        </span>
+
+        Ivory
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="sage-calm"
+        onclick="setTheme('sage-calm')">
+
+        <span
+            class="color-dot"
+            style="background:#4a6b5d;">
+        </span>
+
+        Sage
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="indigo-night"
+        onclick="setTheme('indigo-night')">
+
+        <span
+            class="color-dot"
+            style="background:#6366f1;">
+        </span>
+
+        Night
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="graphite"
+        onclick="setTheme('graphite')">
+
+        <span
+            class="color-dot"
+            style="background:#a1a1aa;">
+        </span>
+
+        Graphite
+
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
+
+<script src="js/jquery-1.9.1.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/modern.js"></script>
+
+
+<script>
+
+    $(document).ready(function () {
+
+        $(document.body).scrollspy({
+            target: "#navparent"
+        });
+
+    });
+
+</script>
+
+
+</body>
+
 </html>
