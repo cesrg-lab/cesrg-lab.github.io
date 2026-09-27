@@ -383,7 +383,30 @@ html[data-theme] .people-brand {
         var(--people-heading) !important;
 }
 
+/* =========================================================
+   PEOPLE BRAND FIX
+   ========================================================= */
 
+.people-brand {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 12px !important;              /* Logo aur Text ke beech space */
+    text-decoration: none !important;
+    margin-right: 25px !important;      /* Home tab aur logo ke beech space */
+}
+
+.people-brand img {
+    display: block;
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.people-brand span {
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
 html[data-theme] .people-brand:hover {
 
     color:
@@ -1316,23 +1339,10 @@ html[data-theme] .theme-btn.active {
 
         <div class="container">
 
-            <a href="index.html"
-               class="people-brand">
-
-                <img
-                    src="thumbs/CESRG_logo_circle02.png"
-                    alt="CESRG Logo"
-                    style="
-                        width:42px;
-                        height:42px;
-                        object-fit:contain;
-                    ">
-
-                <span>
-                    CESRG
-                </span>
-
-            </a>
+            <a href="index.html" class="people-brand">
+    <img src="thumbs/CESRG_logo_circle02.png" alt="CESRG Logo">
+    <span>CESRG</span>
+</a>
 
 
             <button
