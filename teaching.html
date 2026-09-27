@@ -1,215 +1,1164 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <title>Research</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="description" content="Control & Energy Systems Research Group, COMSATS University Islamabad">
-      <meta name="author" content="">
-      <!-- Le styles -->
-      <link href="css/bootstrap.min.css" rel="stylesheet">
-      <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-      <link href="css/theme.css" rel="stylesheet">
-   </head>
-   <body>
-      <div class="container">
-         <header class="jumbotron subhead" id="overview">
-            <h1>Control & Energy Systems Research Group</h1>
-              <p class="lead"> COMSATS University Islamabad </p>
-         </header>
-         <div class="masthead">
+
+<head>
+    <meta charset="utf-8">
+    <title>Teaching | CESRG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Teaching and course information at Control & Energy Systems Research Group, COMSATS University Islamabad">
+
+    <link rel="icon" type="image/png" href="thumbs/CESRG_logo_circle.png">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link href="css/modern.css" rel="stylesheet">
+
+    <style>
+
+        /* =========================================================
+           TEACHING PAGE THEME VARIABLES
+           ========================================================= */
+
+        :root {
+            --teaching-primary: #0b5c53;
+            --teaching-primary-2: #174f49;
+            --teaching-blue: #287d72;
+            --teaching-accent: #4da89b;
+
+            --teaching-page-bg: #f7faf9;
+            --teaching-soft-bg: #edf5f2;
+            --teaching-card-bg: #ffffff;
+
+            --teaching-text: #172033;
+            --teaching-muted: #667085;
+            --teaching-border: #dce8e4;
+
+            --teaching-hero-1: #071d1a;
+            --teaching-hero-2: #174f49;
+
+            --teaching-hover: #e2f0ec;
+        }
+
+
+        /* =========================================================
+           THEME 2 — INSTITUTIONAL BLUE
+           ========================================================= */
+
+        [data-theme="institutional-blue"] {
+
+            --teaching-primary: #1a5276;
+            --teaching-primary-2: #154360;
+            --teaching-blue: #2874a6;
+            --teaching-accent: #3498db;
+
+            --teaching-page-bg: #f6f9fc;
+            --teaching-soft-bg: #eaf2f8;
+            --teaching-card-bg: #ffffff;
+
+            --teaching-text: #172033;
+            --teaching-muted: #667085;
+            --teaching-border: #dce6ef;
+
+            --teaching-hero-1: #071a2d;
+            --teaching-hero-2: #154360;
+
+            --teaching-hover: #e1edf6;
+        }
+
+
+        /* =========================================================
+           THEME 3 — IVORY PRESS
+           ========================================================= */
+
+        [data-theme="ivory-press"] {
+
+            --teaching-primary: #8b3a3a;
+            --teaching-primary-2: #633333;
+            --teaching-blue: #9f4a4a;
+            --teaching-accent: #c27668;
+
+            --teaching-page-bg: #fbf8f3;
+            --teaching-soft-bg: #f3ede4;
+            --teaching-card-bg: #fffdf9;
+
+            --teaching-text: #332d2a;
+            --teaching-muted: #756b65;
+            --teaching-border: #e7ddd2;
+
+            --teaching-hero-1: #241817;
+            --teaching-hero-2: #633333;
+
+            --teaching-hover: #f0e5dc;
+        }
+
+
+        /* =========================================================
+           THEME 4 — SAGE CALM
+           ========================================================= */
+
+        [data-theme="sage-calm"] {
+
+            --teaching-primary: #4a6b5d;
+            --teaching-primary-2: #365247;
+            --teaching-blue: #638676;
+            --teaching-accent: #8daa8d;
+
+            --teaching-page-bg: #f7faf7;
+            --teaching-soft-bg: #edf3ed;
+            --teaching-card-bg: #ffffff;
+
+            --teaching-text: #26342d;
+            --teaching-muted: #6d7d73;
+            --teaching-border: #dce6de;
+
+            --teaching-hero-1: #17251f;
+            --teaching-hero-2: #365247;
+
+            --teaching-hover: #e3eee5;
+        }
+
+
+        /* =========================================================
+           THEME 5 — INDIGO NIGHT
+           ========================================================= */
+
+        [data-theme="indigo-night"] {
+
+            --teaching-primary: #6366f1;
+            --teaching-primary-2: #3730a3;
+            --teaching-blue: #818cf8;
+            --teaching-accent: #a5b4fc;
+
+            --teaching-page-bg: #0f172a;
+            --teaching-soft-bg: #172033;
+            --teaching-card-bg: #1e293b;
+
+            --teaching-text: #e5e7eb;
+            --teaching-muted: #aab3c2;
+            --teaching-border: #334155;
+
+            --teaching-hero-1: #070b18;
+            --teaching-hero-2: #312e81;
+
+            --teaching-hover: #273449;
+        }
+
+
+        /* =========================================================
+           THEME 6 — GRAPHITE
+           ========================================================= */
+
+        [data-theme="graphite"] {
+
+            --teaching-primary: #52525b;
+            --teaching-primary-2: #3f3f46;
+            --teaching-blue: #71717a;
+            --teaching-accent: #a1a1aa;
+
+            --teaching-page-bg: #f4f4f5;
+            --teaching-soft-bg: #e9e9eb;
+            --teaching-card-bg: #ffffff;
+
+            --teaching-text: #27272a;
+            --teaching-muted: #71717a;
+            --teaching-border: #d4d4d8;
+
+            --teaching-hero-1: #18181b;
+            --teaching-hero-2: #3f3f46;
+
+            --teaching-hover: #e4e4e7;
+        }
+
+
+        /* =========================================================
+           PAGE BASE
+           ========================================================= */
+
+        body.teaching-page {
+            background: var(--teaching-page-bg) !important;
+            color: var(--teaching-text);
+            font-family: "Inter", sans-serif;
+        }
+
+        .teaching-page .container {
+            color: var(--teaching-text);
+        }
+
+
+        /* =========================================================
+           HEADER / HERO
+           ========================================================= */
+
+        .teaching-page .jumbotron {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--teaching-hero-1),
+                    var(--teaching-hero-2)
+                ) !important;
+
+            color: #ffffff !important;
+            border-radius: 0 0 18px 18px;
+        }
+
+        .teaching-page .jumbotron h1,
+        .teaching-page .jumbotron .lead {
+            color: #ffffff !important;
+        }
+
+
+        /* =========================================================
+           NAVIGATION
+           ========================================================= */
+
+        .teaching-page .masthead {
+            background: var(--teaching-card-bg);
+            border-color: var(--teaching-border);
+        }
+
+        .teaching-page .navbar-inner {
+            background: var(--teaching-card-bg) !important;
+            border-color: var(--teaching-border) !important;
+        }
+
+        .teaching-page .navbar .nav > li > a {
+            color: var(--teaching-muted) !important;
+            text-shadow: none !important;
+        }
+
+        .teaching-page .navbar .nav > li > a:hover {
+            background: var(--teaching-hover) !important;
+            color: var(--teaching-primary) !important;
+        }
+
+        .teaching-page .navbar .nav > li.active > a,
+        .teaching-page .navbar .nav > li.active > a:hover {
+            background: var(--teaching-primary) !important;
+            color: #ffffff !important;
+        }
+
+
+        /* =========================================================
+           HORIZONTAL LINE
+           ========================================================= */
+
+        .teaching-page hr {
+            border-color: var(--teaching-border);
+        }
+
+
+        /* =========================================================
+           SIDEBAR
+           ========================================================= */
+
+        .teaching-page .bs-docs-sidebar {
+            background: transparent;
+        }
+
+        .teaching-page .bs-docs-sidenav {
+            background: var(--teaching-card-bg);
+            border: 1px solid var(--teaching-border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .teaching-page .bs-docs-sidenav > li > a {
+            color: var(--teaching-muted) !important;
+            border-bottom: 1px solid var(--teaching-border);
+            background: transparent !important;
+        }
+
+        .teaching-page .bs-docs-sidenav > li > a:hover {
+            background: var(--teaching-hover) !important;
+            color: var(--teaching-primary) !important;
+        }
+
+        .teaching-page .bs-docs-sidenav > .active > a {
+            background: var(--teaching-primary) !important;
+            color: #ffffff !important;
+        }
+
+
+        /* =========================================================
+           COURSE CONTENT
+           ========================================================= */
+
+        .teaching-page .page-header {
+            border-color: var(--teaching-border);
+        }
+
+        .teaching-page .page-header h3 {
+            color: var(--teaching-text) !important;
+        }
+
+        .teaching-page .page-header h3 a {
+            color: var(--teaching-primary) !important;
+            text-decoration: none;
+        }
+
+        .teaching-page .page-header h3 a:hover {
+            color: var(--teaching-blue) !important;
+        }
+
+        .teaching-page p {
+            color: var(--teaching-text);
+        }
+
+        .teaching-page b,
+        .teaching-page strong {
+            color: var(--teaching-text);
+        }
+
+        .teaching-page p a {
+            color: var(--teaching-primary) !important;
+        }
+
+        .teaching-page p a:hover {
+            color: var(--teaching-blue) !important;
+        }
+
+
+        /* =========================================================
+           TABLE
+           ========================================================= */
+
+        .teaching-page .table {
+            background: var(--teaching-card-bg);
+            color: var(--teaching-text);
+            border-color: var(--teaching-border);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .teaching-page .table th {
+            background: var(--teaching-primary);
+            color: #ffffff !important;
+            border-color: var(--teaching-primary);
+        }
+
+        .teaching-page .table td {
+            color: var(--teaching-text);
+            border-color: var(--teaching-border);
+        }
+
+        .teaching-page .table-striped tbody > tr:nth-child(odd) > td,
+        .teaching-page .table-striped tbody > tr:nth-child(odd) > th {
+            background: var(--teaching-soft-bg);
+        }
+
+        .teaching-page .table tbody tr:hover td {
+            background: var(--teaching-hover);
+        }
+
+        .teaching-page .table a {
+            color: var(--teaching-primary) !important;
+        }
+
+        .teaching-page .table a:hover {
+            color: var(--teaching-blue) !important;
+        }
+
+
+        /* =========================================================
+           FOOTER
+           ========================================================= */
+
+        .teaching-page + #footer {
+            margin-top: 50px;
+        }
+
+        #footer {
+            background: var(--teaching-hero-1);
+            color: #ffffff;
+            border-top: 1px solid var(--teaching-border);
+        }
+
+        #footer h3 {
+            color: #ffffff !important;
+        }
+
+        #footer p {
+            color: rgba(255, 255, 255, 0.86) !important;
+        }
+
+        #footer a {
+            color: var(--teaching-accent) !important;
+        }
+
+        #footer a:hover {
+            color: #ffffff !important;
+        }
+
+        #footer img {
+            max-width: 100%;
+            height: auto;
+        }
+
+
+        /* =========================================================
+           THEME SWITCHER
+           ========================================================= */
+
+        .theme-switcher-bar {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            z-index: 9999;
+
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 6px;
+
+            padding: 10px 12px;
+
+            background: var(--teaching-card-bg);
+            border: 1px solid var(--teaching-border);
+            border-radius: 14px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .theme-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--teaching-text);
+            margin-right: 4px;
+        }
+
+        .theme-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+
+            padding: 6px 9px;
+
+            border: 1px solid var(--teaching-border);
+            border-radius: 8px;
+
+            background: var(--teaching-soft-bg);
+            color: var(--teaching-text);
+
+            font-size: 11px;
+            font-weight: 600;
+
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .theme-btn:hover {
+            background: var(--teaching-hover);
+            color: var(--teaching-primary);
+            border-color: var(--teaching-primary);
+        }
+
+        .theme-btn.active {
+            background: var(--teaching-primary);
+            color: #ffffff;
+            border-color: var(--teaching-primary);
+        }
+
+        .color-dot {
+            width: 9px;
+            height: 9px;
+            min-width: 9px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+
+        /* =========================================================
+           MOBILE
+           ========================================================= */
+
+        @media (max-width: 767px) {
+
+            .theme-switcher-bar {
+                left: 10px;
+                right: 10px;
+                bottom: 10px;
+                justify-content: center;
+            }
+
+            .theme-title {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 2px;
+            }
+
+            .theme-btn {
+                padding: 5px 7px;
+                font-size: 10px;
+            }
+
+            .teaching-page .bs-docs-sidebar {
+                margin-bottom: 25px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body class="teaching-page">
+
+    <!-- =========================================================
+         MAIN CONTAINER
+         ========================================================= -->
+
+    <div class="container">
+
+        <!-- =====================================================
+             HEADER
+             ===================================================== -->
+
+        <header class="jumbotron subhead" id="overview">
+
+            <h1>
+                Control &amp; Energy Systems Research Group
+            </h1>
+
+            <p class="lead">
+                COMSATS University Islamabad
+            </p>
+
+        </header>
+
+
+        <!-- =====================================================
+             NAVIGATION
+             ===================================================== -->
+
+        <div class="masthead">
+
             <div class="navbar">
-               <div class="navbar-inner">
-                  <div class="container">
-                     <ul class="nav">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="people.html">People</a></li>
-                        <li><a href="research.html">Research</a></li>
-                        <li><a href="publications.html">Publications</a></li>
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="news.html">News</a></li>
-                        <li class="active"><a href="#">Teaching</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                     </ul>
-                  </div>
-               </div>
+
+                <div class="navbar-inner">
+
+                    <div class="container">
+
+                        <ul class="nav">
+
+                            <li>
+                                <a href="index.html">
+                                    Home
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="people.html">
+                                    People
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="research.html">
+                                    Research
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="publications.html">
+                                    Publications
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="gallery.html">
+                                    Gallery
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="news.html">
+                                    News
+                                </a>
+                            </li>
+
+                            <li class="active">
+                                <a href="#">
+                                    Teaching
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="contact.html">
+                                    Contact
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
             </div>
-         </div>
-         <hr>
-         <div class="row-fluid">
+
+        </div>
+
+
+        <hr>
+
+
+        <!-- =====================================================
+             COURSE CONTENT
+             ===================================================== -->
+
+        <div class="row-fluid">
+
+
+            <!-- =================================================
+                 SIDEBAR
+                 ================================================= -->
+
             <div class="span3 bs-docs-sidebar" id="navparent">
-               <ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="200" data-offset-bottom="260">
-                  <li><a href="#ke142"> KE 142: Tortor Vitae Purus</a></li>
-                  <li><a href="#ke121"> KE 121: Ullamcorper Malesuada</a></li>
-               </ul>
+
+                <ul class="nav nav-list bs-docs-sidenav"
+                    data-spy="affix"
+                    data-offset-top="200"
+                    data-offset-bottom="260">
+
+                    <li>
+                        <a href="#ke142">
+                            KE 142: Tortor Vitae Purus
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#ke121">
+                            KE 121: Ullamcorper Malesuada
+                        </a>
+                    </li>
+
+                </ul>
+
             </div>
+
+
+            <!-- =================================================
+                 MAIN CONTENT
+                 ================================================= -->
+
             <div class="span8 offset1">
-               <section id="ke142">
-                  <div class="page-header">
-                     <h3><a href="">KE 142: Tortor Vitae Purus</a></h3>
-                     <hr>
-                     <p>Quam viverra orci sagittis eu volutpat odio. Ultricies tristique nulla aliquet enim tortor at auctor urna nunc. </p>
-                     <p><b>Prerequisite: </b><a href=""><b>ME 310</b></a> and <a href=""><b>ME 320</b></a>.</p>
-                     <p><b>Semesters Taught:</b> Fall 2018.</p>
-                     <p><b>Course Information:</b> <a href="">Syllabus</a></p>
-                     <table class="table table-striped">
-                        <thead>
-                           <tr>
-                              <th>#</th>
-                              <th>Lecture</th>
-                        </thead>
-                        <tbody>
-                           <tr>
-                              <td>1</td>
-                              <td><a href="">Pretium Lectus Quam</a></td>
-                           </tr>
-                           <tr>
-                              <td>2</td>
-                              <td><a href="">Urna porttitor: Rhoncus dolor purus non enim praesent elementum facilisis.</a></td>
-                           </tr>
-                           <tr>
-                              <td>3</td>
-                              <td><a href="">Diam in arcu: Cursus euismod quis viverra nibh cras.</a></td>
-                           </tr>
-                           <tr>
-                              <td>4</td>
-                              <td><a href="">Tristique: Sollicitudin nibh sit amet commodo. </a></td>
-                           </tr>
-                           <tr>
-                              <td>5</td>
-                              <td><a href="">Risus: Viverra adipiscing at in tellus integer. </a></td>
-                           </tr>
-                           <tr>
-                              <td>6</td>
-                              <td><a href="">Mus mauris vitae ultricies leo.</a></td>
-                           </tr>
-                           <tr>
-                              <td>7</td>
-                              <td><a href="">Sed faucibus turpis in eu mi bibendum neque egestas. </a></td>
-                           </tr>
-                           <tr>
-                              <td>8</td>
-                              <td><a href="">Viverra aliquet eget sit amet tellus.</a></td>
-                           </tr>
-                        </tbody>
-                     </table>
-                  </div>
-               </section>
-               <section id="ke121">
-                  <div class="page-header">
-                     <h3><a href="">KE 121: Ullamcorper Malesuada</a></h3>
-                     <hr>
-                     <p>Morbi enim nunc faucibus a pellentesque sit amet porttitor eget. Aliquet bibendum enim facilisis gravida. </p>
-                     <p><b>Prerequisite:</b> Mus mauris vitae.</p>
-                     <p><b>Semesters Taught:</b> Fall 2018.</p>
-                  </div>
-               </section>
+
+
+                <!-- =============================================
+                     COURSE 1
+                     ============================================= -->
+
+                <section id="ke142">
+
+                    <div class="page-header">
+
+                        <h3>
+                            <a href="">
+                                KE 142: Tortor Vitae Purus
+                            </a>
+                        </h3>
+
+                        <hr>
+
+                        <p>
+                            Quam viverra orci sagittis eu volutpat odio.
+                            Ultricies tristique nulla aliquet enim tortor
+                            at auctor urna nunc.
+                        </p>
+
+                        <p>
+                            <b>Prerequisite: </b>
+                            <a href="">
+                                <b>ME 310</b>
+                            </a>
+                            and
+                            <a href="">
+                                <b>ME 320</b>
+                            </a>.
+                        </p>
+
+                        <p>
+                            <b>Semesters Taught:</b>
+                            Fall 2018.
+                        </p>
+
+                        <p>
+                            <b>Course Information:</b>
+                            <a href="">
+                                Syllabus
+                            </a>
+                        </p>
+
+
+                        <!-- =====================================
+                             LECTURE TABLE
+                             ===================================== -->
+
+                        <table class="table table-striped">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        #
+                                    </th>
+
+                                    <th>
+                                        Lecture
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        1
+                                    </td>
+
+                                    <td>
+                                        <a href="">
+                                            Pretium Lectus Quam
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        2
+                                    </td>
+
+                                    <td>
+                                        <a href="">
+                                            Urna porttitor: Rhoncus dolor
+                                            purus non enim praesent
+                                            elementum facilisis.
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        3
+                                    </td>
+
+                                    <td>
+                                        <a href="">
+                                            Diam in arcu: Cursus euismod
+                                            quis viverra nibh cras.
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        4
+                                    </td>
+
+                                    <td>
+                                        <a href="">
+                                            Tristique: Sollicitudin nibh
+                                            sit amet commodo.
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        5
+                                    </td>
+
+                                    <td>
+                                        <a href="">
+                                            Risus: Viverra adipiscing at
+                                            in tellus integer.
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        6
+                                    </td>
+
+                                    <td>
+                                        <a href="">
+                                            Mus mauris vitae ultricies leo.
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        7
+                                    </td>
+
+                                    <td>
+                                        <a href="">
+                                            Sed faucibus turpis in eu mi
+                                            bibendum neque egestas.
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        8
+                                    </td>
+
+                                    <td>
+                                        <a href="">
+                                            Viverra aliquet eget sit amet
+                                            tellus.
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =============================================
+                     COURSE 2
+                     ============================================= -->
+
+                <section id="ke121">
+
+                    <div class="page-header">
+
+                        <h3>
+                            <a href="">
+                                KE 121: Ullamcorper Malesuada
+                            </a>
+                        </h3>
+
+                        <hr>
+
+                        <p>
+                            Morbi enim nunc faucibus a pellentesque
+                            sit amet porttitor eget. Aliquet bibendum
+                            enim facilisis gravida.
+                        </p>
+
+                        <p>
+                            <b>Prerequisite:</b>
+                            Mus mauris vitae.
+                        </p>
+
+                        <p>
+                            <b>Semesters Taught:</b>
+                            Fall 2018.
+                        </p>
+
+                    </div>
+
+                </section>
+
             </div>
-         </div>
-      </div>
-      <footer id="footer">
-         <div class="container-fluid">
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer id="footer">
+
+        <div class="container-fluid">
+
             <div class="row-fluid">
-               <div class="span5">
-                  <h3>Contact Information</h3>
-                  <p><b>Office Hours: </b>Monday-Friday (9.00am - 5.00pm)</p>
-                  <p><b>Phone: </b>+92-51-9049207</p>
-                  <p><b>Cell: </b>+92-331-3666163</p>
-                  <a href="mailto:ali_arshad@comsats.edu.pk">Email</a>
-               </div>
-               <div class="span2">
-                  <a href="https://comsats.edu.pk/"><img src = "thumbs/cesrg_logoo.jpeg" alt="CESRG-logo"/></a>
-               </div>
-               <div class="span5">
-                  <h3>Address</h3>
-                  <p>Control & Energy Systems Research Group<br>
-                     Room No. 229, 2nd Floor, Department of Electrical Engineering,<br>
-                      COMSATS University Islamabad<br>
-                     Pakistan
-                  </p>
-                  <a href="https://maps.app.goo.gl/pZj32DCDwLoRUJXe9">Show Map</a>
-               </div>
+
+
+                <!-- =============================================
+                     CONTACT
+                     ============================================= -->
+
+                <div class="span5">
+
+                    <h3>
+                        Contact Information
+                    </h3>
+
+                    <p>
+                        <b>Office Hours: </b>
+                        Monday-Friday (9.00am - 5.00pm)
+                    </p>
+
+                    <p>
+                        <b>Phone: </b>
+                        +92-51-9049207
+                    </p>
+
+                    <p>
+                        <b>Cell: </b>
+                        +92-331-3666163
+                    </p>
+
+                    <a href="mailto:ali_arshad@comsats.edu.pk">
+                        Email
+                    </a>
+
+                </div>
+
+
+                <!-- =============================================
+                     LOGO
+                     ============================================= -->
+
+                <div class="span2">
+
+                    <a href="https://comsats.edu.pk/">
+
+                        <img
+                            src="thumbs/cesrg_logoo.jpeg"
+                            alt="CESRG-logo">
+
+                    </a>
+
+                </div>
+
+
+                <!-- =============================================
+                     ADDRESS
+                     ============================================= -->
+
+                <div class="span5">
+
+                    <h3>
+                        Address
+                    </h3>
+
+                    <p>
+                        Control &amp; Energy Systems Research Group
+                        <br>
+
+                        Room No. 229, 2nd Floor,
+                        Department of Electrical Engineering,
+                        <br>
+
+                        COMSATS University Islamabad
+                        <br>
+
+                        Pakistan
+                    </p>
+
+                    <a href="https://maps.app.goo.gl/pZj32DCDwLoRUJXe9">
+                        Show Map
+                    </a>
+
+                </div>
+
             </div>
-         </div>
-      </footer>
 
-      <!-- Le javascript
-         ================================================== -->
-      <!-- Placed at the end of the document so the pages load faster -->
-      <script src="js/jquery-1.9.1.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script>
-         $(document).ready(function() {
-             $(document.body).scrollspy({
-                 target: "#navparent"
-             });
-         });
-         
-      </script>
-   </body>
-   <!-- Floating Theme Switcher -->
-<div class="theme-switcher-bar">
+        </div>
 
-  <span class="theme-title">Theme</span>
-
-  <button class="theme-btn"
-          onclick="setTheme('margalla-mist')">
-
-    <span class="color-dot"
-          style="background:#0b5c53;"></span>
-
-    Margalla
-  </button>
+    </footer>
 
 
-  <button class="theme-btn"
-          onclick="setTheme('institutional-blue')">
+    <!-- =========================================================
+         FLOATING THEME SWITCHER
+         ========================================================= -->
 
-    <span class="color-dot"
-          style="background:#1a5276;"></span>
+    <div class="theme-switcher-bar">
 
-    Blue
-  </button>
-
-
-  <button class="theme-btn"
-          onclick="setTheme('ivory-press')">
-
-    <span class="color-dot"
-          style="background:#8b3a3a;"></span>
-
-    Ivory
-  </button>
+        <span class="theme-title">
+            Theme
+        </span>
 
 
-  <button class="theme-btn"
-          onclick="setTheme('sage-calm')">
+        <button
+            class="theme-btn"
+            data-theme="margalla-mist"
+            onclick="setTheme('margalla-mist')">
 
-    <span class="color-dot"
-          style="background:#4a6b5d;"></span>
+            <span
+                class="color-dot"
+                style="background:#0b5c53;">
+            </span>
 
-    Sage
-  </button>
+            Margalla
 
-
-  <button class="theme-btn"
-          onclick="setTheme('indigo-night')">
-
-    <span class="color-dot"
-          style="background:#6366f1;"></span>
-
-    Night
-  </button>
+        </button>
 
 
-  <button class="theme-btn"
-          onclick="setTheme('graphite')">
+        <button
+            class="theme-btn"
+            data-theme="institutional-blue"
+            onclick="setTheme('institutional-blue')">
 
-    <span class="color-dot"
-          style="background:#a1a1aa;"></span>
+            <span
+                class="color-dot"
+                style="background:#1a5276;">
+            </span>
 
-    Graphite
-  </button>
+            Blue
 
-</div>
+        </button>
+
+
+        <button
+            class="theme-btn"
+            data-theme="ivory-press"
+            onclick="setTheme('ivory-press')">
+
+            <span
+                class="color-dot"
+                style="background:#8b3a3a;">
+            </span>
+
+            Ivory
+
+        </button>
+
+
+        <button
+            class="theme-btn"
+            data-theme="sage-calm"
+            onclick="setTheme('sage-calm')">
+
+            <span
+                class="color-dot"
+                style="background:#4a6b5d;">
+            </span>
+
+            Sage
+
+        </button>
+
+
+        <button
+            class="theme-btn"
+            data-theme="indigo-night"
+            onclick="setTheme('indigo-night')">
+
+            <span
+                class="color-dot"
+                style="background:#6366f1;">
+            </span>
+
+            Night
+
+        </button>
+
+
+        <button
+            class="theme-btn"
+            data-theme="graphite"
+            onclick="setTheme('graphite')">
+
+            <span
+                class="color-dot"
+                style="background:#a1a1aa;">
+            </span>
+
+            Graphite
+
+        </button>
+
+    </div>
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+         ========================================================= -->
+
+    <script src="js/modern.js"></script>
+
+    <script>
+
+        /* Bootstrap-style scrollspy replacement for this page */
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const sections = document.querySelectorAll(
+                "#ke142, #ke121"
+            );
+
+            const links = document.querySelectorAll(
+                ".bs-docs-sidenav a"
+            );
+
+            function updateSidebar() {
+
+                let current = "";
+
+                sections.forEach(function (section) {
+
+                    const sectionTop =
+                        section.getBoundingClientRect().top;
+
+                    if (sectionTop <= 180) {
+                        current = section.getAttribute("id");
+                    }
+
+                });
+
+                links.forEach(function (link) {
+
+                    link.parentElement.classList.remove("active");
+
+                    if (
+                        link.getAttribute("href") === "#" + current
+                    ) {
+                        link.parentElement.classList.add("active");
+                    }
+
+                });
+
+            }
+
+            window.addEventListener(
+                "scroll",
+                updateSidebar
+            );
+
+            updateSidebar();
+
+        });
+
+    </script>
+
+</body>
+
 </html>
