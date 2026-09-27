@@ -5,12 +5,9 @@
 
     <meta charset="utf-8">
 
-    <title>
-        Publications | CESRG
-    </title>
+    <title>Publications | CESRG</title>
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
           content="Selected journal publications of the Control & Energy Systems Research Group, COMSATS University Islamabad.">
@@ -36,7 +33,252 @@
     <style>
 
         /* =====================================================
-           PUBLICATIONS PAGE
+           PUBLICATIONS THEME VARIABLES
+           ===================================================== */
+
+        :root {
+
+            /* Margalla Mist */
+            --pub-primary: #0b5c53;
+            --pub-primary-2: #174f49;
+            --pub-blue: #287d72;
+            --pub-accent: #4da89b;
+
+            --pub-page-bg: #f7faf9;
+            --pub-soft-bg: #edf5f2;
+            --pub-card-bg: #ffffff;
+
+            --pub-text: #172033;
+            --pub-muted: #667085;
+            --pub-border: #dce8e4;
+
+            --pub-hero-1: #071d1a;
+            --pub-hero-2: #174f49;
+
+            --pub-hover: #e2f0ec;
+        }
+
+
+        /* =====================================================
+           THEME 1 — MARGALLA MIST
+           ===================================================== */
+
+        [data-theme="margalla-mist"] {
+
+            --pub-primary: #0b5c53;
+            --pub-primary-2: #174f49;
+            --pub-blue: #287d72;
+            --pub-accent: #4da89b;
+
+            --pub-page-bg: #f7faf9;
+            --pub-soft-bg: #edf5f2;
+            --pub-card-bg: #ffffff;
+
+            --pub-text: #172033;
+            --pub-muted: #667085;
+            --pub-border: #dce8e4;
+
+            --pub-hero-1: #071d1a;
+            --pub-hero-2: #174f49;
+
+            --pub-hover: #e2f0ec;
+        }
+
+
+        /* =====================================================
+           THEME 2 — INSTITUTIONAL BLUE
+           ===================================================== */
+
+        [data-theme="institutional-blue"] {
+
+            --pub-primary: #1a5276;
+            --pub-primary-2: #154360;
+            --pub-blue: #2874a6;
+            --pub-accent: #3498db;
+
+            --pub-page-bg: #f6f9fc;
+            --pub-soft-bg: #eaf2f8;
+            --pub-card-bg: #ffffff;
+
+            --pub-text: #172033;
+            --pub-muted: #667085;
+            --pub-border: #dce6ef;
+
+            --pub-hero-1: #071a2d;
+            --pub-hero-2: #154360;
+
+            --pub-hover: #e1edf6;
+        }
+
+
+        /* =====================================================
+           THEME 3 — IVORY PRESS
+           ===================================================== */
+
+        [data-theme="ivory-press"] {
+
+            --pub-primary: #8b3a3a;
+            --pub-primary-2: #633333;
+            --pub-blue: #9f4a4a;
+            --pub-accent: #c27668;
+
+            --pub-page-bg: #fbf8f3;
+            --pub-soft-bg: #f3ede4;
+            --pub-card-bg: #fffdf9;
+
+            --pub-text: #332d2a;
+            --pub-muted: #756b65;
+            --pub-border: #e7ddd2;
+
+            --pub-hero-1: #241817;
+            --pub-hero-2: #633333;
+
+            --pub-hover: #f0e5dc;
+        }
+
+
+        /* =====================================================
+           THEME 4 — SAGE CALM
+           ===================================================== */
+
+        [data-theme="sage-calm"] {
+
+            --pub-primary: #4a6b5d;
+            --pub-primary-2: #365247;
+            --pub-blue: #638676;
+            --pub-accent: #8daa8d;
+
+            --pub-page-bg: #f7faf7;
+            --pub-soft-bg: #edf3ed;
+            --pub-card-bg: #ffffff;
+
+            --pub-text: #26342d;
+            --pub-muted: #6d7d73;
+            --pub-border: #dce6de;
+
+            --pub-hero-1: #17251f;
+            --pub-hero-2: #365247;
+
+            --pub-hover: #e3eee5;
+        }
+
+
+        /* =====================================================
+           THEME 5 — INDIGO NIGHT
+           ===================================================== */
+
+        [data-theme="indigo-night"] {
+
+            --pub-primary: #6366f1;
+            --pub-primary-2: #3730a3;
+            --pub-blue: #818cf8;
+            --pub-accent: #a5b4fc;
+
+            --pub-page-bg: #0f172a;
+            --pub-soft-bg: #172033;
+            --pub-card-bg: #1e293b;
+
+            --pub-text: #e5e7eb;
+            --pub-muted: #aab3c2;
+            --pub-border: #334155;
+
+            --pub-hero-1: #070b18;
+            --pub-hero-2: #312e81;
+
+            --pub-hover: #273449;
+        }
+
+
+        /* =====================================================
+           THEME 6 — GRAPHITE
+           ===================================================== */
+
+        [data-theme="graphite"] {
+
+            --pub-primary: #52525b;
+            --pub-primary-2: #3f3f46;
+            --pub-blue: #71717a;
+            --pub-accent: #a1a1aa;
+
+            --pub-page-bg: #f4f4f5;
+            --pub-soft-bg: #e9e9eb;
+            --pub-card-bg: #ffffff;
+
+            --pub-text: #27272a;
+            --pub-muted: #71717a;
+            --pub-border: #d4d4d8;
+
+            --pub-hero-1: #18181b;
+            --pub-hero-2: #3f3f46;
+
+            --pub-hover: #e4e4e7;
+        }
+
+
+        /* =====================================================
+           PAGE BACKGROUND
+           ===================================================== */
+
+        body {
+            background: var(--pub-page-bg);
+            color: var(--pub-text);
+        }
+
+
+        /* =====================================================
+           HEADER LOGO
+           ===================================================== */
+
+        .publication-brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px auto;
+            width: max-content;
+            color: var(--pub-text) !important;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+
+        .publication-brand img {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .publication-hero {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--pub-hero-1),
+                    var(--pub-hero-2)
+                ) !important;
+        }
+
+
+        .publication-hero-badge {
+            display: inline-flex;
+            padding: 7px 14px;
+            margin-bottom: 18px;
+            border-radius: 50px;
+            background: rgba(255,255,255,.10);
+            border: 1px solid rgba(255,255,255,.15);
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .4px;
+        }
+
+
+        /* =====================================================
+           PUBLICATION NAVIGATION
            ===================================================== */
 
         .publication-nav {
@@ -45,12 +287,13 @@
             z-index: 100;
             margin: 35px 0 50px;
             padding: 12px;
-            background: rgba(255,255,255,.94);
-            border: 1px solid #e5eaf0;
+            background: var(--pub-card-bg);
+            border: 1px solid var(--pub-border);
             border-radius: 16px;
             box-shadow: 0 8px 30px rgba(7,21,37,.07);
             backdrop-filter: blur(14px);
         }
+
 
         .publication-nav-inner {
             display: flex;
@@ -60,19 +303,21 @@
             gap: 8px;
         }
 
+
         .publication-nav a {
             padding: 9px 15px;
             border-radius: 10px;
-            color: #475467;
+            color: var(--pub-muted);
             font-size: 12px;
             font-weight: 650;
             text-decoration: none;
             transition: .25s ease;
         }
 
+
         .publication-nav a:hover {
-            background: #edf7fc;
-            color: #1769aa;
+            background: var(--pub-hover);
+            color: var(--pub-primary);
         }
 
 
@@ -88,25 +333,28 @@
             margin-bottom: 65px;
         }
 
+
         .publication-stat {
             padding: 25px 20px;
             text-align: center;
-            background: #ffffff;
-            border: 1px solid #e5eaf0;
+            background: var(--pub-card-bg);
+            border: 1px solid var(--pub-border);
             border-radius: 18px;
             box-shadow: 0 7px 25px rgba(7,21,37,.06);
         }
 
+
         .publication-stat-number {
             display: block;
             margin-bottom: 7px;
-            color: #1769aa;
+            color: var(--pub-primary);
             font-size: 29px;
             font-weight: 800;
         }
 
+
         .publication-stat-label {
-            color: #667085;
+            color: var(--pub-muted);
             font-size: 12px;
             font-weight: 600;
         }
@@ -120,6 +368,7 @@
             margin-bottom: 70px;
         }
 
+
         .publication-section-header {
             display: flex;
             justify-content: space-between;
@@ -128,15 +377,18 @@
             margin-bottom: 25px;
         }
 
-        .publication-section-header h2 {
+
+        .publication-section-header h2,
+        .section-title h2 {
             margin: 0;
-            color: #0b1f3a;
+            color: var(--pub-text);
             font-size: 28px;
         }
 
+
         .publication-section-header p {
             margin: 5px 0 0;
-            color: #667085;
+            color: var(--pub-muted);
             font-size: 13px;
         }
 
@@ -152,16 +404,17 @@
             gap: 20px;
             margin-bottom: 16px;
             padding: 24px;
-            background: #ffffff;
-            border: 1px solid #e3e8ee;
+            background: var(--pub-card-bg);
+            border: 1px solid var(--pub-border);
             border-radius: 18px;
             box-shadow: 0 7px 25px rgba(7,21,37,.05);
             transition: .28s ease;
         }
 
+
         .publication-card:hover {
             transform: translateY(-3px);
-            border-color: #b9d8ea;
+            border-color: var(--pub-accent);
             box-shadow: 0 14px 32px rgba(7,21,37,.09);
         }
 
@@ -173,8 +426,8 @@
             width: 52px;
             height: 52px;
             border-radius: 15px;
-            background: #edf7fc;
-            color: #1769aa;
+            background: var(--pub-hover);
+            color: var(--pub-primary);
             font-size: 16px;
             font-weight: 800;
         }
@@ -188,21 +441,22 @@
         .publication-title {
             display: block;
             margin: 0 0 10px;
-            color: #0b1f3a;
+            color: var(--pub-text);
             font-size: 17px;
             font-weight: 750;
             line-height: 1.5;
             text-decoration: none;
         }
 
+
         .publication-title:hover {
-            color: #1769aa;
+            color: var(--pub-primary);
         }
 
 
         .publication-authors {
             margin: 0 0 8px;
-            color: #475467;
+            color: var(--pub-muted);
             font-size: 13px;
             line-height: 1.6;
         }
@@ -214,8 +468,8 @@
             padding: 6px 10px;
             margin-top: 3px;
             border-radius: 8px;
-            background: #f6f8fa;
-            color: #667085;
+            background: var(--pub-soft-bg);
+            color: var(--pub-muted);
             font-size: 11px;
             font-weight: 600;
         }
@@ -235,9 +489,9 @@
             gap: 6px;
             padding: 8px 12px;
             border-radius: 9px;
-            background: #f4f8fb;
-            border: 1px solid #dfe8ef;
-            color: #1769aa;
+            background: var(--pub-soft-bg);
+            border: 1px solid var(--pub-border);
+            color: var(--pub-primary);
             font-size: 11px;
             font-weight: 700;
             text-decoration: none;
@@ -246,8 +500,8 @@
 
 
         .publication-button:hover {
-            background: #1769aa;
-            border-color: #1769aa;
+            background: var(--pub-primary);
+            border-color: var(--pub-primary);
             color: white;
         }
 
@@ -257,12 +511,43 @@
             padding: 5px 9px;
             margin-bottom: 12px;
             border-radius: 50px;
-            background: #f0fdf4;
-            color: #15803d;
+            background: var(--pub-hover);
+            color: var(--pub-primary);
             font-size: 10px;
             font-weight: 750;
             letter-spacing: .4px;
             text-transform: uppercase;
+        }
+
+
+        /* =====================================================
+           RESEARCH TOPICS
+           ===================================================== */
+
+        .topic-section-description {
+            max-width: 720px;
+            margin: 10px auto 0;
+            color: var(--pub-muted) !important;
+        }
+
+
+        .topic-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-top: 20px;
+        }
+
+
+        .topic {
+            padding: 8px 12px;
+            background: var(--pub-card-bg);
+            border: 1px solid var(--pub-border);
+            border-radius: 50px;
+            color: var(--pub-muted);
+            font-size: 11px;
+            font-weight: 650;
         }
 
 
@@ -276,8 +561,8 @@
             background:
                 linear-gradient(
                     135deg,
-                    #071525,
-                    #123b69
+                    var(--pub-hero-1),
+                    var(--pub-hero-2)
                 );
             border-radius: 22px;
             color: white;
@@ -307,7 +592,7 @@
             padding: 11px 17px;
             border-radius: 10px;
             background: white;
-            color: #123b69;
+            color: var(--pub-primary-2);
             font-size: 12px;
             font-weight: 750;
             text-decoration: none;
@@ -317,31 +602,26 @@
 
         .complete-list-button:hover {
             transform: translateY(-2px);
-            background: #edf7fc;
+            background: var(--pub-hover);
         }
 
 
         /* =====================================================
-           RESEARCH TOPICS
+           FOOTER
            ===================================================== */
 
-        .topic-list {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 9px;
-            margin-top: 20px;
+        #footer {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--pub-hero-1),
+                    var(--pub-hero-2)
+                ) !important;
         }
 
 
-        .topic {
-            padding: 8px 12px;
-            background: #f6f8fa;
-            border: 1px solid #e2e8ef;
-            border-radius: 50px;
-            color: #475467;
-            font-size: 11px;
-            font-weight: 650;
+        #footer a {
+            color: var(--pub-accent);
         }
 
 
@@ -355,24 +635,30 @@
                 position: static;
             }
 
+
             .publication-card {
                 grid-template-columns: 1fr;
                 gap: 15px;
                 padding: 20px;
             }
 
+
             .publication-index {
                 width: 44px;
                 height: 44px;
             }
 
+
             .publication-section-header {
                 display: block;
             }
 
-            .publication-section-header h2 {
+
+            .publication-section-header h2,
+            .section-title h2 {
                 font-size: 23px;
             }
+
 
             .complete-list-card {
                 padding: 27px 20px;
@@ -402,26 +688,11 @@
 
 
                 <a href="index.html"
-                   style="
-                       display:flex;
-                       align-items:center;
-                       justify-content:center;
-                       gap:10px;
-                       margin:10px auto;
-                       width:max-content;
-                       color:#0b1f3a;
-                       font-weight:800;
-                       text-decoration:none;
-                   ">
+                   class="publication-brand">
 
                     <img
                         src="thumbs/CESRG_logo_circle02.png"
-                        alt="CESRG Logo"
-                        style="
-                            width:42px;
-                            height:42px;
-                            object-fit:contain;
-                        ">
+                        alt="CESRG Logo">
 
                     <span>
                         CESRG
@@ -449,33 +720,48 @@
                         </a>
                     </li>
 
+
                     <li>
                         <a href="people.html">
                             People
                         </a>
                     </li>
 
+
                     <li>
                         <a href="research.html">
                             Research
                         </a>
                     </li>
+
+
                     <li>
                         <a href="collaboration.html">
                             Collaboration
                         </a>
-                        <li>
-                    <li>
+                    </li>
+
+
+                    <li class="active">
                         <a href="publications.html">
                             Publications
                         </a>
                     </li>
+
 
                     <li>
                         <a href="gallery.html">
                             Gallery
                         </a>
                     </li>
+
+
+                    <li>
+                        <a href="news.html">
+                            News
+                        </a>
+                    </li>
+
 
                     <li>
                         <a href="contact.html">
@@ -495,27 +781,19 @@
 </header>
 
 
+
 <!-- =====================================================
      HERO
      ===================================================== -->
 
-<section class="jumbotron">
+<section class="jumbotron publication-hero">
 
     <div class="container">
 
         <div style="max-width:850px;">
 
-            <div style="
-                display:inline-flex;
-                padding:7px 14px;
-                margin-bottom:18px;
-                border-radius:50px;
-                background:rgba(255,255,255,.10);
-                border:1px solid rgba(255,255,255,.15);
-                font-size:12px;
-                font-weight:700;
-                letter-spacing:.4px;
-            ">
+
+            <div class="publication-hero-badge">
 
                 RESEARCH OUTPUT
 
@@ -558,9 +836,11 @@
                 Journal Papers
             </a>
 
+
             <a href="#topics">
                 Research Topics
             </a>
+
 
             <a href="#complete">
                 Complete Publication List
@@ -1150,11 +1430,8 @@
             Research Topics
         </h2>
 
-        <p style="
-            max-width:720px;
-            margin:0 auto;
-            color:#667085;
-        ">
+
+        <p class="topic-section-description">
 
             The publications reflect CESRG's
             interdisciplinary work across control,
@@ -1343,13 +1620,13 @@
                     Address
                 </h3>
 
-               <p>
-                Control & Energy Systems Research Group (CESRG)
-                <br>
-                R&D Lab, COMSATS University Islamabad
-                <br>
-                Park Road, Tarlai Kalan, Islamabad 45550, Pakistan
-            </p>
+                <p>
+                    Control & Energy Systems Research Group (CESRG)
+                    <br>
+                    R&D Lab, COMSATS University Islamabad
+                    <br>
+                    Park Road, Tarlai Kalan, Islamabad 45550, Pakistan
+                </p>
 
 
                 <a
@@ -1399,7 +1676,7 @@
                     target="_blank"
                     rel="noopener noreferrer">
 
-                    Sohail Ahmad,Roshaan Imran
+                    Sohail Ahmad, Roshaan Imran
 
                 </a>
 
@@ -1411,6 +1688,111 @@
     </div>
 
 </footer>
+
+
+
+<!-- =====================================================
+     THEME SWITCHER
+     IMPORTANT: KEEP THIS INSIDE BODY
+     ===================================================== -->
+
+<div class="theme-switcher-bar">
+
+    <span class="theme-title">
+        Theme
+    </span>
+
+
+    <button
+        class="theme-btn"
+        data-theme="margalla-mist"
+        onclick="setTheme('margalla-mist')">
+
+        <span
+            class="color-dot"
+            style="background:#0b5c53;">
+        </span>
+
+        Margalla
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="institutional-blue"
+        onclick="setTheme('institutional-blue')">
+
+        <span
+            class="color-dot"
+            style="background:#1a5276;">
+        </span>
+
+        Blue
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="ivory-press"
+        onclick="setTheme('ivory-press')">
+
+        <span
+            class="color-dot"
+            style="background:#8b3a3a;">
+        </span>
+
+        Ivory
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="sage-calm"
+        onclick="setTheme('sage-calm')">
+
+        <span
+            class="color-dot"
+            style="background:#4a6b5d;">
+        </span>
+
+        Sage
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="indigo-night"
+        onclick="setTheme('indigo-night')">
+
+        <span
+            class="color-dot"
+            style="background:#6366f1;">
+        </span>
+
+        Night
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="graphite"
+        onclick="setTheme('graphite')">
+
+        <span
+            class="color-dot"
+            style="background:#a1a1aa;">
+        </span>
+
+        Graphite
+
+    </button>
+
+</div>
 
 
 
