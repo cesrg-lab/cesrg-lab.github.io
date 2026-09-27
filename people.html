@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -23,11 +22,9 @@
       type="image/png"
       href="thumbs/CESRG_logo_circle.png">
 
-<!-- Modern CESRG CSS -->
 <link rel="stylesheet"
       href="css/modern.css">
 
-<!-- Google Font -->
 <link rel="preconnect"
       href="https://fonts.googleapis.com">
 
@@ -41,9 +38,9 @@
 
 <style>
 
-/* =================================================
+/* =========================================================
    PEOPLE PAGE THEME VARIABLES
-   ================================================= */
+   ========================================================= */
 
 :root {
 
@@ -77,16 +74,14 @@
     --people-shadow: rgba(7,21,37,0.07);
     --people-shadow-hover: rgba(7,21,37,0.13);
 
-    --people-white: #ffffff;
-
 }
 
 
-/* =================================================
+/* =========================================================
    MARGALLA MIST
-   ================================================= */
+   ========================================================= */
 
-[data-theme="margalla-mist"] {
+html[data-theme="margalla-mist"] {
 
     --people-primary: #0b5c53;
     --people-primary-2: #174f49;
@@ -114,15 +109,14 @@
 
     --people-footer-gradient-1: #071d1a;
     --people-footer-gradient-2: #174f49;
-
 }
 
 
-/* =================================================
+/* =========================================================
    INSTITUTIONAL BLUE
-   ================================================= */
+   ========================================================= */
 
-[data-theme="institutional-blue"] {
+html[data-theme="institutional-blue"] {
 
     --people-primary: #1a5276;
     --people-primary-2: #154360;
@@ -150,15 +144,14 @@
 
     --people-footer-gradient-1: #071a2d;
     --people-footer-gradient-2: #154360;
-
 }
 
 
-/* =================================================
+/* =========================================================
    IVORY PRESS
-   ================================================= */
+   ========================================================= */
 
-[data-theme="ivory-press"] {
+html[data-theme="ivory-press"] {
 
     --people-primary: #8b3a3a;
     --people-primary-2: #633333;
@@ -186,15 +179,14 @@
 
     --people-footer-gradient-1: #241817;
     --people-footer-gradient-2: #633333;
-
 }
 
 
-/* =================================================
+/* =========================================================
    SAGE CALM
-   ================================================= */
+   ========================================================= */
 
-[data-theme="sage-calm"] {
+html[data-theme="sage-calm"] {
 
     --people-primary: #4a6b5d;
     --people-primary-2: #365247;
@@ -222,15 +214,14 @@
 
     --people-footer-gradient-1: #17251f;
     --people-footer-gradient-2: #365247;
-
 }
 
 
-/* =================================================
+/* =========================================================
    INDIGO NIGHT
-   ================================================= */
+   ========================================================= */
 
-[data-theme="indigo-night"] {
+html[data-theme="indigo-night"] {
 
     --people-primary: #6366f1;
     --people-primary-2: #3730a3;
@@ -258,15 +249,14 @@
 
     --people-footer-gradient-1: #070b18;
     --people-footer-gradient-2: #312e81;
-
 }
 
 
-/* =================================================
+/* =========================================================
    GRAPHITE
-   ================================================= */
+   ========================================================= */
 
-[data-theme="graphite"] {
+html[data-theme="graphite"] {
 
     --people-primary: #52525b;
     --people-primary-2: #3f3f46;
@@ -294,36 +284,296 @@
 
     --people-footer-gradient-1: #18181b;
     --people-footer-gradient-2: #3f3f46;
-
 }
 
 
-/* =================================================
+/* =========================================================
+   GLOBAL THEME OVERRIDES
+   IMPORTANT:
+   These rules force the complete People page to follow
+   the selected theme instead of only individual cards.
+   ========================================================= */
+
+html[data-theme] {
+    background: var(--people-page-bg) !important;
+}
+
+html[data-theme] body {
+
+    background:
+        var(--people-page-bg) !important;
+
+    color:
+        var(--people-text) !important;
+
+    font-family:
+        "Inter",
+        sans-serif !important;
+}
+
+
+/* Main headings */
+
+html[data-theme] h1,
+html[data-theme] h2,
+html[data-theme] h3,
+html[data-theme] h4,
+html[data-theme] h5,
+html[data-theme] h6 {
+
+    color:
+        var(--people-heading) !important;
+}
+
+
+/* Normal paragraphs */
+
+html[data-theme] p {
+
+    color:
+        var(--people-text);
+}
+
+
+/* =========================================================
+   HEADER / NAVIGATION THEME
+   ========================================================= */
+
+html[data-theme] .masthead {
+
+    background:
+        var(--people-card-bg) !important;
+
+    border-bottom:
+        1px solid var(--people-border) !important;
+
+    box-shadow:
+        0 4px 18px var(--people-shadow) !important;
+}
+
+
+html[data-theme] .navbar {
+
+    background:
+        var(--people-card-bg) !important;
+}
+
+
+html[data-theme] .navbar-inner {
+
+    background:
+        var(--people-card-bg) !important;
+
+    border-color:
+        var(--people-border) !important;
+}
+
+
+html[data-theme] .masthead .container {
+
+    background:
+        transparent !important;
+}
+
+
+html[data-theme] .people-brand {
+
+    color:
+        var(--people-heading) !important;
+}
+
+
+html[data-theme] .people-brand:hover {
+
+    color:
+        var(--people-primary) !important;
+}
+
+
+html[data-theme] .masthead .nav > li > a {
+
+    color:
+        var(--people-muted) !important;
+
+    background:
+        transparent !important;
+}
+
+
+html[data-theme] .masthead .nav > li > a:hover {
+
+    color:
+        var(--people-primary) !important;
+
+    background:
+        var(--people-nav-hover) !important;
+}
+
+
+html[data-theme] .masthead .nav > li.active > a {
+
+    color:
+        var(--people-primary) !important;
+
+    background:
+        var(--people-nav-hover) !important;
+}
+
+
+html[data-theme] .cesrg-mobile-toggle {
+
+    color:
+        var(--people-primary) !important;
+
+    background:
+        var(--people-card-bg) !important;
+
+    border-color:
+        var(--people-border) !important;
+}
+
+
+/* =========================================================
+   HERO THEME
+   ========================================================= */
+
+html[data-theme] .jumbotron {
+
+    color:
+        #ffffff !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--people-hero-1),
+            var(--people-hero-2)
+        ) !important;
+}
+
+
+html[data-theme] .jumbotron h1 {
+
+    color:
+        #ffffff !important;
+}
+
+
+html[data-theme] .jumbotron p {
+
+    color:
+        rgba(255,255,255,0.82) !important;
+}
+
+
+/* =========================================================
+   SECTION NAVIGATION
+   ========================================================= */
+
+.section-navigation {
+
+    margin-bottom: 35px;
+
+    padding: 12px;
+
+    background:
+        color-mix(
+            in srgb,
+            var(--people-card-bg) 92%,
+            transparent
+        );
+
+    border:
+        1px solid var(--people-light-border);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 7px 25px var(--people-shadow);
+
+    backdrop-filter:
+        blur(14px);
+}
+
+
+.section-navigation-inner {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 7px;
+}
+
+
+.section-navigation a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 9px 13px;
+
+    border-radius: 10px;
+
+    color:
+        var(--people-text);
+
+    font-size: 12px;
+
+    font-weight: 650;
+
+    text-decoration: none;
+}
+
+
+.section-navigation a:hover {
+
+    color:
+        var(--people-primary);
+
+    background:
+        var(--people-nav-hover);
+}
+
+
+/* =========================================================
    PEOPLE PAGE
-   ================================================= */
+   ========================================================= */
 
 .people-section {
+
     margin-top: 75px;
 }
 
+
 .people-section:first-of-type {
+
     margin-top: 65px;
 }
 
+
 .people-grid {
+
     display: grid;
+
     grid-template-columns:
         repeat(auto-fit, minmax(310px, 1fr));
+
     gap: 25px;
 }
+
 
 .person-modern-card {
 
     overflow: hidden;
 
-    background: var(--people-card-bg);
+    background:
+        var(--people-card-bg);
 
-    border: 1px solid var(--people-light-border);
+    border:
+        1px solid var(--people-light-border);
 
     border-radius: 20px;
 
@@ -336,9 +586,11 @@
         border-color 0.3s ease;
 }
 
+
 .person-modern-card:hover {
 
-    transform: translateY(-7px);
+    transform:
+        translateY(-7px);
 
     box-shadow:
         0 18px 42px var(--people-shadow-hover);
@@ -346,6 +598,11 @@
     border-color:
         var(--people-primary);
 }
+
+
+/* =========================================================
+   PERSON IMAGE
+   ========================================================= */
 
 .person-image-wrapper {
 
@@ -367,6 +624,7 @@
         var(--people-soft-bg);
 }
 
+
 .person-image-wrapper img {
 
     display: block;
@@ -385,16 +643,24 @@
         transform 0.5s ease;
 }
 
+
 .person-modern-card:hover
 .person-image-wrapper img {
 
-    transform: scale(1.02);
+    transform:
+        scale(1.02);
 }
+
+
+/* =========================================================
+   PERSON CONTENT
+   ========================================================= */
 
 .person-content {
 
     padding: 25px;
 }
+
 
 .person-role {
 
@@ -423,215 +689,232 @@
     text-transform: uppercase;
 }
 
+
 .person-content h3 {
 
-    margin: 0 0 8px;
+    margin:
+        0 0 8px;
 
-    font-size: 22px;
+    font-size:
+        22px;
 
     color:
-        var(--people-heading);
+        var(--people-heading) !important;
 }
+
 
 .person-content h3 a {
 
-    color: inherit;
+    color:
+        inherit !important;
+
+    text-decoration:
+        none;
 }
+
+
+.person-content h3 a:hover {
+
+    color:
+        var(--people-primary) !important;
+}
+
 
 .person-position {
 
-    margin: 0 0 18px;
+    margin:
+        0 0 18px;
 
     color:
-        var(--people-muted);
+        var(--people-muted) !important;
 
-    font-size: 14px;
+    font-size:
+        14px;
 
-    font-weight: 600;
+    font-weight:
+        600;
 }
+
 
 .person-bio {
 
     color:
-        var(--people-text);
+        var(--people-text) !important;
 
-    font-size: 14px;
+    font-size:
+        14px;
 
-    line-height: 1.75;
+    line-height:
+        1.75;
 }
+
 
 .person-bio p {
 
-    margin: 0 0 14px;
+    margin:
+        0 0 14px;
+
+    color:
+        var(--people-text) !important;
 }
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
 
 .person-contact {
 
-    margin-top: 20px;
+    margin-top:
+        20px;
 
-    padding-top: 18px;
+    padding-top:
+        18px;
 
     border-top:
         1px solid var(--people-light-border);
 }
 
+
 .person-contact p {
 
-    margin: 7px 0;
+    margin:
+        7px 0;
 
     color:
-        var(--people-muted);
+        var(--people-muted) !important;
 
-    font-size: 13px;
+    font-size:
+        13px;
 
-    word-break: break-word;
+    word-break:
+        break-word;
 }
+
 
 .person-contact strong {
 
     color:
-        var(--people-heading);
+        var(--people-heading) !important;
 }
+
 
 .person-contact a {
 
     color:
-        var(--people-primary);
+        var(--people-primary) !important;
 
-    font-weight: 650;
+    font-weight:
+        650;
+
+    text-decoration:
+        none;
 }
+
+
+.person-contact a:hover {
+
+    color:
+        var(--people-accent) !important;
+}
+
+
+/* =========================================================
+   PROFILE LINKS
+   ========================================================= */
 
 .person-links {
 
-    display: flex;
+    display:
+        flex;
 
-    flex-wrap: wrap;
+    flex-wrap:
+        wrap;
 
-    gap: 7px;
+    gap:
+        7px;
 
-    margin-top: 15px;
+    margin-top:
+        15px;
 }
+
 
 .person-links a {
 
-    display: inline-flex;
+    display:
+        inline-flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    padding: 7px 10px;
+    padding:
+        7px 10px;
 
     border:
         1px solid var(--people-border);
 
-    border-radius: 8px;
+    border-radius:
+        8px;
 
     background:
         var(--people-link-bg);
 
     color:
-        var(--people-primary);
+        var(--people-primary) !important;
 
-    font-size: 11px;
+    font-size:
+        11px;
 
-    font-weight: 650;
+    font-weight:
+        650;
+
+    text-decoration:
+        none;
 }
+
 
 .person-links a:hover {
 
-    color: #ffffff;
+    color:
+        #ffffff !important;
 
     background:
-        var(--people-primary);
+        var(--people-primary) !important;
 
     border-color:
-        var(--people-primary);
+        var(--people-primary) !important;
 }
 
-.section-navigation {
 
-    position: sticky;
-
-    top: 82px;
-
-    z-index: 100;
-
-    margin-bottom: 35px;
-
-    padding: 12px;
-
-    background:
-        color-mix(
-            in srgb,
-            var(--people-card-bg) 92%,
-            transparent
-        );
-
-    border:
-        1px solid var(--people-light-border);
-
-    border-radius: 16px;
-
-    box-shadow:
-        0 7px 25px var(--people-shadow);
-
-    backdrop-filter: blur(14px);
-}
-
-.section-navigation-inner {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    justify-content: center;
-
-    gap: 7px;
-}
-
-.section-navigation a {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    padding: 9px 13px;
-
-    border-radius: 10px;
-
-    color:
-        var(--people-text);
-
-    font-size: 12px;
-
-    font-weight: 650;
-}
-
-.section-navigation a:hover {
-
-    color:
-        var(--people-primary);
-
-    background:
-        var(--people-nav-hover);
-}
+/* =========================================================
+   PEOPLE COUNT
+   ========================================================= */
 
 .people-count {
 
-    display: inline-flex;
+    display:
+        inline-flex;
 
-    align-items: center;
+    align-items:
+        center;
 
-    justify-content: center;
+    justify-content:
+        center;
 
-    min-width: 28px;
+    min-width:
+        28px;
 
-    height: 22px;
+    height:
+        22px;
 
-    margin-left: 5px;
+    margin-left:
+        5px;
 
-    padding: 0 6px;
+    padding:
+        0 6px;
 
-    border-radius: 50px;
+    border-radius:
+        50px;
 
     background:
         var(--people-role-bg);
@@ -639,14 +922,39 @@
     color:
         var(--people-primary);
 
-    font-size: 10px;
+    font-size:
+        10px;
 }
+
+
+/* =========================================================
+   DESCRIPTION
+   ========================================================= */
+
+.people-page-description {
+
+    max-width:
+        750px;
+
+    margin:
+        0 auto;
+
+    color:
+        var(--people-muted) !important;
+}
+
+
+/* =========================================================
+   EXPERTISE BOX
+   ========================================================= */
 
 .expertise-box {
 
-    margin-top: 45px;
+    margin-top:
+        45px;
 
-    padding: 35px;
+    padding:
+        35px;
 
     background:
         var(--people-card-bg);
@@ -654,41 +962,65 @@
     border:
         1px solid var(--people-light-border);
 
-    border-radius: 20px;
+    border-radius:
+        20px;
 
     box-shadow:
         0 7px 25px var(--people-shadow);
 }
 
 
-/* =================================================
-   HOMEPAGE-LIKE INLINE ELEMENT OVERRIDES
-   ================================================= */
+/* =========================================================
+   RESEARCH TAGS / PILLS
+   These classes come from modern.css, so override them
+   here to ensure they follow the selected People theme.
+   ========================================================= */
 
-.people-page-description {
+html[data-theme] .research-tag,
+html[data-theme] .research-pill {
 
-    max-width: 750px;
-
-    margin: 0 auto;
+    background:
+        var(--people-role-bg) !important;
 
     color:
-        var(--people-muted);
+        var(--people-role-text) !important;
+
+    border-color:
+        var(--people-border) !important;
 }
 
 
-/* =================================================
+html[data-theme] .research-tag:hover,
+html[data-theme] .research-pill:hover {
+
+    background:
+        var(--people-primary) !important;
+
+    color:
+        #ffffff !important;
+
+    border-color:
+        var(--people-primary) !important;
+}
+
+
+/* =========================================================
    COLLABORATION CTA
-   ================================================= */
+   ========================================================= */
 
 .people-collaboration-box {
 
-    padding: 55px 30px;
+    padding:
+        55px 30px;
 
-    text-align: center;
+    text-align:
+        center;
 
-    border-radius: 24px;
+    border-radius:
+        24px;
 
-    color: #ffffff;
+    color:
+        #ffffff;
 
     background:
         linear-gradient(
@@ -701,110 +1033,264 @@
         0 25px 60px var(--people-shadow-hover);
 }
 
+
 .people-collaboration-box h2 {
 
-    color: #ffffff;
+    color:
+        #ffffff !important;
 }
+
 
 .people-collaboration-box p {
 
-    max-width: 700px;
+    max-width:
+        700px;
 
-    margin: 0 auto 25px;
+    margin:
+        0 auto 25px;
 
     color:
-        rgba(255,255,255,0.78);
+        rgba(255,255,255,0.78) !important;
 }
+
 
 .people-collaboration-box .primary-action {
 
-    display: inline-block;
+    display:
+        inline-block;
 
-    padding: 12px 22px;
+    padding:
+        12px 22px;
 
-    border-radius: 12px;
+    border-radius:
+        12px;
 
-    background: #ffffff;
+    background:
+        #ffffff;
 
     color:
-        var(--people-primary-2);
+        var(--people-primary-2) !important;
 
-    font-weight: 700;
+    font-weight:
+        700;
+
+    text-decoration:
+        none;
 }
+
+
+.people-collaboration-box .primary-action:hover {
+
+    background:
+        var(--people-soft-bg);
+
+    color:
+        var(--people-primary) !important;
+}
+
 
 .people-collaboration-box .secondary-action {
 
-    display: inline-block;
+    display:
+        inline-block;
 
-    padding: 12px 22px;
+    padding:
+        12px 22px;
 
     border:
         1px solid rgba(255,255,255,0.30);
 
-    border-radius: 12px;
+    border-radius:
+        12px;
 
-    color: #ffffff;
+    color:
+        #ffffff !important;
 
-    font-weight: 700;
+    font-weight:
+        700;
+
+    text-decoration:
+        none;
 }
 
 
-/* =================================================
-   NAVIGATION BRAND
-   ================================================= */
+.people-collaboration-box .secondary-action:hover {
 
-.people-brand {
+    background:
+        rgba(255,255,255,0.10);
 
-    display: flex;
+    border-color:
+        rgba(255,255,255,0.55);
+}
 
-    align-items: center;
 
-    justify-content: center;
+/* =========================================================
+   FOOTER THEME
+   ========================================================= */
 
-    gap: 10px;
+html[data-theme] #footer {
 
-    margin: 10px auto;
+    background:
+        linear-gradient(
+            135deg,
+            var(--people-footer-gradient-1),
+            var(--people-footer-gradient-2)
+        ) !important;
 
-    width: max-content;
+    color:
+        rgba(255,255,255,0.82) !important;
+}
+
+
+html[data-theme] #footer h3 {
+
+    color:
+        #ffffff !important;
+}
+
+
+html[data-theme] #footer p {
+
+    color:
+        rgba(255,255,255,0.76) !important;
+}
+
+
+html[data-theme] #footer strong {
+
+    color:
+        #ffffff !important;
+}
+
+
+html[data-theme] #footer hr {
+
+    border-color:
+        rgba(255,255,255,0.16) !important;
+}
+
+
+html[data-theme] #footer a {
+
+    color:
+        var(--people-accent) !important;
+
+    text-decoration:
+        none;
+}
+
+
+html[data-theme] #footer a:hover {
+
+    color:
+        #ffffff !important;
+}
+
+
+/* =========================================================
+   THEME SWITCHER
+   ========================================================= */
+
+html[data-theme] .theme-switcher-bar {
+
+    background:
+        var(--people-card-bg) !important;
+
+    border-color:
+        var(--people-border) !important;
+
+    color:
+        var(--people-text) !important;
+
+    box-shadow:
+        0 8px 30px var(--people-shadow) !important;
+}
+
+
+html[data-theme] .theme-title {
 
     color:
         var(--people-heading) !important;
-
-    font-weight: 800;
-
-    text-decoration: none;
 }
 
 
-/* =================================================
-   RESPONSIVE
-   ================================================= */
+html[data-theme] .theme-btn {
+
+    color:
+        var(--people-text) !important;
+
+    background:
+        var(--people-link-bg) !important;
+
+    border-color:
+        var(--people-border) !important;
+}
+
+
+html[data-theme] .theme-btn:hover {
+
+    color:
+        var(--people-primary) !important;
+
+    background:
+        var(--people-nav-hover) !important;
+
+    border-color:
+        var(--people-primary) !important;
+}
+
+
+html[data-theme] .theme-btn.active {
+
+    color:
+        var(--people-primary) !important;
+
+    background:
+        var(--people-role-bg) !important;
+
+    border-color:
+        var(--people-primary) !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
 
 @media (max-width: 700px) {
 
     .people-grid {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
     }
+
 
     .person-image-wrapper {
 
-        min-height: 280px;
+        min-height:
+            280px;
     }
+
 
     .person-image-wrapper img {
 
-        height: 250px;
+        height:
+            250px;
     }
+
 
     .section-navigation {
 
-        position: static;
+        position:
+            static;
     }
+
 
     .expertise-box {
 
-        padding: 25px 18px;
+        padding:
+            25px 18px;
     }
 
 }
@@ -933,6 +1419,7 @@
             border-radius:50px;
             background:rgba(255,255,255,0.10);
             border:1px solid rgba(255,255,255,0.14);
+            color:#ffffff;
             font-size:12px;
             font-weight:700;
             letter-spacing:.4px;
@@ -2390,18 +2877,14 @@
 <div class="people-collaboration-box">
 
     <h2>
-
         Collaborate With CESRG
-
     </h2>
 
 
     <p>
-
         Explore our research activities,
         publications and opportunities for
         academic and research collaboration.
-
     </p>
 
 
