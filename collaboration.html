@@ -5,18 +5,14 @@
 
     <meta charset="UTF-8">
 
-    <title>
-        Collaboration | CESRG
-    </title>
+    <title>Collaboration | CESRG</title>
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
           content="Academic and research collaborations of the Control & Energy Systems Research Group at COMSATS University Islamabad.">
 
-    <meta name="theme-color"
-          content="#0b1f3a">
+    <meta name="theme-color" content="#0b5c53">
 
     <link rel="icon"
           type="image/png"
@@ -39,7 +35,269 @@
     <style>
 
         /* =====================================================
-           COLLABORATION PAGE
+           COLLABORATION PAGE THEME VARIABLES
+           ===================================================== */
+
+        :root {
+            --collab-primary: #0b5c53;
+            --collab-primary-2: #174f49;
+            --collab-accent: #287d72;
+            --collab-accent-2: #4da89b;
+
+            --collab-page-bg: #f7faf9;
+            --collab-soft-bg: #edf5f2;
+            --collab-card-bg: #ffffff;
+
+            --collab-text: #172033;
+            --collab-muted: #667085;
+
+            --collab-border: #dce8e4;
+            --collab-border-strong: #c8ddd7;
+
+            --collab-logo-bg-1: #f0f7f5;
+            --collab-logo-bg-2: #e3efeb;
+
+            --collab-tag-bg: #f2f8f6;
+            --collab-hover-bg: #e2f0ec;
+
+            --collab-network-bg-1: #edf5f2;
+            --collab-network-bg-2: #ffffff;
+
+            --collab-hero-1: #071d1a;
+            --collab-hero-2: #174f49;
+
+            --collab-shadow: rgba(7,21,37,.06);
+            --collab-shadow-hover: rgba(7,21,37,.11);
+
+            --collab-cta-1: #071d1a;
+            --collab-cta-2: #174f49;
+        }
+
+
+        /* =====================================================
+           MARGALLA MIST
+           ===================================================== */
+
+        html[data-theme="margalla-mist"] {
+            --collab-primary: #0b5c53;
+            --collab-primary-2: #174f49;
+            --collab-accent: #287d72;
+            --collab-accent-2: #4da89b;
+
+            --collab-page-bg: #f7faf9;
+            --collab-soft-bg: #edf5f2;
+            --collab-card-bg: #ffffff;
+
+            --collab-text: #172033;
+            --collab-muted: #667085;
+
+            --collab-border: #dce8e4;
+            --collab-border-strong: #c8ddd7;
+
+            --collab-logo-bg-1: #f0f7f5;
+            --collab-logo-bg-2: #e3efeb;
+
+            --collab-tag-bg: #f2f8f6;
+            --collab-hover-bg: #e2f0ec;
+
+            --collab-network-bg-1: #edf5f2;
+            --collab-network-bg-2: #ffffff;
+
+            --collab-hero-1: #071d1a;
+            --collab-hero-2: #174f49;
+
+            --collab-cta-1: #071d1a;
+            --collab-cta-2: #174f49;
+        }
+
+
+        /* =====================================================
+           INSTITUTIONAL BLUE
+           ===================================================== */
+
+        html[data-theme="institutional-blue"] {
+            --collab-primary: #1a5276;
+            --collab-primary-2: #154360;
+            --collab-accent: #2874a6;
+            --collab-accent-2: #3498db;
+
+            --collab-page-bg: #f6f9fc;
+            --collab-soft-bg: #eaf2f8;
+            --collab-card-bg: #ffffff;
+
+            --collab-text: #172033;
+            --collab-muted: #667085;
+
+            --collab-border: #dce6ef;
+            --collab-border-strong: #c5d9e8;
+
+            --collab-logo-bg-1: #f1f7fb;
+            --collab-logo-bg-2: #e3eff7;
+
+            --collab-tag-bg: #f2f7fb;
+            --collab-hover-bg: #e1edf6;
+
+            --collab-network-bg-1: #eaf2f8;
+            --collab-network-bg-2: #ffffff;
+
+            --collab-hero-1: #071a2d;
+            --collab-hero-2: #154360;
+
+            --collab-cta-1: #071a2d;
+            --collab-cta-2: #154360;
+        }
+
+
+        /* =====================================================
+           IVORY PRESS
+           ===================================================== */
+
+        html[data-theme="ivory-press"] {
+            --collab-primary: #8b3a3a;
+            --collab-primary-2: #633333;
+            --collab-accent: #9f4a4a;
+            --collab-accent-2: #c27668;
+
+            --collab-page-bg: #fbf8f3;
+            --collab-soft-bg: #f3ede4;
+            --collab-card-bg: #fffdf9;
+
+            --collab-text: #332d2a;
+            --collab-muted: #756b65;
+
+            --collab-border: #e7ddd2;
+            --collab-border-strong: #d9c9bc;
+
+            --collab-logo-bg-1: #faf4ec;
+            --collab-logo-bg-2: #f1e6da;
+
+            --collab-tag-bg: #f8f0e7;
+            --collab-hover-bg: #f0e5dc;
+
+            --collab-network-bg-1: #f3ede4;
+            --collab-network-bg-2: #fffdf9;
+
+            --collab-hero-1: #241817;
+            --collab-hero-2: #633333;
+
+            --collab-cta-1: #241817;
+            --collab-cta-2: #633333;
+        }
+
+
+        /* =====================================================
+           SAGE CALM
+           ===================================================== */
+
+        html[data-theme="sage-calm"] {
+            --collab-primary: #4a6b5d;
+            --collab-primary-2: #365247;
+            --collab-accent: #638676;
+            --collab-accent-2: #8daa8d;
+
+            --collab-page-bg: #f7faf7;
+            --collab-soft-bg: #edf3ed;
+            --collab-card-bg: #ffffff;
+
+            --collab-text: #26342d;
+            --collab-muted: #6d7d73;
+
+            --collab-border: #dce6de;
+            --collab-border-strong: #c7d8cb;
+
+            --collab-logo-bg-1: #f1f7f2;
+            --collab-logo-bg-2: #e5efe7;
+
+            --collab-tag-bg: #f1f6f2;
+            --collab-hover-bg: #e3eee5;
+
+            --collab-network-bg-1: #edf3ed;
+            --collab-network-bg-2: #ffffff;
+
+            --collab-hero-1: #17251f;
+            --collab-hero-2: #365247;
+
+            --collab-cta-1: #17251f;
+            --collab-cta-2: #365247;
+        }
+
+
+        /* =====================================================
+           INDIGO NIGHT
+           ===================================================== */
+
+        html[data-theme="indigo-night"] {
+            --collab-primary: #6366f1;
+            --collab-primary-2: #3730a3;
+            --collab-accent: #818cf8;
+            --collab-accent-2: #a5b4fc;
+
+            --collab-page-bg: #0f172a;
+            --collab-soft-bg: #172033;
+            --collab-card-bg: #1e293b;
+
+            --collab-text: #e5e7eb;
+            --collab-muted: #aab3c2;
+
+            --collab-border: #334155;
+            --collab-border-strong: #475569;
+
+            --collab-logo-bg-1: #202b45;
+            --collab-logo-bg-2: #172033;
+
+            --collab-tag-bg: #202b45;
+            --collab-hover-bg: #273449;
+
+            --collab-network-bg-1: #172033;
+            --collab-network-bg-2: #1e293b;
+
+            --collab-hero-1: #070b18;
+            --collab-hero-2: #312e81;
+
+            --collab-cta-1: #070b18;
+            --collab-cta-2: #312e81;
+        }
+
+
+        /* =====================================================
+           GRAPHITE
+           ===================================================== */
+
+        html[data-theme="graphite"] {
+            --collab-primary: #52525b;
+            --collab-primary-2: #3f3f46;
+            --collab-accent: #71717a;
+            --collab-accent-2: #a1a1aa;
+
+            --collab-page-bg: #f4f4f5;
+            --collab-soft-bg: #e9e9eb;
+            --collab-card-bg: #ffffff;
+
+            --collab-text: #27272a;
+            --collab-muted: #71717a;
+
+            --collab-border: #d4d4d8;
+            --collab-border-strong: #c4c4c9;
+
+            --collab-logo-bg-1: #f0f0f1;
+            --collab-logo-bg-2: #e6e6e8;
+
+            --collab-tag-bg: #f1f1f2;
+            --collab-hover-bg: #e4e4e7;
+
+            --collab-network-bg-1: #e9e9eb;
+            --collab-network-bg-2: #ffffff;
+
+            --collab-hero-1: #18181b;
+            --collab-hero-2: #3f3f46;
+
+            --collab-cta-1: #18181b;
+            --collab-cta-2: #3f3f46;
+        }
+
+
+        /* =====================================================
+           GENERAL
            ===================================================== */
 
         * {
@@ -52,6 +310,31 @@
 
         body {
             overflow-x: hidden;
+            background: var(--collab-page-bg);
+            color: var(--collab-text);
+        }
+
+
+        /* =====================================================
+           NAVIGATION LOGO
+           ===================================================== */
+
+        .navbar-inner .container > a {
+            color: var(--collab-primary-2) !important;
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .jumbotron {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--collab-hero-1),
+                    var(--collab-hero-2)
+                ) !important;
         }
 
 
@@ -67,7 +350,7 @@
 
         .collab-intro h2 {
             margin: 0 0 15px;
-            color: #0b1f3a;
+            color: var(--collab-text);
             font-size: 36px;
             line-height: 1.2;
             letter-spacing: -1px;
@@ -75,7 +358,7 @@
 
         .collab-intro p {
             margin: 0;
-            color: #667085;
+            color: var(--collab-muted);
             font-size: 14px;
             line-height: 1.8;
         }
@@ -97,10 +380,10 @@
             overflow: hidden;
             padding: 28px 18px;
             text-align: center;
-            border: 1px solid #e1e8ee;
+            border: 1px solid var(--collab-border);
             border-radius: 18px;
-            background: #ffffff;
-            box-shadow: 0 8px 28px rgba(7,21,37,.05);
+            background: var(--collab-card-bg);
+            box-shadow: 0 8px 28px var(--collab-shadow);
             transition: all .28s ease;
         }
 
@@ -113,20 +396,20 @@
             height: 3px;
             background: linear-gradient(
                 90deg,
-                #1769aa,
-                #55c8ed
+                var(--collab-primary),
+                var(--collab-accent-2)
             );
         }
 
         .collab-stat:hover {
             transform: translateY(-5px);
-            box-shadow: 0 16px 35px rgba(7,21,37,.09);
+            box-shadow: 0 16px 35px var(--collab-shadow-hover);
         }
 
         .collab-stat-number {
             display: block;
             margin-bottom: 7px;
-            color: #1769aa;
+            color: var(--collab-primary);
             font-size: 30px;
             font-weight: 800;
             letter-spacing: -1px;
@@ -134,7 +417,7 @@
 
         .collab-stat-label {
             display: block;
-            color: #667085;
+            color: var(--collab-muted);
             font-size: 10px;
             font-weight: 700;
             line-height: 1.5;
@@ -166,10 +449,10 @@
             flex-direction: column;
             min-height: 540px;
             padding: 30px;
-            border: 1px solid #e1e8ee;
+            border: 1px solid var(--collab-border);
             border-radius: 22px;
-            background: #ffffff;
-            box-shadow: 0 8px 28px rgba(7,21,37,.06);
+            background: var(--collab-card-bg);
+            box-shadow: 0 8px 28px var(--collab-shadow);
             transition:
                 transform .3s ease,
                 box-shadow .3s ease,
@@ -178,8 +461,8 @@
 
         .partner-card:hover {
             transform: translateY(-7px);
-            border-color: #c8dce9;
-            box-shadow: 0 20px 45px rgba(7,21,37,.11);
+            border-color: var(--collab-border-strong);
+            box-shadow: 0 20px 45px var(--collab-shadow-hover);
         }
 
         .partner-card::before {
@@ -191,8 +474,8 @@
             height: 4px;
             background: linear-gradient(
                 90deg,
-                #1769aa,
-                #55c8ed
+                var(--collab-primary),
+                var(--collab-accent-2)
             );
         }
 
@@ -216,13 +499,13 @@
             background:
                 linear-gradient(
                     145deg,
-                    #f2f7fa,
-                    #e8f1f6
+                    var(--collab-logo-bg-1),
+                    var(--collab-logo-bg-2)
                 );
 
-            border: 1px solid #dce7ee;
+            border: 1px solid var(--collab-border);
 
-            color: #0b3c64;
+            color: var(--collab-primary);
 
             font-size: 30px;
             font-weight: 800;
@@ -233,7 +516,7 @@
 
         .partner-card:hover .partner-logo {
             transform: scale(1.04);
-            border-color: #bcd5e4;
+            border-color: var(--collab-border-strong);
         }
 
         .partner-logo span {
@@ -248,49 +531,114 @@
 
         .partner-country {
             margin-bottom: 8px;
-
-            color: #1769aa;
-
+            color: var(--collab-primary);
             font-size: 9px;
             font-weight: 800;
-
             letter-spacing: 1px;
             text-transform: uppercase;
         }
 
         .partner-card h3 {
             margin: 0 0 7px;
-
-            color: #0b1f3a;
-
+            color: var(--collab-text);
             font-size: 22px;
             line-height: 1.3;
         }
 
         .partner-full-name {
             min-height: 40px;
-
             margin-bottom: 17px;
-
-            color: #667085;
-
+            color: var(--collab-muted);
             font-size: 11px;
             font-weight: 600;
-
             line-height: 1.5;
         }
 
         .partner-description {
             margin: 0 0 22px;
-
-            color: #667085;
-
+            color: var(--collab-muted);
             font-size: 12px;
             line-height: 1.75;
         }
 
         .partner-description strong {
-            color: #0b1f3a;
+            color: var(--collab-text);
+        }
+
+
+        /* =====================================================
+           PARTNER SECTION
+           ===================================================== */
+
+        .partner-section {
+            margin-bottom: 20px;
+        }
+
+        .partner-section h4 {
+            margin: 0 0 8px;
+            color: var(--collab-text);
+            font-size: 14px;
+        }
+
+        .partner-section p {
+            margin: 0;
+            color: var(--collab-muted);
+            font-size: 11px;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           PARTNER PROJECT
+           ===================================================== */
+
+        .partner-project {
+            margin-top: 15px;
+            padding: 14px;
+            border-radius: 12px;
+            background: var(--collab-soft-bg);
+            border: 1px solid var(--collab-border);
+        }
+
+        .project-funder {
+            margin-bottom: 6px;
+            color: var(--collab-primary);
+            font-size: 8px;
+            font-weight: 800;
+            line-height: 1.5;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+        }
+
+        .partner-project h5 {
+            margin: 0 0 7px;
+            color: var(--collab-text);
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        .partner-project p {
+            margin: 0;
+            color: var(--collab-muted);
+            font-size: 10px;
+            line-height: 1.65;
+        }
+
+
+        /* =====================================================
+           COLLABORATION LIST
+           ===================================================== */
+
+        .collaboration-list {
+            margin: 12px 0 0;
+            padding-left: 18px;
+            color: var(--collab-muted);
+            font-size: 10px;
+            line-height: 1.8;
+        }
+
+        .collaboration-list li::marker {
+            color: var(--collab-primary);
         }
 
 
@@ -307,34 +655,28 @@
             background:
                 linear-gradient(
                     135deg,
-                    #f3f8fb,
-                    #ffffff
+                    var(--collab-soft-bg),
+                    var(--collab-card-bg)
                 );
 
-            border: 1px solid #dce8f0;
+            border: 1px solid var(--collab-border);
         }
 
         .project-label {
             display: block;
             margin-bottom: 6px;
-
-            color: #1769aa;
-
+            color: var(--collab-primary);
             font-size: 8px;
             font-weight: 800;
-
             letter-spacing: 1px;
             text-transform: uppercase;
         }
 
         .project-title {
             display: block;
-
-            color: #0b1f3a;
-
+            color: var(--collab-text);
             font-size: 11px;
             font-weight: 750;
-
             line-height: 1.5;
         }
 
@@ -346,9 +688,7 @@
         .partner-tags {
             display: flex;
             flex-wrap: wrap;
-
             gap: 7px;
-
             margin-top: auto;
             margin-bottom: 24px;
         }
@@ -356,12 +696,12 @@
         .partner-tag {
             padding: 7px 9px;
 
-            border: 1px solid #dce8f0;
+            border: 1px solid var(--collab-border);
             border-radius: 8px;
 
-            background: #f6f9fb;
+            background: var(--collab-tag-bg);
 
-            color: #1769aa;
+            color: var(--collab-primary);
 
             font-size: 9px;
             font-weight: 700;
@@ -370,7 +710,7 @@
         }
 
         .partner-tag:hover {
-            background: #edf6fb;
+            background: var(--collab-hover-bg);
             transform: translateY(-1px);
         }
 
@@ -398,7 +738,7 @@
 
             border-radius: 10px;
 
-            background: #0b1f3a;
+            background: var(--collab-primary-2);
 
             color: white;
 
@@ -411,7 +751,7 @@
         }
 
         .partner-button:hover {
-            background: #1769aa;
+            background: var(--collab-primary);
 
             transform: translateY(-2px);
 
@@ -420,15 +760,15 @@
         }
 
         .partner-button.secondary {
-            background: #f3f7fa;
-            color: #0b1f3a;
-            border: 1px solid #dce7ee;
+            background: var(--collab-soft-bg);
+            color: var(--collab-text);
+            border: 1px solid var(--collab-border);
         }
 
         .partner-button.secondary:hover {
-            background: #eaf3f8;
-            color: #1769aa;
-            border-color: #c5dce9;
+            background: var(--collab-hover-bg);
+            color: var(--collab-primary);
+            border-color: var(--collab-border-strong);
         }
 
 
@@ -446,11 +786,11 @@
             background:
                 linear-gradient(
                     145deg,
-                    #f4f8fb,
-                    #ffffff
+                    var(--collab-network-bg-1),
+                    var(--collab-network-bg-2)
                 );
 
-            border: 1px solid #e1e8ee;
+            border: 1px solid var(--collab-border);
         }
 
         .network-header {
@@ -461,18 +801,14 @@
 
         .network-header h2 {
             margin: 0 0 12px;
-
-            color: #0b1f3a;
-
+            color: var(--collab-text);
             font-size: 30px;
             line-height: 1.2;
         }
 
         .network-header p {
             margin: 0;
-
-            color: #667085;
-
+            color: var(--collab-muted);
             font-size: 12px;
             line-height: 1.7;
         }
@@ -509,12 +845,12 @@
 
             border-radius: 16px;
 
-            background: #ffffff;
+            background: var(--collab-card-bg);
 
-            border: 1px solid #dce7ee;
+            border: 1px solid var(--collab-border);
 
             box-shadow:
-                0 7px 20px rgba(7,21,37,.05);
+                0 7px 20px var(--collab-shadow);
 
             transition: .25s ease;
         }
@@ -523,38 +859,34 @@
             transform: translateY(-5px);
 
             box-shadow:
-                0 14px 30px rgba(7,21,37,.09);
+                0 14px 30px var(--collab-shadow-hover);
         }
 
         .network-node strong {
             margin-bottom: 7px;
-
-            color: #0b1f3a;
-
+            color: var(--collab-text);
             font-size: 14px;
         }
 
         .network-node span {
-            color: #667085;
-
+            color: var(--collab-muted);
             font-size: 9px;
-
             line-height: 1.5;
         }
 
         .main-node {
-            border-color: #1769aa;
+            border-color: var(--collab-primary);
 
             background:
                 linear-gradient(
                     145deg,
-                    #ffffff,
-                    #f1f8fc
+                    var(--collab-card-bg),
+                    var(--collab-soft-bg)
                 );
         }
 
         .main-node strong {
-            color: #1769aa;
+            color: var(--collab-primary);
             font-size: 20px;
         }
 
@@ -564,8 +896,8 @@
             background:
                 linear-gradient(
                     90deg,
-                    #bcd5e4,
-                    #1769aa
+                    var(--collab-border-strong),
+                    var(--collab-primary)
                 );
         }
 
@@ -584,11 +916,11 @@
             background:
                 linear-gradient(
                     145deg,
-                    #f4f8fb,
-                    #ffffff
+                    var(--collab-network-bg-1),
+                    var(--collab-network-bg-2)
                 );
 
-            border: 1px solid #e2e9ee;
+            border: 1px solid var(--collab-border);
         }
 
         .collab-areas-header {
@@ -601,28 +933,20 @@
 
         .collab-areas-header h2 {
             margin: 0 0 12px;
-
-            color: #0b1f3a;
-
+            color: var(--collab-text);
             font-size: 30px;
         }
 
         .collab-areas-header p {
             margin: 0;
-
-            color: #667085;
-
+            color: var(--collab-muted);
             font-size: 12px;
-
             line-height: 1.7;
         }
 
         .area-grid {
             display: grid;
-
-            grid-template-columns:
-                repeat(4, 1fr);
-
+            grid-template-columns: repeat(4, 1fr);
             gap: 14px;
         }
 
@@ -633,9 +957,9 @@
 
             border-radius: 15px;
 
-            background: #ffffff;
+            background: var(--collab-card-bg);
 
-            border: 1px solid #e4ebf0;
+            border: 1px solid var(--collab-border);
 
             text-align: center;
 
@@ -646,32 +970,26 @@
             transform: translateY(-4px);
 
             box-shadow:
-                0 12px 28px rgba(7,21,37,.07);
+                0 12px 28px var(--collab-shadow-hover);
 
-            border-color: #cbdde8;
+            border-color: var(--collab-border-strong);
         }
 
         .area-icon {
             margin-bottom: 10px;
-
             font-size: 27px;
         }
 
         .area-card h3 {
             margin: 0 0 6px;
-
-            color: #0b1f3a;
-
+            color: var(--collab-text);
             font-size: 13px;
         }
 
         .area-card p {
             margin: 0;
-
-            color: #667085;
-
+            color: var(--collab-muted);
             font-size: 10px;
-
             line-height: 1.55;
         }
 
@@ -690,19 +1008,14 @@
 
         .approach-title h2 {
             margin: 0 0 10px;
-
-            color: #0b1f3a;
-
+            color: var(--collab-text);
             font-size: 30px;
         }
 
         .approach-title p {
             margin: 0;
-
-            color: #667085;
-
+            color: var(--collab-muted);
             font-size: 12px;
-
             line-height: 1.7;
         }
 
@@ -724,11 +1037,11 @@
 
             padding: 28px;
 
-            border: 1px solid #e3e8ee;
+            border: 1px solid var(--collab-border);
 
             border-radius: 18px;
 
-            background: white;
+            background: var(--collab-card-bg);
 
             transition: .25s ease;
         }
@@ -737,7 +1050,7 @@
             transform: translateY(-5px);
 
             box-shadow:
-                0 14px 30px rgba(7,21,37,.07);
+                0 14px 30px var(--collab-shadow-hover);
         }
 
         .approach-card::after {
@@ -753,7 +1066,11 @@
 
             border-radius: 50%;
 
-            background: rgba(23,105,170,.05);
+            background: color-mix(
+                in srgb,
+                var(--collab-primary) 5%,
+                transparent
+            );
         }
 
         .approach-number {
@@ -761,7 +1078,7 @@
 
             margin-bottom: 13px;
 
-            color: #1769aa;
+            color: var(--collab-primary);
 
             font-size: 11px;
 
@@ -772,19 +1089,14 @@
 
         .approach-card h3 {
             margin: 0 0 9px;
-
-            color: #0b1f3a;
-
+            color: var(--collab-text);
             font-size: 17px;
         }
 
         .approach-card p {
             margin: 0;
-
-            color: #667085;
-
+            color: var(--collab-muted);
             font-size: 11px;
-
             line-height: 1.7;
         }
 
@@ -807,19 +1119,23 @@
             background:
                 radial-gradient(
                     circle at 80% 15%,
-                    rgba(0,194,255,.16),
+                    color-mix(
+                        in srgb,
+                        var(--collab-accent-2) 16%,
+                        transparent
+                    ),
                     transparent 30%
                 ),
                 linear-gradient(
                     135deg,
-                    #071525,
-                    #123b69
+                    var(--collab-cta-1),
+                    var(--collab-cta-2)
                 );
 
             text-align: center;
 
             box-shadow:
-                0 22px 55px rgba(7,21,37,.15);
+                0 22px 55px var(--collab-shadow-hover);
         }
 
         .collab-cta::before {
@@ -873,7 +1189,7 @@
 
             background: white;
 
-            color: #0b1f3a;
+            color: var(--collab-primary-2);
 
             font-size: 11px;
 
@@ -1016,7 +1332,6 @@
 
             <div class="container">
 
-
                 <a href="index.html"
                    style="
                        display:flex;
@@ -1025,7 +1340,7 @@
                        gap:10px;
                        margin:10px auto;
                        width:max-content;
-                       color:#0b1f3a;
+                       color:var(--collab-primary-2) !important;
                        font-weight:800;
                        text-decoration:none;
                    ">
@@ -1059,13 +1374,11 @@
 
                 <ul class="nav">
 
-
                     <li>
                         <a href="index.html">
                             Home
                         </a>
                     </li>
-
 
                     <li>
                         <a href="people.html">
@@ -1073,13 +1386,11 @@
                         </a>
                     </li>
 
-
                     <li>
                         <a href="research.html">
                             Research
                         </a>
                     </li>
-
 
                     <li class="active">
                         <a href="collaboration.html">
@@ -1087,13 +1398,11 @@
                         </a>
                     </li>
 
-
                     <li>
                         <a href="publications.html">
                             Publications
                         </a>
                     </li>
-
 
                     <li>
                         <a href="gallery.html">
@@ -1101,13 +1410,11 @@
                         </a>
                     </li>
 
-
                     <li>
                         <a href="contact.html">
                             Contact
                         </a>
                     </li>
-
 
                 </ul>
 
@@ -1118,7 +1425,6 @@
     </div>
 
 </header>
-
 
 
 <!-- =====================================================
@@ -1169,7 +1475,6 @@
 </section>
 
 
-
 <!-- =====================================================
      MAIN CONTENT
      ===================================================== -->
@@ -1178,10 +1483,7 @@
          style="margin-top:70px;">
 
 
-
-    <!-- =================================================
-         INTRODUCTION
-         ================================================= -->
+    <!-- INTRODUCTION -->
 
     <div class="collab-intro">
 
@@ -1210,13 +1512,9 @@
     </div>
 
 
-
-    <!-- =================================================
-         COLLABORATION STATISTICS
-         ================================================= -->
+    <!-- STATISTICS -->
 
     <section class="collab-stats">
-
 
         <div class="collab-stat">
 
@@ -1269,265 +1567,227 @@
 
         </div>
 
-
     </section>
 
 
-
-    <!-- =================================================
-         PARTNER CARDS
-         ================================================= -->
+    <!-- PARTNER GRID -->
 
     <div class="partner-grid">
 
 
-        <!-- =========================================================
-     GIKI — Research & Collaboration Partner
-     ========================================================= -->
+        <!-- GIKI -->
 
-<article class="partner-card" id="giki">
+        <article class="partner-card" id="giki">
 
-    <!-- Partner Logo -->
-    <div class="partner-logo">
-        <span>GIKI</span>
-    </div>
-
-
-    <!-- Country -->
-    <div class="partner-country">
-        Pakistan
-    </div>
-
-
-    <!-- Institution Name -->
-    <h3>
-        GIKI
-    </h3>
-
-
-    <!-- Full Name -->
-    <div class="partner-full-name">
-        Ghulam Ishaq Khan Institute
-        of Engineering Sciences
-        and Technology
-    </div>
-
-
-    <!-- Institution Description -->
-    <p class="partner-description">
-
-        GIKI is a leading engineering and technology
-        institution in Pakistan with strong expertise
-        across engineering sciences, electrical engineering,
-        computer science, mechanical engineering, materials
-        science, and emerging technologies.
-
-        Its multidisciplinary research environment provides
-        strong opportunities for collaboration with CESRG
-        in advanced energy systems, battery technologies,
-        intelligent control, and electric mobility.
-
-    </p>
-
-
-    <!-- =====================================================
-         Research Collaboration Focus
-         ===================================================== -->
-
-    <div class="partner-section">
-
-        <h4>
-            Research Collaboration Focus
-        </h4>
-
-        <p>
-            CESRG is particularly interested in collaborative
-            research with GIKI in the following areas:
-        </p>
-
-    </div>
-
-
-    <!-- Research Tags -->
-    <div class="partner-tags">
-
-        <span class="partner-tag">
-            Electric Vehicles
-        </span>
-
-        <span class="partner-tag">
-            Lithium-ion Batteries
-        </span>
-
-        <span class="partner-tag">
-            Battery Management Systems
-        </span>
-
-        <span class="partner-tag">
-            Active Cell Balancing
-        </span>
-
-        <span class="partner-tag">
-            AI &amp; Machine Learning
-        </span>
-
-        <span class="partner-tag">
-            Battery Thermal Management
-        </span>
-
-        <span class="partner-tag">
-            Energy Systems
-        </span>
-
-        <span class="partner-tag">
-            Intelligent Control
-        </span>
-
-    </div>
-
-
-    <!-- =====================================================
-         Relevant CESRG Projects
-         ===================================================== -->
-
-    <div class="partner-section">
-
-        <h4>
-            Relevant CESRG Research Projects
-        </h4>
-
-
-        <!-- Project 1 -->
-        <div class="partner-project">
-
-            <div class="project-funder">
-                Funder: NED–DICE Energy Centre
+            <div class="partner-logo">
+                <span>GIKI</span>
             </div>
 
-            <h5>
-                Investigating Thermal Properties of Li-ion Cells
-                and Designing an Optimal Topology for Efficient
-                Thermal Management
-            </h5>
-
-            <p>
-                This project focuses on experimental investigation
-                and characterization of the thermal behavior of
-                lithium-ion cells and the development of an optimal
-                thermal-management topology for improved battery
-                safety, performance, reliability, and lifetime.
-            </p>
-
-        </div>
-
-
-        <!-- Project 2 -->
-        <div class="partner-project">
-
-            <div class="project-funder">
-                Funder: Directorate of Science and Technology
-                (DoST), Khyber Pakhtunkhwa
+            <div class="partner-country">
+                Pakistan
             </div>
 
-            <h5>
-                Machine-Learning-Informed Active Cell Balancing
-                for Campus EV Shuttle Range Extension and
-                Health Optimization
-            </h5>
+            <h3>
+                GIKI
+            </h3>
 
-            <p>
-                This project investigates intelligent active
-                cell-balancing strategies supported by machine
-                learning to improve battery utilization, extend
-                EV driving range, optimize battery health, and
-                enhance overall energy efficiency.
+            <div class="partner-full-name">
+                Ghulam Ishaq Khan Institute
+                of Engineering Sciences
+                and Technology
+            </div>
+
+            <p class="partner-description">
+
+                GIKI is a leading engineering and technology
+                institution in Pakistan with strong expertise
+                across engineering sciences, electrical engineering,
+                computer science, mechanical engineering, materials
+                science, and emerging technologies.
+
+                Its multidisciplinary research environment provides
+                strong opportunities for collaboration with CESRG
+                in advanced energy systems, battery technologies,
+                intelligent control, and electric mobility.
+
             </p>
 
-        </div>
 
-    </div>
+            <div class="partner-section">
 
+                <h4>
+                    Research Collaboration Focus
+                </h4>
 
-    <!-- =====================================================
-         Collaboration Opportunities
-         ===================================================== -->
+                <p>
+                    CESRG is particularly interested in collaborative
+                    research with GIKI in the following areas:
+                </p>
 
-    <div class="partner-section collaboration-section">
-
-        <h4>
-            Potential Collaboration
-        </h4>
-
-        <p>
-            CESRG and GIKI can explore joint research and
-            development in advanced Battery Management Systems,
-            active cell balancing, lithium-ion battery thermal
-            management, machine-learning-based battery health
-            estimation, EV range extension, intelligent control,
-            battery modeling, and sustainable electric mobility.
-        </p>
+            </div>
 
 
-        <ul class="collaboration-list">
+            <div class="partner-tags">
 
-            <li>
-                Joint research projects and publications
-            </li>
+                <span class="partner-tag">
+                    Electric Vehicles
+                </span>
 
-            <li>
-                Joint HEC, PSF, DoST and international
-                research proposals
-            </li>
+                <span class="partner-tag">
+                    Lithium-ion Batteries
+                </span>
 
-            <li>
-                Graduate student co-supervision
-            </li>
+                <span class="partner-tag">
+                    Battery Management Systems
+                </span>
 
-            <li>
-                Battery and EV experimental validation
-            </li>
+                <span class="partner-tag">
+                    Active Cell Balancing
+                </span>
 
-            <li>
-                AI/ML-based battery diagnostics and optimization
-            </li>
+                <span class="partner-tag">
+                    AI &amp; Machine Learning
+                </span>
 
-            <li>
-                Development of laboratory-scale prototypes
-            </li>
+                <span class="partner-tag">
+                    Battery Thermal Management
+                </span>
 
-        </ul>
+                <span class="partner-tag">
+                    Energy Systems
+                </span>
 
-    </div>
+                <span class="partner-tag">
+                    Intelligent Control
+                </span>
 
-
-    <!-- =====================================================
-         Action Buttons
-         ===================================================== -->
-
-    <div class="partner-actions">
-
-        <a
-            href="https://giki.edu.pk/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="partner-button">
-
-            Visit GIKI →
-            
-        </a>
-
-    </div>
+            </div>
 
 
-</article>
+            <div class="partner-section">
+
+                <h4>
+                    Relevant CESRG Research Projects
+                </h4>
 
 
-        <!-- =================================================
-             FIRAT UNIVERSITY
-             ================================================= -->
+                <div class="partner-project">
+
+                    <div class="project-funder">
+                        Funder: NED–DICE Energy Centre
+                    </div>
+
+                    <h5>
+                        Investigating Thermal Properties of Li-ion Cells
+                        and Designing an Optimal Topology for Efficient
+                        Thermal Management
+                    </h5>
+
+                    <p>
+                        This project focuses on experimental investigation
+                        and characterization of the thermal behavior of
+                        lithium-ion cells and the development of an optimal
+                        thermal-management topology for improved battery
+                        safety, performance, reliability, and lifetime.
+                    </p>
+
+                </div>
+
+
+                <div class="partner-project">
+
+                    <div class="project-funder">
+                        Funder: Directorate of Science and Technology
+                        (DoST), Khyber Pakhtunkhwa
+                    </div>
+
+                    <h5>
+                        Machine-Learning-Informed Active Cell Balancing
+                        for Campus EV Shuttle Range Extension and
+                        Health Optimization
+                    </h5>
+
+                    <p>
+                        This project investigates intelligent active
+                        cell-balancing strategies supported by machine
+                        learning to improve battery utilization, extend
+                        EV driving range, optimize battery health, and
+                        enhance overall energy efficiency.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="partner-section collaboration-section">
+
+                <h4>
+                    Potential Collaboration
+                </h4>
+
+                <p>
+                    CESRG and GIKI can explore joint research and
+                    development in advanced Battery Management Systems,
+                    active cell balancing, lithium-ion battery thermal
+                    management, machine-learning-based battery health
+                    estimation, EV range extension, intelligent control,
+                    battery modeling, and sustainable electric mobility.
+                </p>
+
+
+                <ul class="collaboration-list">
+
+                    <li>
+                        Joint research projects and publications
+                    </li>
+
+                    <li>
+                        Joint HEC, PSF, DoST and international
+                        research proposals
+                    </li>
+
+                    <li>
+                        Graduate student co-supervision
+                    </li>
+
+                    <li>
+                        Battery and EV experimental validation
+                    </li>
+
+                    <li>
+                        AI/ML-based battery diagnostics and optimization
+                    </li>
+
+                    <li>
+                        Development of laboratory-scale prototypes
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="partner-actions">
+
+                <a
+                    href="https://giki.edu.pk/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="partner-button">
+
+                    Visit GIKI →
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- FIRAT UNIVERSITY -->
 
         <article class="partner-card">
-
 
             <div class="partner-logo">
 
@@ -1598,42 +1858,34 @@
 
             <div class="partner-tags">
 
-
                 <span class="partner-tag">
                     Active Cell Balancing
                 </span>
-
 
                 <span class="partner-tag">
                     Lithium-ion Batteries
                 </span>
 
-
                 <span class="partner-tag">
                     Battery Management Systems
                 </span>
-
 
                 <span class="partner-tag">
                     Power Electronics
                 </span>
 
-
                 <span class="partner-tag">
                     Nonlinear MPC
                 </span>
-
 
                 <span class="partner-tag">
                     Electric Vehicle Range Extension
                 </span>
 
-
             </div>
 
 
             <div class="partner-actions">
-
 
                 <a
                     href="research.html"
@@ -1654,20 +1906,14 @@
 
                 </a>
 
-
             </div>
-
 
         </article>
 
 
-
-        <!-- =================================================
-             KFUPM
-             ================================================= -->
+        <!-- KFUPM -->
 
         <article class="partner-card">
-
 
             <div class="partner-logo">
 
@@ -1718,31 +1964,25 @@
 
             <div class="partner-tags">
 
-
                 <span class="partner-tag">
                     Active Cell Balancing
                 </span>
-
 
                 <span class="partner-tag">
                     Battery Energy Storage
                 </span>
 
-
                 <span class="partner-tag">
                     Power Electronics
                 </span>
-
 
                 <span class="partner-tag">
                     Small Grid Applications
                 </span>
 
-
                 <span class="partner-tag">
                     Battery Management Systems
                 </span>
-
 
             </div>
 
@@ -1761,20 +2001,14 @@
 
             </div>
 
-
         </article>
-
 
     </div>
 
 
-
-    <!-- =================================================
-         GLOBAL COLLABORATION NETWORK
-         ================================================= -->
+    <!-- GLOBAL COLLABORATION NETWORK -->
 
     <section class="network-section">
-
 
         <div class="network-header">
 
@@ -1782,11 +2016,9 @@
                 Global Research Network
             </span>
 
-
             <h2>
                 CESRG Across Borders
             </h2>
-
 
             <p>
 
@@ -1800,7 +2032,6 @@
 
 
         <div class="network-flow">
-
 
             <div class="network-node main-node">
 
@@ -1856,20 +2087,14 @@
 
             </div>
 
-
         </div>
-
 
     </section>
 
 
-
-    <!-- =================================================
-         COLLABORATION AREAS
-         ================================================= -->
+    <!-- COLLABORATION AREAS -->
 
     <div class="collab-areas">
-
 
         <div class="collab-areas-header">
 
@@ -1877,11 +2102,9 @@
                 Research Connectivity
             </span>
 
-
             <h2>
                 Areas for Collaborative Research
             </h2>
-
 
             <p>
 
@@ -1897,7 +2120,6 @@
 
 
         <div class="area-grid">
-
 
             <div class="area-card">
 
@@ -2042,16 +2264,12 @@
 
             </div>
 
-
         </div>
 
     </div>
 
 
-
-    <!-- =================================================
-         COLLABORATION APPROACH
-         ================================================= -->
+    <!-- COLLABORATION APPROACH -->
 
     <div class="approach-title">
 
@@ -2073,7 +2291,6 @@
 
 
     <div class="approach-grid">
-
 
         <div class="approach-card">
 
@@ -2140,22 +2357,16 @@
 
         </div>
 
-
     </div>
 
 
-
-    <!-- =================================================
-         CTA
-         ================================================= -->
+    <!-- CTA -->
 
     <div class="collab-cta">
-
 
         <h2>
             Interested in Collaboration?
         </h2>
-
 
         <p>
 
@@ -2167,19 +2378,14 @@
 
         </p>
 
-
         <a href="contact.html">
-
             Contact CESRG →
-
         </a>
-
 
     </div>
 
 
 </section>
-
 
 
 <!-- =====================================================
@@ -2190,14 +2396,12 @@
 
     <div class="container">
 
-
         <div style="
             display:grid;
             grid-template-columns:
                 repeat(auto-fit,minmax(240px,1fr));
             gap:40px;
         ">
-
 
             <div>
 
@@ -2215,7 +2419,6 @@
                 </p>
 
             </div>
-
 
 
             <div>
@@ -2258,15 +2461,12 @@
                 <p>
 
                     <a href="mailto:ali_arshad@comsats.edu.pk">
-
                         ali_arshad@comsats.edu.pk
-
                     </a>
 
                 </p>
 
             </div>
-
 
 
             <div>
@@ -2275,13 +2475,13 @@
                     Address
                 </h3>
 
-               <p>
-                Control & Energy Systems Research Group (CESRG)
-                <br>
-                R&D Lab, COMSATS University Islamabad
-                <br>
-                Park Road, Tarlai Kalan, Islamabad 45550, Pakistan
-            </p>
+                <p>
+                    Control & Energy Systems Research Group (CESRG)
+                    <br>
+                    R&amp;D Lab, COMSATS University Islamabad
+                    <br>
+                    Park Road, Tarlai Kalan, Islamabad 45550, Pakistan
+                </p>
 
                 <a
                     href="https://maps.app.goo.gl/pZj32DCDwLoRUJXe9"
@@ -2294,7 +2494,6 @@
 
             </div>
 
-
         </div>
 
 
@@ -2302,7 +2501,6 @@
 
 
         <div style="text-align:center;">
-
 
             <p style="
                 margin:5px 0;
@@ -2337,83 +2535,119 @@
 
             </p>
 
-
         </div>
-
 
     </div>
 
 </footer>
 
 
+<!-- =====================================================
+     THEME SWITCHER
+     ===================================================== -->
+
+<div class="theme-switcher-bar">
+
+    <span class="theme-title">
+        Theme
+    </span>
+
+
+    <button
+        class="theme-btn"
+        data-theme="margalla-mist"
+        onclick="setTheme('margalla-mist')">
+
+        <span
+            class="color-dot"
+            style="background:#0b5c53;">
+        </span>
+
+        Margalla
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="institutional-blue"
+        onclick="setTheme('institutional-blue')">
+
+        <span
+            class="color-dot"
+            style="background:#1a5276;">
+        </span>
+
+        Blue
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="ivory-press"
+        onclick="setTheme('ivory-press')">
+
+        <span
+            class="color-dot"
+            style="background:#8b3a3a;">
+        </span>
+
+        Ivory
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="sage-calm"
+        onclick="setTheme('sage-calm')">
+
+        <span
+            class="color-dot"
+            style="background:#4a6b5d;">
+        </span>
+
+        Sage
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="indigo-night"
+        onclick="setTheme('indigo-night')">
+
+        <span
+            class="color-dot"
+            style="background:#6366f1;">
+        </span>
+
+        Night
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="graphite"
+        onclick="setTheme('graphite')">
+
+        <span
+            class="color-dot"
+            style="background:#a1a1aa;">
+        </span>
+
+        Graphite
+
+    </button>
+
+</div>
+
 
 <script src="js/modern.js"></script>
 
 
 </body>
-<!-- Floating Theme Switcher -->
-<div class="theme-switcher-bar">
 
-  <span class="theme-title">Theme</span>
-
-  <button class="theme-btn"
-          onclick="setTheme('margalla-mist')">
-
-    <span class="color-dot"
-          style="background:#0b5c53;"></span>
-
-    Margalla
-  </button>
-
-
-  <button class="theme-btn"
-          onclick="setTheme('institutional-blue')">
-
-    <span class="color-dot"
-          style="background:#1a5276;"></span>
-
-    Blue
-  </button>
-
-
-  <button class="theme-btn"
-          onclick="setTheme('ivory-press')">
-
-    <span class="color-dot"
-          style="background:#8b3a3a;"></span>
-
-    Ivory
-  </button>
-
-
-  <button class="theme-btn"
-          onclick="setTheme('sage-calm')">
-
-    <span class="color-dot"
-          style="background:#4a6b5d;"></span>
-
-    Sage
-  </button>
-
-
-  <button class="theme-btn"
-          onclick="setTheme('indigo-night')">
-
-    <span class="color-dot"
-          style="background:#6366f1;"></span>
-
-    Night
-  </button>
-
-
-  <button class="theme-btn"
-          onclick="setTheme('graphite')">
-
-    <span class="color-dot"
-          style="background:#a1a1aa;"></span>
-
-    Graphite
-  </button>
-
-</div>
 </html>
