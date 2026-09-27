@@ -6,9 +6,12 @@
 
     <meta charset="UTF-8">
 
-    <title>CESRG | Control & Energy Systems Research Group</title>
+    <title>
+        CESRG | Control & Energy Systems Research Group
+    </title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
           content="Control & Energy Systems Research Group at COMSATS University Islamabad — research in control, energy, robotics and intelligent systems.">
@@ -19,8 +22,7 @@
     <meta name="author"
           content="Control & Energy Systems Research Group">
 
-
-    <!-- OPEN GRAPH -->
+    <!-- Open Graph -->
 
     <meta property="og:title"
           content="CESRG – Control & Energy Systems Research Group">
@@ -40,21 +42,18 @@
     <meta name="twitter:card"
           content="summary_large_image">
 
-
-    <!-- FAVICON -->
+    <!-- Favicon -->
 
     <link rel="icon"
           type="image/png"
           href="thumbs/CESRG_logo_circle.png">
 
-
-    <!-- MODERN CSS -->
+    <!-- Existing Modern CSS -->
 
     <link rel="stylesheet"
           href="css/modern.css">
 
-
-    <!-- GOOGLE FONT -->
+    <!-- Font -->
 
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
@@ -67,1897 +66,1151 @@
           rel="stylesheet">
 
 
-    <!-- =====================================================
-         CESRG THEME + SIZE CONTROL
-         ===================================================== -->
+<style>
 
-    <style>
+/* =========================================================
+   CESRG HOMEPAGE THEME SYSTEM
+   ========================================================= */
 
-        /* =====================================================
-           GLOBAL STANDARD SIZE
-           ===================================================== */
+/* ---------- DEFAULT THEME ---------- */
 
-        :root {
+:root {
 
-            --cesrg-max-width: 1200px;
+    --home-primary: #0b5c53;
+    --home-primary-2: #174f49;
+    --home-blue: #287d72;
+    --home-accent: #4da89b;
 
-            --cesrg-radius: 14px;
+    --home-page-bg: #f7faf9;
+    --home-soft-bg: #edf5f2;
+    --home-card-bg: #ffffff;
 
-            --cesrg-gap: 28px;
+    --home-text: #172033;
+    --home-muted: #667085;
+    --home-border: #e1e9e6;
 
-            --cesrg-section-padding: 78px;
+    --home-hero-1: #071d1a;
+    --home-hero-2: #174f49;
 
-            --cesrg-primary: #0b5c53;
-            --cesrg-primary-dark: #174f49;
-            --cesrg-accent: #4da89b;
+    --home-hover: #e2f0ec;
+}
 
-            --cesrg-page-bg: #f7faf9;
-            --cesrg-soft-bg: #edf5f2;
-            --cesrg-card-bg: #ffffff;
 
-            --cesrg-text: #172033;
-            --cesrg-muted: #667085;
-            --cesrg-border: #dce8e4;
+/* =========================================================
+   1. MARGALLA MIST
+   ========================================================= */
 
-            --cesrg-shadow: 0 8px 28px rgba(7, 21, 37, .07);
+html[data-theme="margalla-mist"] {
 
-            --cesrg-hero-1: #071d1a;
-            --cesrg-hero-2: #174f49;
+    --home-primary: #0b5c53;
+    --home-primary-2: #174f49;
+    --home-blue: #287d72;
+    --home-accent: #4da89b;
 
-            --cesrg-footer: #071d1a;
-        }
+    --home-page-bg: #f7faf9;
+    --home-soft-bg: #edf5f2;
+    --home-card-bg: #ffffff;
 
+    --home-text: #172033;
+    --home-muted: #667085;
+    --home-border: #dce8e4;
 
-        /* =====================================================
-           THEMES
-           ===================================================== */
+    --home-hero-1: #071d1a;
+    --home-hero-2: #174f49;
 
-        html[data-theme="margalla-mist"] {
+    --home-hover: #e2f0ec;
+}
 
-            --cesrg-primary: #0b5c53;
-            --cesrg-primary-dark: #174f49;
-            --cesrg-accent: #4da89b;
 
-            --cesrg-page-bg: #f7faf9;
-            --cesrg-soft-bg: #edf5f2;
-            --cesrg-card-bg: #ffffff;
+/* =========================================================
+   2. INSTITUTIONAL BLUE
+   ========================================================= */
 
-            --cesrg-text: #172033;
-            --cesrg-muted: #667085;
-            --cesrg-border: #dce8e4;
+html[data-theme="institutional-blue"] {
 
-            --cesrg-hero-1: #071d1a;
-            --cesrg-hero-2: #174f49;
+    --home-primary: #1a5276;
+    --home-primary-2: #154360;
+    --home-blue: #2874a6;
+    --home-accent: #3498db;
 
-            --cesrg-footer: #071d1a;
-        }
+    --home-page-bg: #f6f9fc;
+    --home-soft-bg: #eaf2f8;
+    --home-card-bg: #ffffff;
 
+    --home-text: #172033;
+    --home-muted: #667085;
+    --home-border: #dce6ef;
 
-        html[data-theme="institutional-blue"] {
+    --home-hero-1: #071a2d;
+    --home-hero-2: #154360;
 
-            --cesrg-primary: #1a5276;
-            --cesrg-primary-dark: #154360;
-            --cesrg-accent: #3498db;
+    --home-hover: #e1edf6;
+}
 
-            --cesrg-page-bg: #f6f9fc;
-            --cesrg-soft-bg: #eaf2f8;
-            --cesrg-card-bg: #ffffff;
 
-            --cesrg-text: #172033;
-            --cesrg-muted: #667085;
-            --cesrg-border: #dce6ef;
+/* =========================================================
+   3. IVORY PRESS
+   ========================================================= */
 
-            --cesrg-hero-1: #071a2d;
-            --cesrg-hero-2: #154360;
+html[data-theme="ivory-press"] {
 
-            --cesrg-footer: #071a2d;
-        }
+    --home-primary: #8b3a3a;
+    --home-primary-2: #633333;
+    --home-blue: #9f4a4a;
+    --home-accent: #c27668;
 
+    --home-page-bg: #fbf8f3;
+    --home-soft-bg: #f3ede4;
+    --home-card-bg: #fffdf9;
 
-        html[data-theme="ivory-press"] {
+    --home-text: #332d2a;
+    --home-muted: #756b65;
+    --home-border: #e7ddd2;
 
-            --cesrg-primary: #8b3a3a;
-            --cesrg-primary-dark: #633333;
-            --cesrg-accent: #c27668;
+    --home-hero-1: #241817;
+    --home-hero-2: #633333;
 
-            --cesrg-page-bg: #fbf8f3;
-            --cesrg-soft-bg: #f3ede4;
-            --cesrg-card-bg: #fffdf9;
+    --home-hover: #f0e5dc;
+}
 
-            --cesrg-text: #332d2a;
-            --cesrg-muted: #756b65;
-            --cesrg-border: #e7ddd2;
 
-            --cesrg-hero-1: #241817;
-            --cesrg-hero-2: #633333;
+/* =========================================================
+   4. SAGE CALM
+   ========================================================= */
 
-            --cesrg-footer: #241817;
-        }
+html[data-theme="sage-calm"] {
 
+    --home-primary: #4a6b5d;
+    --home-primary-2: #365247;
+    --home-blue: #638676;
+    --home-accent: #8daa8d;
 
-        html[data-theme="sage-calm"] {
+    --home-page-bg: #f7faf7;
+    --home-soft-bg: #edf3ed;
+    --home-card-bg: #ffffff;
 
-            --cesrg-primary: #4a6b5d;
-            --cesrg-primary-dark: #365247;
-            --cesrg-accent: #8daa8d;
+    --home-text: #26342d;
+    --home-muted: #6d7d73;
+    --home-border: #dce6de;
 
-            --cesrg-page-bg: #f7faf7;
-            --cesrg-soft-bg: #edf3ed;
-            --cesrg-card-bg: #ffffff;
+    --home-hero-1: #17251f;
+    --home-hero-2: #365247;
 
-            --cesrg-text: #26342d;
-            --cesrg-muted: #6d7d73;
-            --cesrg-border: #dce6de;
+    --home-hover: #e3eee5;
+}
 
-            --cesrg-hero-1: #17251f;
-            --cesrg-hero-2: #365247;
 
-            --cesrg-footer: #17251f;
-        }
+/* =========================================================
+   5. INDIGO NIGHT
+   ========================================================= */
 
+html[data-theme="indigo-night"] {
 
-        html[data-theme="indigo-night"] {
+    --home-primary: #6366f1;
+    --home-primary-2: #3730a3;
+    --home-blue: #818cf8;
+    --home-accent: #a5b4fc;
 
-            --cesrg-primary: #6366f1;
-            --cesrg-primary-dark: #3730a3;
-            --cesrg-accent: #a5b4fc;
+    --home-page-bg: #0f172a;
+    --home-soft-bg: #172033;
+    --home-card-bg: #1e293b;
 
-            --cesrg-page-bg: #0f172a;
-            --cesrg-soft-bg: #172033;
-            --cesrg-card-bg: #1e293b;
+    --home-text: #e5e7eb;
+    --home-muted: #aab3c2;
+    --home-border: #334155;
 
-            --cesrg-text: #e5e7eb;
-            --cesrg-muted: #aab3c2;
-            --cesrg-border: #334155;
+    --home-hero-1: #070b18;
+    --home-hero-2: #312e81;
 
-            --cesrg-hero-1: #070b18;
-            --cesrg-hero-2: #312e81;
+    --home-hover: #273449;
+}
 
-            --cesrg-footer: #070b18;
-        }
 
+/* =========================================================
+   6. GRAPHITE
+   ========================================================= */
 
-        html[data-theme="graphite"] {
+html[data-theme="graphite"] {
+
+    --home-primary: #52525b;
+    --home-primary-2: #3f3f46;
+    --home-blue: #71717a;
+    --home-accent: #a1a1aa;
+
+    --home-page-bg: #f4f4f5;
+    --home-soft-bg: #e9e9eb;
+    --home-card-bg: #ffffff;
+
+    --home-text: #27272a;
+    --home-muted: #71717a;
+    --home-border: #d4d4d8;
+
+    --home-hero-1: #18181b;
+    --home-hero-2: #3f3f46;
+
+    --home-hover: #e4e4e7;
+}
+
+
+/* =========================================================
+   BASIC HOMEPAGE
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: var(--home-page-bg);
+    color: var(--home-text);
+}
+
+.home-section {
+    padding: 85px 0;
+    background: var(--home-page-bg);
+}
+
+.home-section-soft {
+    background: var(--home-soft-bg);
+}
+
+.home-container {
+    max-width: 1180px;
+    margin: auto;
+    padding: 0 22px;
+}
 
-            --cesrg-primary: #52525b;
-            --cesrg-primary-dark: #3f3f46;
-            --cesrg-accent: #a1a1aa;
 
-            --cesrg-page-bg: #f4f4f5;
-            --cesrg-soft-bg: #e9e9eb;
-            --cesrg-card-bg: #ffffff;
+/* =========================================================
+   HERO
+   ========================================================= */
 
-            --cesrg-text: #27272a;
-            --cesrg-muted: #71717a;
-            --cesrg-border: #d4d4d8;
+.hero-modern {
+    position: relative;
+    overflow: hidden;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
 
-            --cesrg-hero-1: #18181b;
-            --cesrg-hero-2: #3f3f46;
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            color-mix(in srgb, var(--home-accent) 20%, transparent),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 15% 90%,
+            color-mix(in srgb, var(--home-blue) 20%, transparent),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            var(--home-hero-1) 0%,
+            var(--home-primary-2) 55%,
+            var(--home-hero-2) 100%
+        );
 
-            --cesrg-footer: #18181b;
-        }
+    color: white;
+}
 
+.hero-modern::before {
+    content: "";
+    position: absolute;
+    inset: 0;
 
-        /* =====================================================
-           GLOBAL
-           ===================================================== */
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.035) 1px,
+            transparent 1px
+        );
 
-        html,
-        body {
+    background-size: 55px 55px;
 
-            margin: 0;
-            padding: 0;
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black,
+            transparent
+        );
+}
 
-            width: 100%;
-            min-height: 100%;
+.hero-content {
+    position: relative;
+    z-index: 2;
 
-            background: var(--cesrg-page-bg);
-            color: var(--cesrg-text);
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+    gap: 60px;
+    padding: 90px 0;
+}
 
-            font-family: "Inter", Arial, sans-serif;
-        }
+.hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
 
+    margin-bottom: 22px;
+    padding: 8px 14px;
 
-        *,
-        *::before,
-        *::after {
+    border: 1px solid rgba(255,255,255,.16);
+    border-radius: 50px;
 
-            box-sizing: border-box;
-        }
+    background: rgba(255,255,255,.07);
 
+    color: rgba(255,255,255,.88);
 
-        img {
+    font-size: 11px;
+    font-weight: 750;
 
-            max-width: 100%;
-            display: block;
-        }
+    letter-spacing: .8px;
+    text-transform: uppercase;
+}
 
+.hero-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
 
-        .home-container {
+    background: var(--home-accent);
 
-            width: min(
-                calc(100% - 40px),
-                var(--cesrg-max-width)
-            );
+    box-shadow:
+        0 0 0 5px
+        color-mix(in srgb, var(--home-accent) 15%, transparent);
+}
 
-            margin-left: auto;
-            margin-right: auto;
-        }
+.hero-modern h1 {
+    max-width: 820px;
+    margin: 0;
 
+    color: white;
 
-        /* =====================================================
-           NAVBAR
-           ===================================================== */
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.04;
+    letter-spacing: -2.8px;
+}
 
-        .masthead {
+.hero-modern h1 span {
+    color: var(--home-accent);
+}
 
-            background: var(--cesrg-card-bg) !important;
+.hero-description {
+    max-width: 720px;
 
-            border-bottom:
-                1px solid
-                var(--cesrg-border) !important;
+    margin: 25px 0 0;
 
-            box-shadow:
-                0 2px 12px
-                rgba(0,0,0,.04);
-        }
+    color: rgba(255,255,255,.72);
 
+    font-size: 17px;
+    line-height: 1.75;
+}
 
-        .masthead .navbar,
-        .masthead .navbar-inner {
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 32px;
+}
 
-            background: var(--cesrg-card-bg) !important;
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
 
-            border: 0 !important;
+    padding: 13px 20px;
 
-            box-shadow: none !important;
-        }
+    border-radius: 11px;
 
+    font-size: 12px;
+    font-weight: 750;
 
-        .masthead .container {
+    text-decoration: none;
 
-            max-width: var(--cesrg-max-width);
+    transition: .25s ease;
+}
 
-            margin: 0 auto;
+.hero-btn-primary {
+    background: white;
+    color: var(--home-primary);
+}
 
-            padding-left: 20px;
-            padding-right: 20px;
-        }
+.hero-btn-secondary {
+    border: 1px solid rgba(255,255,255,.25);
+    background: rgba(255,255,255,.05);
+    color: white;
+}
 
+.hero-btn:hover {
+    transform: translateY(-3px);
+}
 
-        .masthead .nav > li > a {
+.hero-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-            color: var(--cesrg-muted) !important;
+.hero-logo-card {
+    width: min(350px, 90%);
+    padding: 35px;
 
-            text-shadow: none !important;
+    border: 1px solid rgba(255,255,255,.13);
+    border-radius: 30px;
 
-            font-weight: 600;
+    background: rgba(255,255,255,.055);
 
-            transition:
-                background .2s ease,
-                color .2s ease;
-        }
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.25);
 
+    backdrop-filter: blur(15px);
 
-        .masthead .nav > li > a:hover {
+    text-align: center;
+}
 
-            color: var(--cesrg-primary) !important;
+.hero-logo-card img {
+    width: 190px;
+    max-width: 100%;
+    border-radius: 25px;
+}
 
-            background:
-                var(--cesrg-soft-bg) !important;
-        }
+.hero-logo-card h3 {
+    margin: 22px 0 6px;
+    color: white;
+    font-size: 18px;
+}
 
+.hero-logo-card p {
+    margin: 0;
+    color: rgba(255,255,255,.58);
+    font-size: 11px;
+    line-height: 1.6;
+}
 
-        .masthead .nav > li.active > a,
-        .masthead .nav > li.active > a:hover {
 
-            color: #ffffff !important;
+/* =========================================================
+   QUICK STATS
+   ========================================================= */
 
-            background:
-                var(--cesrg-primary) !important;
-        }
+.quick-stats {
+    position: relative;
+    margin-top: -50px;
+    z-index: 10;
+}
 
+.quick-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: hidden;
 
-        .cesrg-mobile-logo {
+    border: 1px solid var(--home-border);
+    border-radius: 20px;
 
-            color: var(--cesrg-primary) !important;
-        }
+    background: var(--home-card-bg);
 
+    box-shadow:
+        0 18px 50px rgba(7,21,37,.10);
+}
 
-        .cesrg-mobile-toggle {
+.quick-stat {
+    padding: 27px 20px;
+    text-align: center;
 
-            color: var(--cesrg-primary) !important;
-        }
+    border-right: 1px solid var(--home-border);
+}
 
+.quick-stat:last-child {
+    border-right: 0;
+}
 
-        /* =====================================================
-           HERO
-           ===================================================== */
+.quick-stat strong {
+    display: block;
+    color: var(--home-blue);
+    font-size: 27px;
+    font-weight: 800;
+}
 
-        .hero-modern {
+.quick-stat span {
+    display: block;
+    margin-top: 5px;
+    color: var(--home-muted);
+    font-size: 11px;
+    font-weight: 600;
+}
 
-            background:
 
-                radial-gradient(
-                    circle at 85% 20%,
-                    color-mix(
-                        in srgb,
-                        var(--cesrg-accent) 18%,
-                        transparent
-                    ),
-                    transparent 30%
-                ),
+/* =========================================================
+   SECTION HEADINGS
+   ========================================================= */
 
-                radial-gradient(
-                    circle at 15% 90%,
-                    color-mix(
-                        in srgb,
-                        var(--cesrg-accent) 14%,
-                        transparent
-                    ),
-                    transparent 32%
-                ),
+.home-heading {
+    max-width: 760px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
 
-                linear-gradient(
-                    135deg,
-                    var(--cesrg-hero-1),
-                    var(--cesrg-primary-dark),
-                    var(--cesrg-hero-2)
-                ) !important;
+.home-heading-label {
+    display: inline-block;
+    margin-bottom: 10px;
 
-            color: #ffffff !important;
-        }
+    color: var(--home-blue);
 
+    font-size: 10px;
+    font-weight: 800;
 
-        .hero-modern h1,
-        .hero-modern h2,
-        .hero-modern h3,
-        .hero-modern p {
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+}
 
-            color: #ffffff !important;
-        }
+.home-heading h2 {
+    margin: 0;
+    color: var(--home-primary);
 
+    font-size: clamp(29px, 4vw, 42px);
+    letter-spacing: -1px;
+}
 
-        .hero-modern h1 {
+.home-heading p {
+    margin: 13px auto 0;
+    color: var(--home-muted);
 
-            max-width: 760px;
+    font-size: 14px;
+    line-height: 1.7;
+}
 
-            line-height: 1.08;
 
-            letter-spacing: -2px;
-        }
+/* =========================================================
+   FEATURED CARDS
+   ========================================================= */
 
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
 
-        .hero-modern h1 span {
+.featured-card {
+    overflow: hidden;
 
-            color: var(--cesrg-accent) !important;
-        }
+    border: 1px solid var(--home-border);
+    border-radius: 20px;
 
+    background: var(--home-card-bg);
 
-        .hero-description {
+    text-decoration: none;
 
-            max-width: 650px;
+    box-shadow:
+        0 7px 25px rgba(7,21,37,.055);
 
-            color:
-                rgba(255,255,255,.75) !important;
+    transition: .3s ease;
+}
 
-            line-height: 1.7;
-        }
+.featured-card:hover {
+    transform: translateY(-7px);
 
+    box-shadow:
+        0 18px 40px rgba(7,21,37,.11);
+}
 
-        .hero-eyebrow {
+.featured-image {
+    width: 100%;
+    height: 235px;
 
-            color:
-                rgba(255,255,255,.88) !important;
-        }
+    object-fit: cover;
+    display: block;
+}
 
+.featured-content {
+    padding: 23px;
+}
 
-        .hero-dot {
+.featured-label {
+    color: var(--home-blue);
 
-            background:
-                var(--cesrg-accent) !important;
-        }
+    font-size: 9px;
+    font-weight: 800;
 
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
 
-        .hero-btn-primary {
+.featured-content h3 {
+    margin: 9px 0 8px;
 
-            background: #ffffff !important;
+    color: var(--home-primary);
 
-            color:
-                var(--cesrg-primary) !important;
-        }
+    font-size: 19px;
+    line-height: 1.35;
+}
 
+.featured-content p {
+    margin: 0;
 
-        .hero-btn-secondary {
+    color: var(--home-muted);
 
-            border-color:
-                rgba(255,255,255,.28) !important;
+    font-size: 12px;
+    line-height: 1.65;
+}
 
-            background:
-                rgba(255,255,255,.06) !important;
 
-            color: #ffffff !important;
-        }
+/* =========================================================
+   ABOUT
+   ========================================================= */
 
+.about-grid {
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    gap: 50px;
+    align-items: center;
+}
 
-        .hero-logo-card {
+.about-image-card {
+    overflow: hidden;
+    border-radius: 24px;
 
-            border-color:
-                rgba(255,255,255,.14) !important;
+    box-shadow:
+        0 20px 50px rgba(7,21,37,.12);
+}
 
-            background:
-                rgba(255,255,255,.055) !important;
+.about-image-card img {
+    display: block;
 
-            border-radius:
-                var(--cesrg-radius);
-        }
+    width: 100%;
+    height: 390px;
 
+    object-fit: cover;
+}
 
-        .hero-logo-card img {
+.about-content h2 {
+    margin: 0 0 17px;
 
-            width: 170px;
+    color: var(--home-primary);
 
-            height: 170px;
+    font-size: 34px;
+}
 
-            object-fit: contain;
+.about-content p {
+    color: var(--home-muted);
 
-            margin: 0 auto 20px;
-        }
+    font-size: 14px;
+    line-height: 1.8;
+}
 
+.about-content strong {
+    color: var(--home-text);
+}
 
-        /* =====================================================
-           QUICK STATS
-           ===================================================== */
+.research-tags {
+    display: flex;
+    flex-wrap: wrap;
 
-        .quick-stats {
+    gap: 9px;
+    margin-top: 25px;
+}
 
-            background:
-                var(--cesrg-card-bg);
-        }
+.research-tag {
+    padding: 9px 12px;
 
+    border: 1px solid var(--home-border);
+    border-radius: 9px;
 
-        .quick-stats-grid {
+    background: var(--home-soft-bg);
 
-            display: grid;
+    color: var(--home-blue);
 
-            grid-template-columns:
-                repeat(4, 1fr);
+    font-size: 10px;
+    font-weight: 700;
+}
 
-            border:
-                1px solid
-                var(--cesrg-border);
 
-            border-radius:
-                var(--cesrg-radius);
+/* =========================================================
+   RESEARCH
+   ========================================================= */
 
-            overflow: hidden;
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 17px;
+}
 
-            box-shadow:
-                0 4px 18px
-                rgba(0,0,0,.04);
-        }
+.research-item {
+    position: relative;
 
+    padding: 27px 22px;
 
-        .quick-stat {
+    border: 1px solid var(--home-border);
+    border-radius: 18px;
 
-            min-height: 125px;
+    background: var(--home-card-bg);
 
-            display: flex;
+    box-shadow:
+        0 7px 25px rgba(7,21,37,.045);
 
-            flex-direction: column;
+    transition: .3s ease;
+}
 
-            justify-content: center;
+.research-item:hover {
+    transform: translateY(-5px);
 
-            align-items: center;
+    border-color: var(--home-blue);
 
-            text-align: center;
+    box-shadow:
+        0 16px 35px rgba(7,21,37,.09);
+}
 
-            padding: 22px 15px;
+.research-number {
+    position: absolute;
 
-            background:
-                var(--cesrg-card-bg) !important;
+    top: 18px;
+    right: 18px;
 
-            border-right:
-                1px solid
-                var(--cesrg-border) !important;
-        }
+    color: var(--home-border);
 
+    font-size: 24px;
+    font-weight: 800;
+}
 
-        .quick-stat:last-child {
+.research-icon {
+    width: 48px;
+    height: 48px;
 
-            border-right: 0 !important;
-        }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    margin-bottom: 17px;
 
-        .quick-stat strong {
+    border-radius: 13px;
 
-            color:
-                var(--cesrg-primary) !important;
+    background: var(--home-soft-bg);
 
-            font-size: 30px;
+    font-size: 22px;
+}
 
-            line-height: 1.2;
-        }
+.research-item h3 {
+    margin: 0 0 9px;
 
+    color: var(--home-primary);
 
-        .quick-stat span {
+    font-size: 17px;
+}
 
-            margin-top: 7px;
+.research-item p {
+    margin: 0;
 
-            color:
-                var(--cesrg-muted) !important;
+    color: var(--home-muted);
 
-            font-size: 13px;
+    font-size: 11px;
+    line-height: 1.65;
+}
 
-            line-height: 1.4;
-        }
 
+/* =========================================================
+   LATEST NEWS
+   ========================================================= */
 
-        /* =====================================================
-           GENERAL SECTIONS
-           ===================================================== */
+.news-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
 
-        .home-section {
+.news-item {
+    display: flex;
+    gap: 18px;
 
-            padding:
-                var(--cesrg-section-padding) 0;
+    padding: 21px;
 
-            background:
-                var(--cesrg-page-bg);
-        }
+    border: 1px solid var(--home-border);
+    border-radius: 16px;
 
+    background: var(--home-card-bg);
 
-        .home-section-soft {
+    transition: .25s ease;
+}
 
-            background:
-                var(--cesrg-soft-bg);
-        }
+.news-item:hover {
+    transform: translateY(-3px);
 
+    box-shadow:
+        0 12px 30px rgba(7,21,37,.07);
+}
 
-        .home-heading {
+.news-date {
+    flex-shrink: 0;
+    width: 75px;
+    text-align: center;
+}
 
-            max-width: 720px;
+.news-date strong {
+    display: block;
 
-            margin:
-                0 auto 42px;
+    color: var(--home-blue);
 
-            text-align: center;
-        }
+    font-size: 11px;
+    line-height: 1.3;
+}
 
+.news-date span {
+    display: block;
 
-        .home-heading-label {
+    margin-top: 3px;
 
-            display: inline-block;
+    color: var(--home-muted);
 
-            margin-bottom: 10px;
+    font-size: 9px;
+    font-weight: 700;
 
-            color:
-                var(--cesrg-accent) !important;
+    text-transform: uppercase;
+}
 
-            font-size: 13px;
+.news-content h3 {
+    margin: 0 0 7px;
 
-            font-weight: 700;
+    color: var(--home-primary);
 
-            letter-spacing: 1.2px;
+    font-size: 15px;
+    line-height: 1.4;
+}
 
-            text-transform: uppercase;
-        }
+.news-content p {
+    margin: 0;
 
+    color: var(--home-muted);
 
-        .home-heading h2 {
+    font-size: 11px;
+}
 
-            margin: 0 0 12px;
 
-            color:
-                var(--cesrg-primary) !important;
+/* =========================================================
+   WHY JOIN
+   ========================================================= */
 
-            font-size: 32px;
+.join-box {
+    padding: 50px 35px;
 
-            line-height: 1.2;
+    border: 1px solid var(--home-border);
+    border-radius: 24px;
 
-            letter-spacing: -.7px;
-        }
+    background:
+        linear-gradient(
+            145deg,
+            var(--home-soft-bg),
+            var(--home-card-bg)
+        );
+}
 
+.join-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
 
-        .home-heading p {
+.join-item {
+    padding: 23px;
 
-            margin: 0;
+    border-radius: 15px;
 
-            color:
-                var(--cesrg-muted) !important;
+    background: var(--home-card-bg);
 
-            font-size: 15px;
+    border: 1px solid var(--home-border);
+}
 
-            line-height: 1.7;
-        }
+.join-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
 
+.join-item h3 {
+    margin: 0 0 8px;
 
-        /* =====================================================
-           FEATURED CARDS
-           ===================================================== */
+    color: var(--home-primary);
 
-        .featured-grid {
+    font-size: 15px;
+}
 
-            display: grid;
+.join-item p {
+    margin: 0;
 
-            grid-template-columns:
-                repeat(3, 1fr);
+    color: var(--home-muted);
 
-            gap: var(--cesrg-gap);
+    font-size: 11px;
+    line-height: 1.65;
+}
 
-            align-items: stretch;
-        }
 
+/* =========================================================
+   CTA
+   ========================================================= */
 
-        .featured-card {
+.cta {
+    position: relative;
+    overflow: hidden;
 
-            display: flex;
+    padding: 70px 30px;
 
-            flex-direction: column;
+    border-radius: 26px;
 
-            overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 80% 10%,
+            color-mix(in srgb, var(--home-accent) 20%, transparent),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            var(--home-hero-1),
+            var(--home-hero-2)
+        );
 
-            min-width: 0;
+    text-align: center;
 
-            border:
-                1px solid
-                var(--cesrg-border) !important;
+    box-shadow:
+        0 25px 60px rgba(7,21,37,.17);
+}
 
-            border-radius:
-                var(--cesrg-radius);
+.cta h2 {
+    margin: 0;
+    color: white;
+    font-size: 34px;
+}
 
-            background:
-                var(--cesrg-card-bg) !important;
+.cta p {
+    max-width: 650px;
 
-            box-shadow:
-                var(--cesrg-shadow);
+    margin: 15px auto 28px;
 
-            text-decoration: none !important;
+    color: rgba(255,255,255,.70);
 
-            transition:
-                transform .22s ease,
-                box-shadow .22s ease,
-                border-color .22s ease;
-        }
+    font-size: 13px;
+    line-height: 1.7;
+}
 
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
-        .featured-card:hover {
+.cta-button {
+    padding: 12px 19px;
 
-            transform:
-                translateY(-4px);
+    border-radius: 10px;
 
-            border-color:
-                var(--cesrg-accent) !important;
+    text-decoration: none;
 
-            box-shadow:
-                0 16px 36px
-                rgba(0,0,0,.10);
-        }
+    font-size: 11px;
+    font-weight: 750;
+}
 
+.cta-primary {
+    background: white;
+    color: var(--home-primary);
+}
 
-        .featured-image {
+.cta-secondary {
+    border: 1px solid rgba(255,255,255,.25);
+    color: white;
+}
 
-            width: 100%;
 
-            height: 210px;
+/* =========================================================
+   NAV LOGO
+   ========================================================= */
 
-            object-fit: cover;
-        }
+.cesrg-mobile-logo {
+    color: var(--home-primary) !important;
+}
 
 
-        .featured-content {
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
 
-            padding: 25px;
+@media (max-width: 1000px) {
 
-            flex: 1;
-        }
+    .hero-content {
+        grid-template-columns: 1fr;
+    }
 
+    .hero-visual {
+        display: none;
+    }
 
-        .featured-label {
+    .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-            margin-bottom: 9px;
+    .research-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-            color:
-                var(--cesrg-accent) !important;
+    .join-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-            font-size: 12px;
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
-            font-weight: 700;
 
-            text-transform: uppercase;
+@media (max-width: 700px) {
 
-            letter-spacing: .7px;
-        }
+    .hero-modern {
+        min-height: auto;
+    }
 
+    .hero-content {
+        padding: 75px 0;
+    }
 
-        .featured-content h3 {
+    .hero-modern h1 {
+        letter-spacing: -1.7px;
+    }
 
-            margin:
-                0 0 12px;
+    .quick-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-            color:
-                var(--cesrg-primary) !important;
+    .quick-stat:nth-child(2) {
+        border-right: 0;
+    }
 
-            font-size: 20px;
+    .quick-stat:nth-child(-n+2) {
+        border-bottom: 1px solid var(--home-border);
+    }
 
-            line-height: 1.35;
-        }
+    .featured-grid,
+    .news-list {
+        grid-template-columns: 1fr;
+    }
 
+    .research-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-        .featured-content p {
+    .join-grid {
+        grid-template-columns: 1fr;
+    }
 
-            margin: 0;
+    .home-section {
+        padding: 65px 0;
+    }
+}
 
-            color:
-                var(--cesrg-muted) !important;
 
-            font-size: 14px;
+@media (max-width: 480px) {
 
-            line-height: 1.7;
-        }
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
 
+    .quick-stat strong {
+        font-size: 23px;
+    }
 
-        /* =====================================================
-           ABOUT
-           ===================================================== */
+    .news-item {
+        display: block;
+    }
 
-        .about-grid {
+    .news-date {
+        margin-bottom: 12px;
+        text-align: left;
+    }
+}
 
-            display: grid;
 
-            grid-template-columns:
-                minmax(0, .9fr)
-                minmax(0, 1.1fr);
+/* =========================================================
+   THEME SWITCHER
+   ========================================================= */
 
-            gap: 55px;
+.theme-switcher-bar {
+    position: fixed;
 
-            align-items: center;
-        }
+    right: 20px;
+    bottom: 20px;
 
+    z-index: 9999;
 
-        .about-image-card {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 
-            overflow: hidden;
+    gap: 6px;
 
-            border:
-                1px solid
-                var(--cesrg-border);
+    padding: 9px 10px;
 
-            border-radius:
-                var(--cesrg-radius);
+    border: 1px solid var(--home-border);
+    border-radius: 14px;
 
-            background:
-                var(--cesrg-card-bg);
+    background: var(--home-card-bg);
 
-            box-shadow:
-                var(--cesrg-shadow);
-        }
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.14);
+}
 
+.theme-title {
+    padding: 0 5px;
 
-        .about-image-card img {
+    color: var(--home-muted);
 
-            width: 100%;
+    font-size: 10px;
+    font-weight: 800;
+}
 
-            height: 390px;
+.theme-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
 
-            object-fit: cover;
-        }
+    padding: 6px 8px;
 
+    border: 1px solid transparent;
+    border-radius: 8px;
 
-        .about-content h2 {
+    background: transparent;
 
-            margin:
-                8px 0 18px;
+    color: var(--home-text);
 
-            color:
-                var(--cesrg-primary) !important;
+    font-family: inherit;
+    font-size: 9px;
+    font-weight: 700;
 
-            font-size: 32px;
+    cursor: pointer;
 
-            line-height: 1.2;
-        }
+    transition: .2s ease;
+}
 
+.theme-btn:hover {
+    background: var(--home-soft-bg);
+}
 
-        .about-content p {
+.theme-btn.active {
+    border-color: var(--home-blue);
+    background: var(--home-soft-bg);
+}
 
-            color:
-                var(--cesrg-muted) !important;
+.color-dot {
+    width: 9px;
+    height: 9px;
 
-            font-size: 15px;
+    flex-shrink: 0;
 
-            line-height: 1.8;
-        }
+    border-radius: 50%;
+}
 
-
-        .about-content strong {
-
-            color:
-                var(--cesrg-text) !important;
-        }
-
-
-        /* =====================================================
-           RESEARCH TAGS
-           ===================================================== */
-
-        .research-tags {
-
-            display: flex;
-
-            flex-wrap: wrap;
-
-            gap: 9px;
-
-            margin-top: 23px;
-        }
-
-
-        .research-tag {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            min-height: 34px;
-
-            padding:
-                7px 12px;
-
-            border:
-                1px solid
-                var(--cesrg-border) !important;
-
-            border-radius: 999px;
-
-            background:
-                var(--cesrg-soft-bg) !important;
-
-            color:
-                var(--cesrg-primary) !important;
-
-            font-size: 12px;
-
-            font-weight: 600;
-        }
-
-
-        /* =====================================================
-           BUTTON
-           ===================================================== */
-
-        .home-section .btn-primary {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            min-height: 44px;
-
-            padding:
-                10px 18px;
-
-            border-radius: 8px;
-
-            background:
-                var(--cesrg-primary) !important;
-
-            border:
-                1px solid
-                var(--cesrg-primary) !important;
-
-            color: #ffffff !important;
-
-            font-weight: 600;
-
-            text-decoration: none;
-
-            transition:
-                background .2s ease,
-                transform .2s ease;
-        }
-
-
-        .home-section .btn-primary:hover {
-
-            background:
-                var(--cesrg-primary-dark) !important;
-
-            border-color:
-                var(--cesrg-primary-dark) !important;
-
-            transform:
-                translateY(-1px);
-        }
-
-
-        /* =====================================================
-           RESEARCH GRID
-           ===================================================== */
-
-        .research-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, 1fr);
-
-            gap: var(--cesrg-gap);
-        }
-
-
-        .research-item {
-
-            position: relative;
-
-            min-width: 0;
-
-            min-height: 290px;
-
-            padding: 30px 25px;
-
-            border:
-                1px solid
-                var(--cesrg-border) !important;
-
-            border-radius:
-                var(--cesrg-radius);
-
-            background:
-                var(--cesrg-card-bg) !important;
-
-            box-shadow:
-                var(--cesrg-shadow);
-
-            transition:
-                transform .22s ease,
-                box-shadow .22s ease,
-                border-color .22s ease;
-        }
-
-
-        .research-item:hover {
-
-            transform:
-                translateY(-4px);
-
-            border-color:
-                var(--cesrg-accent) !important;
-
-            box-shadow:
-                0 15px 34px
-                rgba(0,0,0,.09);
-        }
-
-
-        .research-number {
-
-            position: absolute;
-
-            top: 18px;
-
-            right: 20px;
-
-            color:
-                var(--cesrg-border) !important;
-
-            font-size: 25px;
-
-            font-weight: 800;
-        }
-
-
-        .research-icon {
-
-            width: 52px;
-
-            height: 52px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            margin-bottom: 20px;
-
-            border-radius: 12px;
-
-            background:
-                var(--cesrg-soft-bg) !important;
-
-            color:
-                var(--cesrg-primary) !important;
-
-            font-size: 24px;
-        }
-
-
-        .research-item h3 {
-
-            margin:
-                0 0 12px;
-
-            color:
-                var(--cesrg-primary) !important;
-
-            font-size: 19px;
-
-            line-height: 1.35;
-        }
-
-
-        .research-item p {
-
-            margin: 0;
-
-            color:
-                var(--cesrg-muted) !important;
-
-            font-size: 14px;
-
-            line-height: 1.7;
-        }
-
-
-        /* =====================================================
-           NEWS
-           ===================================================== */
-
-        .news-list {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 18px;
-        }
-
-
-        .news-item {
-
-            display: grid;
-
-            grid-template-columns: 78px minmax(0, 1fr);
-
-            gap: 22px;
-
-            align-items: center;
-
-            min-width: 0;
-
-            padding: 22px;
-
-            border:
-                1px solid
-                var(--cesrg-border) !important;
-
-            border-radius:
-                var(--cesrg-radius);
-
-            background:
-                var(--cesrg-card-bg) !important;
-
-            transition:
-                border-color .2s ease,
-                transform .2s ease;
-        }
-
-
-        .news-item:hover {
-
-            border-color:
-                var(--cesrg-accent) !important;
-
-            transform:
-                translateY(-2px);
-        }
-
-
-        .news-date {
-
-            width: 70px;
-
-            text-align: center;
-
-            padding: 10px 5px;
-
-            border-radius: 10px;
-
-            background:
-                var(--cesrg-soft-bg);
-        }
-
-
-        .news-date strong {
-
-            display: block;
-
-            color:
-                var(--cesrg-primary) !important;
-
-            font-size: 25px;
-
-            line-height: 1;
-        }
-
-
-        .news-date span {
-
-            display: block;
-
-            margin-top: 6px;
-
-            color:
-                var(--cesrg-muted) !important;
-
-            font-size: 10px;
-
-            font-weight: 700;
-
-            letter-spacing: .5px;
-        }
-
-
-        .news-content h3 {
-
-            margin:
-                0 0 7px;
-
-            color:
-                var(--cesrg-primary) !important;
-
-            font-size: 17px;
-
-            line-height: 1.4;
-        }
-
-
-        .news-content p {
-
-            margin: 0;
-
-            color:
-                var(--cesrg-muted) !important;
-
-            font-size: 13px;
-        }
-
-
-        /* =====================================================
-           WHY JOIN
-           ===================================================== */
-
-        .join-box {
-
-            padding: 45px;
-
-            border:
-                1px solid
-                var(--cesrg-border) !important;
-
-            border-radius:
-                18px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    var(--cesrg-soft-bg),
-                    var(--cesrg-card-bg)
-                ) !important;
-        }
-
-
-        .join-grid {
-
-            display: grid;
-
-            grid-template-columns:
-                repeat(4, 1fr);
-
-            gap: 18px;
-        }
-
-
-        .join-item {
-
-            min-width: 0;
-
-            padding: 25px 20px;
-
-            border:
-                1px solid
-                var(--cesrg-border) !important;
-
-            border-radius:
-                var(--cesrg-radius);
-
-            background:
-                var(--cesrg-card-bg) !important;
-
-            text-align: center;
-        }
-
-
-        .join-icon {
-
-            margin-bottom: 12px;
-
-            font-size: 28px;
-        }
-
-
-        .join-item h3 {
-
-            margin:
-                0 0 9px;
-
-            color:
-                var(--cesrg-primary) !important;
-
-            font-size: 16px;
-        }
-
-
-        .join-item p {
-
-            margin: 0;
-
-            color:
-                var(--cesrg-muted) !important;
-
-            font-size: 13px;
-
-            line-height: 1.6;
-        }
-
-
-        /* =====================================================
-           CTA
-           ===================================================== */
-
-        .cta {
-
-            padding:
-                60px 45px;
-
-            border-radius:
-                18px;
-
-            text-align: center;
-
-            background:
-
-                radial-gradient(
-                    circle at 80% 10%,
-                    color-mix(
-                        in srgb,
-                        var(--cesrg-accent) 18%,
-                        transparent
-                    ),
-                    transparent 30%
-                ),
-
-                linear-gradient(
-                    135deg,
-                    var(--cesrg-hero-1),
-                    var(--cesrg-hero-2)
-                ) !important;
-        }
-
-
-        .cta h2 {
-
-            margin:
-                0 0 12px;
-
-            color: #ffffff !important;
-
-            font-size: 31px;
-
-            line-height: 1.2;
-        }
-
-
-        .cta p {
-
-            max-width: 680px;
-
-            margin:
-                0 auto 28px;
-
-            color:
-                rgba(255,255,255,.72) !important;
-
-            font-size: 15px;
-
-            line-height: 1.7;
-        }
-
-
-        .cta-buttons {
-
-            display: flex;
-
-            flex-wrap: wrap;
-
-            justify-content: center;
-
-            gap: 10px;
-        }
-
-
-        .cta-button {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            min-height: 43px;
-
-            padding:
-                10px 17px;
-
-            border-radius: 8px;
-
-            font-size: 13px;
-
-            font-weight: 600;
-
-            text-decoration: none;
-
-            transition:
-                transform .2s ease,
-                background .2s ease;
-        }
-
-
-        .cta-button:hover {
-
-            transform:
-                translateY(-2px);
-        }
-
-
-        .cta-primary {
-
-            background: #ffffff !important;
-
-            color:
-                var(--cesrg-primary) !important;
-        }
-
-
-        .cta-secondary {
-
-            border:
-                1px solid
-                rgba(255,255,255,.25);
-
-            background:
-                rgba(255,255,255,.05);
-
-            color: #ffffff !important;
-        }
-
-
-        /* =====================================================
-           FOOTER
-           ===================================================== */
-
-        #footer {
-
-            background:
-                var(--cesrg-footer) !important;
-
-            color: #ffffff !important;
-
-            border-top:
-                1px solid
-                rgba(255,255,255,.10) !important;
-        }
-
-
-        #footer h3 {
-
-            color: #ffffff !important;
-
-            font-size: 17px;
-        }
-
-
-        #footer p {
-
-            color:
-                rgba(255,255,255,.72) !important;
-
-            line-height: 1.65;
-        }
-
-
-        #footer strong {
-
-            color: #ffffff !important;
-        }
-
-
-        #footer a {
-
-            color:
-                var(--cesrg-accent) !important;
-
-            text-decoration: none;
-        }
-
-
-        #footer a:hover {
-
-            color: #ffffff !important;
-        }
-
-
-        #footer hr {
-
-            border-color:
-                rgba(255,255,255,.12) !important;
-
-            margin:
-                30px 0 20px;
-        }
-
-
-        /* =====================================================
-           THEME SWITCHER
-           ===================================================== */
-
-        .theme-switcher-bar {
-
-            position: fixed;
-
-            right: 18px;
-
-            bottom: 18px;
-
-            z-index: 99999;
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 5px;
-
-            padding: 7px 8px;
-
-            border:
-                1px solid
-                var(--cesrg-border);
-
-            border-radius: 11px;
-
-            background:
-                var(--cesrg-card-bg);
-
-            box-shadow:
-                0 10px 28px
-                rgba(0,0,0,.14);
-        }
-
-
-        .theme-title {
-
-            padding:
-                0 5px;
-
-            color:
-                var(--cesrg-muted);
-
-            font-size: 11px;
-
-            font-weight: 600;
-        }
-
-
-        .theme-btn {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 5px;
-
-            min-height: 28px;
-
-            padding:
-                4px 7px;
-
-            border:
-                1px solid transparent;
-
-            border-radius: 7px;
-
-            background: transparent;
-
-            color:
-                var(--cesrg-text);
-
-            font-family: inherit;
-
-            font-size: 10px;
-
-            font-weight: 600;
-
-            cursor: pointer;
-
-            transition:
-                background .2s ease,
-                color .2s ease,
-                border-color .2s ease;
-        }
-
-
-        .theme-btn:hover {
-
-            background:
-                var(--cesrg-soft-bg);
-
-            color:
-                var(--cesrg-primary);
-        }
-
-
-        .theme-btn.active {
-
-            border-color:
-                var(--cesrg-border);
-
-            background:
-                var(--cesrg-soft-bg);
-
-            color:
-                var(--cesrg-primary);
-        }
-
-
-        .color-dot {
-
-            width: 9px;
-
-            height: 9px;
-
-            flex: 0 0 9px;
-
-            border-radius: 50%;
-        }
-
-
-        /* =====================================================
-           TABLET
-           ===================================================== */
-
-        @media (max-width: 1000px) {
-
-            :root {
-
-                --cesrg-section-padding: 65px;
-            }
-
-
-            .featured-grid {
-
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-
-            .research-grid {
-
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-
-            .join-grid {
-
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-
-            .about-grid {
-
-                grid-template-columns: 1fr;
-
-                gap: 35px;
-            }
-
-
-            .about-image-card img {
-
-                height: 350px;
-            }
-
-
-            .hero-logo-card {
-
-                max-width: 350px;
-
-                margin:
-                    0 auto;
-            }
-
-
-            .quick-stat strong {
-
-                font-size: 26px;
-            }
-        }
-
-
-        /* =====================================================
-           MOBILE
-           ===================================================== */
-
-        @media (max-width: 700px) {
-
-            :root {
-
-                --cesrg-section-padding: 55px;
-            }
-
-
-            .home-container {
-
-                width:
-                    calc(100% - 28px);
-            }
-
-
-            .hero-modern {
-
-                min-height: auto;
-            }
-
-
-            .hero-content {
-
-                padding:
-                    65px 0;
-            }
-
-
-            .hero-visual {
-
-                display: none;
-            }
-
-
-            .hero-modern h1 {
-
-                font-size: 38px;
-
-                letter-spacing: -1.4px;
-            }
-
-
-            .hero-description {
-
-                font-size: 14px;
-            }
-
-
-            .quick-stats-grid {
-
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-
-            .quick-stat {
-
-                min-height: 110px;
-
-                border-right:
-                    1px solid
-                    var(--cesrg-border) !important;
-
-                border-bottom:
-                    1px solid
-                    var(--cesrg-border) !important;
-            }
-
-
-            .quick-stat:nth-child(2n) {
-
-                border-right: 0 !important;
-            }
-
-
-            .quick-stat:nth-child(n+3) {
-
-                border-bottom: 0 !important;
-            }
-
-
-            .featured-grid {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .featured-image {
-
-                height: 220px;
-            }
-
-
-            .research-grid {
-
-                grid-template-columns:
-                    repeat(2, 1fr);
-
-                gap: 14px;
-            }
-
-
-            .research-item {
-
-                min-height: 260px;
-
-                padding: 23px 18px;
-            }
-
-
-            .news-list {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .join-grid {
-
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-
-            .join-box {
-
-                padding: 30px 18px;
-            }
-
-
-            .about-image-card img {
-
-                height: 280px;
-            }
-
-
-            .about-content h2 {
-
-                font-size: 28px;
-            }
-
-
-            .home-heading h2 {
-
-                font-size: 28px;
-            }
-
-
-            .cta {
-
-                padding:
-                    45px 22px;
-            }
-
-
-            .cta h2 {
-
-                font-size: 27px;
-            }
-
-
-            .theme-switcher-bar {
-
-                left: 10px;
-
-                right: 10px;
-
-                bottom: 8px;
-
-                justify-content: center;
-
-                flex-wrap: wrap;
-
-                gap: 4px;
-            }
-
-
-            .theme-title {
-
-                width: 100%;
-
-                text-align: center;
-
-                margin-bottom: 2px;
-            }
-        }
-
-
-        /* =====================================================
-           SMALL MOBILE
-           ===================================================== */
-
-        @media (max-width: 480px) {
-
-            .hero-modern h1 {
-
-                font-size: 32px;
-            }
-
-
-            .hero-buttons {
-
-                flex-direction: column;
-
-                align-items: stretch;
-            }
-
-
-            .hero-btn {
-
-                text-align: center;
-            }
-
-
-            .research-grid {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .join-grid {
-
-                grid-template-columns: 1fr;
-            }
-
-
-            .news-item {
-
-                grid-template-columns: 65px minmax(0, 1fr);
-
-                gap: 15px;
-
-                padding: 17px;
-            }
-
-
-            .news-date {
-
-                width: 60px;
-            }
-
-
-            .featured-image {
-
-                height: 200px;
-            }
-
-
-            .theme-btn {
-
-                font-size: 9px;
-
-                padding:
-                    4px 5px;
-            }
-        }
-
-    </style>
+</style>
 
 </head>
 
@@ -1990,23 +1243,27 @@
                        text-decoration:none;
                    ">
 
-                    <img src="thumbs/CESRG_logo_circle02.png"
-                         alt="CESRG Logo"
-                         style="
-                             width:42px;
-                             height:42px;
-                             object-fit:contain;
-                         ">
+                    <img
+                        src="thumbs/CESRG_logo_circle02.png"
+                        alt="CESRG Logo"
+                        style="
+                            width:42px;
+                            height:42px;
+                            object-fit:contain;
+                        ">
 
-                    <span>CESRG</span>
+                    <span>
+                        CESRG
+                    </span>
 
                 </a>
 
 
-                <button class="cesrg-mobile-toggle"
-                        type="button"
-                        aria-label="Open navigation menu"
-                        aria-expanded="false">
+                <button
+                    class="cesrg-mobile-toggle"
+                    type="button"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false">
 
                     ☰
 
@@ -2016,31 +1273,45 @@
                 <ul class="nav">
 
                     <li class="active">
-                        <a href="index.html">Home</a>
+                        <a href="index.html">
+                            Home
+                        </a>
                     </li>
 
                     <li>
-                        <a href="people.html">People</a>
+                        <a href="people.html">
+                            People
+                        </a>
                     </li>
 
                     <li>
-                        <a href="research.html">Research</a>
+                        <a href="research.html">
+                            Research
+                        </a>
                     </li>
 
                     <li>
-                        <a href="collaboration.html">Collaboration</a>
+                        <a href="collaboration.html">
+                            Collaboration
+                        </a>
                     </li>
 
                     <li>
-                        <a href="publications.html">Publications</a>
+                        <a href="publications.html">
+                            Publications
+                        </a>
                     </li>
 
                     <li>
-                        <a href="gallery.html">Gallery</a>
+                        <a href="gallery.html">
+                            Gallery
+                        </a>
                     </li>
 
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="contact.html">
+                            Contact
+                        </a>
                     </li>
 
                 </ul>
@@ -2077,11 +1348,8 @@
 
                 <h1>
 
-                    Control &amp; Energy Systems
-
-                    <span>
-                        Research Group
-                    </span>
+                    Control & Energy Systems
+                    <span>Research Group</span>
 
                 </h1>
 
@@ -2097,16 +1365,18 @@
 
                 <div class="hero-buttons">
 
-                    <a href="research.html"
-                       class="hero-btn hero-btn-primary">
+                    <a
+                        href="research.html"
+                        class="hero-btn hero-btn-primary">
 
                         Explore Research →
 
                     </a>
 
 
-                    <a href="people.html"
-                       class="hero-btn hero-btn-secondary">
+                    <a
+                        href="people.html"
+                        class="hero-btn hero-btn-secondary">
 
                         Meet Our Team
 
@@ -2121,14 +1391,17 @@
 
                 <div class="hero-logo-card">
 
-                    <img src="thumbs/CESRG_logo_circle02.png"
-                         alt="CESRG Logo">
+                    <img
+                        src="thumbs/CESRG_logo_circle02.png"
+                        alt="CESRG Logo">
 
-                    <h3>CESRG</h3>
+                    <h3>
+                        CESRG
+                    </h3>
 
                     <p>
 
-                        Control &amp; Energy Systems
+                        Control & Energy Systems
                         Research Group
 
                         <br>
@@ -2160,37 +1433,51 @@
 
             <div class="quick-stat">
 
-                <strong>120+</strong>
-
-                <span>Publications</span>
-
-            </div>
-
-
-            <div class="quick-stat">
-
-                <strong>3</strong>
-
-                <span>Funded Projects</span>
-
-            </div>
-
-
-            <div class="quick-stat">
-
-                <strong>6+</strong>
-
-                <span>Core Research Areas</span>
-
-            </div>
-
-
-            <div class="quick-stat">
-
-                <strong>2026</strong>
+                <strong>
+                    120+
+                </strong>
 
                 <span>
-                    Ongoing Research &amp; Innovation
+                    Publications
+                </span>
+
+            </div>
+
+
+            <div class="quick-stat">
+
+                <strong>
+                    3
+                </strong>
+
+                <span>
+                    Funded Projects
+                </span>
+
+            </div>
+
+
+            <div class="quick-stat">
+
+                <strong>
+                    6+
+                </strong>
+
+                <span>
+                    Core Research Areas
+                </span>
+
+            </div>
+
+
+            <div class="quick-stat">
+
+                <strong>
+                    2026
+                </strong>
+
+                <span>
+                    Ongoing Research & Innovation
                 </span>
 
             </div>
@@ -2233,12 +1520,14 @@
 
         <div class="featured-grid">
 
-            <a href="gallery.html"
-               class="featured-card">
+            <a
+                href="gallery.html"
+                class="featured-card">
 
-                <img src="images/Azmat_Phd_Defense.jpeg"
-                     alt="CESRG Celebrates the Successful PhD Defense of Dr. Azmat Ullah"
-                     class="featured-image">
+                <img
+                    src="images/Azmat_Phd_Defense.jpeg"
+                    alt="CESRG Celebrates the Successful PhD Defense of Dr. Azmat Ullah"
+                    class="featured-image">
 
                 <div class="featured-content">
 
@@ -2252,10 +1541,7 @@
 
                     <p>
 
-                        Celebrating the academic journey
-                        and achievement of Dr. Azmat,
-                        from student life to earning the
-                        distinguished title of Doctor.
+                        Celebrating the academic journey and achievement of Dr. Azmat, from student life to earning the distinguished title of Doctor.
 
                     </p>
 
@@ -2264,12 +1550,14 @@
             </a>
 
 
-            <a href="publications.html"
-               class="featured-card">
+            <a
+                href="publications.html"
+                class="featured-card">
 
-                <img src="images/w2.jpeg"
-                     alt="CPD Workshop — Battery Management System for Electric Mobility"
-                     class="featured-image">
+                <img
+                    src="images/w2.jpeg"
+                    alt="American Control Conference 2026"
+                    class="featured-image">
 
                 <div class="featured-content">
 
@@ -2278,17 +1566,12 @@
                     </div>
 
                     <h3>
-                        CPD Workshop — Battery Management
-                        System for Electric Mobility
+                        CPD Workshop — Battery Management System for Electric Mobility
                     </h3>
 
                     <p>
 
-                        Dr. Ali Arshad Uppal ·
-                        COMSATS University Islamabad.
-                        The workshop covered active cell
-                        balancing, battery management and
-                        electric mobility.
+                        Dr. Ali Arshad Uppal · COMSATS University Islamabad. The workshop covered active cell balancing, battery management and electric mobility.
 
                     </p>
 
@@ -2297,12 +1580,14 @@
             </a>
 
 
-            <a href="publications.html"
-               class="featured-card">
+            <a
+                href="publications.html"
+                class="featured-card">
 
-                <img src="thumbs/PSF_PublicationJune001.jpeg"
-                     alt="PSF Funded Research Publication"
-                     class="featured-image">
+                <img
+                    src="thumbs/PSF_PublicationJune001.jpeg"
+                    alt="PSF Funded Research Publication"
+                    class="featured-image">
 
                 <div class="featured-content">
 
@@ -2345,8 +1630,9 @@
 
             <div class="about-image-card">
 
-                <img src="images/g1.jpeg"
-                     alt="CESRG Research Community">
+                <img
+                    src="images/g1.jpeg"
+                    alt="CESRG Research Community">
 
             </div>
 
@@ -2367,18 +1653,14 @@
                 <p>
 
                     The
-
                     <strong>
-                        Control &amp; Energy Systems
-                        Research Group (CESRG)
+                        Control & Energy Systems Research
+                        Group (CESRG)
                     </strong>
-
                     at
-
                     <strong>
                         COMSATS University Islamabad
                     </strong>
-
                     focuses on the modeling, analysis,
                     and control of complex dynamical
                     systems, with emphasis on robotics,
@@ -2390,11 +1672,11 @@
                 <div class="research-tags">
 
                     <span class="research-tag">
-                        ⚙ Nonlinear &amp; Robust Control
+                        ⚙ Nonlinear & Robust Control
                     </span>
 
                     <span class="research-tag">
-                        🎯 Optimal &amp; Predictive Control
+                        🎯 Optimal & Predictive Control
                     </span>
 
                     <span class="research-tag">
@@ -2406,7 +1688,7 @@
                     </span>
 
                     <span class="research-tag">
-                        🧠 State Estimation &amp; Observation
+                        🧠 State Estimation & Observation
                     </span>
 
                     <span class="research-tag">
@@ -2418,8 +1700,9 @@
 
                 <div style="margin-top:27px;">
 
-                    <a href="research.html"
-                       class="btn btn-primary">
+                    <a
+                        href="research.html"
+                        class="btn btn-primary">
 
                         Explore Research Areas →
 
@@ -2528,7 +1811,7 @@
                 </div>
 
                 <h3>
-                    Robotics &amp; Automation
+                    Robotics & Automation
                 </h3>
 
                 <p>
@@ -2588,7 +1871,7 @@
             </span>
 
             <h2>
-                Recent Seminars &amp; Talks
+                Recent Seminars & Talks
             </h2>
 
             <p>
@@ -2607,9 +1890,13 @@
 
                 <div class="news-date">
 
-                    <strong>03</strong>
+                    <strong>
+                        03
+                    </strong>
 
-                    <span>DEC 2025</span>
+                    <span>
+                        DEC 2025
+                    </span>
 
                 </div>
 
@@ -2617,8 +1904,10 @@
                 <div class="news-content">
 
                     <h3>
+
                         Consensus Control of
                         Networked Nonlinear Systems
+
                     </h3>
 
                     <p>
@@ -2634,9 +1923,13 @@
 
                 <div class="news-date">
 
-                    <strong>26</strong>
+                    <strong>
+                        26
+                    </strong>
 
-                    <span>NOV 2025</span>
+                    <span>
+                        NOV 2025
+                    </span>
 
                 </div>
 
@@ -2644,8 +1937,10 @@
                 <div class="news-content">
 
                     <h3>
+
                         Active Cell Balancing
                         Systems for EVs
+
                     </h3>
 
                     <p>
@@ -2661,9 +1956,13 @@
 
                 <div class="news-date">
 
-                    <strong>19</strong>
+                    <strong>
+                        19
+                    </strong>
 
-                    <span>NOV 2025</span>
+                    <span>
+                        NOV 2025
+                    </span>
 
                 </div>
 
@@ -2671,8 +1970,10 @@
                 <div class="news-content">
 
                     <h3>
+
                         EV Range Extension
                         using Nonlinear MPC
+
                     </h3>
 
                     <p>
@@ -2688,9 +1989,13 @@
 
                 <div class="news-date">
 
-                    <strong>29</strong>
+                    <strong>
+                        29
+                    </strong>
 
-                    <span>OCT 2025</span>
+                    <span>
+                        OCT 2025
+                    </span>
 
                 </div>
 
@@ -2698,9 +2003,11 @@
                 <div class="news-content">
 
                     <h3>
+
                         Systems Biology:
                         Systems Approach to
-                        Cancer &amp; Epilepsy
+                        Cancer & Epilepsy
+
                     </h3>
 
                     <p>
@@ -2865,32 +2172,36 @@
 
             <div class="cta-buttons">
 
-                <a href="research.html"
-                   class="cta-button cta-primary">
+                <a
+                    href="research.html"
+                    class="cta-button cta-primary">
 
                     Research
 
                 </a>
 
 
-                <a href="publications.html"
-                   class="cta-button cta-secondary">
+                <a
+                    href="publications.html"
+                    class="cta-button cta-secondary">
 
                     Publications
 
                 </a>
 
 
-                <a href="people.html"
-                   class="cta-button cta-secondary">
+                <a
+                    href="people.html"
+                    class="cta-button cta-secondary">
 
                     Our People
 
                 </a>
 
 
-                <a href="contact.html"
-                   class="cta-button cta-secondary">
+                <a
+                    href="contact.html"
+                    class="cta-button cta-secondary">
 
                     Contact CESRG
 
@@ -2920,6 +2231,7 @@
             gap:40px;
             align-items:center;
         ">
+
 
             <div>
 
@@ -2974,27 +2286,33 @@
             </div>
 
 
-            <div style="text-align:center;">
+            <div style="
+                text-align:center;
+            ">
 
-                <a href="https://comsats.edu.pk/"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <a
+                    href="https://comsats.edu.pk/"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
-                    <img src="thumbs/CESRG_logo_circle02.png"
-                         alt="CESRG Logo"
-                         style="
-                             width:150px;
-                             max-width:100%;
-                             margin:auto;
-                             border-radius:18px;
-                         ">
+                    <img
+                        src="thumbs/CESRG_logo_circle02.png"
+                        alt="CESRG Logo"
+                        style="
+                            width:150px;
+                            max-width:100%;
+                            border-radius:18px;
+                        ">
 
                 </a>
 
 
-                <p style="margin-top:15px;">
+                <p style="
+                    margin-top:15px;
+                    color:rgba(255,255,255,.65);
+                ">
 
-                    Control &amp; Energy Systems
+                    Control & Energy Systems
                     Research Group
 
                 </p>
@@ -3010,24 +2328,23 @@
 
                 <p>
 
-                    Control &amp; Energy Systems Research
-                    Group (CESRG)
+                    Control & Energy Systems Research Group (CESRG)
 
                     <br>
 
-                    R&amp;D Lab, COMSATS University Islamabad
+                    R&D Lab, COMSATS University Islamabad
 
                     <br>
 
-                    Park Road, Tarlai Kalan,
-                    Islamabad 45550, Pakistan
+                    Park Road, Tarlai Kalan, Islamabad 45550, Pakistan
 
                 </p>
 
 
-                <a href="https://maps.app.goo.gl/pZj32DCDwLoRUJXe9"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <a
+                    href="https://maps.app.goo.gl/pZj32DCDwLoRUJXe9"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
                     📍 Show on Map →
 
@@ -3041,23 +2358,19 @@
         <hr>
 
 
-        <div style="text-align:center;">
+        <div style="
+            text-align:center;
+        ">
 
             <p style="
                 margin:5px 0;
+                color:rgba(255,255,255,.65);
                 font-size:14px;
             ">
 
-                ©
-
-                <span data-current-year>
-                    2026
-                </span>
-
+                © <span data-current-year>2026</span>
                 CESRG |
-
                 COMSATS University Islamabad.
-
                 All rights reserved.
 
             </p>
@@ -3065,14 +2378,16 @@
 
             <p style="
                 margin:5px 0 0;
+                color:rgba(255,255,255,.45);
                 font-size:13px;
             ">
 
-                Website Designed &amp; Maintained by
+                Website Designed & Maintained by
 
-                <a href="https://www.upwork.com/freelancers/~0198227b97d16b50c9"
-                   target="_blank"
-                   rel="noopener noreferrer">
+                <a
+                    href="https://www.upwork.com/freelancers/~0198227b97d16b50c9"
+                    target="_blank"
+                    rel="noopener noreferrer">
 
                     Sohail Ahmad , Roshaan Imran
 
@@ -3098,12 +2413,14 @@
     </span>
 
 
-    <button class="theme-btn"
-            data-theme="margalla-mist"
-            onclick="setTheme('margalla-mist')">
+    <button
+        class="theme-btn"
+        data-theme="margalla-mist"
+        onclick="setTheme('margalla-mist')">
 
-        <span class="color-dot"
-              style="background:#0b5c53;">
+        <span
+            class="color-dot"
+            style="background:#0b5c53;">
         </span>
 
         Margalla
@@ -3111,12 +2428,14 @@
     </button>
 
 
-    <button class="theme-btn"
-            data-theme="institutional-blue"
-            onclick="setTheme('institutional-blue')">
+    <button
+        class="theme-btn"
+        data-theme="institutional-blue"
+        onclick="setTheme('institutional-blue')">
 
-        <span class="color-dot"
-              style="background:#1a5276;">
+        <span
+            class="color-dot"
+            style="background:#1a5276;">
         </span>
 
         Blue
@@ -3124,12 +2443,14 @@
     </button>
 
 
-    <button class="theme-btn"
-            data-theme="ivory-press"
-            onclick="setTheme('ivory-press')">
+    <button
+        class="theme-btn"
+        data-theme="ivory-press"
+        onclick="setTheme('ivory-press')">
 
-        <span class="color-dot"
-              style="background:#8b3a3a;">
+        <span
+            class="color-dot"
+            style="background:#8b3a3a;">
         </span>
 
         Ivory
@@ -3137,12 +2458,14 @@
     </button>
 
 
-    <button class="theme-btn"
-            data-theme="sage-calm"
-            onclick="setTheme('sage-calm')">
+    <button
+        class="theme-btn"
+        data-theme="sage-calm"
+        onclick="setTheme('sage-calm')">
 
-        <span class="color-dot"
-              style="background:#4a6b5d;">
+        <span
+            class="color-dot"
+            style="background:#4a6b5d;">
         </span>
 
         Sage
@@ -3150,12 +2473,14 @@
     </button>
 
 
-    <button class="theme-btn"
-            data-theme="indigo-night"
-            onclick="setTheme('indigo-night')">
+    <button
+        class="theme-btn"
+        data-theme="indigo-night"
+        onclick="setTheme('indigo-night')">
 
-        <span class="color-dot"
-              style="background:#6366f1;">
+        <span
+            class="color-dot"
+            style="background:#6366f1;">
         </span>
 
         Night
@@ -3163,12 +2488,14 @@
     </button>
 
 
-    <button class="theme-btn"
-            data-theme="graphite"
-            onclick="setTheme('graphite')">
+    <button
+        class="theme-btn"
+        data-theme="graphite"
+        onclick="setTheme('graphite')">
 
-        <span class="color-dot"
-              style="background:#a1a1aa;">
+        <span
+            class="color-dot"
+            style="background:#a1a1aa;">
         </span>
 
         Graphite
@@ -3178,73 +2505,14 @@
 </div>
 
 
-<!-- MODERN JAVASCRIPT -->
+<!-- =====================================================
+     MODERN JAVASCRIPT
+     ===================================================== -->
 
 <script src="js/modern.js"></script>
-
-
-<!-- THEME SCRIPT -->
-
-<script>
-
-    function setTheme(theme) {
-
-        document.documentElement
-            .setAttribute("data-theme", theme);
-
-        localStorage.setItem(
-            "cesrg-theme",
-            theme
-        );
-
-        updateThemeButtons(theme);
-    }
-
-
-    function updateThemeButtons(theme) {
-
-        document
-            .querySelectorAll(".theme-btn")
-            .forEach(function(button) {
-
-                button.classList.toggle(
-                    "active",
-                    button.dataset.theme === theme
-                );
-
-            });
-    }
-
-
-    document.addEventListener(
-        "DOMContentLoaded",
-        function() {
-
-            const savedTheme =
-                localStorage.getItem("cesrg-theme")
-                || "margalla-mist";
-
-            setTheme(savedTheme);
-
-        }
-    );
-
-
-    /* CURRENT YEAR */
-
-    document
-        .querySelectorAll("[data-current-year]")
-        .forEach(function(element) {
-
-            element.textContent =
-                new Date().getFullYear();
-
-        });
-
-</script>
 
 
 </body>
 
 </html>
-```
+plus ais msla a rha ha top page p ++html a rha us ko be hata dena mistke ko
