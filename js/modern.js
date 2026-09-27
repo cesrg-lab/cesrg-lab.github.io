@@ -1,63 +1,36 @@
-/* =========================================================
-   CESRG MODERN WEBSITE JAVASCRIPT
-   Control & Energy Systems Research Group
-   COMSATS University Islamabad
-   ========================================================= */
-
 (function () {
-
     "use strict";
 
-
-    /* =====================================================
-       1. PAGE READY
-       ===================================================== */
+    // ========================================
+    // DOM READY
+    // ========================================
 
     document.addEventListener("DOMContentLoaded", function () {
 
         initThemeSwitcher();
 
         initMobileNavigation();
-
         initBackToTop();
-
         initScrollReveal();
-
         initActiveNavigation();
-
         initNoticeBoard();
-
         initResearchEventLinks();
-
         initGalleryLinks();
-
         initExternalLinks();
-
         initCurrentYear();
-
         initImageLoading();
-
         initLabVideo();
 
     });
 
 
-    /* =====================================================
-       2. THEME SWITCHER
-       ===================================================== */
+    // ========================================
+    // CESRG THEME SWITCHER
+    // ========================================
 
     function initThemeSwitcher() {
 
-        var savedTheme =
-            localStorage.getItem("cesrg-theme") ||
-            "margalla-mist";
-
-        /*
-         * Allowed CESRG themes.
-         * Prevent invalid values from being stored.
-         */
-
-        var allowedThemes = [
+        const themes = [
             "margalla-mist",
             "institutional-blue",
             "ivory-press",
@@ -66,70 +39,43 @@
             "graphite"
         ];
 
-        if (
-            allowedThemes.indexOf(savedTheme) === -1
-        ) {
+        // Load saved theme
+        let savedTheme =
+            localStorage.getItem("cesrg-theme") || "margalla-mist";
 
+        // Check saved theme
+        if (!themes.includes(savedTheme)) {
             savedTheme = "margalla-mist";
-
         }
 
-
+        // Apply saved theme
         setTheme(savedTheme);
 
+        // Get theme buttons
+        const themeButtons =
+            document.querySelectorAll(".theme-btn");
 
-        /*
-         * Theme buttons are already present
-         * in the HTML pages.
-         */
+        themeButtons.forEach(function (button) {
 
-        var buttons =
-            document.querySelectorAll(
-                ".theme-btn"
-            );
+            button.addEventListener("click", function () {
 
+                const themeName =
+                    button.getAttribute("data-theme");
 
-        buttons.forEach(function (button) {
-
-            button.addEventListener(
-                "click",
-                function () {
-
-                    var themeName =
-                        button.getAttribute(
-                            "data-theme"
-                        );
-
-
-                    if (!themeName) {
-                        return;
-                    }
-
-
-                    if (
-                        allowedThemes.indexOf(
-                            themeName
-                        ) === -1
-                    ) {
-
-                        return;
-
-                    }
-
-
+                if (themes.includes(themeName)) {
                     setTheme(themeName);
-
                 }
-            );
+
+            });
 
         });
 
     }
 
 
-    /*
-     * Apply selected theme
-     */
+    // ========================================
+    // APPLY THEME
+    // ========================================
 
     function setTheme(themeName) {
 
@@ -138,40 +84,24 @@
             themeName
         );
 
-
         localStorage.setItem(
             "cesrg-theme",
             themeName
         );
 
+        // Active button
+        const themeButtons =
+            document.querySelectorAll(".theme-btn");
 
-        /*
-         * Highlight active theme button
-         */
+        themeButtons.forEach(function (button) {
 
-        var buttons =
-            document.querySelectorAll(
-                ".theme-btn"
-            );
-
-
-        buttons.forEach(function (button) {
-
-            button.classList.remove(
-                "active"
-            );
-
+            button.classList.remove("active");
 
             if (
-                button.getAttribute(
-                    "data-theme"
-                ) === themeName
+                button.getAttribute("data-theme") ===
+                themeName
             ) {
-
-                button.classList.add(
-                    "active"
-                );
-
+                button.classList.add("active");
             }
 
         });
@@ -179,248 +109,114 @@
     }
 
 
-    /* =====================================================
-       3. MOBILE NAVIGATION
-       ===================================================== */
+    // ========================================
+    // MOBILE NAVIGATION
+    // ========================================
 
     function initMobileNavigation() {
 
-        var masthead =
-            document.querySelector(
-                ".masthead"
-            );
+        const masthead = document.querySelector(".masthead");
+        const nav = document.querySelector(".nav");
+        const container =
+            document.querySelector(".navbar-inner .container");
 
-
-        if (!masthead) {
+        if (!masthead || !nav || !container) {
             return;
         }
 
-
-        var nav =
-            masthead.querySelector(
-                ".nav"
-            );
-
-
-        var container =
-            masthead.querySelector(
-                ".navbar-inner .container"
-            );
-
-
-        if (!nav || !container) {
-            return;
-        }
-
-
-        /*
-         * Prevent creating the button twice.
-         */
-
+        // Avoid duplicate button
         if (
-            document.querySelector(
-                ".cesrg-mobile-toggle"
-            )
+            document.querySelector(".cesrg-mobile-toggle")
         ) {
-
             return;
-
         }
 
+        const toggle = document.createElement("button");
 
-        var button =
-            document.createElement(
-                "button"
-            );
-
-
-        button.className =
-            "cesrg-mobile-toggle";
-
-
-        button.type =
-            "button";
-
-
-        button.setAttribute(
+        toggle.className = "cesrg-mobile-toggle";
+        toggle.type = "button";
+        toggle.setAttribute(
             "aria-label",
-            "Open navigation menu"
+            "Toggle navigation"
         );
-
-
-        button.setAttribute(
+        toggle.setAttribute(
             "aria-expanded",
             "false"
         );
 
+        toggle.innerHTML = "☰";
 
-        button.innerHTML = "☰";
+        container.insertBefore(toggle, nav);
 
+        toggle.addEventListener("click", function () {
 
-        /*
-         * Insert button before navigation.
-         */
-
-        container.insertBefore(
-            button,
-            nav
-        );
-
-
-        /*
-         * Toggle navigation.
-         */
-
-        button.addEventListener(
-            "click",
-            function () {
-
-                var isOpen =
-                    nav.classList.toggle(
-                        "cesrg-mobile-open"
-                    );
-
-
-                button.setAttribute(
-                    "aria-expanded",
-                    isOpen
-                        ? "true"
-                        : "false"
+            const isOpen =
+                masthead.classList.toggle(
+                    "cesrg-mobile-open"
                 );
 
-
-                button.innerHTML =
-                    isOpen
-                        ? "✕"
-                        : "☰";
-
-            }
-        );
-
-
-        /*
-         * Close mobile menu after
-         * clicking a navigation link.
-         */
-
-        var links =
-            nav.querySelectorAll(
-                "a"
+            toggle.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
             );
 
+        });
 
-        links.forEach(function (link) {
+        // Close menu after clicking a link
+        nav.querySelectorAll("a").forEach(function (link) {
 
-            link.addEventListener(
-                "click",
-                function () {
+            link.addEventListener("click", function () {
 
-                    nav.classList.remove(
-                        "cesrg-mobile-open"
-                    );
+                masthead.classList.remove(
+                    "cesrg-mobile-open"
+                );
 
+                toggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
 
-                    button.setAttribute(
-                        "aria-expanded",
-                        "false"
-                    );
-
-
-                    button.innerHTML =
-                        "☰";
-
-                }
-            );
+            });
 
         });
 
     }
 
 
-    /* =====================================================
-       4. BACK TO TOP
-       ===================================================== */
+    // ========================================
+    // BACK TO TOP
+    // ========================================
 
     function initBackToTop() {
 
-        /*
-         * Prevent duplicate button.
-         */
+        const button = document.createElement("button");
 
-        var existing =
-            document.getElementById(
-                "cesrg-back-top"
-            );
+        button.id = "cesrg-back-top";
+        button.type = "button";
+        button.setAttribute(
+            "aria-label",
+            "Back to top"
+        );
 
+        button.innerHTML = "↑";
 
-        var button =
-            existing ||
-            document.createElement(
-                "button"
-            );
+        document.body.appendChild(button);
 
+        function updateButton() {
 
-        if (!existing) {
-
-            button.id =
-                "cesrg-back-top";
-
-
-            button.type =
-                "button";
-
-
-            button.setAttribute(
-                "aria-label",
-                "Back to top"
-            );
-
-
-            button.innerHTML =
-                "↑";
-
-
-            document.body.appendChild(
-                button
-            );
+            if (window.scrollY > 450) {
+                button.classList.add("show");
+            } else {
+                button.classList.remove("show");
+            }
 
         }
 
-
-        /*
-         * Show button after scrolling.
-         */
-
         window.addEventListener(
             "scroll",
-            function () {
-
-                if (
-                    window.scrollY > 450
-                ) {
-
-                    button.classList.add(
-                        "visible"
-                    );
-
-                } else {
-
-                    button.classList.remove(
-                        "visible"
-                    );
-
-                }
-
-            },
-            {
-                passive: true
-            }
+            updateButton,
+            { passive: true }
         );
-
-
-        /*
-         * Smooth scroll to top.
-         */
 
         button.addEventListener(
             "click",
@@ -434,267 +230,165 @@
             }
         );
 
+        updateButton();
+
     }
 
 
-    /* =====================================================
-       5. SCROLL REVEAL
-       ===================================================== */
+    // ========================================
+    // SCROLL REVEAL
+    // ========================================
 
     function initScrollReveal() {
 
-        var elements =
-            document.querySelectorAll(
-                ".cesrg-reveal"
-            );
-
+        const elements =
+            document.querySelectorAll(".cesrg-reveal");
 
         if (!elements.length) {
             return;
         }
 
+        // Fallback
+        if (!("IntersectionObserver" in window)) {
 
-        /*
-         * Modern browser support.
-         */
-
-        if (
-            "IntersectionObserver"
-            in window
-        ) {
-
-            var observer =
-                new IntersectionObserver(
-                    function (entries) {
-
-                        entries.forEach(
-                            function (entry) {
-
-                                if (
-                                    entry.isIntersecting
-                                ) {
-
-                                    entry.target.classList.add(
-                                        "cesrg-visible"
-                                    );
-
-
-                                    observer.unobserve(
-                                        entry.target
-                                    );
-
-                                }
-
-                            }
-                        );
-
-                    },
-                    {
-                        threshold: 0.12
-                    }
+            elements.forEach(function (element) {
+                element.classList.add(
+                    "cesrg-visible"
                 );
+            });
 
-
-            elements.forEach(
-                function (element) {
-
-                    observer.observe(
-                        element
-                    );
-
-                }
-            );
-
-        } else {
-
-            /*
-             * Fallback for older browsers.
-             */
-
-            elements.forEach(
-                function (element) {
-
-                    element.classList.add(
-                        "cesrg-visible"
-                    );
-
-                }
-            );
-
+            return;
         }
+
+        const observer =
+            new IntersectionObserver(
+                function (entries, observer) {
+
+                    entries.forEach(function (entry) {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add(
+                                "cesrg-visible"
+                            );
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.12
+                }
+            );
+
+        elements.forEach(function (element) {
+            observer.observe(element);
+        });
 
     }
 
 
-    /* =====================================================
-       6. ACTIVE NAVIGATION
-       ===================================================== */
+    // ========================================
+    // ACTIVE NAVIGATION
+    // ========================================
 
     function initActiveNavigation() {
 
-        var currentPage =
+        const currentPath =
             window.location.pathname
                 .split("/")
-                .pop();
+                .pop()
+                .toLowerCase();
 
+        const currentPage =
+            currentPath || "index.html";
 
-        /*
-         * GitHub Pages root.
-         */
+        document
+            .querySelectorAll(".nav a")
+            .forEach(function (link) {
 
-        if (
-            currentPage === "" ||
-            currentPage === "/"
-        ) {
+                const href =
+                    link.getAttribute("href");
 
-            currentPage =
-                "index.html";
+                if (!href) {
+                    return;
+                }
 
-        }
+                const linkPage =
+                    href.split("/")
+                        .pop()
+                        .split("#")[0]
+                        .toLowerCase();
 
+                if (
+                    linkPage === currentPage ||
+                    (
+                        currentPage === "" &&
+                        linkPage === "index.html"
+                    )
+                ) {
 
-        var links =
-            document.querySelectorAll(
-                ".masthead .nav a"
-            );
-
-
-        links.forEach(function (link) {
-
-            var href =
-                link.getAttribute(
-                    "href"
-                );
-
-
-            if (!href) {
-                return;
-            }
-
-
-            /*
-             * Ignore external URLs.
-             */
-
-            if (
-                href.indexOf("http") === 0
-            ) {
-
-                return;
-
-            }
-
-
-            var cleanHref =
-                href.split("#")[0]
-                    .split("?")[0];
-
-
-            if (
-                cleanHref === currentPage
-            ) {
-
-                var parent =
-                    link.parentElement;
-
-
-                if (parent) {
-
-                    parent.classList.add(
-                        "active"
-                    );
+                    link.classList.add("active");
 
                 }
 
-            }
-
-        });
+            });
 
     }
 
 
-    /* =====================================================
-       7. NOTICE BOARD
-       ===================================================== */
+    // ========================================
+    // NOTICE BOARD
+    // ========================================
 
     function initNoticeBoard() {
 
-        var board =
-            document.querySelector(
+        const boards =
+            document.querySelectorAll(
                 ".cesrg-notice-board"
             );
 
+        boards.forEach(function (board) {
 
-        if (!board) {
-            return;
-        }
+            const track =
+                board.querySelector(
+                    ".cesrg-notice-track"
+                );
 
+            if (!track) {
+                return;
+            }
 
-        var track =
-            board.querySelector(
-                ".cesrg-notice-track"
-            );
+            // Duplicate content for continuous movement
+            if (!track.dataset.duplicated) {
 
+                track.innerHTML =
+                    track.innerHTML +
+                    track.innerHTML;
 
-        if (!track) {
-            return;
-        }
+                track.dataset.duplicated = "true";
 
+            }
 
-        /*
-         * Duplicate items for seamless
-         * continuous scrolling.
-         */
-
-        var original =
-            track.innerHTML;
-
-
-        if (
-            !track.dataset.duplicated
-        ) {
-
-            track.innerHTML =
-                original + original;
-
-
-            track.dataset.duplicated =
-                "true";
-
-        }
-
-
-        /*
-         * Pause animation while keyboard
-         * users focus on a notice.
-         */
-
-        var links =
-            track.querySelectorAll(
-                "a"
-            );
-
-
-        links.forEach(function (link) {
-
-            link.addEventListener(
-                "focus",
+            // Pause when focused
+            board.addEventListener(
+                "focusin",
                 function () {
-
                     track.style.animationPlayState =
                         "paused";
-
                 }
             );
 
-
-            link.addEventListener(
-                "blur",
+            board.addEventListener(
+                "focusout",
                 function () {
-
                     track.style.animationPlayState =
-                        "";
-
+                        "running";
                 }
             );
 
@@ -703,233 +397,194 @@
     }
 
 
-    /* =====================================================
-       8. RESEARCH EVENT → GALLERY
-       ===================================================== */
+    // ========================================
+    // RESEARCH EVENT LINKS
+    // ========================================
 
     function initResearchEventLinks() {
 
-        var events =
-            document.querySelectorAll(
-                "[data-gallery]"
-            );
+        document
+            .querySelectorAll("[data-gallery]")
+            .forEach(function (link) {
 
+                link.addEventListener(
+                    "click",
+                    function (event) {
 
-        events.forEach(function (event) {
+                        const target =
+                            link.getAttribute(
+                                "data-gallery"
+                            );
 
-            event.addEventListener(
-                "click",
-                function () {
+                        if (!target) {
+                            return;
+                        }
 
-                    var gallery =
-                        event.getAttribute(
-                            "data-gallery"
-                        );
+                        const galleryElement =
+                            document.getElementById(
+                                target
+                            );
 
+                        if (galleryElement) {
 
-                    if (!gallery) {
-                        return;
+                            event.preventDefault();
+
+                            galleryElement.scrollIntoView({
+                                behavior: "smooth",
+                                block: "start"
+                            });
+
+                        } else {
+
+                            const isGalleryPage =
+                                window.location.pathname
+                                    .toLowerCase()
+                                    .includes(
+                                        "gallery.html"
+                                    );
+
+                            if (!isGalleryPage) {
+
+                                event.preventDefault();
+
+                                window.location.href =
+                                    "gallery.html#" +
+                                    target;
+
+                            }
+
+                        }
+
                     }
+                );
 
-
-                    /*
-                     * If gallery ID exists on
-                     * current page, scroll to it.
-                     */
-
-                    var target =
-                        document.getElementById(
-                            gallery
-                        );
-
-
-                    if (target) {
-
-                        target.scrollIntoView({
-                            behavior: "smooth",
-                            block: "start"
-                        });
-
-
-                        return;
-
-                    }
-
-
-                    /*
-                     * Otherwise go to gallery.html
-                     */
-
-                    window.location.href =
-                        "gallery.html#" +
-                        encodeURIComponent(
-                            gallery
-                        );
-
-                }
-            );
-
-        });
+            });
 
     }
 
 
-    /* =====================================================
-       9. GALLERY HASH HANDLING
-       ===================================================== */
+    // ========================================
+    // GALLERY HASH
+    // ========================================
 
     function initGalleryLinks() {
 
-        var hash =
-            window.location.hash;
+        function scrollToHash() {
 
+            const hash =
+                window.location.hash;
 
-        if (!hash) {
-            return;
-        }
+            if (!hash) {
+                return;
+            }
 
+            const id =
+                decodeURIComponent(
+                    hash.substring(1)
+                );
 
-        /*
-         * Remove #.
-         */
+            const element =
+                document.getElementById(id);
 
-        var id =
-            decodeURIComponent(
-                hash.substring(1)
-            );
+            if (!element) {
+                return;
+            }
 
+            setTimeout(function () {
 
-        if (!id) {
-            return;
-        }
-
-
-        var target =
-            document.getElementById(
-                id
-            );
-
-
-        if (!target) {
-            return;
-        }
-
-
-        /*
-         * Small delay so page finishes
-         * rendering before scrolling.
-         */
-
-        setTimeout(
-            function () {
-
-                target.scrollIntoView({
+                element.scrollIntoView({
                     behavior: "smooth",
                     block: "start"
                 });
 
-            },
-            400
+            }, 200);
+
+        }
+
+        scrollToHash();
+
+        window.addEventListener(
+            "hashchange",
+            scrollToHash
         );
 
     }
 
 
-    /* =====================================================
-       10. EXTERNAL LINKS
-       ===================================================== */
+    // ========================================
+    // EXTERNAL LINKS
+    // ========================================
 
     function initExternalLinks() {
 
-        var links =
-            document.querySelectorAll(
-                'a[href^="http"]'
-            );
+        document
+            .querySelectorAll("a[href]")
+            .forEach(function (link) {
 
+                const href =
+                    link.getAttribute("href");
 
-        links.forEach(function (link) {
+                if (!href) {
+                    return;
+                }
 
-            /*
-             * Don't modify links that
-             * already define target.
-             */
+                const isExternal =
+                    href.startsWith("http://") ||
+                    href.startsWith("https://");
 
-            if (
-                !link.hasAttribute(
-                    "target"
-                )
-            ) {
+                if (isExternal) {
 
-                link.setAttribute(
-                    "target",
-                    "_blank"
-                );
+                    link.setAttribute(
+                        "target",
+                        "_blank"
+                    );
 
+                    link.setAttribute(
+                        "rel",
+                        "noopener noreferrer"
+                    );
 
-                link.setAttribute(
-                    "rel",
-                    "noopener noreferrer"
-                );
+                }
 
-            }
-
-        });
+            });
 
     }
 
 
-    /* =====================================================
-       11. AUTOMATIC YEAR
-       ===================================================== */
+    // ========================================
+    // CURRENT YEAR
+    // ========================================
 
     function initCurrentYear() {
 
-        var year =
+        const year =
             new Date().getFullYear();
 
-
-        var elements =
-            document.querySelectorAll(
+        document
+            .querySelectorAll(
                 "[data-current-year]"
-            );
+            )
+            .forEach(function (element) {
 
+                element.textContent = year;
 
-        elements.forEach(
-            function (element) {
-
-                element.textContent =
-                    year;
-
-            }
-        );
+            });
 
     }
 
 
-    /* =====================================================
-       12. IMAGE LOADING
-       ===================================================== */
+    // ========================================
+    // IMAGE LAZY LOADING
+    // ========================================
 
     function initImageLoading() {
 
-        var images =
-            document.querySelectorAll(
-                "img"
-            );
-
-
-        images.forEach(
-            function (image) {
-
-                /*
-                 * Don't override images
-                 * that already have loading.
-                 */
+        document
+            .querySelectorAll("img")
+            .forEach(function (image) {
 
                 if (
-                    !image.hasAttribute(
-                        "loading"
-                    )
+                    !image.hasAttribute("loading")
                 ) {
 
                     image.setAttribute(
@@ -939,159 +594,101 @@
 
                 }
 
-            }
-        );
+            });
 
     }
 
 
-    /* =====================================================
-       13. LAB VIDEO — PLAY WHEN VISIBLE
-       ===================================================== */
+    // ========================================
+    // LAB VIDEO
+    // ========================================
 
     function initLabVideo() {
 
-        var labSection =
-            document.getElementById(
-                "lab"
-            );
+        const labSection =
+            document.getElementById("lab");
 
-
-        var labVideo =
+        const video =
             document.getElementById(
                 "cesrgLabVideo"
             );
 
-
-        if (
-            !labSection ||
-            !labVideo
-        ) {
-
+        if (!labSection || !video) {
             return;
-
         }
 
-
-        /*
-         * IntersectionObserver supported.
-         */
-
         if (
-            "IntersectionObserver"
-            in window
+            !("IntersectionObserver" in window)
         ) {
+            return;
+        }
 
-            var videoObserver =
-                new IntersectionObserver(
-                    function (entries) {
+        const observer =
+            new IntersectionObserver(
+                function (entries) {
 
-                        entries.forEach(
-                            function (entry) {
+                    entries.forEach(function (entry) {
 
-                                if (
-                                    entry.isIntersecting
-                                ) {
+                        if (entry.isIntersecting) {
 
-                                    labVideo
-                                        .play()
-                                        .catch(
-                                            function () {
-                                                /*
-                                                 * Autoplay may be
-                                                 * blocked by browser.
-                                                 */
-                                            }
-                                        );
+                            video.play().catch(
+                                function () {}
+                            );
 
-                                } else {
+                        } else {
 
-                                    labVideo.pause();
+                            video.pause();
 
-                                }
+                        }
 
-                            }
-                        );
+                    });
 
-                    },
-                    {
-                        threshold: 0.35
-                    }
-                );
-
-
-            videoObserver.observe(
-                labSection
+                },
+                {
+                    threshold: 0.25
+                }
             );
 
-        }
+        observer.observe(labSection);
 
     }
 
 
-    /* =====================================================
-       14. SMOOTH INTERNAL LINKS
-       ===================================================== */
+    // ========================================
+    // SMOOTH INTERNAL LINKS
+    // ========================================
 
     document.addEventListener(
         "click",
         function (event) {
 
-            /*
-             * closest() may return null.
-             */
-
-            var link =
+            const link =
                 event.target.closest(
                     'a[href^="#"]'
                 );
-
 
             if (!link) {
                 return;
             }
 
-
-            var href =
-                link.getAttribute(
-                    "href"
-                );
-
+            const href =
+                link.getAttribute("href");
 
             if (
                 !href ||
                 href === "#"
             ) {
-
                 return;
-
             }
 
-
-            var target;
-
-
-            try {
-
-                target =
-                    document.querySelector(
-                        href
-                    );
-
-            } catch (error) {
-
-                return;
-
-            }
-
+            const target =
+                document.querySelector(href);
 
             if (!target) {
                 return;
             }
 
-
             event.preventDefault();
-
 
             target.scrollIntoView({
                 behavior: "smooth",
@@ -1100,6 +697,5 @@
 
         }
     );
-
 
 })();
