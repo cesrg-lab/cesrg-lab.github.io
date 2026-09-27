@@ -57,7 +57,7 @@
    Original professional CESRG palette
    ========================================================= */
 
-[data-theme="cesrg-blue"] {
+[data-theme="margalla-mist"] {
 
     --cesrg-primary: #0b1f3a;
     --cesrg-primary-2: #123b69;
@@ -91,7 +91,7 @@
    Blue + Teal academic research palette
    ========================================================= */
 
-[data-theme="ocean-lab"] {
+[data-theme="institutional-blue"] {
 
     --cesrg-primary: #083b66;
     --cesrg-primary-2: #0b5f8a;
@@ -125,7 +125,7 @@
    Modern engineering / electronics look
    ========================================================= */
 
-[data-theme="electric-cyan"] {
+[data-theme="ivory-press"] {
 
     --cesrg-primary: #082b52;
     --cesrg-primary-2: #0c4f91;
@@ -159,7 +159,7 @@
    Clean institutional / university look
    ========================================================= */
 
-[data-theme="research-navy"] {
+[data-theme="sage-calm"] {
 
     --cesrg-primary: #102a43;
     --cesrg-primary-2: #1d4e89;
@@ -193,7 +193,7 @@
    Energy systems / battery / sustainability look
    ========================================================= */
 
-[data-theme="energy-green"] {
+[data-theme="graphite"] {
 
     --cesrg-primary: #103b46;
     --cesrg-primary-2: #155e6d;
@@ -227,7 +227,7 @@
    Dark research laboratory theme
    ========================================================= */
 
-[data-theme="midnight-lab"] {
+[data-theme="indigo-night"] {
 
     --cesrg-primary: #38bdf8;
     --cesrg-primary-2: #2563eb;
