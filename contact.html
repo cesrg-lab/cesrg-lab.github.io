@@ -13,6 +13,9 @@
     <meta name="description"
           content="Contact the Control & Energy Systems Research Group at COMSATS University Islamabad.">
 
+    <meta name="theme-color"
+          content="#0b5c53">
+
     <link rel="icon"
           type="image/png"
           href="thumbs/CESRG_logo_circle.png">
@@ -34,7 +37,275 @@
     <style>
 
         /* =====================================================
-           CONTACT PAGE
+           CONTACT PAGE THEME VARIABLES
+           ===================================================== */
+
+        :root {
+
+            --contact-primary: #0b5c53;
+            --contact-primary-2: #174f49;
+            --contact-accent: #287d72;
+            --contact-accent-2: #4da89b;
+
+            --contact-page-bg: #f7faf9;
+            --contact-soft-bg: #edf5f2;
+            --contact-card-bg: #ffffff;
+
+            --contact-text: #172033;
+            --contact-muted: #667085;
+
+            --contact-border: #dce8e4;
+            --contact-border-strong: #c8ddd7;
+
+            --contact-icon-bg: #e2f0ec;
+
+            --contact-hero-1: #071d1a;
+            --contact-hero-2: #174f49;
+
+            --contact-banner-1: #071d1a;
+            --contact-banner-2: #174f49;
+
+            --contact-shadow: rgba(7,21,37,.06);
+            --contact-shadow-hover: rgba(7,21,37,.12);
+
+        }
+
+
+        /* =====================================================
+           MARGALLA MIST
+           ===================================================== */
+
+        html[data-theme="margalla-mist"] {
+
+            --contact-primary: #0b5c53;
+            --contact-primary-2: #174f49;
+            --contact-accent: #287d72;
+            --contact-accent-2: #4da89b;
+
+            --contact-page-bg: #f7faf9;
+            --contact-soft-bg: #edf5f2;
+            --contact-card-bg: #ffffff;
+
+            --contact-text: #172033;
+            --contact-muted: #667085;
+
+            --contact-border: #dce8e4;
+            --contact-border-strong: #c8ddd7;
+
+            --contact-icon-bg: #e2f0ec;
+
+            --contact-hero-1: #071d1a;
+            --contact-hero-2: #174f49;
+
+            --contact-banner-1: #071d1a;
+            --contact-banner-2: #174f49;
+
+        }
+
+
+        /* =====================================================
+           INSTITUTIONAL BLUE
+           ===================================================== */
+
+        html[data-theme="institutional-blue"] {
+
+            --contact-primary: #1a5276;
+            --contact-primary-2: #154360;
+            --contact-accent: #2874a6;
+            --contact-accent-2: #3498db;
+
+            --contact-page-bg: #f6f9fc;
+            --contact-soft-bg: #eaf2f8;
+            --contact-card-bg: #ffffff;
+
+            --contact-text: #172033;
+            --contact-muted: #667085;
+
+            --contact-border: #dce6ef;
+            --contact-border-strong: #c5d9e8;
+
+            --contact-icon-bg: #e1edf6;
+
+            --contact-hero-1: #071a2d;
+            --contact-hero-2: #154360;
+
+            --contact-banner-1: #071a2d;
+            --contact-banner-2: #154360;
+
+        }
+
+
+        /* =====================================================
+           IVORY PRESS
+           ===================================================== */
+
+        html[data-theme="ivory-press"] {
+
+            --contact-primary: #8b3a3a;
+            --contact-primary-2: #633333;
+            --contact-accent: #9f4a4a;
+            --contact-accent-2: #c27668;
+
+            --contact-page-bg: #fbf8f3;
+            --contact-soft-bg: #f3ede4;
+            --contact-card-bg: #fffdf9;
+
+            --contact-text: #332d2a;
+            --contact-muted: #756b65;
+
+            --contact-border: #e7ddd2;
+            --contact-border-strong: #d9c9bc;
+
+            --contact-icon-bg: #f0e5dc;
+
+            --contact-hero-1: #241817;
+            --contact-hero-2: #633333;
+
+            --contact-banner-1: #241817;
+            --contact-banner-2: #633333;
+
+        }
+
+
+        /* =====================================================
+           SAGE CALM
+           ===================================================== */
+
+        html[data-theme="sage-calm"] {
+
+            --contact-primary: #4a6b5d;
+            --contact-primary-2: #365247;
+            --contact-accent: #638676;
+            --contact-accent-2: #8daa8d;
+
+            --contact-page-bg: #f7faf7;
+            --contact-soft-bg: #edf3ed;
+            --contact-card-bg: #ffffff;
+
+            --contact-text: #26342d;
+            --contact-muted: #6d7d73;
+
+            --contact-border: #dce6de;
+            --contact-border-strong: #c7d8cb;
+
+            --contact-icon-bg: #e3eee5;
+
+            --contact-hero-1: #17251f;
+            --contact-hero-2: #365247;
+
+            --contact-banner-1: #17251f;
+            --contact-banner-2: #365247;
+
+        }
+
+
+        /* =====================================================
+           INDIGO NIGHT
+           ===================================================== */
+
+        html[data-theme="indigo-night"] {
+
+            --contact-primary: #6366f1;
+            --contact-primary-2: #3730a3;
+            --contact-accent: #818cf8;
+            --contact-accent-2: #a5b4fc;
+
+            --contact-page-bg: #0f172a;
+            --contact-soft-bg: #172033;
+            --contact-card-bg: #1e293b;
+
+            --contact-text: #e5e7eb;
+            --contact-muted: #aab3c2;
+
+            --contact-border: #334155;
+            --contact-border-strong: #475569;
+
+            --contact-icon-bg: #273449;
+
+            --contact-hero-1: #070b18;
+            --contact-hero-2: #312e81;
+
+            --contact-banner-1: #070b18;
+            --contact-banner-2: #312e81;
+
+        }
+
+
+        /* =====================================================
+           GRAPHITE
+           ===================================================== */
+
+        html[data-theme="graphite"] {
+
+            --contact-primary: #52525b;
+            --contact-primary-2: #3f3f46;
+            --contact-accent: #71717a;
+            --contact-accent-2: #a1a1aa;
+
+            --contact-page-bg: #f4f4f5;
+            --contact-soft-bg: #e9e9eb;
+            --contact-card-bg: #ffffff;
+
+            --contact-text: #27272a;
+            --contact-muted: #71717a;
+
+            --contact-border: #d4d4d8;
+            --contact-border-strong: #c4c4c9;
+
+            --contact-icon-bg: #e4e4e7;
+
+            --contact-hero-1: #18181b;
+            --contact-hero-2: #3f3f46;
+
+            --contact-banner-1: #18181b;
+            --contact-banner-2: #3f3f46;
+
+        }
+
+
+        /* =====================================================
+           GENERAL
+           ===================================================== */
+
+        body {
+
+            background: var(--contact-page-bg);
+
+            color: var(--contact-text);
+
+        }
+
+
+        /* =====================================================
+           HEADER LOGO
+           ===================================================== */
+
+        .navbar-inner .container > a {
+
+            color:
+                var(--contact-primary-2) !important;
+
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .jumbotron {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--contact-hero-1),
+                    var(--contact-hero-2)
+                ) !important;
+
+        }
+
+
+        /* =====================================================
+           CONTACT LAYOUT
            ===================================================== */
 
         .contact-layout {
@@ -51,18 +322,24 @@
         }
 
 
+        /* =====================================================
+           CONTACT CARD
+           ===================================================== */
+
         .contact-card {
 
-            background: #ffffff;
+            background:
+                var(--contact-card-bg);
 
-            border: 1px solid #e3e8ee;
+            border:
+                1px solid var(--contact-border);
 
             border-radius: 20px;
 
             padding: 30px;
 
             box-shadow:
-                0 8px 28px rgba(7,21,37,.06);
+                0 8px 28px var(--contact-shadow);
 
         }
 
@@ -73,7 +350,8 @@
 
             margin-bottom: 10px;
 
-            color: #0b1f3a;
+            color:
+                var(--contact-text);
 
             font-size: 25px;
 
@@ -84,7 +362,8 @@
 
             margin-bottom: 28px;
 
-            color: #667085;
+            color:
+                var(--contact-muted);
 
             font-size: 13px;
 
@@ -106,7 +385,7 @@
             padding: 17px 0;
 
             border-bottom:
-                1px solid #edf0f3;
+                1px solid var(--contact-border);
 
         }
 
@@ -134,9 +413,11 @@
 
             border-radius: 13px;
 
-            background: #edf7fc;
+            background:
+                var(--contact-icon-bg);
 
-            color: #1769aa;
+            color:
+                var(--contact-primary);
 
             font-size: 19px;
 
@@ -149,7 +430,8 @@
 
             margin-bottom: 4px;
 
-            color: #98a2b3;
+            color:
+                var(--contact-muted);
 
             font-size: 10px;
 
@@ -164,7 +446,8 @@
 
         .contact-item-value {
 
-            color: #344054;
+            color:
+                var(--contact-text);
 
             font-size: 13px;
 
@@ -175,7 +458,8 @@
 
         .contact-item-value a {
 
-            color: #1769aa;
+            color:
+                var(--contact-primary);
 
             font-weight: 650;
 
@@ -206,7 +490,8 @@
 
         .map-header {
 
-            padding: 27px 28px 20px;
+            padding:
+                27px 28px 20px;
 
         }
 
@@ -215,6 +500,9 @@
 
             margin: 0 0 8px;
 
+            color:
+                var(--contact-text);
+
         }
 
 
@@ -222,7 +510,8 @@
 
             margin: 0;
 
-            color: #667085;
+            color:
+                var(--contact-muted);
 
             font-size: 12px;
 
@@ -239,7 +528,8 @@
 
             height: 330px;
 
-            background: #edf1f4;
+            background:
+                var(--contact-soft-bg);
 
         }
 
@@ -257,7 +547,8 @@
 
         .map-footer {
 
-            padding: 18px 28px 25px;
+            padding:
+                18px 28px 25px;
 
         }
 
@@ -274,7 +565,8 @@
 
             border-radius: 10px;
 
-            background: #1769aa;
+            background:
+                var(--contact-primary);
 
             color: #ffffff;
 
@@ -291,9 +583,11 @@
 
         .map-button:hover {
 
-            transform: translateY(-2px);
+            transform:
+                translateY(-2px);
 
-            background: #0f568c;
+            background:
+                var(--contact-primary-2);
 
         }
 
@@ -310,9 +604,11 @@
 
             border-radius: 15px;
 
-            background: #f7f9fb;
+            background:
+                var(--contact-soft-bg);
 
-            border: 1px solid #e7ebef;
+            border:
+                1px solid var(--contact-border);
 
         }
 
@@ -321,7 +617,8 @@
 
             margin-bottom: 12px;
 
-            color: #0b1f3a;
+            color:
+                var(--contact-text);
 
             font-size: 13px;
 
@@ -340,7 +637,8 @@
 
             padding: 8px 0;
 
-            color: #667085;
+            color:
+                var(--contact-muted);
 
             font-size: 12px;
 
@@ -349,7 +647,8 @@
 
         .hours-row strong {
 
-            color: #344054;
+            color:
+                var(--contact-text);
 
         }
 
@@ -386,13 +685,16 @@
 
             padding: 10px;
 
-            border: 1px solid #dfe7ed;
+            border:
+                1px solid var(--contact-border);
 
             border-radius: 11px;
 
-            color: #1769aa;
+            color:
+                var(--contact-primary);
 
-            background: #ffffff;
+            background:
+                var(--contact-card-bg);
 
             font-size: 11px;
 
@@ -407,9 +709,14 @@
 
         .quick-action:hover {
 
-            background: #edf7fc;
+            background:
+                var(--contact-soft-bg);
 
-            transform: translateY(-2px);
+            color:
+                var(--contact-primary);
+
+            transform:
+                translateY(-2px);
 
         }
 
@@ -429,14 +736,14 @@
             background:
                 linear-gradient(
                     135deg,
-                    #071525,
-                    #123b69
+                    var(--contact-banner-1),
+                    var(--contact-banner-2)
                 );
 
             color: white;
 
             box-shadow:
-                0 15px 40px rgba(7,21,37,.14);
+                0 15px 40px var(--contact-shadow-hover);
 
         }
 
@@ -458,7 +765,8 @@
 
             margin: 0;
 
-            color: rgba(255,255,255,.74);
+            color:
+                rgba(255,255,255,.74);
 
             font-size: 13px;
 
@@ -479,11 +787,13 @@
 
             }
 
+
             .contact-card {
 
                 padding: 23px;
 
             }
+
 
             .map-container {
 
@@ -502,11 +812,14 @@
 
             }
 
+
             .address-banner {
 
-                padding: 27px 22px;
+                padding:
+                    27px 22px;
 
             }
+
 
             .hours-row {
 
@@ -545,7 +858,7 @@
                        gap:10px;
                        margin:10px auto;
                        width:max-content;
-                       color:#0b1f3a;
+                       color:var(--contact-primary-2) !important;
                        font-weight:800;
                        text-decoration:none;
                    ">
@@ -585,11 +898,13 @@
                         </a>
                     </li>
 
+
                     <li>
                         <a href="people.html">
                             People
                         </a>
                     </li>
+
 
                     <li>
                         <a href="research.html">
@@ -597,17 +912,27 @@
                         </a>
                     </li>
 
+
+                    <li>
+                        <a href="collaboration.html">
+                            Collaboration
+                        </a>
+                    </li>
+
+
                     <li>
                         <a href="publications.html">
                             Publications
                         </a>
                     </li>
 
+
                     <li>
                         <a href="gallery.html">
                             Gallery
                         </a>
                     </li>
+
 
                     <li class="active">
                         <a href="contact.html">
@@ -718,11 +1043,13 @@
                     ✉
                 </div>
 
+
                 <div>
 
                     <span class="contact-item-label">
                         Email
                     </span>
+
 
                     <div class="contact-item-value">
 
@@ -739,6 +1066,7 @@
             </div>
 
 
+
             <!-- PHONE -->
 
             <div class="contact-item">
@@ -747,11 +1075,13 @@
                     ☎
                 </div>
 
+
                 <div>
 
                     <span class="contact-item-label">
                         Phone
                     </span>
+
 
                     <div class="contact-item-value">
 
@@ -768,6 +1098,7 @@
             </div>
 
 
+
             <!-- CELL -->
 
             <div class="contact-item">
@@ -776,11 +1107,13 @@
                     📱
                 </div>
 
+
                 <div>
 
                     <span class="contact-item-label">
                         Mobile
                     </span>
+
 
                     <div class="contact-item-value">
 
@@ -797,6 +1130,7 @@
             </div>
 
 
+
             <!-- OFFICE -->
 
             <div class="contact-item">
@@ -805,18 +1139,22 @@
                     🏢
                 </div>
 
+
                 <div>
 
                     <span class="contact-item-label">
                         Office
                     </span>
 
+
                     <div class="contact-item-value">
 
                         Room No. 229, 2nd Floor
+
                         <br>
 
                         Department of Electrical Engineering
+
                         <br>
 
                         COMSATS University Islamabad
@@ -826,6 +1164,7 @@
                 </div>
 
             </div>
+
 
 
             <!-- HOURS -->
@@ -843,19 +1182,21 @@
                         Monday – Friday
                     </strong>
 
+
                     <span>
                         9:00 AM – 5:00 PM
                     </span>
 
                 </div>
 
-
             </div>
+
 
 
             <!-- QUICK ACTIONS -->
 
             <div class="quick-actions">
+
 
                 <a
                     class="quick-action"
@@ -873,6 +1214,7 @@
                     ☎ Call Office
 
                 </a>
+
 
             </div>
 
@@ -912,6 +1254,7 @@
                     loading="lazy"
                     allowfullscreen
                     referrerpolicy="no-referrer-when-downgrade">
+
                 </iframe>
 
             </div>
@@ -949,6 +1292,7 @@
 
     <div class="address-banner">
 
+
         <h2>
             Control & Energy Systems Research Group (CESRG)
         </h2>
@@ -956,11 +1300,15 @@
 
         <p>
 
-            
             R&D Lab, COMSATS University Islamabad
-            Park Road, Tarlai Kalan, Islamabad 45550, Pakistan
+
+            <br>
+
+            Park Road, Tarlai Kalan,
+            Islamabad 45550, Pakistan
 
         </p>
+
 
     </div>
 
@@ -991,10 +1339,12 @@
                     CESRG
                 </h3>
 
+
                 <p>
                     Control & Energy Systems
                     Research Group
                 </p>
+
 
                 <p>
                     COMSATS University Islamabad
@@ -1003,11 +1353,13 @@
             </div>
 
 
+
             <div>
 
                 <h3>
                     Contact Information
                 </h3>
+
 
                 <p>
 
@@ -1056,6 +1408,7 @@
             </div>
 
 
+
             <div>
 
                 <h3>
@@ -1063,13 +1416,21 @@
                 </h3>
 
 
-               <p>
-                Control & Energy Systems Research Group (CESRG)
-                <br>
-                R&D Lab, COMSATS University Islamabad
-                <br>
-                Park Road, Tarlai Kalan, Islamabad 45550, Pakistan
-            </p>
+                <p>
+
+                    Control & Energy Systems
+                    Research Group (CESRG)
+
+                    <br>
+
+                    R&D Lab, COMSATS University Islamabad
+
+                    <br>
+
+                    Park Road, Tarlai Kalan,
+                    Islamabad 45550, Pakistan
+
+                </p>
 
 
                 <a
@@ -1091,6 +1452,7 @@
 
 
         <div style="text-align:center;">
+
 
             <p style="
                 margin:5px 0;
@@ -1125,6 +1487,7 @@
 
             </p>
 
+
         </div>
 
 
@@ -1134,73 +1497,113 @@
 
 
 
+<!-- =====================================================
+     THEME SWITCHER
+     ===================================================== -->
+
+<div class="theme-switcher-bar">
+
+    <span class="theme-title">
+        Theme
+    </span>
+
+
+    <button
+        class="theme-btn"
+        data-theme="margalla-mist"
+        onclick="setTheme('margalla-mist')">
+
+        <span
+            class="color-dot"
+            style="background:#0b5c53;">
+        </span>
+
+        Margalla
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="institutional-blue"
+        onclick="setTheme('institutional-blue')">
+
+        <span
+            class="color-dot"
+            style="background:#1a5276;">
+        </span>
+
+        Blue
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="ivory-press"
+        onclick="setTheme('ivory-press')">
+
+        <span
+            class="color-dot"
+            style="background:#8b3a3a;">
+        </span>
+
+        Ivory
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="sage-calm"
+        onclick="setTheme('sage-calm')">
+
+        <span
+            class="color-dot"
+            style="background:#4a6b5d;">
+        </span>
+
+        Sage
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="indigo-night"
+        onclick="setTheme('indigo-night')">
+
+        <span
+            class="color-dot"
+            style="background:#6366f1;">
+        </span>
+
+        Night
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="graphite"
+        onclick="setTheme('graphite')">
+
+        <span
+            class="color-dot"
+            style="background:#a1a1aa;">
+        </span>
+
+        Graphite
+
+    </button>
+
+</div>
+
+
+
 <script src="js/modern.js"></script>
 
 
 </body>
-<!-- Floating Theme Switcher -->
-<div class="theme-switcher-bar">
 
-  <span class="theme-title">Theme</span>
-
-  <button class="theme-btn"
-          onclick="setTheme('margalla-mist')">
-
-    <span class="color-dot"
-          style="background:#0b5c53;"></span>
-
-    Margalla
-  </button>
-
-
-  <button class="theme-btn"
-          onclick="setTheme('institutional-blue')">
-
-    <span class="color-dot"
-          style="background:#1a5276;"></span>
-
-    Blue
-  </button>
-
-
-  <button class="theme-btn"
-          onclick="setTheme('ivory-press')">
-
-    <span class="color-dot"
-          style="background:#8b3a3a;"></span>
-
-    Ivory
-  </button>
-
-
-  <button class="theme-btn"
-          onclick="setTheme('sage-calm')">
-
-    <span class="color-dot"
-          style="background:#4a6b5d;"></span>
-
-    Sage
-  </button>
-
-
-  <button class="theme-btn"
-          onclick="setTheme('indigo-night')">
-
-    <span class="color-dot"
-          style="background:#6366f1;"></span>
-
-    Night
-  </button>
-
-
-  <button class="theme-btn"
-          onclick="setTheme('graphite')">
-
-    <span class="color-dot"
-          style="background:#a1a1aa;"></span>
-
-    Graphite
-  </button>
-
-</div>
 </html>
