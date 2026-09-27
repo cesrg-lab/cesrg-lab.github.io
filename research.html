@@ -19,11 +19,9 @@
           type="image/png"
           href="thumbs/CESRG_logo_circle.png">
 
-    <!-- CESRG MODERN CSS -->
     <link rel="stylesheet"
           href="css/modern.css">
 
-    <!-- Google Font -->
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
 
@@ -38,43 +36,340 @@
     <style>
 
         /* =====================================================
-           RESEARCH PAGE
+           RESEARCH PAGE THEME VARIABLES
            ===================================================== */
 
-        .research-nav {
-            position: sticky;
-            top: 82px;
-            z-index: 100;
-            margin: 35px 0 50px;
-            padding: 12px;
-            background: rgba(255,255,255,0.94);
-            border: 1px solid #e5eaf0;
-            border-radius: 16px;
-            box-shadow: 0 8px 30px rgba(7,21,37,0.07);
-            backdrop-filter: blur(14px);
+        :root {
+
+            /* Margalla Mist */
+            --research-primary: #0b5c53;
+            --research-primary-2: #174f49;
+            --research-blue: #287d72;
+            --research-accent: #4da89b;
+
+            --research-page-bg: #f7faf9;
+            --research-soft-bg: #edf5f2;
+            --research-card-bg: #ffffff;
+
+            --research-text: #172033;
+            --research-muted: #667085;
+            --research-border: #dce8e4;
+
+            --research-hero-1: #071d1a;
+            --research-hero-2: #174f49;
+
+            --research-hover: #e2f0ec;
         }
 
-        .research-nav-inner {
+
+        /* =====================================================
+           THEME 1 — MARGALLA MIST
+           ===================================================== */
+
+        [data-theme="margalla-mist"] {
+
+            --research-primary: #0b5c53;
+            --research-primary-2: #174f49;
+            --research-blue: #287d72;
+            --research-accent: #4da89b;
+
+            --research-page-bg: #f7faf9;
+            --research-soft-bg: #edf5f2;
+            --research-card-bg: #ffffff;
+
+            --research-text: #172033;
+            --research-muted: #667085;
+            --research-border: #dce8e4;
+
+            --research-hero-1: #071d1a;
+            --research-hero-2: #174f49;
+
+            --research-hover: #e2f0ec;
+        }
+
+
+        /* =====================================================
+           THEME 2 — INSTITUTIONAL BLUE
+           ===================================================== */
+
+        [data-theme="institutional-blue"] {
+
+            --research-primary: #1a5276;
+            --research-primary-2: #154360;
+            --research-blue: #2874a6;
+            --research-accent: #3498db;
+
+            --research-page-bg: #f6f9fc;
+            --research-soft-bg: #eaf2f8;
+            --research-card-bg: #ffffff;
+
+            --research-text: #172033;
+            --research-muted: #667085;
+            --research-border: #dce6ef;
+
+            --research-hero-1: #071a2d;
+            --research-hero-2: #154360;
+
+            --research-hover: #e1edf6;
+        }
+
+
+        /* =====================================================
+           THEME 3 — IVORY PRESS
+           ===================================================== */
+
+        [data-theme="ivory-press"] {
+
+            --research-primary: #8b3a3a;
+            --research-primary-2: #633333;
+            --research-blue: #9f4a4a;
+            --research-accent: #c27668;
+
+            --research-page-bg: #fbf8f3;
+            --research-soft-bg: #f3ede4;
+            --research-card-bg: #fffdf9;
+
+            --research-text: #332d2a;
+            --research-muted: #756b65;
+            --research-border: #e7ddd2;
+
+            --research-hero-1: #241817;
+            --research-hero-2: #633333;
+
+            --research-hover: #f0e5dc;
+        }
+
+
+        /* =====================================================
+           THEME 4 — SAGE CALM
+           ===================================================== */
+
+        [data-theme="sage-calm"] {
+
+            --research-primary: #4a6b5d;
+            --research-primary-2: #365247;
+            --research-blue: #638676;
+            --research-accent: #8daa8d;
+
+            --research-page-bg: #f7faf7;
+            --research-soft-bg: #edf3ed;
+            --research-card-bg: #ffffff;
+
+            --research-text: #26342d;
+            --research-muted: #6d7d73;
+            --research-border: #dce6de;
+
+            --research-hero-1: #17251f;
+            --research-hero-2: #365247;
+
+            --research-hover: #e3eee5;
+        }
+
+
+        /* =====================================================
+           THEME 5 — INDIGO NIGHT
+           ===================================================== */
+
+        [data-theme="indigo-night"] {
+
+            --research-primary: #6366f1;
+            --research-primary-2: #3730a3;
+            --research-blue: #818cf8;
+            --research-accent: #a5b4fc;
+
+            --research-page-bg: #0f172a;
+            --research-soft-bg: #172033;
+            --research-card-bg: #1e293b;
+
+            --research-text: #e5e7eb;
+            --research-muted: #aab3c2;
+            --research-border: #334155;
+
+            --research-hero-1: #070b18;
+            --research-hero-2: #312e81;
+
+            --research-hover: #273449;
+        }
+
+
+        /* =====================================================
+           THEME 6 — GRAPHITE
+           ===================================================== */
+
+        [data-theme="graphite"] {
+
+            --research-primary: #52525b;
+            --research-primary-2: #3f3f46;
+            --research-blue: #71717a;
+            --research-accent: #a1a1aa;
+
+            --research-page-bg: #f4f4f5;
+            --research-soft-bg: #e9e9eb;
+            --research-card-bg: #ffffff;
+
+            --research-text: #27272a;
+            --research-muted: #71717a;
+            --research-border: #d4d4d8;
+
+            --research-hero-1: #18181b;
+            --research-hero-2: #3f3f46;
+
+            --research-hover: #e4e4e7;
+        }
+
+
+        /* =====================================================
+           GLOBAL PAGE COLORS
+           ===================================================== */
+
+        body {
+            background: var(--research-page-bg);
+            color: var(--research-text);
+        }
+
+
+        /* =====================================================
+           HEADER BRAND
+           ===================================================== */
+
+        .research-brand {
+
             display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .research-nav a {
-            display: inline-flex;
             align-items: center;
-            padding: 9px 14px;
-            border-radius: 10px;
-            color: #475467;
-            font-size: 12px;
-            font-weight: 650;
+            justify-content: center;
+
+            gap: 10px;
+
+            margin: 10px auto;
+
+            width: max-content;
+
+            color: var(--research-text) !important;
+
+            font-weight: 800;
+
             text-decoration: none;
         }
 
+
+        .research-brand img {
+
+            width: 42px;
+            height: 42px;
+
+            object-fit: contain;
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .research-hero {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--research-hero-1),
+                    var(--research-hero-2)
+                ) !important;
+        }
+
+
+        .research-hero-badge {
+
+            display: inline-flex;
+
+            padding: 7px 14px;
+
+            margin-bottom: 18px;
+
+            border-radius: 50px;
+
+            background: rgba(255,255,255,.10);
+
+            border: 1px solid rgba(255,255,255,.15);
+
+            color: white;
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            letter-spacing: .4px;
+        }
+
+
+        /* =====================================================
+           RESEARCH NAVIGATION
+           ===================================================== */
+
+        .research-nav {
+
+            position: sticky;
+
+            top: 82px;
+
+            z-index: 100;
+
+            margin: 35px 0 50px;
+
+            padding: 12px;
+
+            background: var(--research-card-bg);
+
+            border: 1px solid var(--research-border);
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 8px 30px rgba(7,21,37,.07);
+
+            backdrop-filter: blur(14px);
+        }
+
+
+        .research-nav-inner {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+        }
+
+
+        .research-nav a {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            padding: 9px 14px;
+
+            border-radius: 10px;
+
+            color: var(--research-muted);
+
+            font-size: 12px;
+
+            font-weight: 650;
+
+            text-decoration: none;
+
+            transition: .25s ease;
+        }
+
+
         .research-nav a:hover {
-            background: #eef7fc;
-            color: #1769aa;
+
+            background: var(--research-hover);
+
+            color: var(--research-primary);
         }
 
 
@@ -83,33 +378,55 @@
            ===================================================== */
 
         .research-stats {
+
             display: grid;
+
             grid-template-columns:
                 repeat(auto-fit, minmax(180px, 1fr));
+
             gap: 16px;
+
             margin: 35px 0 65px;
         }
 
+
         .research-stat {
+
             padding: 25px 20px;
+
             text-align: center;
-            background: #ffffff;
-            border: 1px solid #e5eaf0;
+
+            background: var(--research-card-bg);
+
+            border: 1px solid var(--research-border);
+
             border-radius: 18px;
-            box-shadow: 0 7px 25px rgba(7,21,37,0.06);
+
+            box-shadow:
+                0 7px 25px rgba(7,21,37,.06);
         }
 
+
         .research-stat-number {
+
             display: block;
+
             margin-bottom: 7px;
-            color: #1769aa;
+
+            color: var(--research-primary);
+
             font-size: 28px;
+
             font-weight: 800;
         }
 
+
         .research-stat-label {
-            color: #667085;
+
+            color: var(--research-muted);
+
             font-size: 12px;
+
             font-weight: 600;
         }
 
@@ -119,77 +436,134 @@
            ===================================================== */
 
         .research-project {
+
             margin-bottom: 60px;
+
             padding: 35px;
-            background: #ffffff;
-            border: 1px solid #e4e9ef;
+
+            background: var(--research-card-bg);
+
+            border: 1px solid var(--research-border);
+
             border-radius: 24px;
-            box-shadow: 0 10px 35px rgba(7,21,37,0.07);
+
+            box-shadow:
+                0 10px 35px rgba(7,21,37,.07);
         }
+
 
         .research-project.featured {
-            border-top: 5px solid #1769aa;
+
+            border-top:
+                5px solid var(--research-primary);
         }
 
+
         .project-header {
+
             display: flex;
+
             justify-content: space-between;
+
             align-items: flex-start;
+
             gap: 25px;
+
             margin-bottom: 30px;
         }
 
+
         .project-title-area {
+
             flex: 1;
         }
 
+
         .project-number {
+
             display: inline-flex;
+
             padding: 6px 12px;
+
             margin-bottom: 13px;
+
             border-radius: 50px;
-            background: #edf7fc;
-            color: #1769aa;
+
+            background: var(--research-hover);
+
+            color: var(--research-primary);
+
             font-size: 11px;
+
             font-weight: 750;
+
             letter-spacing: .4px;
+
             text-transform: uppercase;
         }
 
+
         .project-title {
+
             margin: 0;
-            color: #0b1f3a;
+
+            color: var(--research-text);
+
             font-size: 27px;
+
             line-height: 1.35;
         }
 
+
+        /* =====================================================
+           FUNDING BOX
+           ===================================================== */
+
         .funding-box {
+
             flex: 0 0 190px;
+
             padding: 20px;
+
             text-align: center;
+
             background:
                 linear-gradient(
                     135deg,
-                    #071525,
-                    #123b69
+                    var(--research-hero-1),
+                    var(--research-hero-2)
                 );
+
             border-radius: 17px;
+
             color: white;
         }
 
+
         .funding-label {
+
             display: block;
+
             margin-bottom: 6px;
+
             color: rgba(255,255,255,.70);
+
             font-size: 10px;
+
             font-weight: 700;
+
             letter-spacing: .7px;
+
             text-transform: uppercase;
         }
 
+
         .funding-value {
+
             display: block;
+
             font-size: 20px;
+
             font-weight: 800;
         }
 
@@ -199,23 +573,36 @@
            ===================================================== */
 
         .project-meta {
+
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 10px;
+
             margin: 20px 0 30px;
         }
 
+
         .meta-item {
+
             padding: 9px 13px;
-            background: #f6f8fa;
-            border: 1px solid #e6ebf0;
+
+            background: var(--research-soft-bg);
+
+            border: 1px solid var(--research-border);
+
             border-radius: 10px;
-            color: #475467;
+
+            color: var(--research-muted);
+
             font-size: 12px;
         }
 
+
         .meta-item strong {
-            color: #172033;
+
+            color: var(--research-text);
         }
 
 
@@ -224,44 +611,76 @@
            ===================================================== */
 
         .research-content-grid {
+
             display: grid;
+
             grid-template-columns:
                 repeat(auto-fit, minmax(280px, 1fr));
+
             gap: 22px;
         }
 
+
         .research-content-box {
+
             padding: 25px;
-            background: #f8fafc;
-            border: 1px solid #e6ebf0;
+
+            background: var(--research-soft-bg);
+
+            border: 1px solid var(--research-border);
+
             border-radius: 17px;
         }
 
+
         .research-content-box.full {
+
             grid-column: 1 / -1;
         }
 
+
         .research-content-box h4 {
+
             margin: 0 0 15px;
-            color: #0b1f3a;
+
+            color: var(--research-text);
+
             font-size: 17px;
         }
 
+
         .research-content-box p {
-            color: #475467;
+
+            color: var(--research-muted);
+
             font-size: 14px;
+
             line-height: 1.75;
         }
 
+
+        .research-content-box p strong {
+
+            color: var(--research-text);
+        }
+
+
         .research-content-box ul {
+
             margin: 0;
+
             padding-left: 20px;
         }
 
+
         .research-content-box li {
+
             margin-bottom: 10px;
-            color: #475467;
+
+            color: var(--research-muted);
+
             font-size: 14px;
+
             line-height: 1.6;
         }
 
@@ -271,25 +690,40 @@
            ===================================================== */
 
         .team-list {
+
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 9px;
         }
 
+
         .team-member {
+
             display: inline-flex;
+
             align-items: center;
+
             padding: 9px 12px;
-            background: white;
-            border: 1px solid #dfe7ee;
+
+            background: var(--research-card-bg);
+
+            border: 1px solid var(--research-border);
+
             border-radius: 10px;
-            color: #344054;
+
+            color: var(--research-muted);
+
             font-size: 12px;
+
             font-weight: 600;
         }
 
+
         .team-member strong {
-            color: #1769aa;
+
+            color: var(--research-primary);
         }
 
 
@@ -298,46 +732,78 @@
            ===================================================== */
 
         .research-pipeline {
+
             display: grid;
+
             grid-template-columns:
                 repeat(auto-fit, minmax(180px, 1fr));
+
             gap: 12px;
+
             margin-top: 15px;
         }
 
+
         .pipeline-step {
+
             position: relative;
+
             padding: 20px 15px;
+
             text-align: center;
-            background: white;
-            border: 1px solid #dfe7ee;
+
+            background: var(--research-card-bg);
+
+            border: 1px solid var(--research-border);
+
             border-radius: 14px;
         }
 
+
         .pipeline-number {
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
             width: 32px;
+
             height: 32px;
+
             margin: 0 auto 10px;
+
             border-radius: 50%;
-            background: #1769aa;
+
+            background: var(--research-primary);
+
             color: white;
+
             font-size: 12px;
+
             font-weight: 800;
         }
 
+
         .pipeline-step h5 {
+
             margin: 0 0 7px;
-            color: #172033;
+
+            color: var(--research-text);
+
             font-size: 13px;
         }
 
+
         .pipeline-step p {
+
             margin: 0;
-            color: #667085;
+
+            color: var(--research-muted);
+
             font-size: 11px;
+
             line-height: 1.5;
         }
 
@@ -347,125 +813,291 @@
            ===================================================== */
 
         .publication-list {
+
             display: grid;
+
             gap: 10px;
         }
 
+
         .publication-item {
+
             display: flex;
+
             align-items: flex-start;
+
             gap: 13px;
+
             padding: 15px;
-            background: white;
-            border: 1px solid #e2e8ef;
+
+            background: var(--research-card-bg);
+
+            border: 1px solid var(--research-border);
+
             border-radius: 12px;
+
             transition: .25s ease;
         }
 
+
         .publication-item:hover {
-            border-color: #1769aa;
+
+            border-color: var(--research-primary);
+
             transform: translateX(3px);
         }
 
+
         .publication-number {
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
             flex: 0 0 28px;
+
             height: 28px;
+
             border-radius: 8px;
-            background: #edf7fc;
-            color: #1769aa;
+
+            background: var(--research-hover);
+
+            color: var(--research-primary);
+
             font-size: 11px;
+
             font-weight: 800;
         }
 
+
         .publication-item a {
-            color: #344054;
+
+            color: var(--research-muted);
+
             font-size: 13px;
+
             line-height: 1.55;
+
             font-weight: 600;
+
             text-decoration: none;
         }
 
+
         .publication-item a:hover {
-            color: #1769aa;
+
+            color: var(--research-primary);
         }
 
 
         /* =====================================================
-           COMPLETED PROJECT
+           COMPLETED PROJECTS
            ===================================================== */
 
         .completed-grid {
+
             display: grid;
+
             grid-template-columns:
                 repeat(auto-fit, minmax(310px, 1fr));
+
             gap: 22px;
         }
 
+
         .completed-card {
+
             padding: 28px;
-            background: #ffffff;
-            border: 1px solid #e3e8ee;
+
+            background: var(--research-card-bg);
+
+            border: 1px solid var(--research-border);
+
             border-radius: 19px;
-            box-shadow: 0 7px 25px rgba(7,21,37,0.06);
+
+            box-shadow:
+                0 7px 25px rgba(7,21,37,.06);
+
             transition: .3s ease;
         }
 
+
         .completed-card:hover {
+
             transform: translateY(-5px);
-            box-shadow: 0 16px 35px rgba(7,21,37,0.10);
+
+            box-shadow:
+                0 16px 35px rgba(7,21,37,.10);
         }
 
+
         .completed-card h3 {
+
             margin: 12px 0;
-            color: #0b1f3a;
+
+            color: var(--research-text);
+
             font-size: 19px;
+
             line-height: 1.45;
         }
 
+
+        .completed-card h4 {
+
+            color: var(--research-text) !important;
+        }
+
+
         .completed-card p {
-            color: #667085;
+
+            color: var(--research-muted);
+
             font-size: 13px;
+
             line-height: 1.7;
         }
 
+
+        .completed-card p strong {
+
+            color: var(--research-text);
+        }
+
+
         .completed-card ul {
+
             padding-left: 19px;
         }
 
+
         .completed-card li {
+
             margin-bottom: 7px;
-            color: #475467;
+
+            color: var(--research-muted);
+
             font-size: 13px;
         }
 
+
+        .completed-card li strong {
+
+            color: var(--research-text);
+        }
+
+
         .completed-label {
+
             display: inline-flex;
+
             padding: 5px 10px;
+
             border-radius: 50px;
-            background: #f0fdf4;
-            color: #15803d;
+
+            background: var(--research-hover);
+
+            color: var(--research-primary);
+
             font-size: 10px;
+
             font-weight: 750;
+
             letter-spacing: .5px;
+
             text-transform: uppercase;
         }
 
+
         .completed-links {
+
             margin-top: 20px;
+
             padding-top: 15px;
-            border-top: 1px solid #edf0f3;
+
+            border-top:
+                1px solid var(--research-border);
         }
 
+
         .completed-links a {
+
             display: block;
+
             margin: 8px 0;
-            color: #1769aa;
+
+            color: var(--research-primary);
+
             font-size: 12px;
+
             font-weight: 650;
+
             line-height: 1.5;
+        }
+
+
+        .completed-links a:hover {
+
+            color: var(--research-blue);
+        }
+
+
+        /* =====================================================
+           CORE RESEARCH AREA PILLS
+           ===================================================== */
+
+        .research-pill {
+
+            display: inline-flex;
+
+            padding: 9px 13px;
+
+            background: var(--research-soft-bg);
+
+            border: 1px solid var(--research-border);
+
+            border-radius: 50px;
+
+            color: var(--research-muted);
+
+            font-size: 11px;
+
+            font-weight: 650;
+
+            transition: .2s ease;
+        }
+
+
+        .research-pill:hover {
+
+            background: var(--research-hover);
+
+            color: var(--research-primary);
+
+            border-color: var(--research-accent);
+        }
+
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+
+        #footer {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--research-hero-1),
+                    var(--research-hero-2)
+                ) !important;
+        }
+
+
+        #footer a {
+
+            color: var(--research-accent);
         }
 
 
@@ -476,24 +1108,46 @@
         @media (max-width: 760px) {
 
             .research-nav {
+
                 position: static;
             }
 
+
             .research-project {
+
                 padding: 22px;
             }
 
+
             .project-header {
+
                 flex-direction: column;
             }
 
+
             .funding-box {
+
                 width: 100%;
+
                 box-sizing: border-box;
             }
 
+
             .project-title {
+
                 font-size: 22px;
+            }
+
+
+            .research-content-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .research-content-box.full {
+
+                grid-column: auto;
             }
 
         }
@@ -518,27 +1172,13 @@
 
             <div class="container">
 
+
                 <a href="index.html"
-                   style="
-                       display:flex;
-                       align-items:center;
-                       justify-content:center;
-                       gap:10px;
-                       margin:10px auto;
-                       width:max-content;
-                       color:#0b1f3a;
-                       font-weight:800;
-                       text-decoration:none;
-                   ">
+                   class="research-brand">
 
                     <img
                         src="thumbs/CESRG_logo_circle02.png"
-                        alt="CESRG Logo"
-                        style="
-                            width:42px;
-                            height:42px;
-                            object-fit:contain;
-                        ">
+                        alt="CESRG Logo">
 
                     <span>
                         CESRG
@@ -566,33 +1206,48 @@
                         </a>
                     </li>
 
+
                     <li>
                         <a href="people.html">
                             People
                         </a>
                     </li>
 
+
                     <li class="active">
                         <a href="research.html">
                             Research
                         </a>
                     </li>
+
+
                     <li>
                         <a href="collaboration.html">
                             Collaboration
-                     </a>
+                        </a>
                     </li>
+
+
                     <li>
                         <a href="publications.html">
                             Publications
                         </a>
                     </li>
 
+
                     <li>
                         <a href="gallery.html">
                             Gallery
                         </a>
                     </li>
+
+
+                    <li>
+                        <a href="news.html">
+                            News
+                        </a>
+                    </li>
+
 
                     <li>
                         <a href="contact.html">
@@ -616,23 +1271,14 @@
      HERO
      ===================================================== -->
 
-<section class="jumbotron">
+<section class="jumbotron research-hero">
 
     <div class="container">
 
         <div style="max-width:900px;">
 
-            <div style="
-                display:inline-flex;
-                padding:7px 14px;
-                margin-bottom:18px;
-                border-radius:50px;
-                background:rgba(255,255,255,0.10);
-                border:1px solid rgba(255,255,255,0.15);
-                font-size:12px;
-                font-weight:700;
-                letter-spacing:.4px;
-            ">
+
+            <div class="research-hero-badge">
 
                 RESEARCH & INNOVATION
 
@@ -676,13 +1322,16 @@
                 Current Research
             </a>
 
+
             <a href="#project-team">
                 Project Team
             </a>
 
+
             <a href="#contributions">
                 Contributions
             </a>
+
 
             <a href="#completed">
                 Completed Projects
@@ -777,10 +1426,11 @@
             Current Research
         </h2>
 
+
         <p style="
             max-width:760px;
             margin:0 auto;
-            color:#667085;
+            color:var(--research-muted) !important;
         ">
 
             Our current flagship research focuses on
@@ -826,6 +1476,7 @@
                     Funding Amount
                 </span>
 
+
                 <span class="funding-value">
                     19.37 Million PKR
                 </span>
@@ -836,7 +1487,12 @@
 
 
 
+        <!-- =================================================
+             PROJECT META
+             ================================================= -->
+
         <div class="project-meta">
+
 
             <div class="meta-item">
 
@@ -870,12 +1526,13 @@
 
             </div>
 
+
         </div>
 
 
 
         <!-- =================================================
-             TEAM
+             PROJECT TEAM
              ================================================= -->
 
         <div id="project-team"
@@ -889,35 +1546,63 @@
 
             <div class="team-list">
 
+
                 <span class="team-member">
-                    <strong>Dr. Ali Arshad Uppal</strong>
+
+                    <strong>
+                        Dr. Ali Arshad Uppal
+                    </strong>
+
                     &nbsp; · PI, Pakistan
+
                 </span>
 
+
                 <span class="team-member">
-                    <strong>Dr. Qadeer Ahmed</strong>
+
+                    <strong>
+                        Dr. Qadeer Ahmed
+                    </strong>
+
                     &nbsp; · Co-PI, USA
+
                 </span>
 
+
                 <span class="team-member">
+
                     Dr. Ahmad Yar · RA
+
                 </span>
 
+
                 <span class="team-member">
+
                     Mr. Afaq Ahmed · RA
+
                 </span>
 
+
                 <span class="team-member">
+
                     Mr. Sohail Ahmad · RA
+
                 </span>
 
+
                 <span class="team-member">
+
                     Mr. Azmatullah · PhD Student
+
                 </span>
 
+
                 <span class="team-member">
+
                     Ms. Sheharbano · PhD Student
+
                 </span>
+
 
             </div>
 
@@ -938,6 +1623,7 @@
                     Background
                 </h4>
 
+
                 <p>
 
                     The EV market is steadily growing,
@@ -947,6 +1633,7 @@
                     core of EVs.
 
                 </p>
+
 
                 <p>
 
@@ -973,6 +1660,7 @@
                     Intellectual Merit
                 </h4>
 
+
                 <ul>
 
                     <li>
@@ -980,10 +1668,12 @@
                         ACB networks
                     </li>
 
+
                     <li>
                         Unified cell modeling for
                         local and global optimization
                     </li>
+
 
                     <li>
                         Range-extension-aware NMPC design
@@ -1001,16 +1691,19 @@
                     Broader Impact
                 </h4>
 
+
                 <ul>
 
                     <li>
                         Improved EV safety and reliability
                     </li>
 
+
                     <li>
                         Reduced emissions and
                         battery degradation
                     </li>
+
 
                     <li>
                         Enhanced driving range
@@ -1047,9 +1740,11 @@
                         01
                     </div>
 
+
                     <h5>
                         ACBN Selection
                     </h5>
+
 
                     <p>
                         Selection of an appropriate
@@ -1065,9 +1760,11 @@
                         02
                     </div>
 
+
                     <h5>
                         Cell Modeling
                     </h5>
+
 
                     <p>
                         Mathematical modeling of SoC,
@@ -1083,9 +1780,11 @@
                         03
                     </div>
 
+
                     <h5>
                         Loss Modeling
                     </h5>
+
 
                     <p>
                         High-fidelity balancing current
@@ -1101,9 +1800,11 @@
                         04
                     </div>
 
+
                     <h5>
                         NMPC Design
                     </h5>
+
 
                     <p>
                         Range-aware Nonlinear Model
@@ -1119,9 +1820,11 @@
                         05
                     </div>
 
+
                     <h5>
                         Simulation
                     </h5>
+
 
                     <p>
                         Simulation-based performance
@@ -1137,9 +1840,11 @@
                         06
                     </div>
 
+
                     <h5>
                         Prototype
                     </h5>
+
 
                     <p>
                         Real-time prototype development
@@ -1177,6 +1882,7 @@
                         01
                     </span>
 
+
                     <a
                         href="https://aauppal.github.io/publication/C5"
                         target="_blank"
@@ -1197,6 +1903,7 @@
                     <span class="publication-number">
                         02
                     </span>
+
 
                     <a
                         href="https://aauppal.github.io/publication/J30"
@@ -1219,6 +1926,7 @@
                         03
                     </span>
 
+
                     <a
                         href="https://aauppal.github.io/publication/C6"
                         target="_blank"
@@ -1239,6 +1947,7 @@
                     <span class="publication-number">
                         04
                     </span>
+
 
                     <a
                         href="https://aauppal.github.io/publication/J32"
@@ -1261,6 +1970,7 @@
                         05
                     </span>
 
+
                     <a
                         href="https://aauppal.github.io/publication/C7"
                         target="_blank"
@@ -1281,6 +1991,7 @@
                     <span class="publication-number">
                         06
                     </span>
+
 
                     <a
                         href="https://aauppal.github.io/publication/J33"
@@ -1303,6 +2014,7 @@
                         07
                     </span>
 
+
                     <a
                         href="https://aauppal.github.io/publication/C8"
                         target="_blank"
@@ -1323,6 +2035,7 @@
                     <span class="publication-number">
                         08
                     </span>
+
 
                     <a
                         href="https://aauppal.github.io/publication/J34"
@@ -1359,14 +2072,16 @@
 
     <div class="section-title">
 
+
         <h2>
             Completed Projects
         </h2>
 
+
         <p style="
             max-width:760px;
             margin:0 auto;
-            color:#667085;
+            color:var(--research-muted) !important;
         ">
 
             Previous CESRG projects contributing to
@@ -1388,8 +2103,11 @@
 
         <article class="completed-card">
 
+
             <span class="completed-label">
+
                 Completed Project
+
             </span>
 
 
@@ -1415,7 +2133,6 @@
 
             <h4 style="
                 margin-top:22px;
-                color:#172033;
                 font-size:14px;
             ">
 
@@ -1427,20 +2144,29 @@
             <ul>
 
                 <li>
+
                     <strong>
                         Dr. Ali Arshad Uppal
                     </strong>
+
                     · PI
+
                 </li>
 
+
                 <li>
+
                     Dr. Syed Bilal Javed
                     · Co-PI, NESCOM
+
                 </li>
 
+
                 <li>
+
                     Dr. Rizwan Azam
                     · Co-PI, COMSATS
+
                 </li>
 
             </ul>
@@ -1456,8 +2182,11 @@
 
         <article class="completed-card">
 
+
             <span class="completed-label">
+
                 Completed Project
+
             </span>
 
 
@@ -1472,7 +2201,6 @@
 
             <h4 style="
                 margin-top:22px;
-                color:#172033;
                 font-size:14px;
             ">
 
@@ -1484,15 +2212,20 @@
             <ul>
 
                 <li>
+
                     <strong>
                         Dr. Ali Arshad Uppal
                     </strong>
+
                     · PI
+
                 </li>
+
 
                 <li>
                     Mr. Afaq Ahmed
                 </li>
+
 
                 <li>
                     Dr. Syed Bilal Javed
@@ -1503,8 +2236,8 @@
 
             <div class="completed-links">
 
+
                 <h4 style="
-                    color:#172033;
                     font-size:14px;
                 ">
 
@@ -1549,6 +2282,7 @@
 
                 </a>
 
+
             </div>
 
         </article>
@@ -1561,24 +2295,31 @@
 
 
 <!-- =====================================================
-     RESEARCH AREAS
+     CORE RESEARCH AREAS
      ===================================================== -->
 
 <section class="container"
-         style="margin-top:80px; margin-bottom:80px;">
+         style="
+             margin-top:80px;
+             margin-bottom:80px;
+         ">
+
 
     <div class="research-project">
 
+
         <div class="section-title">
+
 
             <h2>
                 Core Research Areas
             </h2>
 
+
             <p style="
                 max-width:720px;
                 margin:0 auto;
-                color:#667085;
+                color:var(--research-muted) !important;
             ">
 
                 CESRG research connects advanced control
@@ -1597,53 +2338,66 @@
             gap:8px;
         ">
 
+
             <span class="research-pill">
                 Nonlinear Control
             </span>
+
 
             <span class="research-pill">
                 Model Predictive Control
             </span>
 
+
             <span class="research-pill">
                 Active Cell Balancing
             </span>
+
 
             <span class="research-pill">
                 Battery Management Systems
             </span>
 
+
             <span class="research-pill">
                 Lithium-ion Batteries
             </span>
+
 
             <span class="research-pill">
                 Electric Vehicles
             </span>
 
+
             <span class="research-pill">
                 Energy Storage
             </span>
+
 
             <span class="research-pill">
                 Thermal Management
             </span>
 
+
             <span class="research-pill">
                 Machine Learning
             </span>
+
 
             <span class="research-pill">
                 State Estimation
             </span>
 
+
             <span class="research-pill">
                 Embedded Systems
             </span>
 
+
             <span class="research-pill">
                 Intelligent Energy Systems
             </span>
+
 
         </div>
 
@@ -1670,16 +2424,20 @@
         ">
 
 
+            <!-- FOOTER COLUMN 1 -->
+
             <div>
 
                 <h3>
                     CESRG
                 </h3>
 
+
                 <p>
                     Control & Energy Systems
                     Research Group
                 </p>
+
 
                 <p>
                     COMSATS University Islamabad
@@ -1688,42 +2446,63 @@
             </div>
 
 
+            <!-- FOOTER COLUMN 2 -->
+
             <div>
 
                 <h3>
                     Contact Information
                 </h3>
 
+
                 <p>
+
                     <strong>
                         Office Hours:
                     </strong>
+
                     Monday–Friday
                     (9:00am – 5:00pm)
+
                 </p>
 
+
                 <p>
+
                     <strong>
                         Phone:
                     </strong>
+
                     +92-51-9049255
+
                 </p>
 
+
                 <p>
+
                     <strong>
                         Cell:
                     </strong>
+
                     +92-331-3666163
+
                 </p>
 
+
                 <p>
+
                     <a href="mailto:ali_arshad@comsats.edu.pk">
+
                         ali_arshad@comsats.edu.pk
+
                     </a>
+
                 </p>
 
             </div>
 
+
+            <!-- FOOTER COLUMN 3 -->
 
             <div>
 
@@ -1731,13 +2510,21 @@
                     Address
                 </h3>
 
+
                 <p>
-                Control & Energy Systems Research Group (CESRG)
-                <br>
-                R&D Lab, COMSATS University Islamabad
-                <br>
-                Park Road, Tarlai Kalan, Islamabad 45550, Pakistan
-            </p>
+
+                    Control & Energy Systems Research Group (CESRG)
+
+                    <br>
+
+                    R&D Lab, COMSATS University Islamabad
+
+                    <br>
+
+                    Park Road, Tarlai Kalan,
+                    Islamabad 45550, Pakistan
+
+                </p>
 
 
                 <a
@@ -1762,15 +2549,19 @@
             text-align:center;
         ">
 
+
             <p style="
                 margin:5px 0;
-                color:rgba(255,255,255,0.65);
+                color:rgba(255,255,255,.65);
                 font-size:14px;
             ">
 
                 © <span data-current-year>2026</span>
+
                 CESRG |
+
                 COMSATS University Islamabad.
+
                 All rights reserved.
 
             </p>
@@ -1778,28 +2569,151 @@
 
             <p style="
                 margin:4px 0 0;
-                color:rgba(255,255,255,0.45);
+                color:rgba(255,255,255,.45);
                 font-size:13px;
             ">
 
                 Website Designed & Maintained by
+
 
                 <a
                     href="https://www.upwork.com/freelancers/~0198227b97d16b50c9"
                     target="_blank"
                     rel="noopener noreferrer">
 
-                    Sohail Ahmad,Roshaan Imran
+                    Sohail Ahmad, Roshaan Imran
 
                 </a>
 
             </p>
 
+
         </div>
+
 
     </div>
 
 </footer>
+
+
+
+<!-- =====================================================
+     FLOATING THEME SWITCHER
+     IMPORTANT:
+     KEEP THIS INSIDE BODY
+     ===================================================== -->
+
+<div class="theme-switcher-bar">
+
+
+    <span class="theme-title">
+        Theme
+    </span>
+
+
+    <!-- MARGALLA -->
+
+    <button
+        class="theme-btn"
+        data-theme="margalla-mist"
+        onclick="setTheme('margalla-mist')">
+
+        <span
+            class="color-dot"
+            style="background:#0b5c53;">
+        </span>
+
+        Margalla
+
+    </button>
+
+
+    <!-- BLUE -->
+
+    <button
+        class="theme-btn"
+        data-theme="institutional-blue"
+        onclick="setTheme('institutional-blue')">
+
+        <span
+            class="color-dot"
+            style="background:#1a5276;">
+        </span>
+
+        Blue
+
+    </button>
+
+
+    <!-- IVORY -->
+
+    <button
+        class="theme-btn"
+        data-theme="ivory-press"
+        onclick="setTheme('ivory-press')">
+
+        <span
+            class="color-dot"
+            style="background:#8b3a3a;">
+        </span>
+
+        Ivory
+
+    </button>
+
+
+    <!-- SAGE -->
+
+    <button
+        class="theme-btn"
+        data-theme="sage-calm"
+        onclick="setTheme('sage-calm')">
+
+        <span
+            class="color-dot"
+            style="background:#4a6b5d;">
+        </span>
+
+        Sage
+
+    </button>
+
+
+    <!-- NIGHT -->
+
+    <button
+        class="theme-btn"
+        data-theme="indigo-night"
+        onclick="setTheme('indigo-night')">
+
+        <span
+            class="color-dot"
+            style="background:#6366f1;">
+        </span>
+
+        Night
+
+    </button>
+
+
+    <!-- GRAPHITE -->
+
+    <button
+        class="theme-btn"
+        data-theme="graphite"
+        onclick="setTheme('graphite')">
+
+        <span
+            class="color-dot"
+            style="background:#a1a1aa;">
+        </span>
+
+        Graphite
+
+    </button>
+
+
+</div>
 
 
 
@@ -1811,69 +2725,5 @@
 
 
 </body>
-<!-- Floating Theme Switcher -->
-<div class="theme-switcher-bar">
 
-  <span class="theme-title">Theme</span>
-
-  <button class="theme-btn"
-          onclick="setTheme('margalla-mist')">
-
-    <span class="color-dot"
-          style="background:#0b5c53;"></span>
-
-    Margalla
-  </button>
-
-
-  <button class="theme-btn"
-          onclick="setTheme('institutional-blue')">
-
-    <span class="color-dot"
-          style="background:#1a5276;"></span>
-
-    Blue
-  </button>
-
-
-  <button class="theme-btn"
-          onclick="setTheme('ivory-press')">
-
-    <span class="color-dot"
-          style="background:#8b3a3a;"></span>
-
-    Ivory
-  </button>
-
-
-  <button class="theme-btn"
-          onclick="setTheme('sage-calm')">
-
-    <span class="color-dot"
-          style="background:#4a6b5d;"></span>
-
-    Sage
-  </button>
-
-
-  <button class="theme-btn"
-          onclick="setTheme('indigo-night')">
-
-    <span class="color-dot"
-          style="background:#6366f1;"></span>
-
-    Night
-  </button>
-
-
-  <button class="theme-btn"
-          onclick="setTheme('graphite')">
-
-    <span class="color-dot"
-          style="background:#a1a1aa;"></span>
-
-    Graphite
-  </button>
-
-</div>
 </html>
