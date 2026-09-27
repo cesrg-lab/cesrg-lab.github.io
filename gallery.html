@@ -36,24 +36,276 @@
     <style>
 
         /* =====================================================
+           GALLERY PAGE THEME VARIABLES
+           ===================================================== */
+
+        :root {
+
+            --gallery-primary: #0b5c53;
+            --gallery-primary-2: #174f49;
+            --gallery-blue: #287d72;
+            --gallery-accent: #4da89b;
+
+            --gallery-page-bg: #f7faf9;
+            --gallery-soft-bg: #edf5f2;
+            --gallery-card-bg: #ffffff;
+
+            --gallery-text: #172033;
+            --gallery-muted: #667085;
+
+            --gallery-border: #dce8e4;
+            --gallery-strong-border: #c9dad5;
+
+            --gallery-hover: #e2f0ec;
+
+            --gallery-hero-1: #071d1a;
+            --gallery-hero-2: #174f49;
+
+            --gallery-shadow:
+                0 7px 25px rgba(7,21,37,.06);
+
+            --gallery-shadow-hover:
+                0 17px 35px rgba(7,21,37,.12);
+        }
+
+
+        /* =====================================================
+           1. MARGALLA MIST
+           ===================================================== */
+
+        [data-theme="margalla-mist"] {
+
+            --gallery-primary: #0b5c53;
+            --gallery-primary-2: #174f49;
+            --gallery-blue: #287d72;
+            --gallery-accent: #4da89b;
+
+            --gallery-page-bg: #f7faf9;
+            --gallery-soft-bg: #edf5f2;
+            --gallery-card-bg: #ffffff;
+
+            --gallery-text: #172033;
+            --gallery-muted: #667085;
+
+            --gallery-border: #dce8e4;
+            --gallery-strong-border: #c9dad5;
+
+            --gallery-hover: #e2f0ec;
+
+            --gallery-hero-1: #071d1a;
+            --gallery-hero-2: #174f49;
+        }
+
+
+        /* =====================================================
+           2. INSTITUTIONAL BLUE
+           ===================================================== */
+
+        [data-theme="institutional-blue"] {
+
+            --gallery-primary: #1a5276;
+            --gallery-primary-2: #154360;
+            --gallery-blue: #2874a6;
+            --gallery-accent: #3498db;
+
+            --gallery-page-bg: #f6f9fc;
+            --gallery-soft-bg: #eaf2f8;
+            --gallery-card-bg: #ffffff;
+
+            --gallery-text: #172033;
+            --gallery-muted: #667085;
+
+            --gallery-border: #dce6ef;
+            --gallery-strong-border: #c7d8e7;
+
+            --gallery-hover: #e1edf6;
+
+            --gallery-hero-1: #071a2d;
+            --gallery-hero-2: #154360;
+        }
+
+
+        /* =====================================================
+           3. IVORY PRESS
+           ===================================================== */
+
+        [data-theme="ivory-press"] {
+
+            --gallery-primary: #8b3a3a;
+            --gallery-primary-2: #633333;
+            --gallery-blue: #9f4a4a;
+            --gallery-accent: #c27668;
+
+            --gallery-page-bg: #fbf8f3;
+            --gallery-soft-bg: #f3ede4;
+            --gallery-card-bg: #fffdf9;
+
+            --gallery-text: #332d2a;
+            --gallery-muted: #756b65;
+
+            --gallery-border: #e7ddd2;
+            --gallery-strong-border: #d8c8bb;
+
+            --gallery-hover: #f0e5dc;
+
+            --gallery-hero-1: #241817;
+            --gallery-hero-2: #633333;
+        }
+
+
+        /* =====================================================
+           4. SAGE CALM
+           ===================================================== */
+
+        [data-theme="sage-calm"] {
+
+            --gallery-primary: #4a6b5d;
+            --gallery-primary-2: #365247;
+            --gallery-blue: #638676;
+            --gallery-accent: #8daa8d;
+
+            --gallery-page-bg: #f7faf7;
+            --gallery-soft-bg: #edf3ed;
+            --gallery-card-bg: #ffffff;
+
+            --gallery-text: #26342d;
+            --gallery-muted: #6d7d73;
+
+            --gallery-border: #dce6de;
+            --gallery-strong-border: #cbd9ce;
+
+            --gallery-hover: #e3eee5;
+
+            --gallery-hero-1: #17251f;
+            --gallery-hero-2: #365247;
+        }
+
+
+        /* =====================================================
+           5. INDIGO NIGHT
+           ===================================================== */
+
+        [data-theme="indigo-night"] {
+
+            --gallery-primary: #6366f1;
+            --gallery-primary-2: #3730a3;
+            --gallery-blue: #818cf8;
+            --gallery-accent: #a5b4fc;
+
+            --gallery-page-bg: #0f172a;
+            --gallery-soft-bg: #172033;
+            --gallery-card-bg: #1e293b;
+
+            --gallery-text: #e5e7eb;
+            --gallery-muted: #aab3c2;
+
+            --gallery-border: #334155;
+            --gallery-strong-border: #475569;
+
+            --gallery-hover: #273449;
+
+            --gallery-hero-1: #070b18;
+            --gallery-hero-2: #312e81;
+        }
+
+
+        /* =====================================================
+           6. GRAPHITE
+           ===================================================== */
+
+        [data-theme="graphite"] {
+
+            --gallery-primary: #52525b;
+            --gallery-primary-2: #3f3f46;
+            --gallery-blue: #71717a;
+            --gallery-accent: #a1a1aa;
+
+            --gallery-page-bg: #f4f4f5;
+            --gallery-soft-bg: #e9e9eb;
+            --gallery-card-bg: #ffffff;
+
+            --gallery-text: #27272a;
+            --gallery-muted: #71717a;
+
+            --gallery-border: #d4d4d8;
+            --gallery-strong-border: #bdbdc3;
+
+            --gallery-hover: #e4e4e7;
+
+            --gallery-hero-1: #18181b;
+            --gallery-hero-2: #3f3f46;
+        }
+
+
+        /* =====================================================
            GALLERY PAGE
            ===================================================== */
 
+        body {
+
+            background: var(--gallery-page-bg);
+            color: var(--gallery-text);
+        }
+
+
+        /* =====================================================
+           HEADER LOGO
+           ===================================================== */
+
+        .masthead a[style*="color:#0b1f3a"] {
+
+            color: var(--gallery-primary-2) !important;
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .jumbotron {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--gallery-hero-1),
+                    var(--gallery-hero-2)
+                ) !important;
+        }
+
+
+        /* =====================================================
+           GALLERY NAVIGATION
+           ===================================================== */
+
         .gallery-nav {
+
             position: sticky;
             top: 82px;
             z-index: 100;
+
             margin: 35px 0 50px;
             padding: 12px;
-            background: rgba(255,255,255,.94);
-            border: 1px solid #e5eaf0;
+
+            background:
+                color-mix(
+                    in srgb,
+                    var(--gallery-card-bg) 94%,
+                    transparent
+                );
+
+            border: 1px solid var(--gallery-border);
+
             border-radius: 16px;
-            box-shadow: 0 8px 30px rgba(7,21,37,.07);
+
+            box-shadow:
+                0 8px 30px rgba(7,21,37,.07);
+
             backdrop-filter: blur(14px);
         }
 
 
         .gallery-nav-inner {
+
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -62,20 +314,28 @@
 
 
         .gallery-nav a {
+
             display: inline-flex;
+
             padding: 9px 14px;
+
             border-radius: 10px;
-            color: #475467;
+
+            color: var(--gallery-muted);
+
             font-size: 12px;
             font-weight: 650;
+
             text-decoration: none;
+
             transition: .25s ease;
         }
 
 
         .gallery-nav a:hover {
-            background: #edf7fc;
-            color: #1769aa;
+
+            background: var(--gallery-hover);
+            color: var(--gallery-primary);
         }
 
 
@@ -84,35 +344,51 @@
            ===================================================== */
 
         .gallery-stats {
+
             display: grid;
+
             grid-template-columns:
                 repeat(auto-fit, minmax(170px, 1fr));
+
             gap: 16px;
+
             margin-bottom: 65px;
         }
 
 
         .gallery-stat {
+
             padding: 25px 20px;
+
             text-align: center;
-            background: #ffffff;
-            border: 1px solid #e5eaf0;
+
+            background: var(--gallery-card-bg);
+
+            border: 1px solid var(--gallery-border);
+
             border-radius: 18px;
-            box-shadow: 0 7px 25px rgba(7,21,37,.06);
+
+            box-shadow: var(--gallery-shadow);
         }
 
 
         .gallery-stat-number {
+
             display: block;
+
             margin-bottom: 7px;
-            color: #1769aa;
+
+            color: var(--gallery-primary);
+
             font-size: 29px;
             font-weight: 800;
         }
 
 
         .gallery-stat-label {
-            color: #667085;
+
+            color: var(--gallery-muted);
+
             font-size: 12px;
             font-weight: 600;
         }
@@ -123,45 +399,64 @@
            ===================================================== */
 
         .gallery-event {
+
             margin-bottom: 70px;
         }
 
 
         .gallery-event-header {
+
             display: flex;
             align-items: flex-end;
             justify-content: space-between;
+
             gap: 25px;
+
             margin-bottom: 25px;
         }
 
 
         .gallery-event-title {
+
             margin: 0;
-            color: #0b1f3a;
+
+            color: var(--gallery-text);
+
             font-size: 27px;
             line-height: 1.35;
         }
 
 
         .gallery-event-description {
+
             max-width: 760px;
+
             margin: 8px 0 0;
-            color: #667085;
+
+            color: var(--gallery-muted);
+
             font-size: 13px;
             line-height: 1.65;
         }
 
 
         .gallery-event-label {
+
             flex-shrink: 0;
+
             padding: 7px 12px;
+
             border-radius: 50px;
-            background: #edf7fc;
-            color: #1769aa;
+
+            background: var(--gallery-hover);
+
+            color: var(--gallery-primary);
+
             font-size: 10px;
             font-weight: 750;
+
             letter-spacing: .5px;
+
             text-transform: uppercase;
         }
 
@@ -171,50 +466,71 @@
            ===================================================== */
 
         .gallery-grid {
+
             display: grid;
+
             grid-template-columns:
                 repeat(3, minmax(0, 1fr));
+
             gap: 18px;
         }
 
 
         .gallery-item {
+
             position: relative;
+
             overflow: hidden;
+
             min-height: 260px;
-            background: #f4f7f9;
-            border: 1px solid #e3e8ee;
+
+            background: var(--gallery-soft-bg);
+
+            border: 1px solid var(--gallery-border);
+
             border-radius: 18px;
-            box-shadow: 0 7px 25px rgba(7,21,37,.06);
+
+            box-shadow: var(--gallery-shadow);
+
             transition: .3s ease;
         }
 
 
         .gallery-item:hover {
+
             transform: translateY(-5px);
-            box-shadow: 0 17px 35px rgba(7,21,37,.12);
+
+            box-shadow: var(--gallery-shadow-hover);
         }
 
 
         .gallery-image-link {
+
             display: block;
+
             width: 100%;
             height: 100%;
+
             text-decoration: none;
         }
 
 
         .gallery-image {
+
             display: block;
+
             width: 100%;
             height: 280px;
+
             object-fit: cover;
             object-position: center;
+
             transition: transform .5s ease;
         }
 
 
         .gallery-item:hover .gallery-image {
+
             transform: scale(1.04);
         }
 
@@ -224,46 +540,145 @@
            ===================================================== */
 
         .gallery-caption {
+
             position: absolute;
+
             left: 0;
             right: 0;
             bottom: 0;
+
             padding: 55px 18px 18px;
+
             background:
                 linear-gradient(
                     transparent,
                     rgba(4,14,27,.88)
                 );
+
             color: white;
+
             font-size: 12px;
             font-weight: 600;
+
             line-height: 1.5;
+
             pointer-events: none;
         }
 
 
         .gallery-caption::before {
+
             content: "VIEW PHOTO";
+
             display: block;
+
             margin-bottom: 5px;
+
             color: rgba(255,255,255,.65);
+
             font-size: 9px;
             font-weight: 800;
+
             letter-spacing: 1px;
         }
 
 
         /* =====================================================
-           FEATURED FIRST IMAGE
+           FEATURED IMAGE
            ===================================================== */
 
         .gallery-item.featured {
+
             grid-column: span 2;
         }
 
 
         .gallery-item.featured .gallery-image {
+
             height: 360px;
+        }
+
+
+        /* =====================================================
+           INTRO CARD
+           ===================================================== */
+
+        .gallery-intro {
+
+            margin-bottom: 65px;
+
+            padding: 30px;
+
+            text-align: center;
+
+            background: var(--gallery-card-bg);
+
+            border: 1px solid var(--gallery-border);
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 7px 25px rgba(7,21,37,.05);
+        }
+
+
+        .gallery-intro h2 {
+
+            color: var(--gallery-text);
+        }
+
+
+        .gallery-intro p {
+
+            max-width: 760px;
+
+            margin: 10px auto 0;
+
+            color: var(--gallery-muted);
+
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+
+        /* =====================================================
+           LAB VIDEO
+           ===================================================== */
+
+        .lab-video-wrapper {
+
+            width: 100%;
+            max-width: 900px;
+
+            margin: 0 auto;
+
+            overflow: hidden;
+
+            border-radius: 16px;
+        }
+
+
+        .lab-video {
+
+            display: block;
+
+            width: 100%;
+            height: auto;
+
+            border-radius: 16px;
+        }
+
+
+        .lab-video-label {
+
+            margin-top: 8px;
+
+            color: var(--gallery-muted);
+
+            font-size: 12px;
+            font-weight: 600;
+
+            text-align: center;
         }
 
 
@@ -272,43 +687,64 @@
            ===================================================== */
 
         .gallery-lightbox {
+
             position: fixed;
+
             inset: 0;
+
             z-index: 9999;
+
             display: none;
+
             align-items: center;
             justify-content: center;
+
             padding: 30px;
+
             background: rgba(3,10,18,.94);
+
             backdrop-filter: blur(8px);
         }
 
 
         .gallery-lightbox.active {
+
             display: flex;
         }
 
 
         .lightbox-content {
+
             position: relative;
+
             width: min(1100px, 94vw);
+
             max-height: 90vh;
+
             text-align: center;
         }
 
 
         .lightbox-image {
+
             max-width: 100%;
             max-height: 78vh;
+
             border-radius: 12px;
-            box-shadow: 0 25px 70px rgba(0,0,0,.45);
+
+            box-shadow:
+                0 25px 70px rgba(0,0,0,.45);
         }
 
 
         .lightbox-caption {
+
             margin-top: 15px;
+
             color: rgba(255,255,255,.85);
+
             font-size: 13px;
+
             line-height: 1.5;
         }
 
@@ -316,45 +752,64 @@
         .lightbox-close,
         .lightbox-prev,
         .lightbox-next {
+
             position: absolute;
+
             z-index: 2;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
+
             border: 0;
+
             border-radius: 50%;
+
             background: rgba(255,255,255,.12);
+
             color: white;
+
             cursor: pointer;
+
             transition: .2s ease;
         }
 
 
         .lightbox-close {
+
             top: 20px;
             right: 25px;
+
             width: 45px;
             height: 45px;
+
             font-size: 25px;
         }
 
 
         .lightbox-prev,
         .lightbox-next {
+
             top: 50%;
+
             width: 48px;
             height: 48px;
+
             transform: translateY(-50%);
+
             font-size: 26px;
         }
 
 
         .lightbox-prev {
+
             left: 20px;
         }
 
 
         .lightbox-next {
+
             right: 20px;
         }
 
@@ -362,31 +817,34 @@
         .lightbox-close:hover,
         .lightbox-prev:hover,
         .lightbox-next:hover {
+
             background: rgba(255,255,255,.25);
         }
 
 
         /* =====================================================
-           EMPTY / INTRO CARD
+           DARK THEME ADJUSTMENTS
            ===================================================== */
 
-        .gallery-intro {
-            margin-bottom: 65px;
-            padding: 30px;
-            text-align: center;
-            background: #ffffff;
-            border: 1px solid #e3e8ee;
-            border-radius: 20px;
-            box-shadow: 0 7px 25px rgba(7,21,37,.05);
+        [data-theme="indigo-night"] .gallery-nav,
+        [data-theme="indigo-night"] .gallery-stat,
+        [data-theme="indigo-night"] .gallery-intro,
+        [data-theme="indigo-night"] .gallery-item {
+
+            box-shadow:
+                0 8px 28px rgba(0,0,0,.25);
         }
 
 
-        .gallery-intro p {
-            max-width: 760px;
-            margin: 10px auto 0;
-            color: #667085;
-            font-size: 13px;
-            line-height: 1.7;
+        [data-theme="indigo-night"] .gallery-nav {
+
+            background: rgba(30,41,59,.94);
+        }
+
+
+        [data-theme="graphite"] .gallery-nav {
+
+            background: rgba(255,255,255,.94);
         }
 
 
@@ -397,11 +855,14 @@
         @media (max-width: 900px) {
 
             .gallery-grid {
+
                 grid-template-columns:
                     repeat(2, minmax(0, 1fr));
             }
 
+
             .gallery-item.featured {
+
                 grid-column: span 2;
             }
 
@@ -411,44 +872,64 @@
         @media (max-width: 650px) {
 
             .gallery-nav {
+
                 position: static;
             }
 
+
             .gallery-event-header {
+
                 display: block;
             }
 
+
             .gallery-event-label {
+
                 display: inline-flex;
+
                 margin-top: 12px;
             }
 
+
             .gallery-event-title {
+
                 font-size: 22px;
             }
 
+
             .gallery-grid {
+
                 grid-template-columns: 1fr;
             }
 
+
             .gallery-item.featured {
+
                 grid-column: span 1;
             }
 
+
             .gallery-image,
             .gallery-item.featured .gallery-image {
+
                 height: 260px;
             }
 
+
             .gallery-lightbox {
+
                 padding: 15px;
             }
 
+
             .lightbox-prev {
+
                 left: 8px;
             }
 
+
             .lightbox-next {
+
                 right: 8px;
             }
 
@@ -483,7 +964,6 @@
                        gap:10px;
                        margin:10px auto;
                        width:max-content;
-                       color:#0b1f3a;
                        font-weight:800;
                        text-decoration:none;
                    ">
@@ -497,7 +977,7 @@
                             object-fit:contain;
                         ">
 
-                    <span>
+                    <span style="color:var(--gallery-primary-2) !important;">
                         CESRG
                     </span>
 
@@ -523,33 +1003,41 @@
                         </a>
                     </li>
 
+
                     <li>
                         <a href="people.html">
                             People
                         </a>
                     </li>
 
+
                     <li>
                         <a href="research.html">
                             Research
                         </a>
                     </li>
+
+
                     <li>
                         <a href="collaboration.html">
                             Collaboration
                         </a>
-                        <li>
+                    </li>
+
+
                     <li>
                         <a href="publications.html">
                             Publications
                         </a>
                     </li>
 
+
                     <li class="active">
                         <a href="gallery.html">
                             Gallery
                         </a>
                     </li>
+
 
                     <li>
                         <a href="contact.html">
@@ -628,26 +1116,31 @@
     <nav class="gallery-nav">
 
         <div class="gallery-nav-inner">
-             <a href="#workshop">
-                 Charging & Discharging Testing
+
+            <a href="#workshop">
+                Charging & Discharging Testing
             </a>
 
-             <a href="#workshop">
-                 Load Testing
+
+            <a href="#workshop">
+                Load Testing
             </a>
+
 
             <a href="#azmat">
                 From Student to Dr. Azmat
             </a>
 
+
             <a href="#lab">
                 PSF Visit to CESRG Lab CUI
             </a>
 
-            
+
             <a href="#workshop">
-                 BMS Workshop
+                BMS Workshop
             </a>
+
 
             <a href="#systems">
                 Systems Biology
@@ -750,64 +1243,140 @@
         </p>
 
     </div>
-    </section>
+
+</section>
+
+
+
 <!-- =====================================================
      EVENT 6 — CAPACITOR CHARGING & DISCHARGING VIDEO
      ===================================================== -->
-<section id="cap-charge" class="container gallery-event">
+
+<section id="cap-charge"
+         class="container gallery-event">
+
 
     <div class="gallery-event-header">
+
         <div>
+
             <span class="gallery-event-label">
                 Experimental Demonstration
             </span>
+
+
             <h2 class="gallery-event-title">
-                Charging and discharging of capacitor using MOSFETS (Switching)
+
+                Charging and discharging of capacitor
+                using MOSFETS (Switching)
+
             </h2>
+
+
             <p class="gallery-event-description">
-                Video demonstration of capacitor charging and discharging dynamics via MOSFET switching control in the laboratory.
+
+                Video demonstration of capacitor charging
+                and discharging dynamics via MOSFET
+                switching control in the laboratory.
+
             </p>
+
         </div>
+
     </div>
-<div class="lab-video-wrapper" style="width: 70%; max-width: 800px; margin: 0 auto; aspect-ratio: 16 / 9;">
-    <video
-        id="capChargeVideo"
-        class="lab-video"
-        controls
-        muted
-        loop
-        playsinline
-        preload="metadata"
-        style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
-        <source src="images/capcharge.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-    </video>
-    <div class="lab-video-label">
-        Charging and discharging of capacitor using MOSFETS — CESRG Lab
+
+
+    <div class="lab-video-wrapper"
+         style="
+             width:70%;
+             max-width:800px;
+             margin:0 auto;
+             aspect-ratio:16 / 9;
+         ">
+
+        <video
+            id="capChargeVideo"
+            class="lab-video"
+            controls
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            style="
+                width:100%;
+                height:100%;
+                object-fit:cover;
+                border-radius:16px;
+            ">
+
+            <source
+                src="images/capcharge.mp4"
+                type="video/mp4">
+
+            Your browser does not support HTML5 video.
+
+        </video>
+
+
+        <div class="lab-video-label">
+
+            Charging and discharging of capacitor
+            using MOSFETS — CESRG Lab
+
+        </div>
+
     </div>
-</div>
+
+</section>
+
+
+
 <!-- =====================================================
      EVENT 5 — CELL DISCHARGING VIDEO
      ===================================================== -->
 
-<section id="cell-discharging" class="container gallery-event">
+<section id="cell-discharging"
+         class="container gallery-event">
+
 
     <div class="gallery-event-header">
+
         <div>
+
             <span class="gallery-event-label">
                 Experimental Demonstration
             </span>
+
+
             <h2 class="gallery-event-title">
+
                 Cell Discharging using DC variable Load
+
             </h2>
+
+
             <p class="gallery-event-description">
-                Video demonstration of battery cell discharging testing using a variable DC load setup in the R & D lab.
+
+                Video demonstration of battery cell
+                discharging testing using a variable
+                DC load setup in the R & D lab.
+
             </p>
+
         </div>
+
     </div>
 
-    <!-- Added height rules directly via inline styles -->
-    <div class="lab-video-wrapper" style="width: 100%; max-width: 900px; margin: 0 auto; aspect-ratio: 16 / 9; max-height: 500px;">
+
+    <div class="lab-video-wrapper"
+         style="
+             width:100%;
+             max-width:900px;
+             margin:0 auto;
+             aspect-ratio:16 / 9;
+             max-height:500px;
+         ">
+
         <video
             id="cellDischargingVideo"
             class="lab-video"
@@ -816,17 +1385,33 @@
             loop
             playsinline
             preload="metadata"
-            style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
-            <source src="images/celldischagring.mp4" type="video/mp4">
+            style="
+                width:100%;
+                height:100%;
+                object-fit:cover;
+                border-radius:16px;
+            ">
+
+            <source
+                src="images/celldischagring.mp4"
+                type="video/mp4">
+
             Your browser does not support HTML5 video.
+
         </video>
 
+
         <div class="lab-video-label">
-            Cell Discharging using DC variable Load — CESRG Lab
+
+            Cell Discharging using DC variable Load
+            — CESRG Lab
+
         </div>
+
     </div>
 
 </section>
+
 
 
 <!-- =====================================================
@@ -845,11 +1430,13 @@
                 Academic Journey
             </span>
 
+
             <h2 class="gallery-event-title">
 
                 From Student to Dr. Azmat
 
             </h2>
+
 
             <p class="gallery-event-description">
 
@@ -863,7 +1450,6 @@
         </div>
 
     </div>
-
 
 
     <div class="gallery-grid">
@@ -885,7 +1471,10 @@
                     loading="lazy">
 
                 <div class="gallery-caption">
-                    From Student to Dr. Azmat — Academic Journey.
+
+                    From Student to Dr. Azmat —
+                    Academic Journey.
+
                 </div>
 
             </a>
@@ -910,7 +1499,10 @@
                     loading="lazy">
 
                 <div class="gallery-caption">
-                    Celebrating Dr. Azmat's academic achievement.
+
+                    Celebrating Dr. Azmat's academic
+                    achievement.
+
                 </div>
 
             </a>
@@ -935,7 +1527,10 @@
                     loading="lazy">
 
                 <div class="gallery-caption">
-                    From student to Doctor — Dr. Azmat.
+
+                    From student to Doctor —
+                    Dr. Azmat.
+
                 </div>
 
             </a>
@@ -948,7 +1543,6 @@
 </section>
 
 
-</section>
 
 <!-- =====================================================
      EVENT 1 — BMS WORKSHOP
@@ -966,12 +1560,14 @@
                 Featured Event
             </span>
 
+
             <h2 class="gallery-event-title">
 
                 CPD Workshop — Battery Management
                 System for Electric Mobility
 
             </h2>
+
 
             <p class="gallery-event-description">
 
@@ -985,7 +1581,6 @@
         </div>
 
     </div>
-
 
 
     <div class="gallery-grid">
@@ -1007,7 +1602,11 @@
                     loading="lazy">
 
                 <div class="gallery-caption">
-                    Impact of Adjacent-Based Active Cell Balancing Topologies on Electric Vehicle Range.
+
+                    Impact of Adjacent-Based Active Cell
+                    Balancing Topologies on Electric
+                    Vehicle Range.
+
                 </div>
 
             </a>
@@ -1032,7 +1631,10 @@
                     loading="lazy">
 
                 <div class="gallery-caption">
-                    First Session at Department of Electrical Engineering.
+
+                    First Session at Department of
+                    Electrical Engineering.
+
                 </div>
 
             </a>
@@ -1057,7 +1659,10 @@
                     loading="lazy">
 
                 <div class="gallery-caption">
-                    Design & Development of BMS for E-Scooter.
+
+                    Design & Development of BMS
+                    for E-Scooter.
+
                 </div>
 
             </a>
@@ -1082,7 +1687,10 @@
                     loading="lazy">
 
                 <div class="gallery-caption">
-                    Dynamic Cell Balancing, Hardware & Firmware.
+
+                    Dynamic Cell Balancing,
+                    Hardware & Firmware.
+
                 </div>
 
             </a>
@@ -1107,7 +1715,10 @@
                     loading="lazy">
 
                 <div class="gallery-caption">
-                    Dr. Khurram Saleem presenting the certificate to Dr. Ahmed Yar.
+
+                    Dr. Khurram Saleem presenting the
+                    certificate to Dr. Ahmed Yar.
+
                 </div>
 
             </a>
@@ -1132,7 +1743,10 @@
                     loading="lazy">
 
                 <div class="gallery-caption">
-                    Dr. Khurram Saleem presenting the certificate to Dr. Habip Şahin.
+
+                    Dr. Khurram Saleem presenting the
+                    certificate to Dr. Habip Şahin.
+
                 </div>
 
             </a>
@@ -1157,7 +1771,10 @@
                     loading="lazy">
 
                 <div class="gallery-caption">
-                    Dr. Khurram Saleem presenting the certificate to Afaq Ahmed.
+
+                    Dr. Khurram Saleem presenting the
+                    certificate to Afaq Ahmed.
+
                 </div>
 
             </a>
@@ -1182,7 +1799,10 @@
                     loading="lazy">
 
                 <div class="gallery-caption">
-                    Dr. Khurram Saleem presenting the certificate to Dr. Ali Arshad.
+
+                    Dr. Khurram Saleem presenting the
+                    certificate to Dr. Ali Arshad.
+
                 </div>
 
             </a>
@@ -1207,7 +1827,10 @@
                     loading="lazy">
 
                 <div class="gallery-caption">
-                    Group photo of all workshop participants.
+
+                    Group photo of all workshop
+                    participants.
+
                 </div>
 
             </a>
@@ -1237,11 +1860,13 @@
                 Laboratory Activity
             </span>
 
+
             <h2 class="gallery-event-title">
 
                 PSF Visit to CESRG Lab
 
             </h2>
+
 
             <p class="gallery-event-description">
 
@@ -1255,7 +1880,6 @@
         </div>
 
     </div>
-
 
 
     <div class="gallery-grid">
@@ -1277,7 +1901,9 @@
                     loading="lazy">
 
                 <div class="gallery-caption">
+
                     Visit to Lab.
+
                 </div>
 
             </a>
@@ -1302,12 +1928,17 @@
                     loading="lazy">
 
                 <div class="gallery-caption">
+
                     Discussion of the Prototype.
+
                 </div>
 
             </a>
 
         </article>
+
+
+
         <!-- 12 -->
 
         <article class="gallery-item">
@@ -1320,18 +1951,23 @@
                 <img
                     class="gallery-image"
                     src="images/lab3.jpg"
-                    alt="Discussion of the research prototype"
+                    alt="Undergraduate Students Working in CESRG Lab"
                     loading="lazy">
 
                 <div class="gallery-caption">
-                    Undergraduate Students Working in CESRG Lab.
+
+                    Undergraduate Students Working
+                    in CESRG Lab.
+
                 </div>
 
             </a>
 
         </article>
 
- <!-- 14 -->
+
+
+        <!-- 14 -->
 
         <article class="gallery-item">
 
@@ -1343,43 +1979,54 @@
                 <img
                     class="gallery-image"
                     src="images/lab4.jpg"
-                    alt="Discussion of the research prototype"
+                    alt="Undergraduate Students Working in CESRG Lab"
                     loading="lazy">
 
                 <div class="gallery-caption">
-                    Undergraduate Students Working in CESRG Lab.
+
+                    Undergraduate Students Working
+                    in CESRG Lab.
+
                 </div>
 
             </a>
 
         </article>
-        <!-- =====================================================
-     LAB VIDEO
-     ===================================================== -->
 
-<div class="lab-video-wrapper">
 
-    <video
-        id="cesrgLabVideo"
-        class="lab-video"
-        muted
-        loop
-        playsinline
-        preload="metadata">
 
-        <source
-            src="images/vl1.mp4"
-            type="video/mp4">
+        <!-- =================================================
+             LAB VIDEO
+             ================================================= -->
 
-        Your browser does not support HTML5 video.
+        <div class="lab-video-wrapper">
 
-    </video>
+            <video
+                id="cesrgLabVideo"
+                class="lab-video"
+                muted
+                loop
+                playsinline
+                preload="metadata">
 
-    <div class="lab-video-label">
-        Students Working in CESRG Lab — CUI
-    </div>
+                <source
+                    src="images/vl1.mp4"
+                    type="video/mp4">
 
-</div>
+                Your browser does not support HTML5 video.
+
+            </video>
+
+
+            <div class="lab-video-label">
+
+                Students Working in CESRG Lab — CUI
+
+            </div>
+
+        </div>
+
+
     </div>
 
 </section>
@@ -1402,12 +2049,14 @@
                 Seminar
             </span>
 
+
             <h2 class="gallery-event-title">
 
                 Systems Biology —
                 Systems Approach to Cancer & Epilepsy
 
             </h2>
+
 
             <p class="gallery-event-description">
 
@@ -1421,7 +2070,6 @@
         </div>
 
     </div>
-
 
 
     <div class="gallery-grid">
@@ -1443,7 +2091,10 @@
                     loading="lazy">
 
                 <div class="gallery-caption">
-                    Dr. Aamer Iqbal Bhatti delivering the seminar lecture.
+
+                    Dr. Aamer Iqbal Bhatti delivering
+                    the seminar lecture.
+
                 </div>
 
             </a>
@@ -1468,7 +2119,10 @@
                     loading="lazy">
 
                 <div class="gallery-caption">
-                    Introduction to Systems Biology applications in Cancer and Epilepsy.
+
+                    Introduction to Systems Biology
+                    applications in Cancer and Epilepsy.
+
                 </div>
 
             </a>
@@ -1493,7 +2147,10 @@
                     loading="lazy">
 
                 <div class="gallery-caption">
-                    Discussion on the CASPR research group and its PhD alumni.
+
+                    Discussion on the CASPR research
+                    group and its PhD alumni.
+
                 </div>
 
             </a>
@@ -1518,7 +2175,10 @@
                     loading="lazy">
 
                 <div class="gallery-caption">
-                    Discussion on systems-level modeling methodologies.
+
+                    Discussion on systems-level
+                    modeling methodologies.
+
                 </div>
 
             </a>
@@ -1543,7 +2203,10 @@
                     loading="lazy">
 
                 <div class="gallery-caption">
-                    Interactive question and answer session.
+
+                    Interactive question and answer
+                    session.
+
                 </div>
 
             </a>
@@ -1568,7 +2231,10 @@
                     loading="lazy">
 
                 <div class="gallery-caption">
-                    Dr. Qudrat Khan presenting a shield to Dr. Aamer Iqbal Bhatti.
+
+                    Dr. Qudrat Khan presenting a shield
+                    to Dr. Aamer Iqbal Bhatti.
+
                 </div>
 
             </a>
@@ -1593,7 +2259,10 @@
                     loading="lazy">
 
                 <div class="gallery-caption">
-                    Group photo with faculty members and seminar participants.
+
+                    Group photo with faculty members
+                    and seminar participants.
+
                 </div>
 
             </a>
@@ -1602,6 +2271,8 @@
 
 
     </div>
+
+</section>
 
 
 
@@ -1643,6 +2314,7 @@
             id="lightboxImage"
             src=""
             alt="">
+
 
         <div
             class="lightbox-caption"
@@ -1690,10 +2362,12 @@
                     CESRG
                 </h3>
 
+
                 <p>
                     Control & Energy Systems
                     Research Group
                 </p>
+
 
                 <p>
                     COMSATS University Islamabad
@@ -1708,32 +2382,47 @@
                     Contact Information
                 </h3>
 
+
                 <p>
+
                     <strong>
                         Office Hours:
                     </strong>
+
                     Monday–Friday
                     (9:00am – 5:00pm)
+
                 </p>
 
+
                 <p>
+
                     <strong>
                         Phone:
                     </strong>
+
                     +92-51-9049255
+
                 </p>
 
+
                 <p>
+
                     <strong>
                         Cell:
                     </strong>
+
                     +92-331-3666163
+
                 </p>
+
 
                 <p>
 
                     <a href="mailto:ali_arshad@comsats.edu.pk">
+
                         ali_arshad@comsats.edu.pk
+
                     </a>
 
                 </p>
@@ -1747,13 +2436,22 @@
                     Address
                 </h3>
 
-               <p>
-                Control & Energy Systems Research Group (CESRG)
-                <br>
-                R&D Lab, COMSATS University Islamabad
-                <br>
-                Park Road, Tarlai Kalan, Islamabad 45550, Pakistan
-            </p>
+
+                <p>
+
+                    Control & Energy Systems Research Group
+                    (CESRG)
+
+                    <br>
+
+                    R&D Lab, COMSATS University Islamabad
+
+                    <br>
+
+                    Park Road, Tarlai Kalan,
+                    Islamabad 45550, Pakistan
+
+                </p>
 
 
                 <a
@@ -1798,6 +2496,7 @@
 
                 Website Designed & Maintained by
 
+
                 <a
                     href="https://www.upwork.com/freelancers/~0198227b97d16b50c9"
                     target="_blank"
@@ -1819,11 +2518,120 @@
 
 
 <!-- =====================================================
+     FLOATING THEME SWITCHER
+     ===================================================== -->
+
+<div class="theme-switcher-bar">
+
+    <span class="theme-title">
+        Theme
+    </span>
+
+
+    <button
+        class="theme-btn"
+        data-theme="margalla-mist"
+        onclick="setTheme('margalla-mist')">
+
+        <span
+            class="color-dot"
+            style="background:#0b5c53;">
+        </span>
+
+        Margalla
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="institutional-blue"
+        onclick="setTheme('institutional-blue')">
+
+        <span
+            class="color-dot"
+            style="background:#1a5276;">
+        </span>
+
+        Blue
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="ivory-press"
+        onclick="setTheme('ivory-press')">
+
+        <span
+            class="color-dot"
+            style="background:#8b3a3a;">
+        </span>
+
+        Ivory
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="sage-calm"
+        onclick="setTheme('sage-calm')">
+
+        <span
+            class="color-dot"
+            style="background:#4a6b5d;">
+        </span>
+
+        Sage
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="indigo-night"
+        onclick="setTheme('indigo-night')">
+
+        <span
+            class="color-dot"
+            style="background:#6366f1;">
+        </span>
+
+        Night
+
+    </button>
+
+
+    <button
+        class="theme-btn"
+        data-theme="graphite"
+        onclick="setTheme('graphite')">
+
+        <span
+            class="color-dot"
+            style="background:#a1a1aa;">
+        </span>
+
+        Graphite
+
+    </button>
+
+</div>
+
+
+
+<!-- =====================================================
      MODERN JAVASCRIPT
      ===================================================== -->
 
 <script src="js/modern.js"></script>
 
+
+
+<!-- =====================================================
+     GALLERY LIGHTBOX JAVASCRIPT
+     ===================================================== -->
 
 <script>
 
@@ -1838,35 +2646,42 @@ document.addEventListener(
                 )
             );
 
+
         const lightbox =
             document.getElementById(
                 "galleryLightbox"
             );
+
 
         const image =
             document.getElementById(
                 "lightboxImage"
             );
 
+
         const caption =
             document.getElementById(
                 "lightboxCaption"
             );
+
 
         const close =
             document.getElementById(
                 "lightboxClose"
             );
 
+
         const previous =
             document.getElementById(
                 "lightboxPrev"
             );
 
+
         const next =
             document.getElementById(
                 "lightboxNext"
             );
+
 
         let currentIndex = 0;
 
@@ -1874,23 +2689,29 @@ document.addEventListener(
         function showImage(index) {
 
             if (!items.length) {
+
                 return;
             }
+
 
             currentIndex =
                 (index + items.length)
                 % items.length;
 
+
             const item =
                 items[currentIndex];
 
+
             image.src =
                 item.getAttribute("href");
+
 
             image.alt =
                 item.querySelector("img")
                     ?.getAttribute("alt")
                 || "";
+
 
             caption.textContent =
                 item.getAttribute(
@@ -1898,12 +2719,17 @@ document.addEventListener(
                 )
                 || "";
 
-            lightbox.classList.add("active");
+
+            lightbox.classList.add(
+                "active"
+            );
+
 
             lightbox.setAttribute(
                 "aria-hidden",
                 "false"
             );
+
 
             document.body.style.overflow =
                 "hidden";
@@ -1916,12 +2742,15 @@ document.addEventListener(
                 "active"
             );
 
+
             lightbox.setAttribute(
                 "aria-hidden",
                 "true"
             );
 
+
             image.src = "";
+
 
             document.body.style.overflow =
                 "";
@@ -2003,7 +2832,6 @@ document.addEventListener(
                 ) {
 
                     return;
-
                 }
 
 
@@ -2048,69 +2876,5 @@ document.addEventListener(
 
 
 </body>
-<!-- Floating Theme Switcher -->
-<div class="theme-switcher-bar">
 
-  <span class="theme-title">Theme</span>
-
-  <button class="theme-btn"
-          onclick="setTheme('margalla-mist')">
-
-    <span class="color-dot"
-          style="background:#0b5c53;"></span>
-
-    Margalla
-  </button>
-
-
-  <button class="theme-btn"
-          onclick="setTheme('institutional-blue')">
-
-    <span class="color-dot"
-          style="background:#1a5276;"></span>
-
-    Blue
-  </button>
-
-
-  <button class="theme-btn"
-          onclick="setTheme('ivory-press')">
-
-    <span class="color-dot"
-          style="background:#8b3a3a;"></span>
-
-    Ivory
-  </button>
-
-
-  <button class="theme-btn"
-          onclick="setTheme('sage-calm')">
-
-    <span class="color-dot"
-          style="background:#4a6b5d;"></span>
-
-    Sage
-  </button>
-
-
-  <button class="theme-btn"
-          onclick="setTheme('indigo-night')">
-
-    <span class="color-dot"
-          style="background:#6366f1;"></span>
-
-    Night
-  </button>
-
-
-  <button class="theme-btn"
-          onclick="setTheme('graphite')">
-
-    <span class="color-dot"
-          style="background:#a1a1aa;"></span>
-
-    Graphite
-  </button>
-
-</div>
 </html>
