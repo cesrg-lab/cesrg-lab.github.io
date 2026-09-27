@@ -4,11 +4,17 @@
    COMSATS University Islamabad
    ========================================================= */
 
+
 /* =========================================================
    1. ROOT VARIABLES
    ========================================================= */
 
 :root {
+
+    /* -----------------------------------------------------
+       DEFAULT THEME: CESRG BLUE
+       ----------------------------------------------------- */
+
     --cesrg-primary: #0b1f3a;
     --cesrg-primary-2: #123b69;
     --cesrg-blue: #1769aa;
@@ -23,20 +29,239 @@
     --cesrg-white: #ffffff;
     --cesrg-border: #e6ebf2;
 
-    --cesrg-radius-sm: 10px;
-    --cesrg-radius-md: 16px;
-    --cesrg-radius-lg: 24px;
+    --cesrg-page-bg: #f7f9fc;
+    --cesrg-card-bg: #ffffff;
+    --cesrg-soft-bg: #eef7fc;
+    --cesrg-hover-bg: #e3f3fa;
+
+    --cesrg-hero-1: #071525;
+    --cesrg-hero-2: #123b69;
+
+    --cesrg-footer-1: #061322;
+    --cesrg-footer-2: #0c2949;
 
     --cesrg-shadow-sm: 0 5px 20px rgba(7, 21, 37, 0.07);
     --cesrg-shadow-md: 0 12px 35px rgba(7, 21, 37, 0.10);
     --cesrg-shadow-lg: 0 25px 60px rgba(7, 21, 37, 0.15);
+
+    --cesrg-radius-sm: 10px;
+    --cesrg-radius-md: 16px;
+    --cesrg-radius-lg: 24px;
 
     --cesrg-transition: 0.3s ease;
 }
 
 
 /* =========================================================
-   2. GLOBAL RESET
+   2. THEME 1 — CESRG BLUE
+   Original professional CESRG palette
+   ========================================================= */
+
+[data-theme="cesrg-blue"] {
+
+    --cesrg-primary: #0b1f3a;
+    --cesrg-primary-2: #123b69;
+    --cesrg-blue: #1769aa;
+    --cesrg-accent: #00a8e8;
+    --cesrg-cyan: #00c2ff;
+    --cesrg-green: #18a77a;
+
+    --cesrg-dark: #071525;
+    --cesrg-text: #172033;
+    --cesrg-muted: #667085;
+    --cesrg-light: #f5f8fc;
+    --cesrg-white: #ffffff;
+    --cesrg-border: #e6ebf2;
+
+    --cesrg-page-bg: #f7f9fc;
+    --cesrg-card-bg: #ffffff;
+    --cesrg-soft-bg: #eef7fc;
+    --cesrg-hover-bg: #e3f3fa;
+
+    --cesrg-hero-1: #071525;
+    --cesrg-hero-2: #123b69;
+
+    --cesrg-footer-1: #061322;
+    --cesrg-footer-2: #0c2949;
+}
+
+
+/* =========================================================
+   3. THEME 2 — OCEAN LAB
+   Blue + Teal academic research palette
+   ========================================================= */
+
+[data-theme="ocean-lab"] {
+
+    --cesrg-primary: #083b66;
+    --cesrg-primary-2: #0b5f8a;
+    --cesrg-blue: #087ea4;
+    --cesrg-accent: #00a6a6;
+    --cesrg-cyan: #16c1c1;
+    --cesrg-green: #20a486;
+
+    --cesrg-dark: #06283f;
+    --cesrg-text: #173042;
+    --cesrg-muted: #617583;
+    --cesrg-light: #f0f8fa;
+    --cesrg-white: #ffffff;
+    --cesrg-border: #d9e9ee;
+
+    --cesrg-page-bg: #f3f9fa;
+    --cesrg-card-bg: #ffffff;
+    --cesrg-soft-bg: #e8f7f8;
+    --cesrg-hover-bg: #dff3f4;
+
+    --cesrg-hero-1: #06283f;
+    --cesrg-hero-2: #0b5f8a;
+
+    --cesrg-footer-1: #042130;
+    --cesrg-footer-2: #084766;
+}
+
+
+/* =========================================================
+   4. THEME 3 — ELECTRIC CYAN
+   Modern engineering / electronics look
+   ========================================================= */
+
+[data-theme="electric-cyan"] {
+
+    --cesrg-primary: #082b52;
+    --cesrg-primary-2: #0c4f91;
+    --cesrg-blue: #0869c7;
+    --cesrg-accent: #00b8f0;
+    --cesrg-cyan: #00e0ff;
+    --cesrg-green: #19b88a;
+
+    --cesrg-dark: #041426;
+    --cesrg-text: #15263b;
+    --cesrg-muted: #63758a;
+    --cesrg-light: #f1f8fc;
+    --cesrg-white: #ffffff;
+    --cesrg-border: #dceaf4;
+
+    --cesrg-page-bg: #f5faff;
+    --cesrg-card-bg: #ffffff;
+    --cesrg-soft-bg: #e9f7fc;
+    --cesrg-hover-bg: #dff4fb;
+
+    --cesrg-hero-1: #041426;
+    --cesrg-hero-2: #0c4f91;
+
+    --cesrg-footer-1: #03101e;
+    --cesrg-footer-2: #073765;
+}
+
+
+/* =========================================================
+   5. THEME 4 — RESEARCH NAVY
+   Clean institutional / university look
+   ========================================================= */
+
+[data-theme="research-navy"] {
+
+    --cesrg-primary: #102a43;
+    --cesrg-primary-2: #1d4e89;
+    --cesrg-blue: #2467a8;
+    --cesrg-accent: #168aad;
+    --cesrg-cyan: #38bdf8;
+    --cesrg-green: #24936f;
+
+    --cesrg-dark: #071827;
+    --cesrg-text: #1c2b3a;
+    --cesrg-muted: #657585;
+    --cesrg-light: #f3f6fa;
+    --cesrg-white: #ffffff;
+    --cesrg-border: #dce3eb;
+
+    --cesrg-page-bg: #f6f8fb;
+    --cesrg-card-bg: #ffffff;
+    --cesrg-soft-bg: #edf4fa;
+    --cesrg-hover-bg: #e3eff8;
+
+    --cesrg-hero-1: #071827;
+    --cesrg-hero-2: #1d4e89;
+
+    --cesrg-footer-1: #06131f;
+    --cesrg-footer-2: #12365c;
+}
+
+
+/* =========================================================
+   6. THEME 5 — ENERGY GREEN
+   Energy systems / battery / sustainability look
+   ========================================================= */
+
+[data-theme="energy-green"] {
+
+    --cesrg-primary: #103b46;
+    --cesrg-primary-2: #155e6d;
+    --cesrg-blue: #177e9b;
+    --cesrg-accent: #16a085;
+    --cesrg-cyan: #20c7b0;
+    --cesrg-green: #15966e;
+
+    --cesrg-dark: #08252c;
+    --cesrg-text: #193238;
+    --cesrg-muted: #65777b;
+    --cesrg-light: #f1f8f6;
+    --cesrg-white: #ffffff;
+    --cesrg-border: #d9e9e4;
+
+    --cesrg-page-bg: #f5faf8;
+    --cesrg-card-bg: #ffffff;
+    --cesrg-soft-bg: #e8f6f1;
+    --cesrg-hover-bg: #ddf1eb;
+
+    --cesrg-hero-1: #08252c;
+    --cesrg-hero-2: #155e6d;
+
+    --cesrg-footer-1: #061c22;
+    --cesrg-footer-2: #10434c;
+}
+
+
+/* =========================================================
+   7. THEME 6 — MIDNIGHT LAB
+   Dark research laboratory theme
+   ========================================================= */
+
+[data-theme="midnight-lab"] {
+
+    --cesrg-primary: #38bdf8;
+    --cesrg-primary-2: #2563eb;
+    --cesrg-blue: #60a5fa;
+    --cesrg-accent: #22d3ee;
+    --cesrg-cyan: #67e8f9;
+    --cesrg-green: #34d399;
+
+    --cesrg-dark: #020617;
+    --cesrg-text: #e5edf7;
+    --cesrg-muted: #a9b8ca;
+    --cesrg-light: #0b1628;
+    --cesrg-white: #ffffff;
+    --cesrg-border: #263852;
+
+    --cesrg-page-bg: #08111f;
+    --cesrg-card-bg: #101c2e;
+    --cesrg-soft-bg: #12243a;
+    --cesrg-hover-bg: #18314d;
+
+    --cesrg-hero-1: #020617;
+    --cesrg-hero-2: #102a56;
+
+    --cesrg-footer-1: #01040a;
+    --cesrg-footer-2: #071a33;
+
+    --cesrg-shadow-sm: 0 5px 20px rgba(0,0,0,0.22);
+    --cesrg-shadow-md: 0 12px 35px rgba(0,0,0,0.30);
+    --cesrg-shadow-lg: 0 25px 60px rgba(0,0,0,0.40);
+}
+
+
+/* =========================================================
+   8. GLOBAL RESET
    ========================================================= */
 
 html {
@@ -44,10 +269,25 @@ html {
 }
 
 body {
+
     margin: 0;
     padding: 0;
-    background: #f7f9fc;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(0, 168, 232, 0.05),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(23, 105, 170, 0.05),
+            transparent 30%
+        ),
+        var(--cesrg-page-bg);
+
     color: var(--cesrg-text);
+
     font-family:
         Inter,
         -apple-system,
@@ -63,6 +303,10 @@ body {
 
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 
 body::selection {
@@ -84,6 +328,7 @@ img {
 a {
     color: var(--cesrg-blue);
     text-decoration: none;
+
     transition: color var(--cesrg-transition);
 }
 
@@ -94,12 +339,16 @@ a:hover {
 
 
 /* =========================================================
-   3. OLD BOOTSTRAP CONTAINER — MODERNIZE IT
+   9. OLD BOOTSTRAP CONTAINER — MODERNIZE IT
+   IMPORTANT:
+   No background is applied to .container.
+   This prevents unwanted square blocks.
    ========================================================= */
 
 .container {
     width: min(1180px, calc(100% - 40px));
     max-width: 1180px;
+
     margin-left: auto;
     margin-right: auto;
 }
@@ -119,37 +368,23 @@ a:hover {
 
 
 /* =========================================================
-   4. MODERN PAGE BACKGROUND
-   ========================================================= */
-
-body {
-    background:
-        radial-gradient(
-            circle at 10% 10%,
-            rgba(0, 168, 232, 0.05),
-            transparent 28%
-        ),
-        radial-gradient(
-            circle at 90% 20%,
-            rgba(23, 105, 170, 0.05),
-            transparent 30%
-        ),
-        #f7f9fc;
-}
-
-
-/* =========================================================
-   5. HEADER / HERO
+   10. HEADER / HERO
    ========================================================= */
 
 .jumbotron {
+
     position: relative;
 
     margin: 0 auto;
+
     padding: 85px 35px 80px;
 
     border: 0;
-    border-radius: 0 0 var(--cesrg-radius-lg) var(--cesrg-radius-lg);
+
+    border-radius:
+        0 0
+        var(--cesrg-radius-lg)
+        var(--cesrg-radius-lg);
 
     overflow: hidden;
 
@@ -158,14 +393,15 @@ body {
     background:
         linear-gradient(
             135deg,
-            rgba(7, 21, 37, 0.97),
-            rgba(18, 59, 105, 0.94)
+            var(--cesrg-hero-1),
+            var(--cesrg-hero-2)
         );
 
     box-shadow: var(--cesrg-shadow-lg);
 }
 
 .jumbotron::before {
+
     content: "";
 
     position: absolute;
@@ -178,12 +414,16 @@ body {
 
     border-radius: 50%;
 
-    background: rgba(0, 194, 255, 0.15);
+    background:
+        var(--cesrg-accent);
+
+    opacity: 0.13;
 
     filter: blur(2px);
 }
 
 .jumbotron::after {
+
     content: "";
 
     position: absolute;
@@ -196,11 +436,16 @@ body {
 
     border-radius: 50%;
 
-    background: rgba(24, 167, 122, 0.12);
+    background:
+        var(--cesrg-green);
+
+    opacity: 0.12;
 }
 
 .jumbotron h1 {
+
     position: relative;
+
     z-index: 2;
 
     margin: 0 auto 15px;
@@ -210,13 +455,18 @@ body {
     color: white;
 
     font-size: clamp(34px, 5vw, 64px);
+
     font-weight: 800;
+
     line-height: 1.1;
+
     letter-spacing: -1.5px;
 }
 
 .jumbotron p {
+
     position: relative;
+
     z-index: 2;
 
     margin: 0;
@@ -224,80 +474,104 @@ body {
     color: rgba(255,255,255,0.82);
 
     font-size: clamp(17px, 2vw, 22px);
+
     font-weight: 400;
 }
 
 
 /* =========================================================
-   6. NAVIGATION
+   11. NAVIGATION
    ========================================================= */
 
 .masthead {
+
     position: sticky;
+
     top: 0;
+
     z-index: 999;
 
     margin: 0 auto;
 
-    background: rgba(255,255,255,0.88);
+    background:
+        rgba(255,255,255,0.90);
 
-    border-bottom: 1px solid rgba(230,235,242,0.8);
+    border-bottom:
+        1px solid var(--cesrg-border);
 
     backdrop-filter: blur(16px);
+
     -webkit-backdrop-filter: blur(16px);
 
-    box-shadow: 0 4px 20px rgba(7,21,37,0.06);
+    box-shadow:
+        0 4px 20px rgba(7,21,37,0.06);
 }
 
 .masthead .navbar {
+
     margin: 0;
+
     border: 0;
+
     background: transparent;
 }
 
 .masthead .navbar-inner {
+
     min-height: 68px;
 
     padding: 0;
 
     border: 0;
+
     border-radius: 0;
 
     background: transparent;
+
     box-shadow: none;
 }
 
 .masthead .navbar .container {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     min-height: 68px;
 }
 
 .masthead .nav {
+
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     gap: 5px;
 
     margin: 0;
+
     padding: 0;
 
     list-style: none;
 }
 
 .masthead .nav > li {
+
     float: none;
+
     display: block;
 }
 
 .masthead .nav > li > a {
+
     position: relative;
 
     display: flex;
+
     align-items: center;
 
     min-height: 48px;
@@ -309,6 +583,7 @@ body {
     color: var(--cesrg-text);
 
     font-size: 14px;
+
     font-weight: 650;
 
     background: transparent;
@@ -320,14 +595,17 @@ body {
 }
 
 .masthead .nav > li > a:hover {
+
     color: var(--cesrg-blue);
 
-    background: rgba(23,105,170,0.07);
+    background:
+        rgba(23,105,170,0.07);
 
     transform: translateY(-1px);
 }
 
 .masthead .nav > li.active > a {
+
     color: white;
 
     background:
@@ -337,7 +615,8 @@ body {
             var(--cesrg-blue)
         );
 
-    box-shadow: 0 7px 18px rgba(23,105,170,0.22);
+    box-shadow:
+        0 7px 18px rgba(23,105,170,0.22);
 }
 
 .masthead .nav > li.active > a:hover {
@@ -346,7 +625,7 @@ body {
 
 
 /* =========================================================
-   7. GENERAL HEADINGS
+   12. GENERAL HEADINGS
    ========================================================= */
 
 h1,
@@ -355,6 +634,7 @@ h3,
 h4,
 h5,
 h6 {
+
     color: var(--cesrg-primary);
 
     font-family:
@@ -370,10 +650,14 @@ h6 {
     font-weight: 750;
 
     line-height: 1.25;
+
+    transition: color var(--cesrg-transition);
 }
 
 h2 {
+
     font-size: clamp(28px, 4vw, 42px);
+
     letter-spacing: -0.5px;
 }
 
@@ -387,35 +671,40 @@ h4 {
 
 
 /* =========================================================
-   8. SECTION SYSTEM
+   13. SECTION SYSTEM
    ========================================================= */
 
 .my-5 {
+
     margin-top: 65px !important;
+
     margin-bottom: 65px !important;
 }
 
 hr {
+
     height: 1px;
 
     margin: 55px auto;
 
     border: 0;
 
-    background: linear-gradient(
-        90deg,
-        transparent,
-        #dfe6ef,
-        transparent
-    );
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--cesrg-border),
+            transparent
+        );
 }
 
 
 /* =========================================================
-   9. CAROUSEL
+   14. CAROUSEL
    ========================================================= */
 
 #main-carousel {
+
     position: relative;
 
     overflow: hidden;
@@ -428,9 +717,11 @@ hr {
 }
 
 .carousel-image {
+
     display: block;
 
     width: 100%;
+
     height: min(650px, 65vh);
 
     min-height: 350px;
@@ -441,10 +732,12 @@ hr {
 }
 
 .carousel-caption {
+
     position: absolute;
 
     left: 5%;
     right: 5%;
+
     bottom: 30px;
 
     width: auto;
@@ -460,25 +753,30 @@ hr {
             rgba(7,21,37,0.68)
         );
 
-    border: 1px solid rgba(255,255,255,0.12);
+    border:
+        1px solid rgba(255,255,255,0.12);
 
     border-radius: 18px;
 
     backdrop-filter: blur(10px);
 
-    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.25);
 }
 
 .carousel-caption h4 {
+
     margin: 0 0 5px;
 
     color: white;
 
     font-size: clamp(18px, 2.2vw, 28px);
+
     line-height: 1.3;
 }
 
 .carousel-caption p {
+
     margin: 5px 0 0;
 
     color: rgba(255,255,255,0.8);
@@ -487,6 +785,7 @@ hr {
 }
 
 .carousel-control {
+
     width: 48px;
     height: 48px;
 
@@ -498,9 +797,11 @@ hr {
 
     opacity: 0.9;
 
-    background: rgba(7,21,37,0.65);
+    background:
+        rgba(7,21,37,0.65);
 
-    border: 1px solid rgba(255,255,255,0.15);
+    border:
+        1px solid rgba(255,255,255,0.15);
 
     transition:
         background var(--cesrg-transition),
@@ -508,6 +809,7 @@ hr {
 }
 
 .carousel-control:hover {
+
     background: var(--cesrg-blue);
 
     transform: scale(1.08);
@@ -515,7 +817,7 @@ hr {
 
 
 /* =========================================================
-   10. MODERN CARD SYSTEM
+   15. MODERN CARD SYSTEM
    ========================================================= */
 
 .cesrg-card,
@@ -526,18 +828,25 @@ hr {
 .person-card,
 .publication-card,
 .news-card {
-    background: white;
 
-    border: 1px solid var(--cesrg-border);
+    background: var(--cesrg-card-bg);
 
-    border-radius: var(--cesrg-radius-md);
+    color: var(--cesrg-text);
 
-    box-shadow: var(--cesrg-shadow-sm);
+    border:
+        1px solid var(--cesrg-border);
+
+    border-radius:
+        var(--cesrg-radius-md);
+
+    box-shadow:
+        var(--cesrg-shadow-sm);
 
     transition:
         transform var(--cesrg-transition),
         box-shadow var(--cesrg-transition),
-        border-color var(--cesrg-transition);
+        border-color var(--cesrg-transition),
+        background var(--cesrg-transition);
 }
 
 .cesrg-card:hover,
@@ -548,20 +857,24 @@ hr {
 .person-card:hover,
 .publication-card:hover,
 .news-card:hover {
+
     transform: translateY(-6px);
 
-    border-color: rgba(23,105,170,0.20);
+    border-color:
+        var(--cesrg-blue);
 
-    box-shadow: var(--cesrg-shadow-md);
+    box-shadow:
+        var(--cesrg-shadow-md);
 }
 
 
 /* =========================================================
-   11. BUTTONS
+   16. BUTTONS
    ========================================================= */
 
 .btn,
 button {
+
     border-radius: 12px !important;
 
     font-weight: 650 !important;
@@ -578,6 +891,7 @@ button:hover {
 }
 
 .btn-primary {
+
     color: white !important;
 
     background:
@@ -594,6 +908,7 @@ button:hover {
 }
 
 .btn-primary:hover {
+
     color: white !important;
 
     box-shadow:
@@ -602,23 +917,31 @@ button:hover {
 
 
 /* =========================================================
-   12. ABOUT / CONTENT SECTIONS
+   17. ABOUT / CONTENT SECTIONS
    ========================================================= */
 
 .about-section,
 .section-card {
+
     padding: 55px 35px;
 
-    background: white;
+    background:
+        var(--cesrg-card-bg);
 
-    border: 1px solid var(--cesrg-border);
+    color: var(--cesrg-text);
 
-    border-radius: var(--cesrg-radius-lg);
+    border:
+        1px solid var(--cesrg-border);
 
-    box-shadow: var(--cesrg-shadow-sm);
+    border-radius:
+        var(--cesrg-radius-lg);
+
+    box-shadow:
+        var(--cesrg-shadow-sm);
 }
 
 .section-title {
+
     position: relative;
 
     margin-bottom: 35px;
@@ -627,6 +950,7 @@ button:hover {
 }
 
 .section-title::after {
+
     content: "";
 
     display: block;
@@ -648,12 +972,13 @@ button:hover {
 
 
 /* =========================================================
-   13. RESEARCH TAGS / PILLS
+   18. RESEARCH TAGS / PILLS
    ========================================================= */
 
 .research-pill,
 .research-tag,
 .tag {
+
     display: inline-flex;
 
     align-items: center;
@@ -664,34 +989,43 @@ button:hover {
 
     color: var(--cesrg-primary);
 
-    background: #eef7fc;
+    background:
+        var(--cesrg-soft-bg);
 
-    border: 1px solid #d8edf8;
+    border:
+        1px solid var(--cesrg-border);
 
     border-radius: 50px;
 
     font-size: 14px;
+
     font-weight: 650;
 
     transition:
         background var(--cesrg-transition),
+        color var(--cesrg-transition),
         transform var(--cesrg-transition);
 }
 
 .research-pill:hover,
 .research-tag:hover,
 .tag:hover {
-    background: #dff3fc;
+
+    color: var(--cesrg-primary);
+
+    background:
+        var(--cesrg-hover-bg);
 
     transform: translateY(-2px);
 }
 
 
 /* =========================================================
-   14. STATISTICS
+   19. STATISTICS
    ========================================================= */
 
 .stats-container {
+
     display: grid;
 
     grid-template-columns:
@@ -701,30 +1035,52 @@ button:hover {
 }
 
 .stat-card {
+
     padding: 32px 20px;
 
     text-align: center;
 
-    background: white;
+    background:
+        var(--cesrg-card-bg);
 
-    border: 1px solid var(--cesrg-border);
+    color: var(--cesrg-text);
 
-    border-radius: var(--cesrg-radius-md);
+    border:
+        1px solid var(--cesrg-border);
 
-    box-shadow: var(--cesrg-shadow-sm);
+    border-radius:
+        var(--cesrg-radius-md);
+
+    box-shadow:
+        var(--cesrg-shadow-sm);
+
+    transition:
+        transform var(--cesrg-transition),
+        box-shadow var(--cesrg-transition);
+}
+
+.stat-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        var(--cesrg-shadow-md);
 }
 
 .stat-card h1,
 .stat-card h2 {
+
     margin: 0 0 8px;
 
     color: var(--cesrg-blue);
 
     font-size: 42px;
+
     font-weight: 800;
 }
 
 .stat-card p {
+
     margin: 0;
 
     color: var(--cesrg-muted);
@@ -734,27 +1090,36 @@ button:hover {
 
 
 /* =========================================================
-   15. NEWS / NOTICE BOARD
+   20. NEWS / NOTICE BOARD
    ========================================================= */
 
 .cesrg-notice-board {
+
     position: relative;
 
     overflow: hidden;
 
-    background: white;
+    background:
+        var(--cesrg-card-bg);
 
-    border: 1px solid var(--cesrg-border);
+    color: var(--cesrg-text);
 
-    border-radius: var(--cesrg-radius-md);
+    border:
+        1px solid var(--cesrg-border);
 
-    box-shadow: var(--cesrg-shadow-md);
+    border-radius:
+        var(--cesrg-radius-md);
+
+    box-shadow:
+        var(--cesrg-shadow-md);
 }
 
 .cesrg-notice-header {
+
     display: flex;
 
     align-items: center;
+
     justify-content: space-between;
 
     padding: 18px 22px;
@@ -770,6 +1135,7 @@ button:hover {
 }
 
 .cesrg-notice-header h3 {
+
     margin: 0;
 
     color: white;
@@ -778,16 +1144,19 @@ button:hover {
 }
 
 .cesrg-notice-header span {
+
     font-size: 12px;
 
     padding: 5px 10px;
 
     border-radius: 50px;
 
-    background: rgba(255,255,255,0.15);
+    background:
+        rgba(255,255,255,0.15);
 }
 
 .cesrg-notice-track {
+
     display: flex;
 
     gap: 20px;
@@ -796,14 +1165,18 @@ button:hover {
 
     padding: 18px;
 
-    animation: cesrgMarquee 35s linear infinite;
+    animation:
+        cesrgMarquee 35s linear infinite;
 }
 
-.cesrg-notice-board:hover .cesrg-notice-track {
+.cesrg-notice-board:hover
+.cesrg-notice-track {
+
     animation-play-state: paused;
 }
 
 .cesrg-notice-item {
+
     display: flex;
 
     align-items: center;
@@ -814,14 +1187,19 @@ button:hover {
 
     padding: 14px 18px;
 
-    background: #f8fafc;
+    background:
+        var(--cesrg-soft-bg);
 
-    border: 1px solid var(--cesrg-border);
+    color: var(--cesrg-text);
+
+    border:
+        1px solid var(--cesrg-border);
 
     border-radius: 12px;
 }
 
 .cesrg-notice-dot {
+
     flex: 0 0 auto;
 
     width: 10px;
@@ -829,13 +1207,15 @@ button:hover {
 
     border-radius: 50%;
 
-    background: var(--cesrg-accent);
+    background:
+        var(--cesrg-accent);
 
     box-shadow:
         0 0 0 5px rgba(0,194,255,0.10);
 }
 
 @keyframes cesrgMarquee {
+
     from {
         transform: translateX(0);
     }
@@ -847,11 +1227,12 @@ button:hover {
 
 
 /* =========================================================
-   16. PEOPLE / FACULTY
+   21. PEOPLE / FACULTY
    ========================================================= */
 
 .people-grid,
 .faculty-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -861,27 +1242,33 @@ button:hover {
 }
 
 .person-card {
+
     overflow: hidden;
 
     text-align: center;
 }
 
 .person-card img {
+
     width: 100%;
+
     height: 280px;
 
     object-fit: cover;
 }
 
 .person-card-content {
+
     padding: 22px;
 }
 
 .person-card h3 {
+
     margin: 0 0 5px;
 }
 
 .person-card p {
+
     margin: 5px 0;
 
     color: var(--cesrg-muted);
@@ -889,31 +1276,37 @@ button:hover {
 
 
 /* =========================================================
-   17. PUBLICATIONS
+   22. PUBLICATIONS
    ========================================================= */
 
 .publication-card {
+
     position: relative;
 
     margin-bottom: 18px;
 
     padding: 25px 28px;
 
-    background: white;
+    background:
+        var(--cesrg-card-bg);
 }
 
 .publication-card::before {
+
     content: "";
 
     position: absolute;
 
     left: 0;
+
     top: 18px;
+
     bottom: 18px;
 
     width: 4px;
 
-    border-radius: 0 5px 5px 0;
+    border-radius:
+        0 5px 5px 0;
 
     background:
         linear-gradient(
@@ -928,6 +1321,7 @@ button:hover {
 }
 
 .publication-card .year {
+
     display: inline-block;
 
     margin-bottom: 8px;
@@ -936,20 +1330,26 @@ button:hover {
 
     color: var(--cesrg-blue);
 
-    background: #edf7fc;
+    background:
+        var(--cesrg-soft-bg);
+
+    border:
+        1px solid var(--cesrg-border);
 
     border-radius: 50px;
 
     font-size: 12px;
+
     font-weight: 700;
 }
 
 
 /* =========================================================
-   18. GALLERY
+   23. GALLERY
    ========================================================= */
 
 .gallery-grid {
+
     display: grid;
 
     grid-template-columns:
@@ -959,23 +1359,29 @@ button:hover {
 }
 
 .gallery-item {
+
     position: relative;
 
     overflow: hidden;
 
     min-height: 220px;
 
-    border-radius: var(--cesrg-radius-md);
+    border-radius:
+        var(--cesrg-radius-md);
 
-    background: #e9eef5;
+    background:
+        var(--cesrg-soft-bg);
 
-    box-shadow: var(--cesrg-shadow-sm);
+    box-shadow:
+        var(--cesrg-shadow-sm);
 }
 
 .gallery-item img {
+
     display: block;
 
     width: 100%;
+
     height: 100%;
 
     min-height: 220px;
@@ -988,12 +1394,14 @@ button:hover {
 }
 
 .gallery-item:hover img {
+
     transform: scale(1.06);
 
     filter: brightness(0.78);
 }
 
 .gallery-item::after {
+
     content: "View";
 
     position: absolute;
@@ -1009,7 +1417,8 @@ button:hover {
 
     color: white;
 
-    background: rgba(7,21,37,0.78);
+    background:
+        rgba(7,21,37,0.78);
 
     border-radius: 50px;
 
@@ -1021,6 +1430,7 @@ button:hover {
 }
 
 .gallery-item:hover::after {
+
     opacity: 1;
 
     transform:
@@ -1030,23 +1440,29 @@ button:hover {
 
 
 /* =========================================================
-   19. RESEARCH EVENT ARROWS
+   24. RESEARCH EVENT ARROWS
    ========================================================= */
 
 .research-event {
+
     position: relative;
 
     padding: 20px 55px 20px 22px;
 
     margin-bottom: 15px;
 
-    background: white;
+    background:
+        var(--cesrg-card-bg);
 
-    border: 1px solid var(--cesrg-border);
+    color: var(--cesrg-text);
+
+    border:
+        1px solid var(--cesrg-border);
 
     border-radius: 14px;
 
-    box-shadow: var(--cesrg-shadow-sm);
+    box-shadow:
+        var(--cesrg-shadow-sm);
 
     transition:
         transform var(--cesrg-transition),
@@ -1054,12 +1470,15 @@ button:hover {
 }
 
 .research-event:hover {
+
     transform: translateX(4px);
 
-    box-shadow: var(--cesrg-shadow-md);
+    box-shadow:
+        var(--cesrg-shadow-md);
 }
 
 .research-event-arrow {
+
     position: absolute;
 
     right: 18px;
@@ -1071,13 +1490,16 @@ button:hover {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
-    transform: translateY(-50%);
+    transform:
+        translateY(-50%);
 
     color: white;
 
-    background: var(--cesrg-blue);
+    background:
+        var(--cesrg-blue);
 
     border-radius: 50%;
 
@@ -1088,8 +1510,11 @@ button:hover {
         transform var(--cesrg-transition);
 }
 
-.research-event:hover .research-event-arrow {
-    background: var(--cesrg-accent);
+.research-event:hover
+.research-event-arrow {
+
+    background:
+        var(--cesrg-accent);
 
     transform:
         translateY(-50%)
@@ -1098,27 +1523,30 @@ button:hover {
 
 
 /* =========================================================
-   20. FOOTER
+   25. FOOTER
    ========================================================= */
 
 #footer,
 footer {
+
     position: relative;
 
     margin-top: 80px;
 
     padding: 55px 25px 25px;
 
-    color: rgba(255,255,255,0.75);
+    color:
+        rgba(255,255,255,0.75);
 
     background:
         linear-gradient(
             135deg,
-            #061322,
-            #0c2949
+            var(--cesrg-footer-1),
+            var(--cesrg-footer-2)
         );
 
-    border-radius: 28px 28px 0 0;
+    border-radius:
+        28px 28px 0 0;
 
     box-shadow:
         0 -15px 50px rgba(7,21,37,0.10);
@@ -1131,7 +1559,7 @@ footer h3 {
 
 #footer a,
 footer a {
-    color: #69d8ff;
+    color: var(--cesrg-cyan);
 }
 
 #footer a:hover,
@@ -1141,15 +1569,17 @@ footer a:hover {
 
 #footer hr,
 footer hr {
-    background: rgba(255,255,255,0.15);
+    background:
+        rgba(255,255,255,0.15);
 }
 
 
 /* =========================================================
-   21. SCROLL REVEAL
+   26. SCROLL REVEAL
    ========================================================= */
 
 .cesrg-reveal {
+
     opacity: 0;
 
     transform: translateY(25px);
@@ -1160,6 +1590,7 @@ footer hr {
 }
 
 .cesrg-reveal.cesrg-visible {
+
     opacity: 1;
 
     transform: translateY(0);
@@ -1167,10 +1598,11 @@ footer hr {
 
 
 /* =========================================================
-   22. BACK TO TOP
+   27. BACK TO TOP
    ========================================================= */
 
 #cesrg-back-top {
+
     position: fixed;
 
     right: 22px;
@@ -1199,7 +1631,8 @@ footer hr {
 
     border-radius: 50%;
 
-    box-shadow: 0 10px 25px rgba(7,21,37,0.20);
+    box-shadow:
+        0 10px 25px rgba(7,21,37,0.20);
 
     opacity: 0;
 
@@ -1216,6 +1649,7 @@ footer hr {
 }
 
 #cesrg-back-top.visible {
+
     opacity: 1;
 
     visibility: visible;
@@ -1224,6 +1658,7 @@ footer hr {
 }
 
 #cesrg-back-top:hover {
+
     transform:
         translateY(-3px)
         scale(1.05);
@@ -1231,10 +1666,11 @@ footer hr {
 
 
 /* =========================================================
-   23. MOBILE NAVIGATION
+   28. MOBILE NAVIGATION
    ========================================================= */
 
 .cesrg-mobile-toggle {
+
     display: none;
 
     width: 44px;
@@ -1247,7 +1683,8 @@ footer hr {
 
     color: white;
 
-    background: var(--cesrg-primary);
+    background:
+        var(--cesrg-primary);
 
     border: 0;
 
@@ -1260,81 +1697,427 @@ footer hr {
 
 
 /* =========================================================
-   24. MOBILE RESPONSIVE
+   29. THEME SWITCHER
+   ========================================================= */
+
+.theme-switcher-bar {
+
+    position: fixed;
+
+    left: 50%;
+
+    bottom: 15px;
+
+    z-index: 10000;
+
+    transform:
+        translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    max-width:
+        calc(100% - 30px);
+
+    padding: 7px 9px;
+
+    background:
+        rgba(255,255,255,0.94);
+
+    border:
+        1px solid var(--cesrg-border);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 30px rgba(7,21,37,0.16);
+
+    backdrop-filter:
+        blur(16px);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+}
+
+.theme-title {
+
+    margin-right: 3px;
+
+    padding:
+        0 7px;
+
+    color:
+        var(--cesrg-muted);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+}
+
+.theme-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 6px;
+
+    padding:
+        7px 10px;
+
+    border: 0 !important;
+
+    border-radius: 12px !important;
+
+    background:
+        transparent !important;
+
+    color:
+        var(--cesrg-text) !important;
+
+    font-size: 12px !important;
+
+    font-weight: 650 !important;
+
+    cursor: pointer;
+
+    transform: none !important;
+
+    box-shadow: none !important;
+
+    white-space: nowrap;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.theme-btn:hover {
+
+    background:
+        rgba(23,105,170,0.08) !important;
+
+    color:
+        var(--cesrg-primary) !important;
+
+    transform: none !important;
+}
+
+.theme-btn.active {
+
+    color: white !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--cesrg-primary),
+            var(--cesrg-blue)
+        ) !important;
+
+    box-shadow:
+        0 4px 12px rgba(23,105,170,0.20) !important;
+}
+
+.color-dot {
+
+    display: inline-block;
+
+    flex: 0 0 auto;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    border:
+        2px solid rgba(255,255,255,0.65);
+
+    box-shadow:
+        0 0 0 1px rgba(0,0,0,0.08);
+}
+
+
+/* =========================================================
+   30. MIDNIGHT THEME — NAVIGATION & SWITCHER
+   ========================================================= */
+
+[data-theme="midnight-lab"] .masthead {
+
+    background:
+        rgba(8,17,31,0.92);
+
+    border-bottom-color:
+        var(--cesrg-border);
+
+    box-shadow:
+        0 4px 20px rgba(0,0,0,0.25);
+}
+
+[data-theme="midnight-lab"]
+.masthead .nav > li > a {
+
+    color:
+        var(--cesrg-text);
+}
+
+[data-theme="midnight-lab"]
+.masthead .nav > li > a:hover {
+
+    color:
+        var(--cesrg-cyan);
+
+    background:
+        rgba(34,211,238,0.08);
+}
+
+[data-theme="midnight-lab"]
+.theme-switcher-bar {
+
+    background:
+        rgba(16,28,46,0.95);
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.40);
+}
+
+[data-theme="midnight-lab"]
+.theme-btn {
+
+    color:
+        var(--cesrg-text) !important;
+}
+
+[data-theme="midnight-lab"]
+.theme-btn:hover {
+
+    background:
+        rgba(96,165,250,0.10) !important;
+}
+
+
+/* =========================================================
+   31. LAB VIDEO
+   ========================================================= */
+
+.lab-video-wrapper {
+
+    position: relative;
+
+    overflow: hidden;
+
+    margin-bottom: 25px;
+
+    background:
+        var(--cesrg-dark);
+
+    border:
+        1px solid var(--cesrg-border);
+
+    border-radius: 20px;
+
+    box-shadow:
+        var(--cesrg-shadow-md);
+}
+
+.lab-video {
+
+    display: block;
+
+    width: 100%;
+
+    max-height: 600px;
+
+    object-fit: cover;
+
+    background:
+        var(--cesrg-dark);
+}
+
+.lab-video-label {
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 0;
+
+    padding:
+        55px 22px 20px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(4,14,27,.88)
+        );
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   32. ACCESSIBILITY
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible {
+
+    outline:
+        3px solid var(--cesrg-cyan);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   33. MOBILE RESPONSIVE
    ========================================================= */
 
 @media (max-width: 900px) {
 
     .container {
-        width: min(100% - 28px, 720px);
+
+        width:
+            min(100% - 28px, 720px);
     }
 
     .jumbotron {
-        padding: 65px 22px 60px;
+
+        padding:
+            65px 22px 60px;
     }
 
     .masthead .navbar-inner {
+
         min-height: auto;
     }
 
     .masthead .navbar .container {
+
         display: block;
     }
 
     .cesrg-mobile-toggle {
+
         display: flex;
     }
 
     .masthead .nav {
+
         display: none;
 
         flex-direction: column;
 
         width: 100%;
 
-        padding: 10px 0 15px;
+        padding:
+            10px 0 15px;
 
         gap: 3px;
     }
 
     .masthead .nav.cesrg-mobile-open {
+
         display: flex;
     }
 
     .masthead .nav > li {
+
         width: 100%;
     }
 
     .masthead .nav > li > a {
+
         justify-content: center;
 
         width: 100%;
     }
 
     .carousel-image {
+
         height: 55vh;
 
         min-height: 320px;
     }
 
     .carousel-caption {
+
         left: 15px;
         right: 15px;
+
         bottom: 15px;
 
         padding: 18px;
     }
 
     .carousel-control {
+
         display: none;
     }
 
     .about-section,
     .section-card {
-        padding: 35px 20px;
+
+        padding:
+            35px 20px;
+    }
+
+    /* Theme bar */
+
+    .theme-switcher-bar {
+
+        max-width:
+            calc(100% - 20px);
+
+        overflow-x: auto;
+
+        justify-content:
+            flex-start;
+
+        padding:
+            7px 9px;
+
+        gap: 4px;
+
+        white-space: nowrap;
+
+        border-radius: 15px;
+    }
+
+    .theme-title {
+
+        display: none;
+    }
+
+    .theme-btn {
+
+        padding:
+            7px 9px;
+
+        font-size:
+            11px !important;
     }
 }
 
+
+/* =========================================================
+   34. SMALL MOBILE
+   ========================================================= */
 
 @media (max-width: 600px) {
 
@@ -1343,82 +2126,148 @@ footer hr {
     }
 
     .container {
-        width: calc(100% - 22px);
+
+        width:
+            calc(100% - 22px);
     }
 
     .jumbotron {
-        padding: 50px 18px;
+
+        padding:
+            50px 18px;
     }
 
     .jumbotron h1 {
-        letter-spacing: -0.7px;
+
+        letter-spacing:
+            -0.7px;
     }
 
     .my-5 {
-        margin-top: 40px !important;
-        margin-bottom: 40px !important;
+
+        margin-top:
+            40px !important;
+
+        margin-bottom:
+            40px !important;
     }
 
     hr {
-        margin: 35px auto;
+
+        margin:
+            35px auto;
     }
 
     .carousel-image {
-        height: 430px;
+
+        height:
+            430px;
 
         min-height: 0;
     }
 
     .carousel-caption {
-        padding: 15px;
+
+        padding:
+            15px;
     }
 
     .carousel-caption p {
-        font-size: 13px;
+
+        font-size:
+            13px;
     }
 
     .cesrg-notice-track {
-        animation-duration: 28s;
+
+        animation-duration:
+            28s;
     }
 
     .cesrg-notice-item {
-        min-width: 245px;
+
+        min-width:
+            245px;
     }
 
     .gallery-grid {
-        grid-template-columns: 1fr 1fr;
 
-        gap: 10px;
+        grid-template-columns:
+            1fr 1fr;
+
+        gap:
+            10px;
     }
 
     .gallery-item,
     .gallery-item img {
-        min-height: 150px;
+
+        min-height:
+            150px;
     }
 
     #footer,
     footer {
-        margin-top: 50px;
 
-        padding: 40px 18px 20px;
+        margin-top:
+            50px;
+
+        padding:
+            40px 18px 20px;
+    }
+
+    .theme-switcher-bar {
+
+        bottom:
+            8px;
+
+        max-width:
+            calc(100% - 12px);
+    }
+
+    .theme-btn {
+
+        padding:
+            6px 8px;
+
+        font-size:
+            10px !important;
+
+        gap:
+            4px;
+    }
+
+    .color-dot {
+
+        width:
+            10px;
+
+        height:
+            10px;
+    }
+
+    .lab-video {
+
+        min-height:
+            240px;
+
+        max-height:
+            400px;
+    }
+
+    .lab-video-label {
+
+        padding:
+            45px 15px 15px;
+
+        font-size:
+            12px;
     }
 }
 
 
 /* =========================================================
-   25. ACCESSIBILITY
-   ========================================================= */
-
-a:focus-visible,
-button:focus-visible {
-    outline: 3px solid rgba(0,194,255,0.45);
-
-    outline-offset: 3px;
-}
-
-
-/* =========================================================
-   26. REDUCE MOTION
+   35. REDUCE MOTION
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -1430,184 +2279,14 @@ button:focus-visible {
     *,
     *::before,
     *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
     }
-}
-/* =====================================================
-   CESRG LAB VIDEO
-   ===================================================== */
-
-.lab-video-wrapper {
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 25px;
-    background: #071525;
-    border: 1px solid #e3e8ee;
-    border-radius: 20px;
-    box-shadow: 0 10px 35px rgba(7,21,37,.10);
-}
-
-.lab-video {
-    display: block;
-    width: 100%;
-    max-height: 600px;
-    object-fit: cover;
-    background: #071525;
-}
-
-.lab-video-label {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 55px 22px 20px;
-    background: linear-gradient(
-        transparent,
-        rgba(4,14,27,.88)
-    );
-    color: white;
-    font-size: 14px;
-    font-weight: 700;
-    pointer-events: none;
-}
-
-@media (max-width: 650px) {
-
-    .lab-video {
-        min-height: 240px;
-        max-height: 400px;
-    }
-
-    .lab-video-label {
-        padding: 45px 15px 15px;
-        font-size: 12px;
-    }
-
-}
-/* Base / Default Theme (Margalla Mist) */
-:root {
-  --bg-color: #eaf3f1;
-  --primary-color: #0b5c53;
-  --text-color: #1a2e2b;
-  --card-bg: #ffffff;
-}
-
-/* 1. Margalla Mist */
-[data-theme="margalla-mist"] {
-  --bg-color: #eaf3f1;
-  --primary-color: #0b5c53;
-  --text-color: #1a2e2b;
-  --card-bg: #ffffff;
-}
-
-/* 2. Institutional Blue */
-[data-theme="institutional-blue"] {
-  --bg-color: #eef4f8;
-  --primary-color: #1a5276;
-  --text-color: #1b2631;
-  --card-bg: #ffffff;
-}
-
-/* 3. Ivory Press */
-[data-theme="ivory-press"] {
-  --bg-color: #fdfbf7;
-  --primary-color: #8b3a3a;
-  --text-color: #2c221e;
-  --card-bg: #ffffff;
-}
-
-/* 4. Sage Calm */
-[data-theme="sage-calm"] {
-  --bg-color: #f1f5f2;
-  --primary-color: #4a6b5d;
-  --text-color: #1f2d27;
-  --card-bg: #ffffff;
-}
-
-/* 5. Indigo Night */
-[data-theme="indigo-night"] {
-  --bg-color: #0f172a;
-  --primary-color: #6366f1;
-  --text-color: #f8fafc;
-  --card-bg: #1e293b;
-}
-
-/* 6. Graphite */
-[data-theme="graphite"] {
-  --bg-color: #18181b;
-  --primary-color: #a1a1aa;
-  --text-color: #f4f4f5;
-  --card-bg: #27272a;
-}
-
-/* Global Application */
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding-bottom: 70px; /* Leave room for floating bar */
-}
-
-.card, .container {
-  background-color: var(--card-bg);
-}
-
-.btn-primary {
-  background-color: var(--primary-color);
-  color: #ffffff;
-}
-
-/* Floating Theme Switcher Bar */
-.theme-switcher-bar {
-  position: fixed;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(255, 255, 255, 0.95);
-  padding: 8px 18px;
-  border-radius: 30px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  backdrop-filter: blur(8px);
-  z-index: 1000;
-}
-
-.theme-title {
-  font-size: 11px;
-  font-weight: 700;
-  color: #666;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.theme-btn {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  font-weight: 500;
-  color: #333;
-  padding: 6px 10px;
-  border-radius: 20px;
-  transition: background 0.2s;
-}
-
-.theme-btn:hover {
-  background: rgba(0, 0, 0, 0.06);
-}
-
-.color-dot {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  display: inline-block;
 }
