@@ -8,7 +8,49 @@
 /* =========================================================
    1. ROOT VARIABLES
    ========================================================= */
+/* ===== THEME TEST ===== */
 
+html[data-theme="margalla-mist"] {
+    --cesrg-primary: #0b1f3a;
+    --cesrg-primary-2: #123b69;
+    --cesrg-blue: #1769aa;
+    --cesrg-accent: #00a8e8;
+}
+
+html[data-theme="institutional-blue"] {
+    --cesrg-primary: #003b5c;
+    --cesrg-primary-2: #005f86;
+    --cesrg-blue: #0077a8;
+    --cesrg-accent: #00a6c7;
+}
+
+html[data-theme="ivory-press"] {
+    --cesrg-primary: #4a3f35;
+    --cesrg-primary-2: #6b5a4a;
+    --cesrg-blue: #8b6f47;
+    --cesrg-accent: #b58b5a;
+}
+
+html[data-theme="sage-calm"] {
+    --cesrg-primary: #274c3a;
+    --cesrg-primary-2: #3d6b52;
+    --cesrg-blue: #56806a;
+    --cesrg-accent: #7ca982;
+}
+
+html[data-theme="indigo-night"] {
+    --cesrg-primary: #111827;
+    --cesrg-primary-2: #312e81;
+    --cesrg-blue: #4f46e5;
+    --cesrg-accent: #818cf8;
+}
+
+html[data-theme="graphite"] {
+    --cesrg-primary: #252525;
+    --cesrg-primary-2: #3f3f46;
+    --cesrg-blue: #52525b;
+    --cesrg-accent: #a1a1aa;
+}
 :root {
 
     /* -----------------------------------------------------
