@@ -22,9 +22,7 @@
           content="Control & Energy Systems Research Group">
 
 
-    <!-- =====================================================
-         OPEN GRAPH
-         ===================================================== -->
+    <!-- OPEN GRAPH -->
 
     <meta property="og:title"
           content="CESRG – Control & Energy Systems Research Group">
@@ -45,26 +43,20 @@
           content="summary_large_image">
 
 
-    <!-- =====================================================
-         FAVICON
-         ===================================================== -->
+    <!-- FAVICON -->
 
     <link rel="icon"
           type="image/png"
           href="thumbs/CESRG_logo_circle.png">
 
 
-    <!-- =====================================================
-         MODERN CSS
-         ===================================================== -->
+    <!-- MODERN CSS -->
 
     <link rel="stylesheet"
           href="css/modern.css">
 
 
-    <!-- =====================================================
-         GOOGLE FONT
-         ===================================================== -->
+    <!-- GOOGLE FONT -->
 
     <link rel="preconnect"
           href="https://fonts.googleapis.com">
@@ -81,44 +73,16 @@
     <style>
 
         /* =====================================================
-           CESRG HOMEPAGE — COMPLETE THEME SYSTEM
+           CESRG HOMEPAGE THEME COLORS ONLY
+           ORIGINAL HOMEPAGE LAYOUT IS PRESERVED
            ===================================================== */
-
-
-        /* =====================================================
-           DEFAULT / MARGALLA MIST
-           ===================================================== */
-
-        :root {
-
-            --home-primary: #0b5c53;
-            --home-primary-2: #174f49;
-            --home-blue: #287d72;
-            --home-accent: #4da89b;
-
-            --home-page-bg: #f7faf9;
-            --home-soft-bg: #edf5f2;
-            --home-card-bg: #ffffff;
-
-            --home-text: #172033;
-            --home-muted: #667085;
-            --home-border: #dce8e4;
-
-            --home-hero-1: #071d1a;
-            --home-hero-2: #174f49;
-
-            --home-hover: #e2f0ec;
-
-            --home-shadow: rgba(7, 21, 37, .08);
-
-            --home-footer: #071d1a;
-        }
 
 
         /* =====================================================
            1 — MARGALLA MIST
            ===================================================== */
 
+        :root,
         html[data-theme="margalla-mist"] {
 
             --home-primary: #0b5c53;
@@ -296,61 +260,12 @@
 
 
         /* =====================================================
-           GLOBAL HOMEPAGE RESET
+           THEME COLORS
            ===================================================== */
-
-        html {
-            scroll-behavior: smooth;
-        }
 
         body {
-            margin: 0 !important;
-            padding: 0 !important;
-
-            font-family: "Inter", sans-serif !important;
-
-            background: var(--home-page-bg) !important;
-            color: var(--home-text) !important;
-
-            transition:
-                background-color .25s ease,
-                color .25s ease;
-        }
-
-        body,
-        body * {
-            box-sizing: border-box;
-        }
-
-
-        /* =====================================================
-           FORCE THE FULL PAGE BACKGROUND
-           ===================================================== */
-
-        body::before,
-        body::after {
-            background: transparent !important;
-        }
-
-        .home-section,
-        .home-section-soft {
-            background: var(--home-page-bg) !important;
-            color: var(--home-text) !important;
-        }
-
-        .home-section-soft {
-            background: var(--home-soft-bg) !important;
-        }
-
-
-        /* =====================================================
-           CONTAINER
-           ===================================================== */
-
-        .home-container {
-            max-width: 1180px;
-            margin: auto;
-            padding: 0 22px;
+            background: var(--home-page-bg);
+            color: var(--home-text);
         }
 
 
@@ -361,7 +276,6 @@
         .masthead {
             background: var(--home-card-bg) !important;
             border-color: var(--home-border) !important;
-            color: var(--home-text) !important;
         }
 
         .masthead .navbar,
@@ -373,7 +287,6 @@
         .masthead .nav > li > a {
             color: var(--home-muted) !important;
             text-shadow: none !important;
-            background: transparent !important;
         }
 
         .masthead .nav > li > a:hover {
@@ -397,20 +310,10 @@
 
 
         /* =====================================================
-           HERO
+           HERO — COLORS ONLY
            ===================================================== */
 
         .hero-modern {
-
-            position: relative;
-
-            overflow: hidden;
-
-            min-height: 650px;
-
-            display: flex;
-            align-items: center;
-
             background:
                 radial-gradient(
                     circle at 85% 20%,
@@ -447,18 +350,6 @@
             color: #ffffff;
         }
 
-        .hero-modern h1 {
-            max-width: 820px;
-
-            margin: 0;
-
-            font-size: clamp(42px, 6vw, 72px);
-
-            line-height: 1.04;
-
-            letter-spacing: -2.8px;
-        }
-
         .hero-modern h1 span {
             color: var(--home-accent) !important;
         }
@@ -467,61 +358,13 @@
             color: rgba(255,255,255,.72) !important;
         }
 
-
-        /* =====================================================
-           HERO EYEBROW
-           ===================================================== */
-
         .hero-eyebrow {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 9px;
-
-            margin-bottom: 22px;
-
-            padding: 8px 14px;
-
-            border: 1px solid rgba(255,255,255,.16);
-
-            border-radius: 50px;
-
-            background: rgba(255,255,255,.07);
-
             color: rgba(255,255,255,.88) !important;
-
-            font-size: 11px;
-
-            font-weight: 750;
-
-            letter-spacing: .8px;
-
-            text-transform: uppercase;
         }
 
         .hero-dot {
-            width: 8px;
-            height: 8px;
-
-            border-radius: 50%;
-
             background: var(--home-accent);
-
-            box-shadow:
-                0 0 0 5px
-                color-mix(
-                    in srgb,
-                    var(--home-accent) 15%,
-                    transparent
-                );
         }
-
-
-        /* =====================================================
-           HERO BUTTONS
-           ===================================================== */
 
         .hero-btn-primary {
             background: #ffffff !important;
@@ -534,27 +377,9 @@
             color: #ffffff !important;
         }
 
-
-        /* =====================================================
-           HERO LOGO CARD
-           ===================================================== */
-
         .hero-logo-card {
-
             border-color: rgba(255,255,255,.13) !important;
-
             background: rgba(255,255,255,.055) !important;
-
-            box-shadow:
-                0 30px 80px rgba(0,0,0,.25);
-        }
-
-        .hero-logo-card h3 {
-            color: #ffffff !important;
-        }
-
-        .hero-logo-card p {
-            color: rgba(255,255,255,.58) !important;
         }
 
 
@@ -562,21 +387,10 @@
            QUICK STATS
            ===================================================== */
 
-        .quick-stats-grid {
-
-            border-color: var(--home-border) !important;
-
-            background: var(--home-card-bg) !important;
-
-            box-shadow:
-                0 18px 50px var(--home-shadow);
-        }
-
+        .quick-stats-grid,
         .quick-stat {
-
-            background: var(--home-card-bg) !important;
-
             border-color: var(--home-border) !important;
+            background: var(--home-card-bg) !important;
         }
 
         .quick-stat strong {
@@ -610,19 +424,14 @@
            ===================================================== */
 
         .featured-card {
-
             border-color: var(--home-border) !important;
-
             background: var(--home-card-bg) !important;
-
             box-shadow:
                 0 7px 25px var(--home-shadow);
         }
 
         .featured-card:hover {
-
             border-color: var(--home-blue) !important;
-
             box-shadow:
                 0 18px 40px var(--home-shadow);
         }
@@ -656,22 +465,14 @@
             color: var(--home-text) !important;
         }
 
-        .about-image-card {
-            box-shadow:
-                0 20px 50px var(--home-shadow);
-        }
-
 
         /* =====================================================
            RESEARCH TAGS
            ===================================================== */
 
         .research-tag {
-
             border-color: var(--home-border) !important;
-
             background: var(--home-soft-bg) !important;
-
             color: var(--home-blue) !important;
         }
 
@@ -681,19 +482,14 @@
            ===================================================== */
 
         .research-item {
-
             border-color: var(--home-border) !important;
-
             background: var(--home-card-bg) !important;
-
             box-shadow:
                 0 7px 25px var(--home-shadow);
         }
 
         .research-item:hover {
-
             border-color: var(--home-blue) !important;
-
             box-shadow:
                 0 16px 35px var(--home-shadow);
         }
@@ -703,9 +499,7 @@
         }
 
         .research-icon {
-
             background: var(--home-soft-bg) !important;
-
             color: var(--home-primary) !important;
         }
 
@@ -723,18 +517,12 @@
            ===================================================== */
 
         .news-item {
-
             border-color: var(--home-border) !important;
-
             background: var(--home-card-bg) !important;
-
-            box-shadow: none;
         }
 
         .news-item:hover {
-
             border-color: var(--home-blue) !important;
-
             box-shadow:
                 0 12px 30px var(--home-shadow);
         }
@@ -761,7 +549,6 @@
            ===================================================== */
 
         .join-box {
-
             border-color: var(--home-border) !important;
 
             background:
@@ -773,9 +560,7 @@
         }
 
         .join-item {
-
             border-color: var(--home-border) !important;
-
             background: var(--home-card-bg) !important;
         }
 
@@ -789,26 +574,18 @@
 
 
         /* =====================================================
-           BOOTSTRAP BUTTON OVERRIDE
+           BUTTON
            ===================================================== */
 
         .home-section .btn-primary {
-
             background: var(--home-primary) !important;
-
             border-color: var(--home-primary) !important;
-
             color: #ffffff !important;
-
-            text-shadow: none !important;
         }
 
         .home-section .btn-primary:hover {
-
             background: var(--home-primary-2) !important;
-
             border-color: var(--home-primary-2) !important;
-
             color: #ffffff !important;
         }
 
@@ -818,7 +595,6 @@
            ===================================================== */
 
         .cta {
-
             background:
                 radial-gradient(
                     circle at 80% 10%,
@@ -850,9 +626,7 @@
         }
 
         .cta-secondary {
-
             border-color: rgba(255,255,255,.25) !important;
-
             color: #ffffff !important;
         }
 
@@ -862,11 +636,8 @@
            ===================================================== */
 
         #footer {
-
             background: var(--home-footer) !important;
-
             color: #ffffff !important;
-
             border-top:
                 1px solid
                 rgba(255,255,255,.10) !important;
@@ -893,7 +664,6 @@
         }
 
         #footer hr {
-
             border-color:
                 rgba(255,255,255,.12) !important;
         }
@@ -938,114 +708,22 @@
         }
 
         .theme-title {
-
-            padding: 0 5px;
-
-            color:
-                var(--home-muted);
-
-            font-size: 10px;
-
-            font-weight: 800;
+            color: var(--home-muted);
         }
 
         .theme-btn {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 5px;
-
-            padding: 6px 8px;
-
-            border:
-                1px solid
-                transparent;
-
-            border-radius: 8px;
-
-            background:
-                transparent;
-
-            color:
-                var(--home-text);
-
-            font-family: inherit;
-
-            font-size: 9px;
-
-            font-weight: 700;
-
-            cursor: pointer;
-
-            transition:
-                .2s ease;
+            color: var(--home-text);
         }
 
         .theme-btn:hover {
-
-            background:
-                var(--home-soft-bg);
-
-            color:
-                var(--home-primary);
+            background: var(--home-soft-bg);
+            color: var(--home-primary);
         }
 
         .theme-btn.active {
-
-            border-color:
-                var(--home-blue);
-
-            background:
-                var(--home-soft-bg);
-
-            color:
-                var(--home-primary);
-        }
-
-        .color-dot {
-
-            width: 9px;
-
-            height: 9px;
-
-            flex-shrink: 0;
-
-            border-radius: 50%;
-        }
-
-
-        /* =====================================================
-           DARK THEME EXTRA PROTECTION
-           ===================================================== */
-
-        html[data-theme="indigo-night"] body {
-
-            background: #0f172a !important;
-
-            color: #e5e7eb !important;
-        }
-
-        html[data-theme="indigo-night"] .home-section {
-
-            background: #0f172a !important;
-        }
-
-        html[data-theme="indigo-night"] .home-section-soft {
-
-            background: #172033 !important;
-        }
-
-        html[data-theme="indigo-night"] .featured-card,
-        html[data-theme="indigo-night"] .research-item,
-        html[data-theme="indigo-night"] .news-item,
-        html[data-theme="indigo-night"] .join-item,
-        html[data-theme="indigo-night"] .quick-stats-grid {
-
-            background: #1e293b !important;
-
-            border-color: #334155 !important;
+            border-color: var(--home-blue);
+            background: var(--home-soft-bg);
+            color: var(--home-primary);
         }
 
 
