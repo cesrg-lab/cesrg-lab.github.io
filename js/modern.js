@@ -835,3 +835,27 @@ if (labSection && labVideo) {
 
 })();
 
+// ========================================
+// CESRG Theme Switcher
+// ========================================
+
+function setTheme(themeName) {
+
+    // Apply selected theme
+    document.documentElement.setAttribute("data-theme", themeName);
+
+    // Save selected theme
+    localStorage.setItem("cesrg-theme", themeName);
+
+}
+
+
+// Load saved theme when page opens
+document.addEventListener("DOMContentLoaded", function () {
+
+    const savedTheme =
+        localStorage.getItem("cesrg-theme") || "margalla-mist";
+
+    setTheme(savedTheme);
+
+});
