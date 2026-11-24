@@ -1246,7 +1246,6 @@ body {
 /* =========================================================
    UPCOMING CESRG EVENT
    ========================================================= */
-
 .cesrg-upcoming-event {
     display: grid;
     grid-template-columns: minmax(0, 1.05fr) minmax(300px, .95fr);
@@ -1259,7 +1258,6 @@ body {
     background: var(--home-card-bg);
     box-shadow: 0 12px 32px rgba(7,21,37,.08);
 }
-
 .cesrg-event-poster {
     display: block;
     width: 100%;
@@ -1267,7 +1265,6 @@ body {
     border-radius: 13px;
     border: 1px solid var(--home-border);
 }
-
 .cesrg-event-label {
     display: inline-block;
     margin-bottom: 12px;
@@ -1280,25 +1277,19 @@ body {
     letter-spacing: .8px;
     text-transform: uppercase;
 }
-
 .cesrg-event-details h3 {
     margin: 0 0 13px;
     color: var(--home-primary);
     font-size: clamp(21px, 2.5vw, 29px);
     line-height: 1.3;
 }
-
 .cesrg-event-details p {
     margin: 8px 0;
     color: var(--home-muted);
     font-size: 13px;
     line-height: 1.65;
 }
-
-.cesrg-event-details strong {
-    color: var(--home-text);
-}
-
+.cesrg-event-details strong { color: var(--home-text); }
 .cesrg-event-join {
     display: inline-flex;
     align-items: center;
@@ -1307,18 +1298,16 @@ body {
     padding: 13px 19px;
     border-radius: 10px;
     background: var(--home-primary);
-    color: #fff;
+    color: #fff !important;
     font-size: 12px;
     font-weight: 800;
     text-decoration: none;
     transition: .2s ease;
 }
-
 .cesrg-event-join:hover {
     transform: translateY(-2px);
     filter: brightness(1.12);
 }
-
 @media (max-width: 760px) {
     .cesrg-upcoming-event {
         grid-template-columns: 1fr;
@@ -1535,6 +1524,64 @@ body {
     </div>
 
 </section>
+
+
+<!-- =====================================================
+     UPCOMING CESRG RESEARCH PRESENTATION
+     ===================================================== -->
+
+<section class="home-section home-section-soft">
+
+    <div class="home-container">
+
+        <div class="home-heading">
+            <span class="home-heading-label">Upcoming Event</span>
+            <h2>CESRG Research Presentation</h2>
+            <p>Join our upcoming research presentation at COMSATS University Islamabad.</p>
+        </div>
+
+        <article class="cesrg-upcoming-event">
+
+            <div>
+                <img
+                    class="cesrg-event-poster"
+                    src="images/cesrg-research-presentation-25-nov-2026.png"
+                    alt="CESRG Research Presentation: Nonlinear Cooperative Control for Networked Underactuated Nonlinear Systems">
+            </div>
+
+            <div class="cesrg-event-details">
+
+                <span class="cesrg-event-label">Upcoming Research Presentation</span>
+
+                <h3>Nonlinear Cooperative Control for Networked Underactuated Nonlinear Systems</h3>
+
+                <p><strong>Presenter:</strong> Armaghan Mohsin</p>
+                <p><strong>Date:</strong> Wednesday, 25 November 2026</p>
+                <p><strong>Time:</strong> 4:30 PM</p>
+                <p><strong>Venue:</strong> R&amp;D Lab, COMSATS University Islamabad</p>
+
+                <p>
+                    All CESRG members are cordially invited to attend the presentation.
+                    Online participants can join through Microsoft Teams.
+                </p>
+
+                <a
+                    class="cesrg-event-join"
+                    href="https://teams.live.com/meet/9320157082623?p=JdH25IgtDS17H8yoiN"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Join Presentation on Microsoft Teams →
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
 
 
 <!-- =====================================================
@@ -1999,36 +2046,6 @@ body {
 
         </div>
 
-
-        <!-- UPCOMING EVENT: CESRG RESEARCH PRESENTATION -->
-        <article class="cesrg-upcoming-event">
-            <div>
-                <img
-                    class="cesrg-event-poster"
-                    src="images/cesrg-research-presentation-25-nov-2026.png"
-                    alt="CESRG Research Presentation: Nonlinear Cooperative Control for Networked Underactuated Nonlinear Systems">
-            </div>
-
-            <div class="cesrg-event-details">
-                <span class="cesrg-event-label">Upcoming Research Presentation</span>
-
-                <h3>Nonlinear Cooperative Control for Networked Underactuated Nonlinear Systems</h3>
-
-                <p><strong>Presenter:</strong> Armaghan Mohsin</p>
-                <p><strong>Date:</strong> Wednesday, 25 November 2026</p>
-                <p><strong>Time:</strong> 4:30 PM</p>
-                <p><strong>Venue:</strong> R&amp;D Lab, COMSATS University Islamabad</p>
-                <p>All CESRG members are cordially invited to attend the presentation. Online participants can join through Microsoft Teams.</p>
-
-                <a
-                    class="cesrg-event-join"
-                    href="https://teams.live.com/meet/9320157082623?p=JdH25IgtDS17H8yoiN"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    Join Presentation on Microsoft Teams →
-                </a>
-            </div>
-        </article>
 
         <div class="news-list">
 
